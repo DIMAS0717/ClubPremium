@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+.admin-body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagen de fondo */
+.bg-image-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* El filtro azulado oscuro de la foto */
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(47, 47, 52, 0.35); /* Tono azul grisáceo con opacidad */
+    z-index: -1;
+}
+.boton-inicio {
+    position: absolute; /* Cambia a 'fixed' si quieres que te siga al bajar el scroll */
+    top: -30px;          /* Espacio desde arriba */
+    left: 10px;         /* Espacio desde la izquierda */
+    z-index: 1000;      /* Para que esté por encima de otros elementos */
+}
+
+.boton-inicio img {
+    width: 300px;        /* Ajusta el tamaño a tu gusto */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.boton-inicio img:hover {
+    transform: scale(1.1); /* Efecto visual al pasar el mouse */
+}
+
+/* Tarjeta de Login Actualizada */
+.admin-login-card {
+    /* Fondo con transparencia (85%) */
+    background: rgba(255, 255, 255, 0.85); 
+    
+    /* Lo hacemos más ancho */
+    width: 100%;
+    max-width: 500px; /* Antes era 420px */
+    
+    /* Más espacio interno */
+    padding: 60px 50px; 
+    
+    /* Bordes y sombras */
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    text-align: center;
+    position: relative;
+
+    /* Efecto de desenfoque de fondo (opcional pero recomendado) */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    
+    /* Un borde sutil para que resalte sobre fondos claros */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.card-header h1 {
+    margin: 0;
+    color: #1e3c55;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.card-header p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+/* Inputs */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #1e3c55;
+}
+
+/* Botón igual al de la foto (azul sólido) */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #2c5d83; /* Azul profesional */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #1e3c55;
+}
+
+/* Footer de la tarjeta */
+.card-footer {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.link-back {
+    text-decoration: none;
+    color: #2c5d83;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.link-back:hover {
+    text-decoration: underline;
+}
+
+.form-error {
+    color: #d9534f;
+    background: #fdf7f7;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid #d9534f;
+}

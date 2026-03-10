@@ -1,0 +1,518 @@
+/* =========================================================
+   RENTA.PHP
+   Solo estilos usados en la página de propiedades en renta
+   ========================================================= */
+
+/* =========================================================
+   VARIABLES BASE
+   ========================================================= */
+:root {
+  --blue-main:  #173457;
+  --blue-soft:  #3D5477;
+  --bg-light:   #ffffff;
+  --text-dark:  #173457;
+
+  --bg-page: var(--bg-light);
+  --bg-card: #f3f4f6;
+  --text-main: var(--text-dark);
+  --text-muted: #6b7280;
+  --border-subtle: #e5e7eb;
+
+  --btn-primary-from: var(--blue-soft);
+  --btn-primary-to:   var(--blue-main);
+  --btn-secondary-bg: #f3f4f6;
+  --chip-bg: #e5edff;
+  --chip-border: var(--blue-soft);
+
+  --radius-lg: 18px;
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.22);
+}
+
+/* =========================================================
+   BASE GENERAL
+   ========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-top: 160px;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-page);
+  color: var(--text-main);
+}
+
+/* =========================================================
+   LAYOUT GENERAL DE LA PÁGINA
+   ========================================================= */
+.page-main {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.page-centered {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  margin-top: 24px;
+}
+
+.muted-text {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   BOTÓN GENÉRICO USADO EN LAS CARDS
+   ========================================================= */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  background: linear-gradient(135deg, var(--btn-primary-from), var(--btn-primary-to));
+  color: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+/* =========================================================
+   BUSCADOR / FILTROS
+   ========================================================= */
+.booking-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 0;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.booking-field {
+  padding: 12px 16px;
+  border-right: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.booking-field:last-child {
+  border-right: none;
+}
+
+.booking-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.booking-field input,
+.booking-field select {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  color: #111827;
+  background: transparent;
+}
+
+.booking-btn {
+  background: #173457;
+  color: #fff;
+  border: none;
+  border-radius: 0 9px 9px 0;
+  padding: 0 26px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .3s ease;
+}
+
+.booking-btn:hover {
+  background: #3D5477;
+}
+
+.booking-input {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+}
+
+.booking-input select {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+.booking-input:focus-within {
+  border-color: #1f3c88;
+  background: #fff;
+}
+
+.booking-dropdown {
+  position: relative;
+}
+
+.booking-dropdown-toggle {
+  cursor: pointer;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.booking-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  padding: 10px;
+  display: none;
+  z-index: 20;
+}
+
+.booking-dropdown-menu label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.booking-dropdown-menu label:hover {
+  background: #f9fafb;
+  border-radius: 6px;
+}
+
+.booking-dropdown-menu.show {
+  display: block;
+}
+
+/* =========================================================
+   GRID DE PROPIEDADES
+   ========================================================= */
+.home-property-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* =========================================================
+   TARJETA DE PROPIEDAD
+   ========================================================= */
+.home-property-card {
+  background: var(--bg-card);
+  border-radius: 18px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.45);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.home-property-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================================
+   ÁREA DE IMAGEN
+   ========================================================= */
+.home-property-img-wrapper {
+  position: relative;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 18px 18px 0 0;
+  background: #000;
+}
+
+.home-property-img {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 18px 18px 0 0;
+  object-fit: cover;
+  display: block;
+}
+
+.img-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  transition: transform 1.4s ease-in-out, filter 2s ease;
+}
+
+.img-back-pool {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.home-property-img-wrapper.show-pool .img-front {
+  transform: translateX(-100%);
+}
+
+/* =========================================================
+   EFECTO DE IMAGEN NO DISPONIBLE
+   ========================================================= */
+.img-no-disponible {
+  filter: grayscale(80%) brightness(0.6);
+}
+
+.home-property-card:hover .img-no-disponible {
+  filter: grayscale(30%) brightness(0.75);
+}
+
+/* =========================================================
+   BOTÓN CIRCULAR PARA VER ALBERCA
+   ========================================================= */
+.btn-view-pool {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  width: 34px;
+  height: 34px;
+  background: rgba(18, 18, 18, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 30;
+  transform: translateY(-15%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.arrow-indicator {
+  font-size: 22px;
+  color: rgba(243, 241, 241, 0.85);
+  line-height: 1;
+  transform: translateX(1px);
+}
+
+.home-property-card:hover .btn-view-pool {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.4);
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   CHIP DE ESTADO
+   ========================================================= */
+.card-status-chip {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+  z-index: 20;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.card-status-chip::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  animation: status-pulse 1.5s infinite;
+}
+
+@keyframes status-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.card-status-disponible {
+  background: rgba(209, 250, 229, 0.85);
+  color: #065f46;
+}
+
+.card-status-disponible::before {
+  background-color: #10b981;
+  box-shadow: 0 0 8px #10b981, 0 0 12px rgba(16, 185, 129, 0.6);
+}
+
+.card-status-no-disponible {
+  background: rgba(15, 23, 42, 0.8);
+  color: #ffffff;
+}
+
+.card-status-no-disponible::before {
+  background-color: #94a3b8;
+  box-shadow: 0 0 5px rgba(148, 163, 184, 0.5);
+}
+
+/* =========================================================
+   CÍRCULO DE CAPACIDAD
+   ========================================================= */
+.capacity-circle {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  transition: all 0.5s ease;
+}
+
+.capacity-circle-icon {
+  width: 14px;
+  height: 14px;
+  color: #ffffff;
+  opacity: 1;
+}
+
+.capacity-circle-number {
+  font-size: 11px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.home-property-card:hover .capacity-circle {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   CUERPO DE LA CARD
+   ========================================================= */
+.home-property-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.home-property-title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.home-property-text {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   PAGINACIÓN
+   ========================================================= */
+.pagination {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 900px) {
+  .booking-bar {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .booking-field {
+    border-right: none;
+    padding: 0;
+  }
+
+  .booking-btn {
+    border-radius: 10px;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-property-card:active .img-front,
+  .home-property-card:focus .img-front {
+    transform: translateX(-90%);
+  }
+
+  .btn-view-pool {
+    width: 44px;
+    height: 44px;
+  }
+
+  .page-centered {
+    padding: 0 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .booking-bar {
+    grid-template-columns: 1fr;
+  }
+}

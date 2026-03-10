@@ -1,0 +1,757 @@
+/* =========================================================
+   ALREDEDORES
+   ========================================================= */
+
+/* =========================================================
+   HERO CON FONDO
+   ========================================================= */
+.around-hero-container {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  background-image: url("images/fondoalrededores.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  min-height: 600px;
+  height: 60vh;
+  padding: 0 20px 580px;
+  margin-top: -46px;
+  box-sizing: border-box;
+}
+
+.around-hero-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  z-index: 1;
+}
+
+.around-hero-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   ENCABEZADO HERO
+   ========================================================= */
+.around-hero-container .around-header {
+  text-align: center;
+  padding-top: 60px;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.around-hero-container .around-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-bottom: 12px;
+}
+
+.around-hero-container .around-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  animation: fadeInUpSoft 0.8s ease-out both;
+}
+
+.around-hero-container .around-title-deco {
+  width: 72px;
+  height: auto;
+  opacity: 0.85;
+  filter: brightness(1.2) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+  animation: fadeInUpSoft 0.8s ease-out 0.1s both;
+}
+
+.around-hero-container .around-title-underline.gold-gradient-line {
+  width: 260px;
+  height: 4px;
+  margin: 18px auto 26px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #d4af37,
+    #f1d592,
+    #d4af37,
+    transparent
+  );
+  border-radius: 50px;
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.35);
+  animation: fadeInUpSoft 0.8s ease-out 0.15s both;
+}
+
+.around-hero-container .around-subtitle {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInUpSoft 0.8s ease-out 0.35s both;
+}
+
+.around-hero-container p {
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* =========================================================
+   MAPA
+   ========================================================= */
+.around-hero-container .around-map-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.around-hero-container .around-map-card {
+  width: 100%;
+  max-width: 1100px;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: 40px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+  border: none;
+  transform: translateY(0);
+  transition: transform 0.4s ease;
+  animation: fadeInUpSoft 1s ease-out 0.55s both;
+}
+
+.around-hero-container .around-map-card:hover {
+  transform: translateY(-5px);
+}
+
+.around-hero-container .around-map-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.around-hero-container .around-map-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #173457;
+  letter-spacing: 0.5px;
+}
+
+.around-hero-container .around-map-title span {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.around-hero-container .around-map-divider {
+  width: 320px;
+  height: 2px;
+  background: linear-gradient(90deg, #0f172a, #64748b);
+  border-radius: 2px;
+  margin: 12px 0 22px 0;
+}
+
+.around-hero-container .around-map-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.around-hero-container .around-map-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-bottom: 1px solid #f1f5f9;
+  transition: all 0.3s ease;
+}
+
+.around-hero-container .around-map-list li:last-child {
+  border-bottom: none;
+}
+
+.around-hero-container .around-map-list li:hover {
+  background-color: rgba(14, 165, 233, 0.05);
+}
+
+.around-map-list span {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.around-hero-container .around-map-icon {
+  width: 24px;
+  height: 24px;
+  color: #173457;
+  flex-shrink: 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.around-hero-container .around-map-list li:hover .around-map-icon {
+  color: #0ea5e9;
+  transform: scale(1.1);
+}
+
+.around-hero-container .around-map-time {
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: #0f172a;
+  font-weight: 600;
+  background: rgba(14, 165, 233, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.around-map-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.around-hero-container .around-map-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: contain;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  cursor: zoom-in;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#openMap {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#openMap:hover {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   MODAL MAPA
+   ========================================================= */
+#mapModal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 0;
+  margin: 0;
+  animation: fadeIn 0.3s ease;
+}
+
+.map-modal-content {
+  display: block;
+  margin: 50px auto;
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+  animation: zoomIn 0.3s ease;
+}
+
+.map-close {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 100000;
+  transition: 0.3s;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.map-close:hover {
+  color: #7cbcbc;
+  transform: scale(1.1);
+}
+
+.around-hero-container .map-modal {
+  display: none !important;
+}
+
+/* =========================================================
+   SECCIONES DE ACTIVIDADES
+   ========================================================= */
+.around-activities-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 50px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-header span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2d6a4f;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.around-activities-section .around-section-title {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #173457;
+  margin-top: 0;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.around-activities-section .around-section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(190, 233, 158, 0.9),
+    rgba(23, 52, 87, 0.9)
+  );
+  margin: 12px auto 0;
+  border-radius: 10px;
+}
+
+.around-activities-grid {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+/* =========================================================
+   CARDS DE ACTIVIDADES
+   ========================================================= */
+.around-activity-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center center;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+  box-shadow: 0 10px 25px rgba(10, 15, 27, 0.1);
+  cursor: pointer;
+}
+
+.around-activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(10, 15, 26, 0.25);
+}
+
+.around-activity-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.1));
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.around-activity-overlay h3 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.around-activity-overlay p {
+  font-family: "Montserrat", sans-serif;
+  color: #e6e9ee;
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+}
+
+.around-btn {
+  align-self: flex-start;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.around-btn:hover {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #ffffff;
+}
+
+.around-activity-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.badge-green {
+  background: rgba(22, 163, 74, 0.9);
+}
+
+.badge-blue {
+  background: rgba(37, 99, 235, 0.9);
+}
+
+.badge-gray {
+  background: rgba(51, 65, 85, 0.9);
+}
+
+/* =========================================================
+   IMÁGENES DE ACTIVIDADES / EXPERIENCIAS / RESTAURANTES
+   ========================================================= */
+.around-activity-hiking {
+  background-image: url("images/senderismo.png");
+}
+
+.around-activity-beach {
+  background-image: url("images/playa.jpg");
+}
+
+.around-activity-golf {
+  background-image: url("images/golf.jpg");
+}
+
+.around-activity-cycling {
+  background-image: url("images/ciclismo.jpg");
+}
+
+.experience-banana {
+  background-image: url("images/playa.jpg");
+}
+
+.experience-sunset {
+  background-image: url("images/atardecer.jpeg");
+}
+
+.experience-food {
+  background-image: url("images/comida.jpeg");
+}
+
+.restaurant-oasis {
+  background-image: url("images/oasis.jpg");
+}
+
+.restaurant-delfos {
+  background-image: url("images/delfos.jpg");
+}
+
+.restaurant-eureka {
+  background-image: url("images/eureka-tienda.jpg");
+}
+
+/* =========================================================
+   GALERÍA
+   ========================================================= */
+.gallery-section {
+  padding: 80px 6%;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.gallery-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f2a44;
+  margin-bottom: 10px;
+}
+
+.gallery-header p {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-item span {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+.gallery-item.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-item.medium {
+  grid-column: span 2;
+}
+
+.gallery-item.wide {
+  grid-column: span 4;
+  grid-row: span 1;
+}
+
+.gallery-cta {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.btn-gallery {
+  padding: 14px 36px;
+  background: #1f8f88;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-gallery:hover {
+  background: #176f6a;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   ANIMACIONES
+   ========================================================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUpSoft {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1024px) {
+  .around-hero-container .around-title {
+    font-size: 3.2rem;
+  }
+
+  .around-hero-container .around-map-card {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-item.large,
+  .gallery-item.medium,
+  .gallery-item.wide {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .around-hero-container {
+    padding: 60px 15px 80px;
+    background-attachment: scroll;
+    height: auto;
+  }
+
+  .around-hero-container .around-title {
+    font-size: 2.8rem;
+  }
+
+  .around-hero-container .around-title-wrap {
+    gap: 30px;
+  }
+
+  .around-hero-container .around-title-deco {
+    width: 70px;
+  }
+
+  .around-hero-container .around-title-underline {
+    width: 300px;
+  }
+
+  .around-hero-container .around-subtitle {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+
+  .around-hero-container .around-map-card {
+    padding: 25px;
+  }
+
+  .around-activities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .around-hero-container {
+    padding: 40px 10px 60px;
+  }
+
+  .around-hero-container .around-title {
+    font-size: 2.2rem;
+  }
+
+  .around-hero-container .around-title-wrap {
+    gap: 20px;
+  }
+
+  .around-hero-container .around-title-deco {
+    width: 50px;
+  }
+
+  .around-hero-container .around-title-underline {
+    width: 200px;
+    height: 6px;
+  }
+
+  .around-hero-container .around-subtitle {
+    font-size: 1rem;
+  }
+
+  .around-hero-container .around-map-divider {
+    width: 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item,
+  .gallery-item.large,
+  .gallery-item.medium,
+  .gallery-item.wide {
+    grid-column: span 1;
+  }
+
+  .map-close {
+    top: 12px;
+    right: 20px;
+    font-size: 38px;
+  }
+}
