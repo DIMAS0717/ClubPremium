@@ -77,7 +77,6 @@ try {
             p.distancia_mar,
             p.descripcion_corta,
             p.foto_principal,
-            p.foto_alberca,
             p.categoria,
             p.estado_base,
             p.es_pie_playa,
@@ -343,7 +342,6 @@ try {
                         : 'card-status-disponible';
 
                     $fotoPrincipal = assetImg($p['foto_principal'] ?? '');
-                    $fotoAlberca   = assetImg($p['foto_alberca'] ?? '');
                     ?>
 
                     <article class="home-property-card">
@@ -356,18 +354,6 @@ try {
                                     class="home-property-img img-front <?= $estadoFinal === 'no_disponible' ? 'img-no-disponible' : '' ?>"
                                     loading="lazy"
                                 >
-
-                                <?php if (!empty($p['foto_alberca'])): ?>
-                                    <img
-                                        src="<?= e($fotoAlberca) ?>"
-                                        alt="<?= e($p['nombre']) ?> alberca"
-                                        class="img-back-pool"
-                                        loading="lazy"
-                                    >
-                                    <div class="btn-view-pool" title="Ver más fotos">
-                                        <span class="arrow-indicator">›</span>
-                                    </div>
-                                <?php endif; ?>
 
                                 <span class="card-status-chip <?= e($estadoClass) ?>">
                                     <?= e($estadoLabel) ?>
