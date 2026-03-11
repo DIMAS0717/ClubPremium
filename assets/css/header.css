@@ -1,0 +1,352 @@
+/* =========================================================
+   HEADER
+   ========================================================= */
+:root {
+  --header-height: 170px;
+  --header-height-scrolled: 110px;
+  --gold: #d4af37;
+  --gold-soft: #e6c158;
+  --header-bg-start: #3d5477;
+  --header-bg-end: #173457;
+  --header-text: #ffffff;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   HEADER BASE
+   ========================================================= */
+.header-full {
+  width: 100%;
+  height: var(--header-height);
+  background: linear-gradient(90deg, var(--header-bg-start), var(--header-bg-end));
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+
+  font-family: "Montserrat", sans-serif;
+  color: var(--header-text);
+
+  transition:
+    height 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease,
+    backdrop-filter 0.35s ease;
+}
+
+/* =========================================================
+   HEADER SCROLLED
+   ========================================================= */
+.header-full.scrolled {
+  background: rgba(23, 52, 87, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: var(--header-height-scrolled);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
+}
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+.header-container {
+  width: min(92%, 1280px);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 28px;
+}
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-logo img {
+  height: 150px;
+  width: auto;
+  display: block;
+  transition: height 0.35s ease, transform 0.35s ease;
+}
+
+.header-full.scrolled .header-logo img {
+  height: 95px;
+}
+
+.header-logo span {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   NAV
+   ========================================================= */
+.header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+  min-width: 0;
+}
+
+.header-nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: color 0.3s ease;
+}
+
+/* =========================================================
+   UNDERLINE ANIMADA
+   ========================================================= */
+.header-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--gold),
+    var(--gold-soft),
+    var(--gold)
+  );
+  transform: translateX(-50%);
+  transition: width 0.35s ease;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   HOVER / ACTIVE
+   ========================================================= */
+.header-nav a:hover {
+  color: var(--gold);
+}
+
+.header-nav a:hover::after {
+  width: 100%;
+}
+
+.header-nav a.active {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.header-nav a.active::after {
+  width: 100%;
+}
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* =========================================================
+   TOGGLE TEMA
+   ========================================================= */
+.toggle-theme {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+  width: 38px;
+  height: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+  cursor: pointer;
+  color: white;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.toggle-theme:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: var(--gold);
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   ADMIN DOT
+   ========================================================= */
+.admin-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  position: relative;
+  display: inline-block;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.admin-dot::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  border-radius: 50%;
+  position: absolute;
+  top: 11px;
+  left: 11px;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.45);
+}
+
+.admin-dot:hover {
+  transform: scale(1.06);
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.12);
+}
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+body.dark-mode .header-full {
+  background: linear-gradient(90deg, #020817, #051427);
+}
+
+body.dark-mode .header-full.scrolled {
+  background: rgba(2, 8, 23, 0.85);
+}
+
+body.dark-mode .header-nav a {
+  color: #ffffff;
+}
+
+body.dark-mode .header-nav a:hover,
+body.dark-mode .header-nav a.active {
+  color: var(--gold);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1180px) {
+  .header-container {
+    grid-template-columns: auto 1fr auto;
+    gap: 18px;
+  }
+
+  .header-nav {
+    gap: 22px;
+  }
+
+  .header-logo span {
+    font-size: 19px;
+  }
+
+  .header-nav a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 980px) {
+  .header-full {
+    height: 110px;
+  }
+
+  .header-full.scrolled {
+    height: 90px;
+  }
+
+  .header-container {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .header-logo img {
+    height: 95px;
+  }
+
+  .header-full.scrolled .header-logo img {
+    height: 78px;
+  }
+
+  .header-logo span {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .header-container {
+    width: 94%;
+    gap: 10px;
+  }
+
+  .header-logo-link {
+    gap: 8px;
+  }
+
+  .header-logo img {
+    height: 78px;
+  }
+
+  .header-full.scrolled .header-logo img {
+    height: 68px;
+  }
+
+  .header-logo span {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  .toggle-theme,
+  .admin-dot {
+    width: 34px;
+    height: 34px;
+  }
+
+  .admin-dot::after {
+    top: 10px;
+    left: 10px;
+  }
+}

@@ -2,15 +2,15 @@
 $current_page = basename($_SERVER['PHP_SELF']);
 ?>
 
-<link rel="stylesheet" href="./assets/header.css">
+<link rel="stylesheet" href="assets/css/header.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <header class="header-full">
     <div class="header-container">
 
         <div class="header-logo">
-            <a href="index.php" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;">
-                <img src="./assets/images/logofoter.png" alt="Logo Club Santiago">
+            <a href="index.php" class="header-logo-link">
+                <img src="assets/images/logofoter.png" alt="Logo Club Santiago">
                 <span>Villas Eureka</span>
             </a>
         </div>
@@ -25,16 +25,16 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </nav>
 
         <div class="header-actions">
-            <button id="themeToggle" class="toggle-theme" type="button">🌙</button>
-            <a href="../admin/login.php" class="admin-dot" title="Administración"></a>
+            <button id="themeToggle" class="toggle-theme" type="button" aria-label="Cambiar tema">🌙</button>
+            <a href="admin/login.php" class="admin-dot" title="Administración" aria-label="Administración"></a>
         </div>
 
     </div>
 </header>
 
 <script>
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.header-full');
+window.addEventListener('scroll', function () {
+    var header = document.querySelector('.header-full');
     if (!header) return;
 
     if (window.scrollY > 50) {

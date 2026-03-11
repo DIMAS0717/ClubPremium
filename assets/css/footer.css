@@ -1,0 +1,344 @@
+:root {
+  --ve-blue-dark: #0e3564;
+  --ve-blue-mid: #1c4f83;
+  --ve-card-bg: rgba(5, 36, 76, 0.9);
+  --ve-text-main: #ffffff;
+  --ve-text-muted: #d8e4f5;
+  --ve-border-soft: #6fb8ff;
+}
+
+/* ================== FOOTER VILLAS EUREKA ================== */
+
+.ve-footer {
+  background: linear-gradient(135deg, #3D5477, #173457);
+  color: var(--ve-text-main);
+  padding: 20px 30px 14px;
+  width: 100%;
+  max-width: none;
+  margin: 60px 0 0;
+  margin-top: 0 !important;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.ve-footer-inner {
+  display: flex;
+  align-items: stretch;
+  gap: 24px;
+}
+
+.ve-footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 2px;
+}
+
+.ve-logo-img {
+  max-width: 230px;
+  height: auto;
+}
+
+/* ================== TARJETAS ================== */
+
+.ve-footer-card {
+  flex: 1;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+}
+
+.ve-footer-card h3 {
+  margin: 0 0 14px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ve-footer-card h4 {
+  margin: 20px 0 6px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ve-footer-card p {
+  margin: 0 0 4px;
+  color: var(--ve-text-muted);
+}
+
+/* ================== COLORES DE TARJETAS ================== */
+
+.card-contacto {
+  background: #3D5477;
+}
+
+.card-links {
+  background: #3D5477;
+}
+
+.card-social {
+  background: #3D5477;
+}
+
+/* ================== CONTACTO ================== */
+
+.ve-contact-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: flex-start;
+}
+
+.ve-icon-img {
+  width: 22px;
+  height: 22px;
+  filter: invert(100%);
+  flex-shrink: 0;
+}
+
+.ve-contact-item a,
+.ve-contact-item p {
+  color: var(--ve-text-muted);
+  text-decoration: none;
+}
+
+/* ================== LINKS ================== */
+
+.ve-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ve-links li {
+  margin-bottom: 8px;
+}
+
+.ve-links a {
+  text-decoration: none !important;
+  color: var(--ve-text-muted);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.ve-links a::before {
+  content: '›';
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+/* Colores hover dinámicos */
+.ve-links li:nth-child(1) a:hover { color: #0056b3; }
+.ve-links li:nth-child(2) a:hover { color: #ff8c00; }
+.ve-links li:nth-child(3) a:hover { color: #e60000; }
+.ve-links li:nth-child(4) a:hover { color: #ffcc00; }
+.ve-links li:nth-child(5) a:hover { color: #00bcd4; }
+.ve-links li:nth-child(6) a:hover { color: #b8f0e6; }
+
+.ve-links a:hover::before {
+  opacity: 1;
+  transform: translateX(4px);
+  color: inherit;
+}
+
+/* ================== REDES ================== */
+
+.ve-social-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.ve-social-circle {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.ve-social-circle img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+/* ================== PARTE INFERIOR ================== */
+
+.ve-footer-bottom {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.ve-bottom-line {
+  flex: 1;
+  height: 1px;
+  background: #fff;
+}
+
+.ve-iguana-mini {
+  height: 70px;
+  width: auto;
+}
+
+/* ================== LIGHTBOX ================== */
+
+#lightbox.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#lightbox.lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 42px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.lightbox-counter {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
+/* ================== RESPONSIVE ================== */
+
+@media (max-width: 900px) {
+  .ve-footer-inner {
+    flex-wrap: wrap;
+  }
+
+  .ve-footer-logo {
+    flex-basis: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ve-footer {
+    padding: 18px 16px 12px;
+  }
+
+  .ve-footer-card {
+    padding: 16px;
+  }
+
+  .ve-social-circle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .ve-social-circle img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .ve-iguana-mini {
+    height: 56px;
+  }
+}
+
+@media (max-width: 560px) {
+  .ve-footer-inner {
+    flex-direction: column;
+  }
+
+  .ve-footer-logo {
+    padding-right: 0;
+    margin-bottom: 6px;
+  }
+
+  .ve-logo-img {
+    max-width: 180px;
+  }
+
+  .lightbox-close {
+    top: 14px;
+    right: 18px;
+    font-size: 36px;
+  }
+
+  .lightbox-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .lightbox-prev {
+    left: 12px;
+  }
+
+  .lightbox-next {
+    right: 12px;
+  }
+}
