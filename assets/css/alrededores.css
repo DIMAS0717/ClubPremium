@@ -482,9 +482,6 @@ h4,
   background-image: url("../img/fondos/senderismo.png");
 }
 
-.around-activity-beach {
-  background-image: url("../img/fondos/playa.jpg");
-}
 
 .around-activity-golf {
   background-image: url("../img/fondos/golf.jpg");
@@ -503,7 +500,7 @@ h4,
 }
 
 .experience-food {
-  background-image: url("img/fondos/comida.jpeg");
+  background-image: url("../img/fondos/comida.jpeg");
 }
 
 .restaurant-oasis {
@@ -511,11 +508,11 @@ h4,
 }
 
 .restaurant-delfos {
-  background-image: url("img/fondos/delfos.jpg");
+  background-image: url("../img/fondos/delfos.jpg");
 }
 
 .restaurant-eureka {
-  background-image: url("img/fondos/eureka-tienda.jpg");
+  background-image: url("../img/fondos/eureka-tienda.jpg");
 }
 
 /* =========================================================
