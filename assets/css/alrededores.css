@@ -487,19 +487,19 @@ h4,
 }
 
 .around-activity-golf {
-  background-image: url("img/fondos/golf.jpg");
+  background-image: url("../img/fondos/golf.jpg");
 }
 
 .around-activity-cycling {
-  background-image: url("img/fondos/ciclismo.jpg");
+  background-image: url("../img/fondos/ciclismo.jpg");
 }
 
 .experience-banana {
-  background-image: url("img/fondos/banana  .jpg");
+  background-image: url("../img/fondos/playa.jpg");
 }
 
 .experience-sunset {
-  background-image: url("img/fondos/atardecer.jpeg");
+  background-image: url("../img/fondos/atardecer.jpeg");
 }
 
 .experience-food {
