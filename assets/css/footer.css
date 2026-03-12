@@ -10,72 +10,81 @@
 /* ================== FOOTER VILLAS EUREKA ================== */
 
 .ve-footer {
+  width: 100%;
+  margin: 0;
+  margin-top: 0 !important;
+  padding: 24px 22px 14px;
   background: linear-gradient(135deg, #3D5477, #173457);
   color: var(--ve-text-main);
-  padding: 20px 30px 14px;
-  width: 100%;
-  max-width: none;
-  margin: 60px 0 0;
-  margin-top: 0 !important;
   border-radius: 0;
   box-shadow: none;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .ve-footer-inner {
+  width: min(96%, 1480px);
+  margin: 0 auto;
+
   display: flex;
   align-items: stretch;
-  gap: 24px;
+  justify-content: space-between;
+  gap: 22px;
+  flex-wrap: nowrap;
 }
 
+/* ================== LOGO ================== */
+
 .ve-footer-logo {
+  flex: 0 0 15%;
+  min-width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 2px;
 }
 
 .ve-logo-img {
-  max-width: 230px;
+  max-width: 210px;
+  width: 100%;
   height: auto;
+  display: block;
 }
 
 /* ================== TARJETAS ================== */
 
 .ve-footer-card {
-  flex: 1;
-  border-radius: 16px;
-  padding: 18px 20px;
-  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.4);
+  flex: 1 1 0;
+  min-width: 0;
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.32);
   font-size: 14px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .ve-footer-card h3 {
-  margin: 0 0 14px;
+  margin: 0 0 16px;
   font-size: 16px;
   font-weight: 700;
 }
 
 .ve-footer-card h4 {
-  margin: 20px 0 6px;
+  margin: 22px 0 8px;
   font-size: 15px;
   font-weight: 700;
 }
 
 .ve-footer-card p {
-  margin: 0 0 4px;
+  margin: 0 0 5px;
   color: var(--ve-text-muted);
+  line-height: 1.5;
 }
 
 /* ================== COLORES DE TARJETAS ================== */
 
-.card-contacto {
-  background: #3D5477;
-}
-
-.card-links {
-  background: #3D5477;
-}
-
+.card-contacto,
+.card-links,
 .card-social {
   background: #3D5477;
 }
@@ -84,9 +93,9 @@
 
 .ve-contact-item {
   display: flex;
-  gap: 12px;
-  margin-bottom: 12px;
   align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .ve-icon-img {
@@ -100,6 +109,7 @@
 .ve-contact-item p {
   color: var(--ve-text-muted);
   text-decoration: none;
+  word-break: break-word;
 }
 
 /* ================== LINKS ================== */
@@ -111,16 +121,16 @@
 }
 
 .ve-links li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .ve-links a {
-  text-decoration: none !important;
-  color: var(--ve-text-muted);
-  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 8px;
+  color: var(--ve-text-muted);
+  font-size: 14px;
+  text-decoration: none !important;
   transition: all 0.3s ease;
 }
 
@@ -132,7 +142,6 @@
   transition: all 0.3s ease;
 }
 
-/* Colores hover dinámicos */
 .ve-links li:nth-child(1) a:hover { color: #0056b3; }
 .ve-links li:nth-child(2) a:hover { color: #ff8c00; }
 .ve-links li:nth-child(3) a:hover { color: #e60000; }
@@ -150,8 +159,9 @@
 
 .ve-social-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .ve-social-circle {
@@ -163,6 +173,14 @@
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.ve-social-circle:hover {
+  transform: translateY(-2px);
+  border-color: #d4af37;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .ve-social-circle img {
@@ -175,7 +193,8 @@
 /* ================== PARTE INFERIOR ================== */
 
 .ve-footer-bottom {
-  margin-top: 14px;
+  width: min(96%, 1480px);
+  margin: 18px auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -185,12 +204,13 @@
 .ve-bottom-line {
   flex: 1;
   height: 1px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .ve-iguana-mini {
   height: 70px;
   width: auto;
+  display: block;
 }
 
 /* ================== LIGHTBOX ================== */
@@ -272,15 +292,28 @@
 
 /* ================== RESPONSIVE ================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .ve-footer-inner {
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .ve-footer-logo {
+    flex: 0 0 100%;
+    min-width: 0;
+    margin-bottom: 6px;
+  }
+
+  .ve-logo-img {
+    max-width: 190px;
+  }
+
+  .ve-footer-card {
+    flex: 1 1 calc(50% - 22px);
+  }
+
+  .card-social {
     flex-basis: 100%;
-    justify-content: center;
-    margin-bottom: 10px;
   }
 }
 
@@ -289,8 +322,12 @@
     padding: 18px 16px 12px;
   }
 
+  .ve-footer-inner {
+    gap: 16px;
+  }
+
   .ve-footer-card {
-    padding: 16px;
+    padding: 18px;
   }
 
   .ve-social-circle {
@@ -314,12 +351,20 @@
   }
 
   .ve-footer-logo {
-    padding-right: 0;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
+  }
+
+  .ve-footer-card {
+    width: 100%;
+    flex: 1 1 100%;
   }
 
   .ve-logo-img {
     max-width: 180px;
+  }
+
+  .ve-footer-bottom {
+    gap: 10px;
   }
 
   .lightbox-close {
