@@ -10,7 +10,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
         <div class="header-logo">
             <a href="index.php" class="header-logo-link">
-                <img src="assets/images/logofoter.png" alt="Logo Club Santiago">
+                <img src="assets/img/icon/logofoter.png" alt="Logo Club Santiago">
                 <span>Villas Eureka</span>
             </a>
         </div>
