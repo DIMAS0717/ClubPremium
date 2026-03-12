@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Contáctanos - Casas Club Santiago</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/contacto.css">
+    <link rel="stylesheet" href="assets/css/contacto.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,9 +47,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <section class="cs-contact-section">
 
         <div class="cs-title-wrap">
-            <img src="assets/images/iconoeureka.png" class="cs-title-deco" alt="">
+            <img src="assets/img/icon/iconoeureka.png" class="cs-title-deco" alt="">
             <h1 class="cs-title">Contáctanos</h1>
-            <img src="assets/images/iconoeureka.png" class="cs-title-deco" alt="">
+            <img src="assets/img/icon/iconoeureka.png" class="cs-title-deco" alt="">
         </div>
 
         <span class="cs-title-underline"></span>

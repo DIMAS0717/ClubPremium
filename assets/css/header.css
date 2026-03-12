@@ -2,8 +2,8 @@
    HEADER
    ========================================================= */
 :root {
-  --header-height: 170px;
-  --header-height-scrolled: 110px;
+  --header-height: 110px;
+  --header-height-scrolled: 82px;
   --gold: #d4af37;
   --gold-soft: #e6c158;
   --header-bg-start: #3d5477;
@@ -56,13 +56,13 @@ body {
    CONTENEDOR
    ========================================================= */
 .header-container {
-  width: min(92%, 1280px);
+  width: min(94%, 1400px);
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 340px 1fr 90px;
   align-items: center;
-  gap: 28px;
+  gap: 30px;
 }
 
 /* =========================================================
@@ -71,31 +71,32 @@ body {
 .header-logo {
   display: flex;
   align-items: center;
+  min-width: 0;
 }
 
 .header-logo-link {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   text-decoration: none;
   color: inherit;
 }
 
 .header-logo img {
-  height: 150px;
+  height: 125px;
   width: auto;
   display: block;
   transition: height 0.35s ease, transform 0.35s ease;
 }
 
 .header-full.scrolled .header-logo img {
-  height: 95px;
+  height: 110px;
 }
 
 .header-logo span {
-  font-size: 22px;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -105,10 +106,11 @@ body {
    ========================================================= */
 .header-nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 34px;
+  gap: 32px;
   min-width: 0;
+  padding-left: 18px;
 }
 
 .header-nav a {
@@ -117,9 +119,9 @@ body {
   align-items: center;
 
   font-family: "Poppins", sans-serif;
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 500;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.7px;
   text-transform: uppercase;
 
   color: #ffffff;
@@ -128,14 +130,13 @@ body {
 
   transition: color 0.3s ease;
 }
-
 /* =========================================================
    UNDERLINE ANIMADA
    ========================================================= */
 .header-nav a::after {
   content: "";
   position: absolute;
-  bottom: -6px;
+  bottom: -8px;
   left: 50%;
   width: 0;
   height: 3px;
@@ -213,8 +214,8 @@ body {
    ADMIN DOT
    ========================================================= */
 .admin-dot {
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.7);
   position: relative;
@@ -232,8 +233,8 @@ body {
   background: var(--gold);
   border-radius: 50%;
   position: absolute;
-  top: 11px;
-  left: 11px;
+  top: 12px;
+  left: 12px;
   box-shadow: 0 0 10px rgba(212, 175, 55, 0.45);
 }
 
@@ -269,29 +270,37 @@ body.dark-mode .header-nav a.active {
 @media (max-width: 1180px) {
   .header-container {
     grid-template-columns: auto 1fr auto;
-    gap: 18px;
+    gap: 16px;
   }
 
   .header-nav {
     gap: 22px;
   }
 
+  .header-logo img {
+    height: 68px;
+  }
+
+  .header-full.scrolled .header-logo img {
+    height: 56px;
+  }
+
   .header-logo span {
-    font-size: 19px;
+    font-size: 16px;
   }
 
   .header-nav a {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 
 @media (max-width: 980px) {
   .header-full {
-    height: 110px;
+    height: 88px;
   }
 
   .header-full.scrolled {
-    height: 90px;
+    height: 74px;
   }
 
   .header-container {
@@ -304,15 +313,15 @@ body.dark-mode .header-nav a.active {
   }
 
   .header-logo img {
-    height: 95px;
+    height: 62px;
   }
 
   .header-full.scrolled .header-logo img {
-    height: 78px;
+    height: 54px;
   }
 
   .header-logo span {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 
@@ -327,16 +336,16 @@ body.dark-mode .header-nav a.active {
   }
 
   .header-logo img {
-    height: 78px;
+    height: 54px;
   }
 
   .header-full.scrolled .header-logo img {
-    height: 68px;
+    height: 48px;
   }
 
   .header-logo span {
-    font-size: 15px;
-    letter-spacing: 0.5px;
+    font-size: 13px;
+    letter-spacing: 0.4px;
   }
 
   .toggle-theme,
