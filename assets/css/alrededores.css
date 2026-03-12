@@ -479,11 +479,11 @@ h4,
    FONDOS DE TARJETAS
    ========================================================= */
 .around-activity-hiking {
-  background-image: url("img/fondos/senderismo.png");
+  background-image: url("../img/fondos/senderismo.png");
 }
 
 .around-activity-beach {
-  background-image: url("img/fondos/playa.jpg");
+  background-image: url("../img/fondos/playa.jpg");
 }
 
 .around-activity-golf {
