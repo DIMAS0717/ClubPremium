@@ -1,0 +1,321 @@
+/* ===================== HERO NUESTRAS VILLAS ===================== */
+
+/* CONTENEDOR PRINCIPAL */
+.around-hero-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ===================== IMÁGENES DIVIDIDAS ===================== */
+
+.hero-split-images {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  z-index: 0;
+}
+
+/* COLUMNA DE IMAGEN */
+.hero-image {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* IZQUIERDA */
+.hero-image.left {
+  background-image: url('./images/fondo_1.jpg');
+}
+
+/* DERECHA */
+.hero-image.right {
+  background-image: url('./images/fondo_2.jpg');
+}
+
+/* CAPA OSCURA SOBRE CADA IMAGEN */
+.hero-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* LÍNEA CENTRAL DECORATIVA */
+.hero-split-images::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ===================== TEXTO ===================== */
+
+.around-header {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+}
+
+/* CONTENEDOR DEL TÍTULO */
+.around-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 18px;
+}
+
+/* ICONOS DECORATIVOS */
+.around-title-deco {
+  width: 72px;
+  height: auto;
+  opacity: 0.85;
+  filter: brightness(1.2) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+/* TÍTULO PRINCIPAL */
+.around-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding-left: 23px;
+  color: #fff;
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(0, 0, 0, 0.7),
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    0 -2px 0 #000,
+    2px 0 0 #000,
+    -2px 0 0 #000;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* SUBTÍTULO */
+.around-subtitle-main {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 10px;
+  margin: 60px 0 30px;
+  color: #fff;
+  opacity: 0.95;
+  text-shadow:
+    1px 1px 1px #000,
+    -1px -1px 1px #000,
+    1px -1px 1px #000,
+    -1px 1px 1px #000,
+    0 4px 15px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* LÍNEA DECORATIVA */
+.around-title-underline {
+  display: block;
+  width: 320px;
+  height: 4px;
+  margin: 5px auto 25px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #D4AF37,
+    #E6C158,
+    #D4AF37,
+    transparent
+  );
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+/* CAJA DEL TEXTO */
+.around-description-box {
+  max-width: 750px;
+  margin: 0 auto 40px;
+  padding: 22px 35px;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* TEXTO DESCRIPTIVO */
+.around-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 300;
+  text-shadow:
+    0.5px 0.5px 1px #000,
+    -0.5px -0.5px 1px #000;
+}
+
+/* ===================== BOTONES PREMIUM ===================== */
+
+.hero-actions {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.hero-btn {
+  position: relative;
+  overflow: hidden;
+  min-width: 240px;
+  display: inline-flex;
+  justify-content: center;
+  padding: 16px 30px;
+  border-radius: 40px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* BRILLO HOVER */
+.hero-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.hero-btn:hover::before {
+  left: 100%;
+}
+
+/* BOTÓN PRIMARIO */
+.hero-btn.primary {
+  background: #1a1a1a;
+  border: 2px solid #d4af37;
+  color: #ffffff;
+  padding: 16px 40px;
+}
+
+.hero-btn.primary:hover {
+  background: #2a2a2a;
+  transform: translateY(-3px);
+}
+
+/* BOTÓN SECUNDARIO */
+.hero-btn.secondary {
+  background: #d4af37;
+  border: 2px solid #d4af37;
+  color: #1a1a1a;
+  font-weight: 700;
+  padding: 16px 40px;
+}
+
+.hero-btn.secondary:hover {
+  background: #e6c158;
+  transform: translateY(-3px);
+}
+
+/* ===================== ANIMACIÓN ===================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 768px) {
+  .around-title {
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+  }
+
+  .around-subtitle-main {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+  }
+
+  .around-description-box {
+    padding: 20px;
+    margin: 0 auto 30px;
+  }
+
+  .around-description {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-btn {
+    min-width: 250px;
+    padding: 14px 30px;
+  }
+
+  .hero-image::after {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  .around-title {
+    font-size: 2.2rem;
+  }
+
+  .around-title-wrap {
+    gap: 15px;
+  }
+
+  .around-title-deco {
+    width: 40px;
+  }
+}
