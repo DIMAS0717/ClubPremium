@@ -295,7 +295,7 @@ Aquí puedes administrar las casas, gestionar el calendario y actualizar tu perf
 
 </div>
 
-<img src="../assets/img/icon_admin.png" class="hand-header" alt="">
+<img src="../assets/img/fondos/icon_admin.png" class="hand-header" alt="">
 
 </div>
 
