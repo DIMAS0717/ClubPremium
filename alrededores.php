@@ -8,7 +8,7 @@ $page_title = 'Alrededores - Villas Eureka';
     <title><?= $page_title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/styles.css">
+
     <link rel="stylesheet" href="assets/css/alrededores.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,9 +27,9 @@ $page_title = 'Alrededores - Villas Eureka';
 
         <div class="section around-header">
             <div class="around-title-wrap">
-                <img src="assets/img/iconoeureka.png" class="around-title-deco" alt="">
+                <img src="assets/img/icon/iconoeureka.png" class="around-title-deco" alt="">
                 <h1 class="around-title">Alrededores</h1>
-                <img src="assets/img/iconoeureka.png" class="around-title-deco" alt="">
+                <img src="assets/img/icon/iconoeureka.png" class="around-title-deco" alt="">
             </div>
 
             <div class="around-title-underline gold-gradient-line"></div>

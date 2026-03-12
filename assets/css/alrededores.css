@@ -479,43 +479,43 @@ h4,
    FONDOS DE TARJETAS
    ========================================================= */
 .around-activity-hiking {
-  background-image: url("images/senderismo.png");
+  background-image: url("img/fondos/senderismo.png");
 }
 
 .around-activity-beach {
-  background-image: url("images/playa.jpg");
+  background-image: url("img/fondos/playa.jpg");
 }
 
 .around-activity-golf {
-  background-image: url("images/golf.jpg");
+  background-image: url("img/fondos/golf.jpg");
 }
 
 .around-activity-cycling {
-  background-image: url("images/ciclismo.jpg");
+  background-image: url("img/fondos/ciclismo.jpg");
 }
 
 .experience-banana {
-  background-image: url("images/playa.jpg");
+  background-image: url("img/fondos/banana  .jpg");
 }
 
 .experience-sunset {
-  background-image: url("images/atardecer.jpeg");
+  background-image: url("img/fondos/atardecer.jpeg");
 }
 
 .experience-food {
-  background-image: url("images/comida.jpeg");
+  background-image: url("img/fondos/comida.jpeg");
 }
 
 .restaurant-oasis {
-  background-image: url("images/oasis.jpg");
+  background-image: url("img/fondos/oasis.jpg");
 }
 
 .restaurant-delfos {
-  background-image: url("images/delfos.jpg");
+  background-image: url("img/fondos/delfos.jpg");
 }
 
 .restaurant-eureka {
-  background-image: url("images/eureka-tienda.jpg");
+  background-image: url("img/fondos/eureka-tienda.jpg");
 }
 
 /* =========================================================
