@@ -6,7 +6,7 @@ $villas = [
         'clase' => '',
         'badge' => 'Económica',
         'badge_class' => '',
-        'imagen' => 'assets/images/plantabaja.jpg',
+        'imagen' => 'assets/img/fondos/plantabaja.jpg',
         'alt' => 'Villa Planta Baja',
         'titulo' => 'Villa Planta Baja',
         'capacidad' => '4 personas (incluye niños)',
@@ -27,7 +27,7 @@ $villas = [
         'clase' => 'featured',
         'badge' => 'Más popular',
         'badge_class' => '',
-        'imagen' => 'assets/images/plantaalta.jpg',
+        'imagen' => 'assets/img/fondos/plantaalta.jpg',
         'alt' => 'Villa Planta Alta',
         'titulo' => 'Villa Planta Alta',
         'capacidad' => '6-8 personas (incluye niños)',
@@ -92,9 +92,9 @@ $villas = [
     <section class="villas-hero-container">
         <div class="villas-header">
             <div class="around-title-wrap">
-                <img src="assets/images/iconoeureka.png" class="title-deco" alt="">
+                <img src="assets/img/icon/iconoeureka.png" class="title-deco" alt="">
                 <h1 class="around-title">Nuestras Villas</h1>
-                <img src="assets/images/iconoeureka.png" class="title-deco" alt="">
+                <img src="assets/img/icon/iconoeureka.png" class="title-deco" alt="">
             </div>
 
             <div class="around-title-underline"></div>

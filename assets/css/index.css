@@ -531,240 +531,445 @@
   transform: scale(1.02);
 }
 
+
 /* ================= SOBRE NOSOTROS ================= */
 
-/* BLOQUE ANTIGUO ABOUT */
-.about {
+.about-section {
   width: 100%;
-  padding: 120px 8%;
-  background: linear-gradient(90deg, #0f172a 0%, #111827 50%, #1f2937 100%);
-  color: #fff;
+  padding: 110px 4%;
+  background: linear-gradient(90deg, #07101a 0%, #0b1320 45%, #0d1520 100%);
+  overflow: hidden;
 }
 
 .about-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 80px;
+  gap: 90px;
 }
 
-/* IMAGEN */
+/* ================= COLUMNA IMAGEN ================= */
+
 .about-image {
   position: relative;
-  flex: 0 0 48%;
+  flex: 1.45;
+  min-width: 0;
+  height: 620px;
+  border-radius: 28px;
+  overflow: visible;
 }
 
-.about-image img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-/* CARD FLOTANTE */
-.rating-card {
+/* ESTA PARTE ES LA CLAVE */
+.about-image > img {
   position: absolute;
-  bottom: -30px;
-  left: 40px;
-  max-width: 260px;
-  padding: 20px 25px;
-  background: #111;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-}
-
-.rating-card .stars {
-  margin-bottom: 5px;
-  color: #f4b400;
-  font-size: 16px;
-}
-
-.rating-card p {
-  margin: 0;
-  font-size: 14px;
-}
-
-.rating-card span {
-  font-size: 12px;
-  color: #aaa;
-}
-
-/* TEXTO */
-.about-content {
-  flex: 0 0 48%;
-}
-
-.subtitle {
-  color: #60a5fa;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.about-content h2 {
-  margin: 15px 0 20px 0;
-  font-size: 42px;
-  line-height: 1.2;
-}
-
-.about-content p {
-  margin-bottom: 25px;
-  color: #cbd5e1;
-  font-size: 16px;
-}
-
-.about-content ul {
-  padding: 0;
-  margin-bottom: 25px;
-  list-style: none;
-}
-
-.about-content ul li {
-  margin-bottom: 10px;
-  color: #cbd5e1;
-}
-
-.btn-link {
-  color: #60a5fa;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn-link:hover {
-  letter-spacing: 1px;
-}
-
-/* ================= SECCIÓN ABOUT NUEVA ================= */
-
-.about-container {
-  display: flex !important;
-  align-items: flex-start !important;
-  justify-content: space-between;
-  gap: 40px;
-  width: 95%;
-  max-width: 1200px;
-  height: auto !important;
-  margin: 0 auto;
-}
-
-.about-image {
-  flex: 0 0 45% !important;
-  height: 500px !important;
-  overflow: hidden;
-  display: flex;
-}
-
-.about-image img {
-  width: 50% !important;
-  height: 50% !important;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
   object-fit: cover !important;
-  border-radius: 20px;
+  object-position: center center;
+  display: block !important;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
 }
 
-.rating-card {
+.about-image:hover > img {
+  transform: scale(1.02);
+  box-shadow: 0 30px 75px rgba(0, 0, 0, 0.45);
+}
+
+/* ================= TARJETA FLOTANTE ================= */
+
+.rating-box {
   position: absolute;
-  bottom: -35px;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 300px;
-  padding: 22px 28px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  left: 34px;
+  bottom: -28px;
+  z-index: 5;
+  width: 340px;
+  padding: 24px 26px;
+  border-radius: 22px;
+  background: rgba(8, 12, 18, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
 }
 
-.rating-card .stars {
-  margin-bottom: 5px;
+.rating-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.star-icon {
   color: #f4b400;
   font-size: 18px;
+  line-height: 1;
 }
 
-.rating-card p {
+.rating-box h4 {
   margin: 0;
-  font-size: 15px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #f5efe6;
 }
 
-.rating-card span {
-  color: #666;
+.rating-box p {
+  margin: 0;
   font-size: 13px;
+  line-height: 1.65;
+  color: rgba(245, 239, 230, 0.72);
 }
 
-.about-content {
-  flex: 0 0 48%;
+/* ================= COLUMNA TEXTO ================= */
+
+.about-text {
+  flex: 1;
+  max-width: 560px;
 }
 
-.about-content h2 {
-  font-size: 38px;
-  line-height: 1.2;
-}
-
-.about-content p {
-  margin: 20px 0 25px 0;
-  font-size: 16px;
-}
-
-.subtitle {
-  color: #1E3A8A;
+.about-subtitle {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #1f78ff;
   font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
 }
 
-.about-content ul {
-  padding: 0;
-  margin-bottom: 25px;
+.about-text h2 {
+  margin: 0 0 24px;
+  font-size: 60px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #f5efe6;
+}
+
+.about-text p {
+  margin: 0 0 32px;
+  max-width: 520px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(245, 239, 230, 0.74);
+}
+
+/* ================= LISTA ================= */
+
+.about-list {
   list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
 }
 
-.about-content ul li {
-  margin-bottom: 10px;
-  color: #333;
-  font-size: 15px;
-}
-
-.btn-link {
-  color: #1E3A8A;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.btn-link:hover {
-  letter-spacing: 1px;
-}
-
-/* ====================== 4TA SECCIÓN BENEFICIOS FULL WIDTH ========================= */
-
-.villas-eureka-beneficios {
+.about-list li {
   position: relative;
-  left: 50%;
-  right: 50%;
-  width: 100vw;
-  min-height: 500px;
-  padding: 60px 0;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  box-sizing: border-box;
+  padding-left: 32px;
+  margin-bottom: 16px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #f5efe6;
+}
 
+.about-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #1f5fe0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-
-  background-color: #3c4b62;
-  border-top: 1px solid rgba(212, 175, 55, 0.3);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
 }
 
-/* CONTENEDOR DE ÍCONOS */
-.beneficios-wrapper {
+/* ================= LINK ================= */
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1f78ff;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about-link:hover {
+  transform: translateX(6px);
+  color: #4c93ff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1300px) {
+  .about-wrapper {
+    gap: 70px;
+  }
+
+  .about-image {
+    height: 580px;
+  }
+
+  .about-text h2 {
+    font-size: 54px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .about-section {
+    padding: 90px 5%;
+  }
+
+  .about-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 70px;
+  }
+
+  .about-image,
+  .about-text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-image {
+    height: 540px;
+  }
+
+  .about-text h2 {
+    font-size: 48px;
+  }
+
+  .rating-box {
+    left: 24px;
+    bottom: -24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 80px 5%;
+  }
+
+  .about-image {
+    height: 420px;
+  }
+
+  .rating-box {
+    width: calc(100% - 40px);
+    max-width: 330px;
+    left: 20px;
+    padding: 20px;
+  }
+
+  .about-text h2 {
+    font-size: 40px;
+  }
+
+  .about-text p,
+  .about-list li,
+  .about-link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-image {
+    height: 330px;
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+  }
+
+  .rating-box {
+    left: 16px;
+    width: calc(100% - 32px);
+    padding: 18px;
+  }
+}
+
+/* ================= BENEFICIOS PREMIUM ================= */
+
+.villas-eureka-beneficios {
   width: 100%;
-  padding: 135px 0;
-  background: #f5f7fa;
+  padding: 110px 5%;
+  background:
+    radial-gradient(circle at top left, rgba(35, 98, 255, 0.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.05), transparent 30%),
+    linear-gradient(135deg, #08111f 0%, #0c1c31 45%, #102947 100%);
 }
 
+.beneficios-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 65px 50px 55px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.045) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+  backdrop-filter: blur(8px);
+  text-align: center;
+}
+
+.beneficios-subtitle {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #d6b25e;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.beneficios-titulo {
+  margin: 0 0 55px;
+  color: #f5efe6;
+  font-size: 46px;
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.beneficios-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.beneficio-card {
+  position: relative;
+  padding: 36px 24px 30px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.025) 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.beneficio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.25);
+  border-color: rgba(214, 178, 94, 0.35);
+}
+
+.icon-box {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5efe6;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.08), transparent 45%),
+    linear-gradient(180deg, rgba(255,255,255,0.045) 0%, rgba(255,255,255,0.02) 100%);
+  border: 2px solid rgba(214, 178, 94, 0.75);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    0 10px 30px rgba(0,0,0,0.18);
+}
+
+.icon-box svg {
+  width: 56px;
+  height: 56px;
+  display: block;
+}
+
+.beneficio-card h3 {
+  margin: 0 0 14px;
+  color: #f5efe6;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.beneficio-card p {
+  margin: 0;
+  color: rgba(245, 239, 230, 0.72);
+  font-size: 15px;
+  line-height: 1.75;
+  max-width: 250px;
+  margin-inline: auto;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .beneficios-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .beneficios-titulo {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .villas-eureka-beneficios {
+    padding: 85px 5%;
+  }
+
+  .beneficios-container {
+    padding: 45px 24px 35px;
+    border-radius: 24px;
+  }
+
+  .beneficios-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .beneficios-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .beneficios-titulo {
+    font-size: 32px;
+    margin-bottom: 38px;
+  }
+
+  .beneficio-card {
+    padding: 30px 20px 26px;
+  }
+
+  .icon-box {
+    width: 105px;
+    height: 105px;
+    margin-bottom: 20px;
+  }
+
+  .icon-box svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .beneficio-card h3 {
+    font-size: 22px;
+  }
+
+  .beneficio-card p {
+    font-size: 14px;
+  }
+}
 /* ============================== SECCIÓN VILLAS ============================= */
 
 .villas {

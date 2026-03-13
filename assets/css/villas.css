@@ -3,7 +3,7 @@
 .villas-hero-container {
     position: relative;
     width: 100%;
-    background-image: url('./images/fondo_11.jpg');
+    background-image: url('../img/fondos/fondo_11.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
