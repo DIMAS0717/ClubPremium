@@ -3,12 +3,12 @@
 
     <div class="ubicacion-texto">
       <span class="ubicacion-subtitle">Ubicación estratégica</span>
-      <h2>Encuéntranos en una zona privilegiada de Manzanillo</h2>
+      <h2>Encuéntranos en Club Santiago</h2>
 
       <p class="ubicacion-intro">
         Nuestras oficinas se encuentran en Club Santiago, una de las zonas más
-        atractivas de Manzanillo, con acceso cómodo, entorno tranquilo y cercanía
-        a puntos clave de la ciudad. Te recibimos en una ubicación pensada para
+        atractivas de Manzanillo, con acceso cómodo, entorno tranquilo 
+        Te recibimos en una ubicación pensada para
         brindarte comodidad, confianza y atención personalizada.
       </p>
 

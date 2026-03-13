@@ -1008,7 +1008,7 @@
 
 .villas-texto h2{
   margin:0 0 35px;
-  color:#0f1720;
+  color:#142e4d;
   font-size:58px;
   line-height:1.05;
   font-weight:700;
@@ -1024,7 +1024,7 @@
   position:absolute;
   left:0;
   bottom:-14px;
-  width:80px;
+  width:350px;
   height:3px;
   background:linear-gradient(90deg,#d4af37,#b8962e);
   border-radius:3px;
@@ -1060,7 +1060,7 @@
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #cda654 0%, #b8892f 100%);
+  background: linear-gradient(135deg, #3D5477 0%, #173457 100%);
   color: #fff;
   font-size: 12px;
   font-weight: 700;
@@ -1272,7 +1272,7 @@
 .ubicacion-texto h2::after {
   content: "";
   display: block;
-  width: 78px;
+  width: 220px;
   height: 3px;
   margin-top: 14px;
   border-radius: 999px;
