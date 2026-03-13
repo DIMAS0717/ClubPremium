@@ -7,9 +7,9 @@
 
     <div class="section around-header">
         <div class="around-title-wrap">
-            <img src="assets/images/iconoeureka.png" class="around-title-deco" alt="">
+            <img src="assets/img/icon/iconoeureka.png" class="around-title-deco" alt="">
             <h1 class="around-title">VILLAS EUREKA</h1>
-            <img src="assets/images/iconoeureka.png" class="around-title-deco" alt="">
+            <img src="assets/img/icon/iconoeureka.png" class="around-title-deco" alt="">
         </div>
 
         <span class="around-title-underline"></span>

@@ -31,12 +31,12 @@
 
 /* IZQUIERDA */
 .hero-image.left {
-  background-image: url('./images/fondo_1.jpg');
+  background-image: url('../img/fondos/fondo_1.JPG');
 }
 
 /* DERECHA */
 .hero-image.right {
-  background-image: url('./images/fondo_2.jpg');
+  background-image: url('../img/fondos/fondo_2.JPG');
 }
 
 /* CAPA OSCURA SOBRE CADA IMAGEN */
