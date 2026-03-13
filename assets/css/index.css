@@ -970,184 +970,542 @@
     font-size: 14px;
   }
 }
-/* ============================== SECCIÓN VILLAS ============================= */
+/* ================= NUESTRAS VILLAS PREMIUM ================= */
 
 .villas {
-  padding: 120px 0;
-  background: #f5f7fa;
+  width: 100%;
+  padding: 110px 5%;
+  background:
+    radial-gradient(circle at top left, rgba(201, 169, 97, 0.07), transparent 26%),
+    linear-gradient(180deg, #f8f6f1 0%, #f2efea 100%);
+  overflow: hidden;
 }
 
 .villas-container {
-  display: flex;
-  align-items: center;
-  gap: 80px;
-  width: 95%;
-  max-width: 1200px;
+  max-width: 1380px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.1fr;
+  gap: 70px;
+  align-items: center;
 }
 
-/* TEXTO */
+/* ================= TEXTO ================= */
+
 .villas-texto {
-  flex: 0 0 48%;
+  max-width: 520px;
 }
 
-.villas-texto h2 {
-  margin-bottom: 10px;
-  font-size: 32px;
+.villas-subtitle {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #b88a2e;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
 }
 
-.linea {
-  width: 300px;
-  height: 3px;
-  margin-bottom: 25px;
-  background: #d4a017;
+.villas-texto h2{
+  margin:0 0 35px;
+  color:#0f1720;
+  font-size:58px;
+  line-height:1.05;
+  font-weight:700;
+  letter-spacing:-1px;
+  position:relative;
+  display:inline-block;
+}
+
+/* línea dorada */
+
+.villas-texto h2::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-14px;
+  width:80px;
+  height:3px;
+  background:linear-gradient(90deg,#d4af37,#b8962e);
+  border-radius:3px;
 }
 
 .intro {
-  margin-bottom: 20px;
-  color: #555;
+  margin: 0 0 30px;
+  color: #566270;
+  font-size: 16px;
+  line-height: 1.9;
 }
 
-/* LISTA */
 .villas-lista {
-  padding: 0;
-  margin-bottom: 30px;
   list-style: none;
+  padding: 0;
+  margin: 0 0 34px;
 }
 
 .villas-lista li {
   position: relative;
-  margin-bottom: 12px;
-  padding-left: 25px;
-  color: #333;
-  font-size: 15px;
+  padding-left: 34px;
+  margin-bottom: 15px;
+  color: #16212b;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .villas-lista li::before {
   content: "✓";
   position: absolute;
   left: 0;
-  color: #1E3A8A;
-  font-weight: bold;
+  top: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #cda654 0%, #b8892f 100%);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(184, 137, 47, 0.16);
 }
 
-/* BOTÓN */
 .btn-villas {
-  display: inline-block;
-  padding: 12px 28px;
-  background: #1E3A8A;
-  color: #fff;
-  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #14263c 0%, #1d3d68 100%);
+  color: #ffffff;
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow: 0 12px 24px rgba(17, 31, 53, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-villas:hover {
-  background: #142b63;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(17, 31, 53, 0.20);
 }
 
-/* ============================== SLIDER AUTOMÁTICO ============================= */
+/* ================= GALERÍA ================= */
 
-.villas-slider {
+.villas-galeria {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr 0.92fr;
+  grid-template-rows: 175px 175px;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.villa-img {
   position: relative;
-  flex: 0 0 48%;
   overflow: hidden;
   border-radius: 20px;
+  background: #e7e2d8;
+  box-shadow: 0 10px 24px rgba(19, 27, 38, 0.08);
+  border: 1px solid rgba(15, 23, 32, 0.04);
 }
 
-.slider-track {
-  display: flex;
-  width: 500%;
-  animation: slide 25s infinite;
-}
-
-.slider-track img {
-  width: 20%;
-  height: 450px;
+.villa-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
   object-fit: cover;
+  object-position: center;
+  transition: transform 0.45s ease, filter 0.35s ease;
+  filter: saturate(0.96) contrast(0.98) brightness(1.01);
+}
+
+.villa-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 18, 28, 0.10), transparent 60%);
+  pointer-events: none;
+}
+
+.villa-img:hover img {
+  transform: scale(1.04);
+  filter: saturate(1) contrast(1);
+}
+
+/* Imagen principal */
+.villa-main {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  min-height: 366px;
+  border: 1px solid rgba(184, 137, 47, 0.16);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .villas-container {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .villas-texto {
+    max-width: 100%;
+  }
+
+  .villas-texto h2 {
+    font-size: 48px;
+  }
+
+  .villas-galeria {
+    grid-template-columns: 1.05fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .villas {
+    padding: 90px 5%;
+  }
+
+  .villas-texto h2 {
+    font-size: 38px;
+  }
+
+  .intro {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .villas-lista li {
+    font-size: 15px;
+  }
+
+  .villas-galeria {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 240px 170px 170px;
+    gap: 14px;
+  }
+
+  .villa-main {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .villas {
+    padding: 75px 5%;
+  }
+
+  .villas-texto h2 {
+    font-size: 32px;
+  }
+
+  .villas-texto h2::after {
+    width: 65px;
+    margin-top: 12px;
+  }
+
+  .btn-villas {
+    width: 100%;
+  }
+
+  .villas-galeria {
+    grid-template-columns: 1fr;
+    grid-template-rows: 240px 170px 170px 170px 170px;
+  }
+
+  .villa-main {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+
+/* ================= UBICACIÓN PREMIUM ================= */
+
+.ubicacion-premium {
+  width: 100%;
+  padding: 120px 5%;
+  background:
+    radial-gradient(circle at top right, rgba(201, 169, 97, 0.08), transparent 24%),
+    linear-gradient(180deg, #f8f6f1 0%, #f2efe9 100%);
+  overflow: hidden;
+}
+
+.ubicacion-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+/* ================= TEXTO ================= */
+
+.ubicacion-texto {
+  max-width: 540px;
+}
+
+.ubicacion-subtitle {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #b8892f;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.ubicacion-texto h2 {
+  margin: 0 0 28px;
+  color: #0f1720;
+  font-size: 54px;
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -1px;
+  position: relative;
+}
+
+.ubicacion-texto h2::after {
+  content: "";
+  display: block;
+  width: 78px;
+  height: 3px;
+  margin-top: 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #d3ad5b 0%, #b8892f 100%);
+}
+
+.ubicacion-intro {
+  margin: 0 0 28px;
+  color: #566270;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* ================= CARD DE DIRECCIÓN ================= */
+
+.ubicacion-card {
+  padding: 24px 24px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(15, 23, 32, 0.06);
+  box-shadow: 0 16px 34px rgba(16, 24, 32, 0.08);
+  backdrop-filter: blur(10px);
+  margin-bottom: 28px;
+}
+
+.ubicacion-card h3 {
+  margin: 0 0 10px;
+  color: #0f1720;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ubicacion-card p {
+  margin: 0 0 18px;
+  color: #4f5b67;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.ubicacion-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ubicacion-badges span {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #f7f1e3;
+  color: #9c7525;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid rgba(184, 137, 47, 0.14);
+}
+
+/* ================= BOTONES ================= */
+
+.ubicacion-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn-ubicacion {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn-ubicacion.principal {
+  background: linear-gradient(135deg, #14263c 0%, #1d3d68 100%);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(17, 31, 53, 0.15);
+}
+
+.btn-ubicacion.principal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 34px rgba(17, 31, 53, 0.22);
+}
+
+.btn-ubicacion.secundario {
+  background: #ffffff;
+  color: #14263c;
+  border: 1px solid rgba(20, 38, 60, 0.12);
+  box-shadow: 0 10px 24px rgba(17, 31, 53, 0.06);
+}
+
+.btn-ubicacion.secundario:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 28px rgba(17, 31, 53, 0.12);
+}
+
+/* ================= VISUAL / MAPA ================= */
+
+.ubicacion-visual {
+  position: relative;
+}
+
+.mapa-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  min-height: 560px;
+  background: #dfe7ee;
+  border: 1px solid rgba(15, 23, 32, 0.05);
+  box-shadow: 0 22px 48px rgba(18, 28, 38, 0.12);
+}
+
+.mapa-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.96) contrast(0.98) brightness(1.01);
+}
+
+.mapa-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(8, 13, 20, 0.14), transparent 38%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.06), transparent 26%);
+  pointer-events: none;
+}
+
+/* tarjeta dentro del mapa */
+.mapa-overlay-card {
+  position: absolute;
+  left: 26px;
+  bottom: 26px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 28px rgba(14, 22, 32, 0.14);
+  backdrop-filter: blur(8px);
+  max-width: 300px;
+}
+
+.pin-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2b64f1;
+  box-shadow: 0 0 0 6px rgba(43, 100, 241, 0.14);
   flex-shrink: 0;
 }
 
-@keyframes slide {
-  0%   { transform: translateX(0); }
-  18%  { transform: translateX(0); }
-
-  20%  { transform: translateX(-20%); }
-  38%  { transform: translateX(-20%); }
-
-  40%  { transform: translateX(-40%); }
-  58%  { transform: translateX(-40%); }
-
-  60%  { transform: translateX(-60%); }
-  78%  { transform: translateX(-60%); }
-
-  80%  { transform: translateX(-80%); }
-  98%  { transform: translateX(-80%); }
-
-  100% { transform: translateX(0); }
+.mapa-overlay-card strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #0f1720;
+  font-size: 15px;
 }
 
-/* ============================== RESPONSIVE ============================= */
+.mapa-overlay-card p {
+  margin: 0;
+  color: #5c6772;
+  font-size: 13px;
+  line-height: 1.5;
+}
 
-@media (max-width: 992px) {
-  .about-wrapper {
-    flex-direction: column;
-    gap: 50px;
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .ubicacion-container {
+    grid-template-columns: 1fr;
+    gap: 55px;
   }
 
-  .about-image,
-  .about-content {
-    flex: 1 1 100%;
+  .ubicacion-texto {
+    max-width: 100%;
   }
 
-  .about-image img {
-    height: 320px;
-  }
-
-  .rating-card {
-    bottom: -20px;
-    left: 20px;
-    transform: none;
+  .ubicacion-texto h2 {
+    font-size: 46px;
   }
 }
 
-@media (max-width: 992px) {
-  .about-container {
-    flex-direction: column;
-    gap: 40px;
+@media (max-width: 768px) {
+  .ubicacion-premium {
+    padding: 90px 5%;
   }
 
-  .about-image,
-  .about-content {
-    flex: 1 1 100%;
+  .ubicacion-texto h2 {
+    font-size: 38px;
   }
 
-  .about-image img {
-    height: 350px;
+  .ubicacion-intro {
+    font-size: 15px;
+    line-height: 1.8;
   }
 
-  .rating-card {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    transform: none;
-    margin-top: 20px;
+  .mapa-frame {
+    min-height: 420px;
+    border-radius: 22px;
+  }
+
+  .mapa-overlay-card {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    max-width: none;
   }
 }
 
-@media (max-width: 992px) {
-  .villas-container {
+@media (max-width: 480px) {
+  .ubicacion-texto h2 {
+    font-size: 32px;
+  }
+
+  .ubicacion-actions {
     flex-direction: column;
-    gap: 40px;
   }
 
-  .villas-texto,
-  .villas-slider {
-    flex: 1 1 100%;
+  .btn-ubicacion {
+    width: 100%;
   }
 
-  .slider-track img {
-    height: 300px;
+  .mapa-frame {
+    min-height: 340px;
   }
 }
