@@ -9,11 +9,11 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="header-container">
 
         <div class="header-logo">
-            <a href="index.php" class="header-logo-link">
-                <img src="assets/img/icon/logofoter.png" alt="Logo Club Santiago">
-                <span>Villas Eureka</span>
-            </a>
-        </div>
+    <a href="index.php" class="header-logo-link">
+        <img src="assets/img/icon/logofoter.png" alt="Logo Club Santiago">
+        <span>Villas Eureka</span>
+    </a>
+</div>
 
         <nav class="header-nav">
             <a href="index.php" class="<?= $current_page === 'index.php' ? 'active' : ''; ?>">Inicio</a>

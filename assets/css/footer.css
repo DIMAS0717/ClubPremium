@@ -11,9 +11,9 @@
 
 .ve-footer {
   width: 100%;
-  margin: 0;
+  margin: 60px 0 0;
   margin-top: 0 !important;
-  padding: 24px 22px 14px;
+  padding: 20px 26px 14px;
   background: linear-gradient(135deg, #3D5477, #173457);
   color: var(--ve-text-main);
   border-radius: 0;
@@ -23,28 +23,26 @@
 }
 
 .ve-footer-inner {
-  width: min(96%, 1480px);
+  width: min(100%, 1850px);
   margin: 0 auto;
-
   display: flex;
   align-items: stretch;
-  justify-content: space-between;
-  gap: 22px;
-  flex-wrap: nowrap;
+  gap: 20px;
 }
 
 /* ================== LOGO ================== */
 
 .ve-footer-logo {
-  flex: 0 0 15%;
+  flex: 0 0 13%;
   min-width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 4px;
 }
 
 .ve-logo-img {
-  max-width: 210px;
+  max-width: 220px;
   width: 100%;
   height: auto;
   display: block;
@@ -53,32 +51,31 @@
 /* ================== TARJETAS ================== */
 
 .ve-footer-card {
-  flex: 1 1 0;
+  flex: 1;
   min-width: 0;
-  border-radius: 20px;
-  padding: 24px 28px;
-  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.32);
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.35);
   font-size: 14px;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .ve-footer-card h3 {
-  margin: 0 0 16px;
+  margin: 0 0 14px;
   font-size: 16px;
   font-weight: 700;
 }
 
 .ve-footer-card h4 {
-  margin: 22px 0 8px;
+  margin: 20px 0 6px;
   font-size: 15px;
   font-weight: 700;
 }
 
 .ve-footer-card p {
-  margin: 0 0 5px;
+  margin: 0 0 4px;
   color: var(--ve-text-muted);
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 /* ================== COLORES DE TARJETAS ================== */
@@ -93,9 +90,9 @@
 
 .ve-contact-item {
   display: flex;
-  align-items: flex-start;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  align-items: flex-start;
 }
 
 .ve-icon-img {
@@ -121,16 +118,16 @@
 }
 
 .ve-links li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .ve-links a {
+  text-decoration: none !important;
+  color: var(--ve-text-muted);
+  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--ve-text-muted);
-  font-size: 14px;
-  text-decoration: none !important;
   transition: all 0.3s ease;
 }
 
@@ -159,9 +156,9 @@
 
 .ve-social-row {
   display: flex;
-  flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
 }
 
 .ve-social-circle {
@@ -193,8 +190,8 @@
 /* ================== PARTE INFERIOR ================== */
 
 .ve-footer-bottom {
-  width: min(96%, 1480px);
-  margin: 18px auto 0;
+  width: min(100%, 1850px);
+  margin: 14px auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,7 +201,8 @@
 .ve-bottom-line {
   flex: 1;
   height: 1px;
-  background: rgba(255, 255, 255, 0.7);
+  background: #fff;
+  opacity: 0.7;
 }
 
 .ve-iguana-mini {
@@ -295,13 +293,13 @@
 @media (max-width: 1180px) {
   .ve-footer-inner {
     flex-wrap: wrap;
-    justify-content: center;
   }
 
   .ve-footer-logo {
-    flex: 0 0 100%;
-    min-width: 0;
-    margin-bottom: 6px;
+    flex-basis: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-right: 0;
   }
 
   .ve-logo-img {
@@ -309,7 +307,7 @@
   }
 
   .ve-footer-card {
-    flex: 1 1 calc(50% - 22px);
+    flex: 1 1 calc(50% - 20px);
   }
 
   .card-social {
@@ -327,7 +325,7 @@
   }
 
   .ve-footer-card {
-    padding: 18px;
+    padding: 16px;
   }
 
   .ve-social-circle {
@@ -351,7 +349,8 @@
   }
 
   .ve-footer-logo {
-    margin-bottom: 2px;
+    flex-basis: auto;
+    margin-bottom: 6px;
   }
 
   .ve-footer-card {
@@ -361,10 +360,6 @@
 
   .ve-logo-img {
     max-width: 180px;
-  }
-
-  .ve-footer-bottom {
-    gap: 10px;
   }
 
   .lightbox-close {
