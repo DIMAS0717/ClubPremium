@@ -66,6 +66,7 @@ try {
     <?php include __DIR__ . '/includes/home/about.php'; ?>
     <?php include __DIR__ . '/includes/home/beneficios.php'; ?>
     <?php include __DIR__ . '/includes/home/villas.php'; ?>
+    <?php include __DIR__ . '/includes/home/ubicacion.php'; ?>
 </main>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
