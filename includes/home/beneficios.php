@@ -36,7 +36,7 @@
           </svg>
         </div>
         <h3>Hermosos jardines</h3>
-        <p>Áreas verdes cuidadas para relajarte en un entorno armonioso y elegante.</p>
+        <p>Áreas verdes cuidadas para relajarte en un entorno armonioso</p>
       </article>
 
       <article class="beneficio-card">
