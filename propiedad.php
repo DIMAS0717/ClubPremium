@@ -274,6 +274,13 @@ try {
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
 
-<script src="assets/app.js"></script>
+<script src="assets/js/app.js"></script>
+<div id="lightbox" class="lightbox">
+    <button type="button" class="lightbox-close">&times;</button>
+    <button type="button" id="lbPrev" class="lightbox-nav lightbox-prev">‹</button>
+    <img id="lightbox-img" src="" alt="Imagen ampliada">
+    <button type="button" id="lbNext" class="lightbox-nav lightbox-next">›</button>
+    <div id="lightbox-counter" class="lightbox-counter"></div>
+</div>
 </body>
 </html>
