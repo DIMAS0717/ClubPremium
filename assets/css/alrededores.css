@@ -40,10 +40,9 @@ h4,
   min-height: 600px;
   height: 60vh;
   padding: 0 20px 580px;
-  margin-top: 0px;
+  margin-top: 0;
   box-sizing: border-box;
 }
-
 .around-hero-container::before {
   content: '';
   position: absolute;
