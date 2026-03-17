@@ -216,36 +216,6 @@ $page_title = 'Alrededores - Villas Eureka';
         </div>
     </section>
 
-    <!-- GALERÍA -->
-    <section class="gallery-section">
-        <div class="gallery-header">
-            <h2>Galería de Club Santiago</h2>
-            <p>Un vistazo a lo que te espera en este paraíso frente al mar</p>
-        </div>
-
-        <div class="gallery-grid">
-            <div class="gallery-item large" style="background-image:url('assets/images/ciclismo.jpg')">
-                <span>Playa La Boquita</span>
-            </div>
-
-            <div class="gallery-item medium" style="background-image:url('assets/images/golf.jpg')">
-                <span>Campo de Golf</span>
-            </div>
-
-            <div class="gallery-item medium" style="background-image:url('assets/images/playa.jpg')">
-                <span>Atardeceres Mágicos</span>
-            </div>
-
-            <div class="gallery-item wide" style="background-image:url('assets/images/senderismo.png')">
-                <span>Marina</span>
-            </div>
-        </div>
-
-        <div class="gallery-cta">
-            <a href="#" class="btn-gallery">Ver galería completa</a>
-        </div>
-    </section>
-
 </main>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
