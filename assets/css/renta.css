@@ -322,11 +322,11 @@ body {
 }
 
 .booking-btn:hover {
-  filter: brightness(1.08);
+  filter: brightness(1.30);
 }
 
 .booking-btn:active {
-  transform: scale(0.98);
+  transform: scale(1.30);
 }
 
 .booking-reset-btn {
@@ -338,14 +338,18 @@ body {
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
-  color: #173457;
-  background: #eef2f7;
+  color: #fff;
+  background: linear-gradient(135deg, #264b78, #173457);
   border-left: 1px solid #dbe3ec;
   transition: background 0.25s ease, color 0.25s ease;
 }
 
 .booking-reset-btn:hover {
-  background: #dde6f0;
+  filter: brightness(1.30);
+}
+
+.booking-reset-btn:active {
+  transform: scale(1.20);
 }
 
 /* =========================================================
@@ -519,43 +523,6 @@ body {
 
 .home-property-card:hover .img-no-disponible {
   filter: grayscale(30%) brightness(0.75);
-}
-
-/* =========================================================
-   BOTÓN CIRCULAR PARA VER ALBERCA
-   ========================================================= */
-.btn-view-pool {
-  position: absolute;
-  top: 50%;
-  right: 14px;
-  width: 34px;
-  height: 34px;
-  background: rgba(18, 18, 18, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 30;
-  transform: translateY(-15%);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  opacity: 0.6;
-  transition: all 0.3s ease;
-}
-
-.arrow-indicator {
-  font-size: 22px;
-  color: rgba(243, 241, 241, 0.85);
-  line-height: 1;
-  transform: translateX(1px);
-}
-
-.home-property-card:hover .btn-view-pool {
-  opacity: 1;
-  background: rgba(0, 0, 0, 0.4);
-  transform: scale(1.08);
 }
 
 /* =========================================================

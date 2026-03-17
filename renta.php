@@ -410,7 +410,7 @@ try {
             </div>
 
             <?php if ($totalPaginas > 1): ?>
-                <div class="pagination" style="margin-top:40px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
+                <div class="pagination">
                     <?php if ($pagina > 1): ?>
                         <a href="<?= e(buildPaginationUrl($pagina - 1)) ?>" class="btn-primary" style="text-decoration:none;">«</a>
                     <?php endif; ?>
