@@ -3,10 +3,16 @@
    ========================================================= */
 
 /* =========================================================
-   TIPOGRAFÍA BASE
+   BASE
    ========================================================= */
 body {
   font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.alrededores-page {
+  padding-top: 170px;
 }
 
 h1,
@@ -21,39 +27,33 @@ h4,
 }
 
 /* =========================================================
-   HERO CON FONDO
+   HERO
    ========================================================= */
 .around-hero-container {
   position: relative;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-
+  width: 100%;
   background-image: url("../img/fondos/fondo_alrededores.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-  min-height: 600px;
-  height: 60vh;
-  padding: 0 20px 580px;
-  margin-top: 0;
-  box-sizing: border-box;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  z-index: 1;
 }
+
 .around-hero-container::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.3) 50%,
+    to bottom,
+    rgba(0, 28, 48, 0.7) 0%,
     rgba(0, 0, 0, 0.3) 100%
   );
-  z-index: 1;
+  z-index: 0;
 }
 
 .around-hero-container > * {
@@ -61,19 +61,16 @@ h4,
   z-index: 2;
 }
 
-/* =========================================================
-   TÍTULO HERO
-   ========================================================= */
-.around-hero-container .around-header {
+.around-header {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  padding-top: 60px;
-  margin-bottom: 40px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 120px;
+  max-width: 900px;
+  width: 100%;
 }
 
-.around-hero-container .around-title-wrap {
+.around-title-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,7 +78,14 @@ h4,
   margin-bottom: 12px;
 }
 
-.around-hero-container .around-title {
+.around-title-deco {
+  width: 72px;
+  height: auto;
+  opacity: 0.85;
+  filter: brightness(1.2) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+.around-title {
   font-size: 3.5rem;
   font-weight: 800;
   letter-spacing: 4px;
@@ -92,15 +96,7 @@ h4,
   animation: fadeInUpSoft 0.8s ease-out both;
 }
 
-.around-hero-container .around-title-deco {
-  width: 72px;
-  height: auto;
-  opacity: 0.85;
-  filter: brightness(1.2) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
-  animation: fadeInUpSoft 0.8s ease-out 0.1s both;
-}
-
-.around-hero-container .around-title-underline.gold-gradient-line {
+.around-title-underline {
   width: 260px;
   height: 4px;
   margin: 18px auto 26px;
@@ -117,7 +113,7 @@ h4,
   animation: fadeInUpSoft 0.8s ease-out 0.15s both;
 }
 
-.around-hero-container .around-subtitle {
+.around-subtitle {
   max-width: 650px;
   margin: 0 auto;
   font-size: 1.25rem;
@@ -129,58 +125,59 @@ h4,
 }
 
 /* =========================================================
-   MAPA
+   MAPA FLOTANTE
    ========================================================= */
-.around-hero-container .around-map-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+.around-map-section {
+  position: relative;
+  z-index: 10;
+  margin-top: -280px;
+  padding: 0 20px 100px;
 }
 
-.around-hero-container .around-map-card {
-  width: 100%;
+.around-map-card {
   max-width: 1100px;
-  background: #ffffff;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 30px;
   padding: 40px;
   display: grid;
   grid-template-columns: 1fr 1.8fr;
   gap: 40px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
-  transition: transform 0.4s ease;
-  animation: fadeInUpSoft 1s ease-out 0.55s both;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  animation: fadeInUpSoft 0.9s ease-out 0.45s both;
 }
 
-.around-hero-container .around-map-card:hover {
-  transform: translateY(-5px);
+.around-map-card:hover {
+  transform: translateY(-4px);
+  transition: transform 0.35s ease;
 }
 
-.around-hero-container .around-map-info {
+.around-map-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 10px 0;
 }
 
-.around-hero-container .around-map-title {
+.around-map-title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 8px;
+  margin: 0 0 8px;
   color: #173457;
   letter-spacing: 0.5px;
 }
 
-.around-hero-container .around-map-title span {
+.around-map-title span {
   font-size: 1rem;
   color: #64748b;
   font-weight: 500;
   font-family: 'Inter', sans-serif;
 }
 
-.around-hero-container .around-map-divider {
+.around-map-divider {
   width: 320px;
   height: 2px;
   background: linear-gradient(90deg, #0f172a, #64748b);
@@ -188,13 +185,13 @@ h4,
   margin: 12px 0 22px 0;
 }
 
-.around-hero-container .around-map-list {
+.around-map-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.around-hero-container .around-map-list li {
+.around-map-list li {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -205,11 +202,11 @@ h4,
   transition: all 0.3s ease;
 }
 
-.around-hero-container .around-map-list li:last-child {
+.around-map-list li:last-child {
   border-bottom: none;
 }
 
-.around-hero-container .around-map-list li:hover {
+.around-map-list li:hover {
   background-color: rgba(14, 165, 233, 0.05);
 }
 
@@ -218,7 +215,7 @@ h4,
   color: #0f172a;
 }
 
-.around-hero-container .around-map-icon {
+.around-map-icon {
   width: 24px;
   height: 24px;
   color: #173457;
@@ -226,12 +223,12 @@ h4,
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.around-hero-container .around-map-list li:hover .around-map-icon {
+.around-map-list li:hover .around-map-icon {
   color: #0ea5e9;
   transform: scale(1.1);
 }
 
-.around-hero-container .around-map-time {
+.around-map-time {
   margin-left: auto;
   font-size: 0.9rem;
   color: #0f172a;
@@ -249,7 +246,7 @@ h4,
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.around-hero-container .around-map-image img {
+.around-map-image img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -259,11 +256,7 @@ h4,
   cursor: zoom-in;
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-#openMap {
-  cursor: pointer;
-  transition: 0.3s ease;
+  display: block;
 }
 
 #openMap:hover {
@@ -317,10 +310,6 @@ h4,
   transform: scale(1.1);
 }
 
-.around-hero-container .map-modal {
-  display: none !important;
-}
-
 /* =========================================================
    SECCIONES DE ACTIVIDADES
    ========================================================= */
@@ -347,7 +336,7 @@ h4,
   text-transform: uppercase;
 }
 
-.around-activities-section .around-section-title {
+.around-section-title {
   text-align: center;
   font-size: 2.2rem;
   font-weight: 700;
@@ -359,7 +348,7 @@ h4,
   position: relative;
 }
 
-.around-activities-section .around-section-title::after {
+.around-section-title::after {
   content: "";
   display: block;
   width: 60px;
@@ -481,7 +470,6 @@ h4,
   background-image: url("../img/fondos/senderismo.png");
 }
 
-
 .around-activity-golf {
   background-image: url("../img/fondos/golf.jpg");
 }
@@ -503,7 +491,7 @@ h4,
 }
 
 .restaurant-oasis {
-  background-image: url("img/fondos/oasis.jpg");
+  background-image: url("../img/fondos/oasis.jpg");
 }
 
 .restaurant-delfos {
@@ -660,13 +648,19 @@ h4,
    RESPONSIVE
    ========================================================= */
 @media (max-width: 1024px) {
-  .around-hero-container .around-title {
+  .around-title {
     font-size: 3.2rem;
   }
 
-  .around-hero-container .around-map-card {
+  .around-map-card {
     grid-template-columns: 1fr;
     max-width: 800px;
+  }
+}
+
+@media (max-width: 980px) {
+  .alrededores-page {
+    padding-top: 110px;
   }
 }
 
@@ -688,76 +682,82 @@ h4,
 
 @media (max-width: 768px) {
   .around-hero-container {
-    padding: 60px 15px 80px;
+    height: 520px;
     background-attachment: scroll;
-    height: auto;
   }
 
-  .around-hero-container .around-title {
+  .around-header {
+    padding-top: 70px;
+  }
+
+  .around-map-section {
+    margin-top: -220px;
+    padding: 0 15px 80px;
+  }
+
+  .around-map-card {
+    padding: 25px;
+  }
+
+  .around-title {
     font-size: 2.8rem;
   }
 
-  .around-hero-container .around-title-wrap {
+  .around-title-wrap {
     gap: 30px;
   }
 
-  .around-hero-container .around-title-deco {
-    width: 70px;
+  .around-title-deco {
+    width: 60px;
   }
 
-  .around-hero-container .around-title-underline {
-    width: 300px;
-  }
-
-  .around-hero-container .around-subtitle {
+  .around-subtitle {
     font-size: 1.1rem;
     padding: 0 20px;
   }
 
-  .around-hero-container .around-map-card {
-    padding: 25px;
-  }
-
-  .around-activities-section {
+  .around-activities-section,
+  .gallery-section {
     margin: 60px auto;
   }
 
   .around-activities-grid {
     grid-template-columns: 1fr;
   }
-
-  .gallery-section {
-    margin: 60px auto;
-  }
 }
 
 @media (max-width: 500px) {
   .around-hero-container {
-    padding: 40px 10px 60px;
+    height: 460px;
   }
 
-  .around-hero-container .around-title {
+  .around-map-section {
+    margin-top: -180px;
+    padding: 0 10px 60px;
+  }
+
+  .around-title {
     font-size: 2.2rem;
   }
 
-  .around-hero-container .around-title-wrap {
+  .around-title-wrap {
     gap: 20px;
   }
 
-  .around-hero-container .around-title-deco {
+  .around-title-deco {
     width: 50px;
   }
 
-  .around-hero-container .around-title-underline {
+  .around-title-underline {
     width: 200px;
     height: 6px;
   }
 
-  .around-hero-container .around-subtitle {
+  .around-subtitle {
     font-size: 1rem;
   }
 
-  .around-hero-container .around-map-divider {
+  .around-map-divider {
     width: 100%;
   }
 

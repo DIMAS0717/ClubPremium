@@ -7,9 +7,24 @@
   --gold-soft: #E6C158;
 }
 
+/* RESET IMPORTANTE */
 html,
 body {
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* 👉 ESTO SOLUCIONA TU PROBLEMA GLOBAL */
+.page-main {
+  padding-top: var(--header-height);
+}
+
+/* Responsive ajuste */
+@media (max-width: 980px) {
+  .page-main {
+    padding-top: 110px;
+  }
 }
 
 /* ---------- HEADER BASE ---------- */
