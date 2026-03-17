@@ -1269,7 +1269,7 @@
 .ubicacion-texto h2::after {
   content: "";
   display: block;
-  width: 220px;
+  width: 82px;
   height: 3px;
   margin-top: 14px;
   border-radius: 999px;
@@ -1286,13 +1286,12 @@
 /* ================= CARD DE DIRECCIÓN ================= */
 
 .ubicacion-card {
-  padding: 24px 24px;
+  padding: 26px 24px;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(15, 23, 32, 0.06);
   box-shadow: 0 16px 34px rgba(16, 24, 32, 0.08);
   backdrop-filter: blur(10px);
-  margin-bottom: 28px;
 }
 
 .ubicacion-card h3 {
@@ -1313,6 +1312,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 18px;
 }
 
 .ubicacion-badges span {
@@ -1387,22 +1387,23 @@
   box-shadow: 0 22px 48px rgba(18, 28, 38, 0.12);
 }
 
-.mapa-frame img {
+/* ESTA PARTE ES LA CLAVE */
+.mapa-frame iframe {
   width: 100%;
   height: 100%;
+  min-height: 560px;
   display: block;
-  object-fit: cover;
-  object-position: center;
-  filter: saturate(0.96) contrast(0.98) brightness(1.01);
+  border: 0;
 }
 
+/* overlay elegante encima del mapa */
 .mapa-frame::after {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to top, rgba(8, 13, 20, 0.14), transparent 38%),
-    linear-gradient(to right, rgba(255, 255, 255, 0.06), transparent 26%);
+    linear-gradient(to top, rgba(8, 13, 20, 0.10), transparent 35%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.04), transparent 24%);
   pointer-events: none;
 }
 
@@ -1416,10 +1417,11 @@
   gap: 14px;
   padding: 18px 20px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.90);
   box-shadow: 0 12px 28px rgba(14, 22, 32, 0.14);
   backdrop-filter: blur(8px);
-  max-width: 300px;
+  max-width: 320px;
+  z-index: 2;
 }
 
 .pin-dot {
@@ -1443,6 +1445,19 @@
   color: #5c6772;
   font-size: 13px;
   line-height: 1.5;
+}
+
+.mapa-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b64f1;
+  text-decoration: none;
+}
+
+.mapa-link:hover {
+  text-decoration: underline;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -1481,6 +1496,10 @@
     border-radius: 22px;
   }
 
+  .mapa-frame iframe {
+    min-height: 420px;
+  }
+
   .mapa-overlay-card {
     left: 18px;
     right: 18px;
@@ -1503,6 +1522,10 @@
   }
 
   .mapa-frame {
+    min-height: 340px;
+  }
+
+  .mapa-frame iframe {
     min-height: 340px;
   }
 }
