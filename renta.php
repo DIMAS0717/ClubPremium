@@ -263,69 +263,92 @@ try {
 
     <form class="booking-bar" method="GET">
 
-        <div class="booking-field">
-            <span class="booking-label">Registro de entrada</span>
+    <div class="booking-field">
+        <span class="booking-label">Registro de entrada</span>
+        <div class="booking-input">
             <input type="date" name="entrada" value="<?= e($entrada) ?>">
         </div>
+    </div>
 
-        <div class="booking-field">
-            <span class="booking-label">Registrar la salida</span>
+    <div class="booking-field">
+        <span class="booking-label">Registro de salida</span>
+        <div class="booking-input">
             <input type="date" name="salida" value="<?= e($salida) ?>">
         </div>
+    </div>
 
-        <div class="booking-field">
-            <span class="booking-label">Huéspedes</span>
-            <div class="booking-input">
-                <select name="personas">
-                    <option value="">Seleccionar</option>
-                    <option value="2"  <?= $personas === '2' ? 'selected' : '' ?>>2 personas</option>
-                    <option value="4"  <?= $personas === '4' ? 'selected' : '' ?>>4 personas</option>
-                    <option value="8"  <?= $personas === '8' ? 'selected' : '' ?>>8 personas</option>
-                    <option value="10" <?= $personas === '10' ? 'selected' : '' ?>>10 personas</option>
-                    <option value="11" <?= $personas === '11' ? 'selected' : '' ?>>11 personas</option>
-                    <option value="12" <?= $personas === '12' ? 'selected' : '' ?>>12 personas</option>
-                    <option value="14" <?= $personas === '14' ? 'selected' : '' ?>>14 personas</option>
-                    <option value="16" <?= $personas === '16' ? 'selected' : '' ?>>16 personas</option>
-                    <option value="20" <?= $personas === '20' ? 'selected' : '' ?>>20+ personas</option>
-                </select>
-            </div>
+    <div class="booking-field">
+        <span class="booking-label">Huéspedes</span>
+        <div class="booking-input">
+            <select name="personas">
+                <option value="">Seleccionar</option>
+                <option value="2"  <?= $personas === '2' ? 'selected' : '' ?>>2 personas</option>
+                <option value="4"  <?= $personas === '4' ? 'selected' : '' ?>>4 personas</option>
+                <option value="8"  <?= $personas === '8' ? 'selected' : '' ?>>8 personas</option>
+                <option value="10" <?= $personas === '10' ? 'selected' : '' ?>>10 personas</option>
+                <option value="11" <?= $personas === '11' ? 'selected' : '' ?>>11 personas</option>
+                <option value="12" <?= $personas === '12' ? 'selected' : '' ?>>12 personas</option>
+                <option value="14" <?= $personas === '14' ? 'selected' : '' ?>>14 personas</option>
+                <option value="16" <?= $personas === '16' ? 'selected' : '' ?>>16 personas</option>
+                <option value="20" <?= $personas === '20' ? 'selected' : '' ?>>20+ personas</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="booking-field booking-dropdown">
+        <span class="booking-label">Tipo</span>
+
+        <div class="booking-input booking-dropdown-toggle" id="tipoToggle" role="button" tabindex="0">
+            <span id="tipoTexto">Seleccionar</span>
+            <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M5 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
         </div>
 
-        <div class="booking-field booking-dropdown">
-            <span class="booking-label">Tipo</span>
+        <div class="booking-dropdown-menu" id="tipoMenu">
 
-            <div class="booking-input booking-dropdown-toggle" id="tipoToggle" role="button" tabindex="0">
-                <span id="tipoTexto">Seleccionar</span>
-                <svg width="16" height="16" viewBox="0 0 20 20">
-                    <path d="M5 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/>
-                </svg>
-            </div>
+            <div class="booking-dropdown-group">
+                <div class="booking-dropdown-title">Ubicación</div>
 
-            <div class="booking-dropdown-menu" id="tipoMenu">
-                <label>
+                <label class="booking-option">
                     <input type="checkbox" name="tipo_playa[]" value="pie" <?= $pieSeleccionado ? 'checked' : '' ?>>
-                    Casa a pie de playa
+                    <span>Casa a pie de playa</span>
                 </label>
 
-                <label>
+                <label class="booking-option">
                     <input type="checkbox" name="tipo_playa[]" value="cerca" <?= $cercaSeleccionado ? 'checked' : '' ?>>
-                    Cerca de la playa
-                </label>
-
-                <label>
-                    <input type="radio" name="estado" value="disponible" <?= $estado === 'disponible' ? 'checked' : '' ?>>
-                    Casas disponibles
-                </label>
-
-                <label>
-                    <input type="radio" name="estado" value="no_disponible" <?= $estado === 'no_disponible' ? 'checked' : '' ?>>
-                    Casas no disponibles
+                    <span>Cerca de la playa</span>
                 </label>
             </div>
-        </div>
 
+            <div class="booking-dropdown-divider"></div>
+
+            <div class="booking-dropdown-group">
+                <div class="booking-dropdown-title">Estado</div>
+
+                <label class="booking-option">
+                    <input type="radio" name="estado" value="disponible" <?= $estado === 'disponible' ? 'checked' : '' ?>>
+                    <span>Casas disponibles</span>
+                </label>
+
+                <label class="booking-option">
+                    <input type="radio" name="estado" value="no_disponible" <?= $estado === 'no_disponible' ? 'checked' : '' ?>>
+                    <span>Casas no disponibles</span>
+                </label>
+            </div>
+
+            <div class="booking-dropdown-actions">
+                <button type="button" class="booking-clear-mini" id="tipoClearBtn">Limpiar tipo</button>
+                <button type="button" class="booking-apply-mini" id="tipoCloseBtn">Listo</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="booking-actions">
         <button type="submit" class="booking-btn">Buscar</button>
-    </form>
+        <a href="renta.php" class="booking-reset-btn">Borrar</a>
+    </div>
+</form>
 
     <section class="section">
         <?php if (!empty($propiedades)): ?>
@@ -422,19 +445,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('tipoToggle');
     const menu = document.getElementById('tipoMenu');
     const texto = document.getElementById('tipoTexto');
+    const clearBtn = document.getElementById('tipoClearBtn');
+    const closeBtn = document.getElementById('tipoCloseBtn');
 
     if (!toggle || !menu || !texto) return;
 
+    const inputs = Array.from(menu.querySelectorAll('input'));
+
     const updateTexto = () => {
-        const seleccionados = Array.prototype.slice.call(menu.querySelectorAll('input:checked'))
-            .map(function (i) {
-                return i.parentNode.textContent.trim();
-            });
+        const seleccionados = inputs
+            .filter(input => input.checked)
+            .map(input => input.parentNode.textContent.trim());
 
         texto.textContent = seleccionados.length
             ? seleccionados.join(', ')
             : 'Seleccionar';
     };
+
+    const openMenu = () => menu.classList.add('show');
+    const closeMenu = () => menu.classList.remove('show');
 
     toggle.addEventListener('click', function (e) {
         e.preventDefault();
@@ -450,16 +479,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('click', function () {
-        menu.classList.remove('show');
+        closeMenu();
     });
 
     menu.addEventListener('click', function (e) {
         e.stopPropagation();
     });
 
-    Array.prototype.slice.call(menu.querySelectorAll('input')).forEach(function (input) {
-        input.addEventListener('change', updateTexto);
+    // Permitir deseleccionar radios si vuelves a hacer click
+    inputs.forEach(input => {
+        if (input.type === 'radio') {
+            input.addEventListener('click', function () {
+                if (this.dataset.wasChecked === 'true') {
+                    this.checked = false;
+                    this.dataset.wasChecked = 'false';
+                } else {
+                    menu.querySelectorAll('input[type="radio"][name="' + this.name + '"]').forEach(r => {
+                        r.dataset.wasChecked = 'false';
+                    });
+                    this.dataset.wasChecked = this.checked ? 'true' : 'false';
+                }
+                updateTexto();
+            });
+        } else {
+            input.addEventListener('change', updateTexto);
+        }
     });
+
+    // Inicializar radios marcados
+    menu.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.dataset.wasChecked = radio.checked ? 'true' : 'false';
+    });
+
+    if (clearBtn) {
+        clearBtn.addEventListener('click', function () {
+            inputs.forEach(input => {
+                input.checked = false;
+                if (input.type === 'radio') {
+                    input.dataset.wasChecked = 'false';
+                }
+            });
+            updateTexto();
+        });
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function () {
+            closeMenu();
+        });
+    }
 
     updateTexto();
 });
