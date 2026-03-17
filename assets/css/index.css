@@ -4,7 +4,8 @@
 .around-hero-container {
   position: relative;
   width: 100%;
-  height: calc(100vh - 120px);
+  min-height: calc(100vh - 170px);
+  margin-top: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
