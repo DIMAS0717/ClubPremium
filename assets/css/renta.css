@@ -341,6 +341,7 @@ body {
   color: #fff;
   background: linear-gradient(135deg, #264b78, #173457);
   border-left: 1px solid #dbe3ec;
+  border-radius: 0 24px 24px 0;
   transition: background 0.25s ease, color 0.25s ease;
 }
 
