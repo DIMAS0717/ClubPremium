@@ -339,7 +339,7 @@
 /* CONTENEDOR PRINCIPAL */
 .destacados-container {
   width: 100vw;
-  padding: 100px 2%;
+  padding: 20px 2% 200px; /* 👈 arriba 90, abajo 100 */
   margin-left: calc(-50vw + 50%);
   box-sizing: border-box;
   background-color: #fcfdfd !important;
