@@ -25,11 +25,11 @@
         </div>
 
         <div class="ubicacion-actions">
-          <a href="https://maps.app.goo.gl/bWzAP8ebcaPjbWpEA" target="_blank" class="btn-ubicacion principal">
+          <a href="https://maps.app.goo.gl/apEZJCZRCjNDRexZ7" target="_blank" class="btn-ubicacion principal">
             Ver en Google Maps
           </a>
 
-          <a href="https://www.tiktok.com/" target="_blank" class="btn-ubicacion secundario">
+          <a href="https://vt.tiktok.com/ZSu4UCUfA/" target="_blank" class="btn-ubicacion secundario">
             Ver video en TikTok
           </a>
         </div>
@@ -38,30 +38,34 @@
 
     <div class="ubicacion-visual">
       <div class="mapa-frame">
-        <iframe
-          src="https://maps.app.goo.gl/bWzAP8ebcaPjbWpEA"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
-        </iframe>
 
-        <div class="mapa-overlay-card">
-          <span class="pin-dot"></span>
+    <iframe
+      src="https://maps.app.goo.gl/PT94YbrSMqmGHz5g9"
+      width="100%"
+      height="320"
+      style="border:0; border-radius:18px;"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
 
-          <div>
-            <strong>Club Santiago Real Estate</strong>
-            <p>Club Santiago, Manzanillo, Colima</p>
+    <div class="mapa-overlay-card">
+      <span class="pin-dot"></span>
 
-            <a
-              href="https://maps.app.goo.gl/bWzAP8ebcaPjbWpEA"
-              target="_blank"
-              class="mapa-link">
-              Cómo llegar
-            </a>
-          </div>
-        </div>
+      <div>
+        <strong>Club Santiago Real Estate</strong>
+        <p>Club Santiago, Manzanillo, Colima</p>
+
+        <a
+          href="https://maps.app.goo.gl/apEZJCZRCjNDRexZ7"
+          target="_blank"
+          class="mapa-link">
+          Cómo llegar
+        </a>
       </div>
     </div>
+
+  </div>
+</div>
 
   </div>
 </section>
