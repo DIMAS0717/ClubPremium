@@ -1457,29 +1457,13 @@
   gap: 14px;
 }
 
-.btn-ubicacion {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 52px;
-  padding: 0 24px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 700;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
+/* ❌ Ocultamos el botón viejo */
 .btn-ubicacion.principal {
-  background: linear-gradient(135deg, #14263c 0%, #1d3d68 100%);
-  color: #fff;
-  box-shadow: 0 14px 28px rgba(17, 31, 53, 0.15);
+  display: none;
 }
 
-.btn-ubicacion.principal:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 18px 34px rgba(17, 31, 53, 0.22);
-}
+/* ================= MINI VIDEO (TIKTOK) ================= */
+
 .mini-video-card {
   display: inline-flex;
   align-items: center;
@@ -1494,7 +1478,7 @@
   box-shadow:
     0 14px 28px rgba(17, 31, 53, 0.10),
     inset 0 1px 0 rgba(255,255,255,0.8);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .mini-video-card:hover {
@@ -1505,6 +1489,7 @@
     0 0 0 1px rgba(29, 61, 104, 0.08);
 }
 
+/* ICONO PLAY */
 .mini-video-play {
   width: 46px;
   height: 46px;
@@ -1520,6 +1505,52 @@
     0 8px 18px rgba(0, 0, 0, 0.18),
     0 0 10px rgba(255, 0, 80, 0.10);
 }
+
+/* ================= GOOGLE MAPS CARD ================= */
+
+.mini-maps-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  min-height: 74px;
+  min-width: 210px;
+  border-radius: 20px;
+  text-decoration: none;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(20, 38, 60, 0.10);
+  box-shadow:
+    0 14px 28px rgba(17, 31, 53, 0.10),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+  transition: all 0.3s ease;
+}
+
+.mini-maps-card:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(180deg, #ffffff 0%, #f4f8fc 100%);
+  box-shadow:
+    0 18px 34px rgba(17, 31, 53, 0.16),
+    0 0 0 1px rgba(29, 61, 104, 0.08);
+}
+
+/* ICONO MAPA */
+.mini-maps-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #111111, #2a2a2a);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.18),
+    0 0 10px rgba(29, 61, 104, 0.10);
+}
+
+/* ================= CONTENIDO ================= */
 
 .mini-video-content {
   display: flex;
@@ -1537,7 +1568,8 @@
   color: #b08a4a;
 }
 
-.mini-video-card strong {
+.mini-video-card strong,
+.mini-maps-card strong {
   display: block;
   color: #14263c;
   font-size: 16px;
@@ -1545,7 +1577,8 @@
   line-height: 1.15;
 }
 
-.mini-video-card p {
+.mini-video-card p,
+.mini-maps-card p {
   margin: 3px 0 0;
   color: #6b7280;
   font-size: 13px;

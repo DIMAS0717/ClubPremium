@@ -33,8 +33,14 @@
               <p>Mira la ruta en video</p>
             </div>
           </a>
-          <a href="https://maps.app.goo.gl/apEZJCZRCjNDRexZ7" target="_blank" class="btn-ubicacion principal">
-            Ver en Google Maps
+          <a href="https://maps.app.goo.gl/apEZJCZRCjNDRexZ7" target="_blank" class="mini-maps-card">
+            <div class="mini-maps-icon">📍</div>
+
+            <div class="mini-video-content">
+              <span class="mini-video-tag">Ubicación</span>
+              <strong>Google Maps</strong>
+              <p>Abre la ruta en el mapa</p>
+            </div>
           </a>
         </div>
       </div>
