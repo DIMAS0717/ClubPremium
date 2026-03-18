@@ -51,5 +51,8 @@
       </article>
 
     </div>
+      <div class="beneficios-action">
+      <a href="renta.php" class="beneficios-btn">Ver propiedades</a>
+    </div>
   </div>
 </section>

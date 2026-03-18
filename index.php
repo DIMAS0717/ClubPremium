@@ -64,8 +64,8 @@ try {
 <main class="page-main villas-page">
     <?php include __DIR__ . '/includes/home/destacadas.php'; ?>
     <?php include __DIR__ . '/includes/home/about.php'; ?>
-    <?php include __DIR__ . '/includes/home/beneficios.php'; ?>
     <?php include __DIR__ . '/includes/home/villas.php'; ?>
+    <?php include __DIR__ . '/includes/home/beneficios.php'; ?>
     <?php include __DIR__ . '/includes/home/ubicacion.php'; ?>
 </main>
 
