@@ -1098,7 +1098,7 @@
 .villas {
   width: 100%;
   padding: 110px 5%;
-  background: linear-gradient(to bottom, #fdfaf6, #f5f3ef);
+  background-color: #fcfdfd !important;
   overflow: hidden;
 }
 
