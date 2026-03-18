@@ -25,12 +25,16 @@
         </div>
 
         <div class="ubicacion-actions">
+          <a href="https://vt.tiktok.com/ZSu4UCUfA/" target="_blank" class="mini-video-card">
+            <div class="mini-video-play">▶</div>
+            <div class="mini-video-content">
+              <span class="mini-video-tag">Ruta visual</span>
+              <strong>Cómo llegar</strong>
+              <p>Mira la ruta en video</p>
+            </div>
+          </a>
           <a href="https://maps.app.goo.gl/apEZJCZRCjNDRexZ7" target="_blank" class="btn-ubicacion principal">
             Ver en Google Maps
-          </a>
-
-          <a href="https://vt.tiktok.com/ZSu4UCUfA/" target="_blank" class="btn-ubicacion secundario">
-            Ver video en TikTok
           </a>
         </div>
       </div>
