@@ -37,10 +37,10 @@
     </div>
 
     <div class="ubicacion-visual">
-      <div class="mapa-frame">
+    <div class="mapa-frame">
 
     <iframe
-      src="https://maps.app.goo.gl/PT94YbrSMqmGHz5g9"
+      src="https://www.google.com/maps?q=19.116595673360756,-104.39527120222621&output=embed"
       width="100%"
       height="320"
       style="border:0; border-radius:18px;"
