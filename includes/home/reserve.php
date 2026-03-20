@@ -1,46 +1,50 @@
-<section class="reserve-section">
-  <div class="reserve-overlay"></div>
+<section class="booking-hero">
+  <div class="booking-overlay"></div>
 
-  <div class="reserve-content">
-    <div class="reserve-header">
-      <span class="reserve-kicker">VILLAS EUREKA</span>
-      <h2>Reserva tu estancia ideal</h2>
-      <p>Disfruta privacidad, confort y una experiencia única en Club Santiago.</p>
+  <div class="booking-content">
+    <div class="booking-header">
+      <h2>¡ES TIEMPO DE UNAS<br>VACACIONES!</h2>
+      <p>Paraíso tropical rodeado de jardines</p>
+      <h3>¡RESERVA HOY!</h3>
     </div>
 
-    <form class="reserve-form">
-      <div class="reserve-field">
-        <input type="text" placeholder="Nombre completo">
+    <form class="booking-form" action="#" method="POST">
+      <div class="booking-field">
+        <input type="text" name="nombre" placeholder="Nombre" required>
       </div>
 
-      <div class="reserve-field">
-        <input type="email" placeholder="Correo electrónico">
+      <div class="booking-field">
+        <input type="email" name="email" placeholder="Email" required>
       </div>
 
-      <div class="reserve-field">
-        <input type="tel" placeholder="Teléfono">
+      <div class="booking-field">
+        <input type="tel" name="telefono" placeholder="Teléfono" required>
       </div>
 
-      <div class="reserve-field">
-        <select>
-          <option selected disabled>Huéspedes</option>
-          <option>2 personas</option>
-          <option>4 personas</option>
-          <option>8 personas</option>
-          <option>12 personas</option>
+      <div class="booking-field">
+        <select name="personas" required>
+          <option value="" selected disabled>No. de personas</option>
+          <option value="1">1 persona</option>
+          <option value="2">2 personas</option>
+          <option value="3">3 personas</option>
+          <option value="4">4 personas</option>
+          <option value="5">5 personas</option>
+          <option value="6">6 personas</option>
+          <option value="7">7 personas</option>
+          <option value="8">8 personas</option>
         </select>
       </div>
 
-      <div class="reserve-field">
-        <input type="date">
+      <div class="booking-field">
+        <input type="date" name="llegada" required>
       </div>
 
-      <div class="reserve-field">
-        <input type="date">
+      <div class="booking-field">
+        <input type="date" name="salida" required>
       </div>
 
-      <div class="reserve-actions">
-        <button type="submit">Consultar disponibilidad</button>
+      <div class="booking-actions">
+        <button type="submit">Reservar</button>
       </div>
     </form>
   </div>
