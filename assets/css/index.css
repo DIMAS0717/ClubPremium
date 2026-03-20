@@ -492,15 +492,14 @@
   -webkit-box-orient: vertical;
 }
 
-.ubicacion-text {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  min-height: 3em;
-  margin-bottom: 20px;
-  color: #64748b;
-  font-size: 0.9rem;
+.ubicacion-texto {
+  width: 100%;
+  max-width: 540px;
+  margin: 0;
+  padding: 0;
+  justify-self: start;
 }
+
 
 /* ICONOS */
 .villa-icons {
@@ -1343,7 +1342,6 @@
   }
 }
 
-
 /* ================= UBICACIÓN PREMIUM ================= */
 
 .ubicacion-premium {
@@ -1351,6 +1349,13 @@
   padding: 120px 5%;
   background: #f8fafc;
   overflow: hidden;
+  box-sizing: border-box;
+}
+
+.ubicacion-premium *,
+.ubicacion-premium *::before,
+.ubicacion-premium *::after {
+  box-sizing: border-box;
 }
 
 .ubicacion-container {
@@ -1365,12 +1370,17 @@
 /* ================= TEXTO ================= */
 
 .ubicacion-texto {
+  width: 100%;
   max-width: 540px;
+  margin: 0;
+  padding: 0;
+  justify-self: start;
 }
 
 .ubicacion-subtitle {
-  display: inline-block;
-  margin-bottom: 14px;
+  display: block;
+  margin: 0 0 14px 0;
+  padding: 0;
   color: #b8892f;
   font-size: 13px;
   font-weight: 700;
@@ -1379,7 +1389,10 @@
 }
 
 .ubicacion-texto h2 {
-  margin: 0 0 28px;
+  display: block;
+  width: 100%;
+  margin: 0 0 28px 0;
+  padding: 0;
   color: #0f1720;
   font-size: 54px;
   line-height: 1.08;
@@ -1399,7 +1412,10 @@
 }
 
 .ubicacion-intro {
-  margin: 0 0 28px;
+  display: block;
+  width: 100%;
+  margin: 0 0 28px 0;
+  padding: 0;
   color: #566270;
   font-size: 16px;
   line-height: 1.9;
@@ -1408,12 +1424,19 @@
 /* ================= CARD DE DIRECCIÓN ================= */
 
 .ubicacion-card {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
   padding: 26px 24px;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(15, 23, 32, 0.06);
+  border: 3px solid rgba(15, 23, 32, 0.06);
   box-shadow: 0 16px 34px rgba(16, 24, 32, 0.08);
   backdrop-filter: blur(10px);
+  position: relative;
+  left: 0;
+  transform: none;
 }
 
 .ubicacion-card h3 {
@@ -1453,61 +1476,21 @@
 
 .ubicacion-actions {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   gap: 14px;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
 }
 
-/* ❌ Ocultamos el botón viejo */
 .btn-ubicacion.principal {
   display: none;
 }
 
-/* ================= MINI VIDEO (TIKTOK) ================= */
+/* ================= MINI VIDEO ================= */
 
-.mini-video-card {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 20px;
-  min-height: 74px;
-  min-width: 210px;
-  border-radius: 20px;
-  text-decoration: none;
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-  border: 1px solid rgba(20, 38, 60, 0.10);
-  box-shadow:
-    0 14px 28px rgba(17, 31, 53, 0.10),
-    inset 0 1px 0 rgba(255,255,255,0.8);
-  transition: all 0.3s ease;
-}
-
-.mini-video-card:hover {
-  transform: translateY(-4px);
-  background: linear-gradient(180deg, #ffffff 0%, #f4f8fc 100%);
-  box-shadow:
-    0 18px 34px rgba(17, 31, 53, 0.16),
-    0 0 0 1px rgba(29, 61, 104, 0.08);
-}
-
-/* ICONO PLAY */
-.mini-video-play {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #111111, #2a2a2a);
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  flex-shrink: 0;
-  box-shadow:
-    0 8px 18px rgba(0, 0, 0, 0.18),
-    0 0 10px rgba(255, 0, 80, 0.10);
-}
-
-/* ================= GOOGLE MAPS CARD ================= */
-
+.mini-video-card,
 .mini-maps-card {
   display: inline-flex;
   align-items: center;
@@ -1515,16 +1498,18 @@
   padding: 14px 20px;
   min-height: 74px;
   min-width: 210px;
+  flex: 0 0 auto;
   border-radius: 20px;
   text-decoration: none;
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   border: 1px solid rgba(20, 38, 60, 0.10);
   box-shadow:
     0 14px 28px rgba(17, 31, 53, 0.10),
-    inset 0 1px 0 rgba(255,255,255,0.8);
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
 }
 
+.mini-video-card:hover,
 .mini-maps-card:hover {
   transform: translateY(-4px);
   background: linear-gradient(180deg, #ffffff 0%, #f4f8fc 100%);
@@ -1533,7 +1518,7 @@
     0 0 0 1px rgba(29, 61, 104, 0.08);
 }
 
-/* ICONO MAPA */
+.mini-video-play,
 .mini-maps-icon {
   width: 46px;
   height: 46px;
@@ -1543,14 +1528,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
   flex-shrink: 0;
   box-shadow:
     0 8px 18px rgba(0, 0, 0, 0.18),
     0 0 10px rgba(29, 61, 104, 0.10);
 }
 
-/* ================= CONTENIDO ================= */
+.mini-video-play {
+  font-size: 16px;
+}
+
+.mini-maps-icon {
+  font-size: 18px;
+}
 
 .mini-video-content {
   display: flex;
@@ -1584,10 +1574,12 @@
   font-size: 13px;
   line-height: 1.3;
 }
+
 /* ================= VISUAL / MAPA ================= */
 
 .ubicacion-visual {
   position: relative;
+  width: 100%;
 }
 
 .mapa-frame {
@@ -1600,7 +1592,6 @@
   box-shadow: 0 22px 48px rgba(18, 28, 38, 0.12);
 }
 
-/* ESTA PARTE ES LA CLAVE */
 .mapa-frame iframe {
   width: 100%;
   height: 100%;
@@ -1609,7 +1600,6 @@
   border: 0;
 }
 
-/* overlay elegante encima del mapa */
 .mapa-frame::after {
   content: "";
   position: absolute;
@@ -1620,7 +1610,6 @@
   pointer-events: none;
 }
 
-/* tarjeta dentro del mapa */
 .mapa-overlay-card {
   position: absolute;
   left: 26px;
@@ -1703,6 +1692,21 @@
     line-height: 1.8;
   }
 
+  .ubicacion-card {
+    padding: 22px 20px;
+  }
+
+  .ubicacion-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .mini-video-card,
+  .mini-maps-card {
+    width: 100%;
+    min-width: 100%;
+  }
+
   .mapa-frame {
     min-height: 420px;
     border-radius: 22px;
@@ -1725,12 +1729,8 @@
     font-size: 32px;
   }
 
-  .ubicacion-actions {
-    flex-direction: column;
-  }
-
-  .btn-ubicacion {
-    width: 100%;
+  .ubicacion-card {
+    padding: 20px 18px;
   }
 
   .mapa-frame {
