@@ -339,17 +339,16 @@
 .destacados-container {
   width: 100%;
   margin: 0;
-  padding: 90px 5% 110px;
+  padding: 0 5% 90px;
   box-sizing: border-box;
-  background: #fcfdfd;
-  position: relative;
-  z-index: 2;
+  background: #fcfdfd !important;
 }
 
 /* ENCABEZADO */
 .destacados-header {
   text-align: center;
   margin: 0 0 60px;
+  padding-top: 80px;
 }
 
 .destacados-header span {
