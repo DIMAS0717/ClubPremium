@@ -55,10 +55,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $fechaEntradaFormateada = date("d/m/Y", strtotime($entrada));
         $fechaSalidaFormateada  = date("d/m/Y", strtotime($salida));
 
-        $destinatario = "tu_correo@dominio.com"; // <-- CAMBIA ESTE CORREO
+        $destinatario = "tu_correo@dominio.com"; // CAMBIA ESTE CORREO
         $asunto = "Nueva solicitud de reserva";
 
-        $contenido = "Nombre: " . $nombre . "\n";
+        $contenido  = "Nombre: " . $nombre . "\n";
         $contenido .= "Correo: " . $email . "\n";
         $contenido .= "Numero: " . $telefono . "\n";
         $contenido .= "Cuantas personas: " . $personas . "\n";
@@ -89,8 +89,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <div class="booking-content">
     <div class="booking-header">
       <h2>¡ES TIEMPO DE UNAS VACACIONES!</h2>
-      <p>Paraíso tropical rodeado de jardines</p>
-      <h3>¡RESERVA HOY!</h3>
+      <div class="booking-divider"></div>
+      <p>Paraiso tropical rodeado de jardines</p>
     </div>
 
     <?php if (!empty($mensaje_reserva)): ?>
@@ -99,78 +99,83 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       </div>
     <?php endif; ?>
 
-    <form class="booking-form" action="" method="POST">
-      <div class="booking-field">
-        <input
-          type="text"
-          name="nombre"
-          placeholder="Nombre"
-          required
-          value="<?php echo htmlspecialchars($_POST['nombre'] ?? ''); ?>"
-        >
-      </div>
+    <div class="booking-panel">
+  <div class="booking-panel-title">Ingrese sus datos</div>
 
-      <div class="booking-field">
-        <input
-          type="email"
-          name="email"
-          placeholder="Correo electrónico"
-          required
-          value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>"
-        >
-      </div>
+  <form class="booking-form" action="" method="POST">
+    <div class="booking-field">
+      <input
+        type="text"
+        name="nombre"
+        placeholder="Nombre"
+        required
+        value="<?php echo htmlspecialchars($_POST['nombre'] ?? ''); ?>"
+      >
+    </div>
 
-      <div class="booking-field">
-        <input
-          type="tel"
-          name="telefono"
-          placeholder="Teléfono"
-          required
-          inputmode="numeric"
-          pattern="[0-9]{10,15}"
-          maxlength="15"
-          value="<?php echo htmlspecialchars($_POST['telefono'] ?? ''); ?>"
-        >
-      </div>
+    <div class="booking-field">
+      <input
+        type="email"
+        name="email"
+        placeholder="Correo electrónico"
+        required
+        value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>"
+      >
+    </div>
 
-      <div class="booking-field">
-        <input
-          type="number"
-          name="personas"
-          placeholder="No. de personas"
-          required
-          min="1"
-          step="1"
-          value="<?php echo htmlspecialchars($_POST['personas'] ?? ''); ?>"
-        >
-      </div>
+    <div class="booking-field">
+      <input
+        type="tel"
+        name="telefono"
+        placeholder="Teléfono"
+        required
+        inputmode="numeric"
+        pattern="[0-9]{10,15}"
+        maxlength="15"
+        value="<?php echo htmlspecialchars($_POST['telefono'] ?? ''); ?>"
+      >
+    </div>
 
-      <div class="booking-field">
-        <input
-          type="date"
-          name="entrada"
-          required
-          min="<?php echo date('Y-m-d'); ?>"
-          value="<?php echo htmlspecialchars($_POST['entrada'] ?? ''); ?>"
-        >
-        <span class="booking-date-label">Fecha de entrada</span>
-      </div>
+    <div class="booking-field">
+      <input
+        type="number"
+        name="personas"
+        placeholder="No. de personas"
+        required
+        min="1"
+        step="1"
+        value="<?php echo htmlspecialchars($_POST['personas'] ?? ''); ?>"
+      >
+    </div>
 
-      <div class="booking-field">
-        <input
-          type="date"
-          name="salida"
-          required
-          min="<?php echo date('Y-m-d'); ?>"
-          value="<?php echo htmlspecialchars($_POST['salida'] ?? ''); ?>"
-        >
-        <span class="booking-date-label">Fecha de salida</span>
-      </div>
+    <div class="booking-field booking-field-date">
+      <span class="booking-date-label">Fecha de entrada</span>
+      <input
+        type="date"
+        name="entrada"
+        required
+        min="<?php echo date('Y-m-d'); ?>"
+        value="<?php echo htmlspecialchars($_POST['entrada'] ?? ''); ?>"
+      >
+    </div>
 
-      <div class="booking-actions">
-        <button type="submit">Reservar</button>
-      </div>
-    </form>
+    <div class="booking-field booking-field-date">
+      <span class="booking-date-label">Fecha de salida</span>
+      <input
+        type="date"
+        name="salida"
+        required
+        min="<?php echo date('Y-m-d'); ?>"
+        value="<?php echo htmlspecialchars($_POST['salida'] ?? ''); ?>"
+      >
+    </div>
+
+    <div class="booking-actions">
+      <button type="reset" class="booking-reset">Borrar datos</button>
+      <button type="submit">Reservar ahora</button>
+    </div>
+  </form>
+</div>
   </div>
 </section>
 
