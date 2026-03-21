@@ -245,23 +245,36 @@ textarea.cs-input {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 13px 28px;
-  background: linear-gradient(135deg, #bfeee4, #8fd8c8);
+  min-width: 220px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #d8f7ef, #8fd8c8);
   color: #0b2c2f;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.95rem;
+  letter-spacing: 0.4px;
   cursor: pointer;
-  box-shadow: 0 6px 18px rgba(143, 216, 200, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow:
+    0 10px 24px rgba(88, 170, 154, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
 }
 
 .cs-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(143, 216, 200, 0.45);
+  background: linear-gradient(135deg, #c7efe5, #78cdbb);
+  box-shadow:
+    0 14px 30px rgba(88, 170, 154, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
 }
 
+.cs-submit:active {
+  transform: translateY(0);
+}
 /* ==================== MENSAJES ==================== */
 
 .cs-message-success,
