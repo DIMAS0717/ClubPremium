@@ -19,7 +19,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $mensajeError = 'Ingresa un correo electrónico válido.';
     } else {
-        $mensajeExito = 'Tu mensaje fue recibido correctamente. Pronto nos pondremos en contacto contigo.';
+        $destinatario = 'goyorealestate@gmail.com'; // cámbialo si quieres otro correo
+        $asunto = 'Nuevo mensaje desde Contáctanos';
+
+        $contenido  = "Nombre: " . $nombre . "\n";
+        $contenido .= "Apellido: " . $apellido . "\n";
+        $contenido .= "Correo: " . $email . "\n";
+        $contenido .= "Mensaje: " . $mensaje . "\n";
+
+        $headers  = "From: noreply@tudominio.com\r\n";
+        $headers .= "Reply-To: " . $email . "\r\n";
+        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+        if (mail($destinatario, $asunto, $contenido, $headers)) {
+            $mensajeExito = 'Tu mensaje fue enviado correctamente. Pronto nos pondremos en contacto contigo.';
+
+            $_POST['nombre'] = '';
+            $_POST['apellido'] = '';
+            $_POST['email'] = '';
+            $_POST['mensaje'] = '';
+        } else {
+            $mensajeError = 'No se pudo enviar el mensaje. Revisa la configuración de correo del servidor.';
+        }
     }
 }
 ?>
@@ -42,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <?php include __DIR__ . '/includes/header.php'; ?>
 
-<main class="page-main">
+<main class="page-main contact-page">
 
     <section class="cs-contact-section">
 

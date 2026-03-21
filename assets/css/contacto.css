@@ -12,6 +12,9 @@ body {
   padding: 0 !important;
   margin: 0 !important;
 }
+.cs-contact-section{
+  padding-top: 170px;
+}
 
 /* CONTENEDOR PRINCIPAL */
 .cs-contact-section {
