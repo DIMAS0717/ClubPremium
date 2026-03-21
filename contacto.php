@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <?php include __DIR__ . '/includes/header.php'; ?>
 
-<main class="page-main contact-page">
+<main class="page-main">
 
     <section class="cs-contact-section">
 
