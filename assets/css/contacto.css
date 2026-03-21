@@ -2,7 +2,8 @@
 
 /* BASE */
 body {
-    background: linear-gradient(90deg, #3D5477, #173457);
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #3D5477, #173457);
   overflow-x: hidden;
 }
 
