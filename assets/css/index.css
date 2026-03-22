@@ -66,19 +66,7 @@
   z-index: 1;
   pointer-events: none;
 }
-@media (max-width: 980px) {
-  .around-hero-container {
-    min-height: calc(100vh - 110px);
-    margin-top: 110px;
-  }
-}
 
-@media (max-width: 560px) {
-  .around-hero-container {
-    min-height: calc(100vh - 110px);
-    margin-top: 110px;
-  }
-}
 
 /* ===================== TEXTO ===================== */
 
