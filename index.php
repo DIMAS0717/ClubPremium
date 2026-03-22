@@ -59,7 +59,7 @@ try {
 
 <?php include __DIR__ . '/includes/header.php'; ?>
 
-<main class="page-main villas-page">
+<main class="page-main villas-page" style="background: linear-gradient(90deg, #3D5477, #173457);">
     <?php include __DIR__ . '/includes/home/hero.php'; ?>
     <?php include __DIR__ . '/includes/home/destacadas.php'; ?>
     <?php include __DIR__ . '/includes/home/about.php'; ?>
