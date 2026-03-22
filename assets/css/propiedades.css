@@ -36,7 +36,6 @@
 
 body {
   margin: 0;
-  padding-top: 160px;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg-page);
   color: var(--text-main);
@@ -107,7 +106,8 @@ body {
 .property-wrapper {
   max-width: 1200px;
   margin: 24px auto 64px;
-  padding: 0 16px;
+  padding: 0px 16px;
+  padding-top: 110px;
 }
 
 /* =========================================================

@@ -31,7 +31,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 
             <button id="langToggle" class="lang-toggle" type="button" aria-label="Cambiar idioma">
-                    ESP | ENG
+                ESP | ENG
             </button>
 
             <button id="themeToggle" class="toggle-theme" type="button" aria-label="Cambiar tema">🌙</button>
