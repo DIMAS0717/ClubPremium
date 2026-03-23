@@ -398,6 +398,17 @@ a {
   color: #fca5a5;
   font-weight: 600;
 }
+
+.booking-btn,
+.booking-reset-btn {
+  transform: scale(1);
+  transition: transform 0.18s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+
+.booking-btn:active,
+.booking-reset-btn:active {
+  transform: scale(1.25);
+}
 /* =========================================================
    GRID DE PROPIEDADES
    ========================================================= */
