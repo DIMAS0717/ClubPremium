@@ -306,9 +306,9 @@ a {
 }
 
 .status-disponible {
-  border-color: #22c55e33;
-  background: #16a34a33;
-  color: #bbf7d0;
+  border-color: #1da44e33;
+  background: #0aa84433;
+  color: #11ad48;
 }
 
 .status-no_disponible {
@@ -317,11 +317,6 @@ a {
   color: #e5e7eb;
 }
 
-.status-ocupada {
-  border-color: #f59e0b33;
-  background: #d9770633;
-  color: #fde68a;
-}
 
 .status-soft {
   background: #e8f0ff;
