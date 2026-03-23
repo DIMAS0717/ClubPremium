@@ -371,6 +371,26 @@ a {
   border-left: 1px solid #dbe3ec;
   border-radius: 0 24px 24px 0;
 }
+.search-feedback {
+  margin-top: 16px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.search-feedback-success {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.search-feedback-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
 
 /* =========================================================
    GRID DE PROPIEDADES
