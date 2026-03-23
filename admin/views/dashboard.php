@@ -26,15 +26,12 @@
         <div class="info-item">
             <span class="info-label">Fecha de Registro</span>
             <span class="info-value">
-                <?=
-                    !empty($admin['created_at'])
-                    ? date('d/m/Y', strtotime($admin['created_at']))
-                    : '—';
-                ?>
+                <?= !empty($admin['created_at']) ? date('d/m/Y', strtotime($admin['created_at'])) : '—'; ?>
             </span>
         </div>
     </div>
 </div>
+
 <div class="content-section">
     <h2>Foto de Perfil</h2>
 
@@ -83,6 +80,38 @@
     </div>
 </div>
 
+<div class="content-section">
+    <h2>Últimos movimientos</h2>
+
+    <?php if (!empty($movimientos)): ?>
+        <div class="table-responsive movimientos-wrap">
+            <table class="admin-table movimientos-table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Tipo</th>
+                        <th>Detalle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($movimientos as $mov): ?>
+                        <tr>
+                            <td><?= htmlspecialchars($mov['fecha']) ?></td>
+                            <td><?= htmlspecialchars($mov['tipo']) ?></td>
+                            <td><?= htmlspecialchars($mov['detalle']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    <?php else: ?>
+        <p class="no-items">
+            <i class="fas fa-info-circle"></i>
+            No hay movimientos recientes todavía.
+        </p>
+    <?php endif; ?>
+</div>
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const avatarInput = document.getElementById('avatar');
@@ -99,37 +128,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 </script>
-
-<div class="content-section">
-    <h2>Últimos movimientos</h2>
-
-    <?php if (!empty($movimientos)): ?>
-        <div class="articles-container">
-            <table class="admin-table">
-                <thead>
-                    <tr>
-                        <th>Fecha</th>
-                        <th>Tipo</th>
-                        <th>Detalle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($movimientos as $mov): ?>
-                        <tr>
-                            <td>
-                                <?= !empty($mov['fecha']) ? date('d/m/Y H:i', strtotime($mov['fecha'])) : '—'; ?>
-                            </td>
-                            <td><?= htmlspecialchars($mov['tipo'] ?? ''); ?></td>
-                            <td><?= htmlspecialchars($mov['detalle'] ?? ''); ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        </div>
-    <?php else: ?>
-        <p class="no-items">
-            <i class="fas fa-info-circle"></i>
-            No hay movimientos recientes todavía.
-        </p>
-    <?php endif; ?>
-</div>

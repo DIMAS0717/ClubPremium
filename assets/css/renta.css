@@ -371,7 +371,33 @@ a {
   border-left: 1px solid #dbe3ec;
   border-radius: 0 24px 24px 0;
 }
+.search-feedback {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+}
 
+.search-feedback-success {
+  color: #e5e7eb;
+}
+
+.search-feedback-success strong {
+  color: #7dd3fc;
+  font-weight: 800;
+  border-bottom: 2px solid rgba(125, 211, 252, 0.85);
+  padding-bottom: 2px;
+}
+
+.search-feedback-error {
+  color: #fca5a5;
+  font-weight: 600;
+}
 /* =========================================================
    GRID DE PROPIEDADES
    ========================================================= */

@@ -1,4 +1,21 @@
 <?php
+$hoy = date('Y-m-d');
+$errorCalendario = '';
+
+// Validación backend
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_POST['action'] ?? '') === 'save_calendar') {
+    $fechaInicioPost = $_POST['fecha_inicio'] ?? '';
+    $fechaFinPost    = $_POST['fecha_fin'] ?? '';
+
+    if ($fechaInicioPost !== '' && $fechaInicioPost < $hoy) {
+        $errorCalendario = 'La fecha de inicio no puede ser menor a hoy.';
+    } elseif ($fechaFinPost !== '' && $fechaFinPost < $hoy) {
+        $errorCalendario = 'La fecha fin no puede ser menor a hoy.';
+    } elseif ($fechaInicioPost !== '' && $fechaFinPost !== '' && $fechaFinPost < $fechaInicioPost) {
+        $errorCalendario = 'La fecha fin no puede ser menor que la fecha de inicio.';
+    }
+}
+
 // Cargar lista de propiedades
 $sql_prop = "SELECT id, nombre FROM properties ORDER BY nombre ASC";
 $stmt_prop = $conn->prepare($sql_prop);
@@ -19,7 +36,13 @@ $registros = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="content-section">
     <h2>Gestionar calendario de ocupación</h2>
 
-    <form method="post" class="biografia-form">
+    <?php if ($errorCalendario !== ''): ?>
+        <div class="alert error" style="margin-bottom:18px;">
+            <?= htmlspecialchars($errorCalendario); ?>
+        </div>
+    <?php endif; ?>
+
+    <form method="post" class="biografia-form" id="calendarForm">
         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
         <input type="hidden" name="action" value="save_calendar">
 
@@ -42,21 +65,27 @@ $registros = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         <div class="form-group" style="margin-top:15px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;">
             <div>
-                <label>Fecha inicio</label>
+                <label for="fecha_inicio">Fecha inicio</label>
                 <input
                     type="date"
+                    id="fecha_inicio"
                     name="fecha_inicio"
                     required
+                    min="<?= htmlspecialchars($hoy); ?>"
+                    value="<?= htmlspecialchars($_POST['fecha_inicio'] ?? ''); ?>"
                     style="width:100%;padding:10px;border-radius:12px;border:1px solid #ddd;"
                 >
             </div>
 
             <div>
-                <label>Fecha fin</label>
+                <label for="fecha_fin">Fecha fin</label>
                 <input
                     type="date"
+                    id="fecha_fin"
                     name="fecha_fin"
                     required
+                    min="<?= htmlspecialchars($hoy); ?>"
+                    value="<?= htmlspecialchars($_POST['fecha_fin'] ?? ''); ?>"
                     style="width:100%;padding:10px;border-radius:12px;border:1px solid #ddd;"
                 >
             </div>
@@ -81,8 +110,8 @@ $registros = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <div class="content-section">
     <h2>Rangos registrados</h2>
 
-    <div class="articles-container">
-        <table class="admin-table">
+    <div class="table-responsive rangos-wrap">
+        <table class="admin-table rangos-table">
             <thead>
                 <tr>
                     <th>Casa</th>
@@ -104,19 +133,14 @@ $registros = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <td>
                                 <form
                                     method="post"
-                                    class="inline-form"
-                                    style="display:inline;"
+                                    class="inline-form delete-inline-form"
                                     onsubmit="return confirm('¿Eliminar este rango?');"
                                 >
                                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
                                     <input type="hidden" name="action" value="delete_calendar">
                                     <input type="hidden" name="id" value="<?= (int)$r['id']; ?>">
 
-                                    <button
-                                        type="submit"
-                                        class="small-link danger"
-                                        style="border:none;background:none;"
-                                    >
+                                    <button type="submit" class="small-link danger small-link-btn">
                                         Borrar
                                     </button>
                                 </form>
@@ -133,6 +157,64 @@ $registros = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </div>
 
-<footer style="margin-top:30px;text-align:center;color:#e5e7eb;font-size:0.85rem;">
-    &copy; <?= date('Y'); ?> Club Santiago. Panel de administración.
-</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('calendarForm');
+    const fechaInicio = document.getElementById('fecha_inicio');
+    const fechaFin = document.getElementById('fecha_fin');
+
+    const hoy = new Date();
+    const year = hoy.getFullYear();
+    const month = String(hoy.getMonth() + 1).padStart(2, '0');
+    const day = String(hoy.getDate()).padStart(2, '0');
+    const fechaHoy = `${year}-${month}-${day}`;
+
+    if (fechaInicio) {
+        fechaInicio.min = fechaHoy;
+    }
+
+    if (fechaFin) {
+        fechaFin.min = fechaInicio && fechaInicio.value ? fechaInicio.value : fechaHoy;
+    }
+
+    if (fechaInicio && fechaFin) {
+        const actualizarFechaFin = () => {
+            fechaFin.min = fechaInicio.value || fechaHoy;
+
+            if (fechaFin.value && fechaInicio.value && fechaFin.value < fechaInicio.value) {
+                fechaFin.value = '';
+            }
+        };
+
+        fechaInicio.addEventListener('change', actualizarFechaFin);
+        actualizarFechaFin();
+    }
+
+    if (form && fechaInicio && fechaFin) {
+        form.addEventListener('submit', function (e) {
+            const inicio = fechaInicio.value;
+            const fin = fechaFin.value;
+
+            if (inicio && inicio < fechaHoy) {
+                e.preventDefault();
+                alert('La fecha de inicio no puede ser menor a hoy.');
+                fechaInicio.focus();
+                return;
+            }
+
+            if (fin && fin < fechaHoy) {
+                e.preventDefault();
+                alert('La fecha fin no puede ser menor a hoy.');
+                fechaFin.focus();
+                return;
+            }
+
+            if (inicio && fin && fin < inicio) {
+                e.preventDefault();
+                alert('La fecha fin no puede ser menor que la fecha de inicio.');
+                fechaFin.focus();
+            }
+        });
+    }
+});
+</script>
