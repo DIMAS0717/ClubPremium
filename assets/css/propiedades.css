@@ -47,6 +47,7 @@ body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg-page);
   color: var(--text-main);
+  overflow-x: hidden;
 }
 
 img {
@@ -85,7 +86,6 @@ a {
   cursor: pointer;
   text-decoration: none;
   font-weight: 600;
-  box-sizing: border-box;
   text-align: center;
   transition: 0.25s ease;
 }
@@ -140,9 +140,9 @@ a {
    CONTENEDOR GENERAL
    ========================================================= */
 .property-wrapper {
-  max-width: 1200px;
+  width: min(100%, 1200px);
   margin: 0 auto 64px;
-  padding: 120px 10px 0;
+  padding: 140px 16px 0;
 }
 
 /* =========================================================
@@ -150,9 +150,11 @@ a {
    ========================================================= */
 .property-hero {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(0, 1.65fr) minmax(320px, 1fr);
   gap: 24px;
   margin-bottom: 24px;
+  align-items: stretch;
+  padding-top: 55px;
 }
 
 .property-slider-card,
@@ -167,11 +169,13 @@ a {
 .property-slider-card {
   padding: 0;
   overflow: hidden;
+  min-width: 0;
 }
 
 .property-summary-card,
 .property-card {
   padding: 20px 22px;
+  min-width: 0;
 }
 
 /* =========================================================
@@ -184,7 +188,7 @@ a {
 .slider-window {
   overflow: hidden;
   width: 100%;
-  height: 440px;
+  height: clamp(320px, 42vw, 440px);
   border-radius: 20px;
 }
 
@@ -192,12 +196,13 @@ a {
   display: flex;
   transition: transform 0.4s ease;
   width: 100%;
+  height: 100%;
 }
 
 .slide {
   min-width: 100%;
   flex: 0 0 100%;
-  max-height: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,8 +222,8 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.25);
   background: rgba(0, 0, 0, 0.25);
@@ -231,6 +236,7 @@ a {
   cursor: pointer;
   transition: all 0.25s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+  z-index: 2;
 }
 
 .slider-arrow:hover {
@@ -239,18 +245,19 @@ a {
 }
 
 .slider-arrow[data-prev] {
-  left: 10px;
+  left: 12px;
 }
 
 .slider-arrow[data-next] {
-  right: 10px;
+  right: 12px;
 }
 
 .slider-dots {
   display: flex;
   justify-content: center;
   gap: 6px;
-  margin-top: 8px;
+  margin-top: 10px;
+  padding: 0 10px 10px;
 }
 
 .slider-dot {
@@ -273,6 +280,7 @@ a {
   margin: 10px 0 8px;
   font-size: 24px;
   line-height: 1.12;
+  word-break: break-word;
 }
 
 .property-short {
@@ -347,6 +355,7 @@ a {
 
 .mini-stat {
   text-align: center;
+  min-width: 0;
 }
 
 .mini-label {
@@ -369,7 +378,7 @@ a {
    ========================================================= */
 .property-info-grid {
   display: grid;
-  grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(0, 1.65fr) minmax(280px, 1fr);
   grid-auto-rows: auto;
   column-gap: 24px;
   row-gap: 16px;
@@ -410,6 +419,7 @@ a {
   font-size: 14px;
   line-height: 1.65;
   color: var(--text-muted);
+  overflow-wrap: break-word;
 }
 
 /* =========================================================
@@ -523,6 +533,7 @@ a {
 
 .location-value {
   color: var(--text-muted);
+  overflow-wrap: break-word;
 }
 
 .small-link {
@@ -605,15 +616,19 @@ a {
 /* =========================================================
    RESPONSIVE
    ========================================================= */
+
+/* -------- TABLET GRANDE / LAPTOP PEQUEÑA -------- */
 @media (max-width: 1100px) {
   .property-wrapper {
-    padding: 110px 12px 0;
+    padding: 120px 14px 0;
     margin-bottom: 40px;
   }
 
   .property-hero {
     grid-template-columns: 1fr;
     gap: 18px;
+    margin-bottom: 18px;
+    padding-top: 30px;
   }
 
   .property-info-grid {
@@ -629,19 +644,20 @@ a {
     grid-row: auto;
   }
 
+  .slider-window {
+    height: clamp(300px, 52vw, 420px);
+  }
+
   .property-gallery-card .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .slider-window {
-    height: 360px;
-  }
 }
 
+/* -------- TABLET -------- */
 @media (max-width: 768px) {
   .property-wrapper {
-    padding: 76px 12px 0;
-    margin-bottom: 28px;
+    padding: 105px 12px 0;
+    margin-bottom: 32px;
   }
 
   .property-slider-card,
@@ -658,6 +674,7 @@ a {
   .property-hero {
     gap: 14px;
     margin-bottom: 14px;
+    padding-top: 37px;
   }
 
   .property-info-grid {
@@ -666,7 +683,7 @@ a {
   }
 
   .slider-window {
-    height: 245px;
+    height: clamp(230px, 54vw, 320px);
     border-radius: 16px;
   }
 
@@ -687,8 +704,8 @@ a {
 
   .property-title {
     font-size: 22px;
-    line-height: 1.08;
-    margin: 8px 0 8px;
+    line-height: 1.1;
+    margin: 8px 0;
   }
 
   .property-short {
@@ -796,9 +813,10 @@ a {
   }
 }
 
+/* -------- CELULAR -------- */
 @media (max-width: 480px) {
   .property-wrapper {
-    padding: 68px 10px 0;
+    padding: 90px 10px 0;
   }
 
   .property-summary-card,
@@ -807,7 +825,7 @@ a {
   }
 
   .slider-window {
-    height: 220px;
+    height: clamp(210px, 58vw, 260px);
   }
 
   .property-title {
@@ -844,5 +862,40 @@ a {
   .property-gallery-card .gallery-item img,
   .gallery-img {
     height: 170px;
+  }
+}
+
+/* -------- CELULAR MUY PEQUEÑO -------- */
+@media (max-width: 360px) {
+  .property-wrapper {
+    padding: 84px 8px 0;
+  }
+
+  .property-summary-card,
+  .property-card {
+    padding: 12px;
+  }
+
+  .slider-window {
+    height: 200px;
+  }
+
+  .property-title {
+    font-size: 18px;
+  }
+
+  .property-mini-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .mini-stat {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  .mini-stat:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 }
