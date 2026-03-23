@@ -46,6 +46,22 @@ try {
         return '?' . http_build_query($query);
     }
 
+    function diaEnEspanol(string $fecha): string
+    {
+        $dias = [
+            'Sunday'    => 'Domingo',
+            'Monday'    => 'Lunes',
+            'Tuesday'   => 'Martes',
+            'Wednesday' => 'Miércoles',
+            'Thursday'  => 'Jueves',
+            'Friday'    => 'Viernes',
+            'Saturday'  => 'Sábado',
+        ];
+
+        $diaIngles = date('l', strtotime($fecha));
+        return $dias[$diaIngles] ?? $diaIngles;
+    }
+
     /* =========================================================
        FILTROS
     ========================================================= */
@@ -86,7 +102,7 @@ try {
         } else {
             $hayFechas = true;
             $entradaBusqueda = $entrada;
-            $salidaBusqueda = $entrada; // un solo día
+            $salidaBusqueda = $entrada;
             $textoBusqueda = 'Disponibilidad para el día: ' . date('d/m', strtotime($entradaBusqueda));
         }
     } elseif ($entrada === '' && $salida !== '') {
@@ -435,7 +451,15 @@ try {
         </div>
     <?php elseif ($textoBusqueda !== ''): ?>
         <div class="search-feedback search-feedback-success">
-            <?= e($textoBusqueda) ?>
+            <?php if ($hayFechas && $entradaBusqueda === $salidaBusqueda): ?>
+                Disponibilidad para el día:
+                <strong><?= e(diaEnEspanol($entradaBusqueda)) ?> / <?= date('d/m', strtotime($entradaBusqueda)) ?></strong>
+            <?php elseif ($hayFechas): ?>
+                Disponibilidad del
+                <strong><?= e(diaEnEspanol($entradaBusqueda)) ?> / <?= date('d/m', strtotime($entradaBusqueda)) ?></strong>
+                al
+                <strong><?= e(diaEnEspanol($salidaBusqueda)) ?> / <?= date('d/m', strtotime($salidaBusqueda)) ?></strong>
+            <?php endif; ?>
         </div>
     <?php endif; ?>
 
