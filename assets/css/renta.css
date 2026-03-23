@@ -1,6 +1,6 @@
 /* =========================================================
    RENTA.PHP
-   Solo estilos usados en la página de propiedades en renta
+   CSS RESPONSIVE CORREGIDO
    ========================================================= */
 
 /* =========================================================
@@ -24,7 +24,9 @@
   --chip-bg: #e5edff;
   --chip-border: var(--blue-soft);
 
+  --radius-xl: 24px;
   --radius-lg: 18px;
+  --radius-md: 14px;
   --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.22);
 }
 
@@ -37,12 +39,26 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  padding-top: 160px;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--bg-page);
   color: var(--text-main);
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* =========================================================
@@ -50,41 +66,56 @@ body {
    ========================================================= */
 .page-main {
   width: 100%;
-  padding: 60px 0 20px;
+  padding: 148px 0 28px;
 }
 
 .page-centered {
-  max-width: 1120px;
+  width: min(100%, 1200px);
   margin: 0 auto;
-  padding: 0 20px 15px;
+  padding: 0 20px;
 }
 
 .section {
   margin-top: 24px;
 }
 
+.section h1 {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.08;
+}
+
 .muted-text {
-  font-size: 13px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
   color: var(--text-muted);
 }
 
 /* =========================================================
-   BOTÓN GENÉRICO USADO EN LAS CARDS
+   BOTÓN GENÉRICO
    ========================================================= */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
+  min-height: 46px;
+  padding: 10px 18px;
   border-radius: 999px;
   font-size: 14px;
   border: none;
   cursor: pointer;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   background: linear-gradient(135deg, var(--btn-primary-from), var(--btn-primary-to));
   color: #fff;
   box-shadow: var(--shadow-soft);
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
 }
 
 /* =========================================================
@@ -94,6 +125,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
   gap: 0;
+  margin-top: 22px;
   background: rgba(255, 255, 255, 0.98);
   border: 1px solid rgba(229, 231, 235, 0.95);
   border-radius: 24px;
@@ -115,7 +147,11 @@ body {
   justify-content: center;
   min-height: 92px;
   position: relative;
-  z-index: 6;
+  min-width: 0;
+}
+
+.booking-field:last-of-type {
+  border-right: 1px solid #e5e7eb;
 }
 
 .booking-label {
@@ -124,17 +160,6 @@ body {
   color: #173457;
   margin-bottom: 8px;
   letter-spacing: 0.2px;
-}
-
-.booking-field input,
-.booking-field select {
-  border: none;
-  font-size: 15px;
-  font-weight: 600;
-  outline: none;
-  color: #5b6472;
-  background: transparent;
-  width: 100%;
 }
 
 .booking-input {
@@ -148,10 +173,13 @@ body {
   transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
   position: relative;
   z-index: 6;
+  min-width: 0;
 }
 
-.booking-input select,
-.booking-input input {
+.booking-field input,
+.booking-field select,
+.booking-input input,
+.booking-input select {
   border: none;
   background: transparent;
   width: 100%;
@@ -159,6 +187,7 @@ body {
   font-weight: 600;
   outline: none;
   color: #5b6472;
+  min-width: 0;
 }
 
 .booking-input:focus-within {
@@ -172,9 +201,17 @@ body {
   font-weight: 700;
 }
 
+.booking-field select,
+.booking-input select {
+  appearance: auto;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  cursor: pointer;
+}
+
 .booking-dropdown {
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 
 .booking-dropdown-toggle {
@@ -188,19 +225,10 @@ body {
 
 #tipoTexto {
   flex: 1;
+  min-width: 0;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-.booking-field select,
-.booking-input select {
-  appearance: auto;
-  -webkit-appearance: menulist;
-  -moz-appearance: menulist;
-  cursor: pointer;
-  position: relative;
-  z-index: 7;
 }
 
 .booking-dropdown-menu {
@@ -306,140 +334,44 @@ body {
 .booking-actions {
   display: flex;
   align-items: stretch;
+  min-width: 250px;
 }
 
-.booking-btn {
-  min-width: 150px;
-  border: none;
-  border-radius: 0;
-  background: linear-gradient(135deg, #264b78, #173457);
-  color: #fff;
-  font-size: 15px;
-  font-weight: 700;
-  padding: 0 28px;
-  cursor: pointer;
-  transition: transform 0.25s ease, filter 0.25s ease, background 0.25s ease;
-}
-
-.booking-btn:hover {
-  filter: brightness(1.30);
-}
-
-.booking-btn:active {
-  transform: scale(1.30);
-}
-
+.booking-btn,
 .booking-reset-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-height: 100%;
+  font-size: 15px;
+  font-weight: 700;
+  transition: transform 0.25s ease, filter 0.25s ease, background 0.25s ease;
+}
+
+.booking-btn {
+  min-width: 140px;
+  border: none;
+  border-radius: 0;
+  background: linear-gradient(135deg, #264b78, #173457);
+  color: #fff;
+  padding: 0 24px;
+  cursor: pointer;
+}
+
+.booking-btn:hover,
+.booking-reset-btn:hover {
+  filter: brightness(1.10);
+}
+
+.booking-reset-btn {
   min-width: 110px;
   padding: 0 18px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 700;
   color: #fff;
   background: linear-gradient(135deg, #264b78, #173457);
   border-left: 1px solid #dbe3ec;
   border-radius: 0 24px 24px 0;
-  transition: background 0.25s ease, color 0.25s ease;
 }
 
-.booking-reset-btn:hover {
-  filter: brightness(1.30);
-}
-
-.booking-reset-btn:active {
-  transform: scale(1.20);
-}
-
-/* =========================================================
-   RESPONSIVE DEL BUSCADOR
-   ========================================================= */
-@media (max-width: 900px) {
-  .booking-bar {
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    padding: 16px;
-    border-radius: 22px;
-    overflow: visible;
-  }
-
-  .booking-field {
-    min-height: auto;
-    padding: 0;
-    border-right: none;
-  }
-
-  .booking-actions {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
-
-  .booking-btn,
-  .booking-reset-btn {
-    min-height: 52px;
-    border-radius: 14px;
-    min-width: 100%;
-    border-left: none;
-  }
-
-  .booking-reset-btn {
-    background: #eef2f7;
-  }
-}
-
-@media (max-width: 640px) {
-  .booking-bar {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 18px;
-    border-radius: 24px;
-    box-shadow:
-      0 20px 40px rgba(15, 23, 42, 0.10),
-      0 8px 18px rgba(15, 23, 42, 0.06);
-  }
-
-  .booking-field {
-    background: transparent;
-  }
-
-  .booking-label {
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-
-  .booking-input {
-    min-height: 54px;
-    border-radius: 14px;
-    padding: 12px 14px;
-  }
-
-  .booking-input select,
-  .booking-input input {
-    font-size: 16px;
-  }
-
-  .booking-actions {
-    grid-template-columns: 1fr;
-  }
-
-  .booking-btn,
-  .booking-reset-btn {
-    min-height: 58px;
-    border-radius: 16px;
-    font-size: 17px;
-    font-weight: 700;
-    width: 100%;
-  }
-
-  .booking-dropdown-menu {
-    min-width: 100%;
-    width: 100%;
-  }
-}
 /* =========================================================
    GRID DE PROPIEDADES
    ========================================================= */
@@ -463,48 +395,48 @@ body {
   display: flex;
   flex-direction: column;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-  cursor: pointer;
+  min-width: 0;
 }
 
 .home-property-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
 }
 
-/* =========================================================
-   ÁREA DE IMAGEN
-   ========================================================= */
 .home-property-img-wrapper {
   position: relative;
-  height: 230px;
+  height: 260px;
   overflow: hidden;
   border-radius: 18px 18px 0 0;
   background: #000;
 }
 
+.property-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .home-property-img {
   width: 100%;
-  max-height: 300px;
-  border-radius: 18px 18px 0 0;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
 .img-front {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 2;
-  transition: transform 1.4s ease-in-out, filter 2s ease;
+  transition: transform 1.4s ease-in-out, filter 0.35s ease;
 }
 
 .img-back-pool {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -538,7 +470,7 @@ body {
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   backdrop-filter: blur(8px);
@@ -597,10 +529,10 @@ body {
   position: absolute;
   left: 1rem;
   bottom: 1rem;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -610,14 +542,14 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1px;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
+  z-index: 25;
 }
 
 .capacity-circle-icon {
   width: 14px;
   height: 14px;
   color: #ffffff;
-  opacity: 1;
 }
 
 .capacity-circle-number {
@@ -637,27 +569,31 @@ body {
    CUERPO DE LA CARD
    ========================================================= */
 .home-property-body {
-  padding: 14px 16px 16px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
+  flex: 1;
 }
 
 .home-property-title {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.2;
+  word-break: break-word;
 }
 
 .home-property-text {
   margin: 0;
   font-size: 14px;
+  line-height: 1.65;
   color: var(--text-muted);
 }
 
-.home-property-body .btn-primary {
+.home-property-btn {
   margin-top: auto;
   width: 100%;
-  min-height: 44px;
+  min-height: 46px;
   border-radius: 999px;
   font-weight: 700;
 }
@@ -666,7 +602,7 @@ body {
    PAGINACIÓN
    ========================================================= */
 .pagination {
-  margin-top: 10px;
+  margin-top: 12px;
   margin-bottom: 15px;
   display: flex;
   justify-content: center;
@@ -675,16 +611,31 @@ body {
   flex-wrap: wrap;
 }
 
+.pagination .btn-primary {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px 14px;
+}
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
-@media (max-width: 900px) {
+
+/* -------- LAPTOP PEQUEÑA / TABLET GRANDE -------- */
+@media (max-width: 1100px) {
+  .page-main {
+    padding-top: 132px;
+  }
+
+  .page-centered {
+    padding: 0 16px;
+  }
+
   .booking-bar {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 14px;
     padding: 16px;
     border-radius: 22px;
-    overflow: visible;
   }
 
   .booking-field {
@@ -693,56 +644,66 @@ body {
     border-right: none;
   }
 
-  .booking-field:last-of-type {
-    border-right: none;
+  .booking-actions {
+    grid-column: 1 / -1;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
 
-  .booking-btn {
+  .booking-btn,
+  .booking-reset-btn {
+    min-width: 100%;
     min-height: 52px;
     border-radius: 14px;
-    min-width: 100%;
-    box-shadow: 0 10px 22px rgba(23, 52, 87, 0.20);
+    padding: 0 18px;
+    border-left: none;
+  }
+
+  .booking-reset-btn {
+    background: #eef2f7;
+    color: #173457;
+  }
+
+  .home-property-grid {
+    gap: 20px;
+  }
+
+  .home-property-img-wrapper {
+    height: 235px;
   }
 }
 
+/* -------- TABLET -------- */
 @media (max-width: 768px) {
-  .home-property-grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 15px;
-  }
-
-  .home-property-card:active .img-front,
-  .home-property-card:focus .img-front {
-    transform: translateX(-90%);
-  }
-
-  .btn-view-pool {
-    width: 44px;
-    height: 44px;
+  .page-main {
+    padding-top: 118px;
+    padding-bottom: 24px;
   }
 
   .page-centered {
-    padding: 0 14px 15px;
+    padding: 0 14px;
   }
 
-  .page-main {
-    padding: 40px 0 15px;
+  .section {
+    margin-top: 20px;
   }
-}
 
-@media (max-width: 640px) {
+  .section h1 {
+    font-size: 30px;
+  }
+
   .booking-bar {
     grid-template-columns: 1fr;
     gap: 16px;
     padding: 18px;
-    border-radius: 24px;
-    box-shadow:
-      0 20px 40px rgba(15, 23, 42, 0.10),
-      0 8px 18px rgba(15, 23, 42, 0.06);
+    border-radius: 22px;
+    margin-top: 18px;
   }
 
   .booking-field {
-    background: transparent;
+    padding: 0;
   }
 
   .booking-label {
@@ -761,15 +722,194 @@ body {
     font-size: 16px;
   }
 
-  .booking-btn {
-    min-height: 58px;
-    border-radius: 16px;
-    font-size: 18px;
-    font-weight: 700;
+  .booking-dropdown-menu {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .booking-actions {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .booking-btn,
+  .booking-reset-btn {
+    min-height: 54px;
+    border-radius: 14px;
+    font-size: 16px;
     width: 100%;
   }
 
+  .home-property-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  .home-property-card:hover {
+    transform: none;
+  }
+
+  .home-property-img-wrapper {
+    height: 240px;
+  }
+
+  .home-property-body {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .home-property-title {
+    font-size: 17px;
+  }
+
+  .home-property-text {
+    font-size: 14px;
+  }
+
   .pagination {
-    margin-bottom: 15px;
+    gap: 8px;
+  }
+
+  .pagination .btn-primary {
+    min-width: 42px;
+    min-height: 42px;
+  }
+}
+
+/* -------- CELULAR -------- */
+@media (max-width: 480px) {
+  .page-main {
+    padding-top: 104px;
+  }
+
+  .page-centered {
+    padding: 0 10px;
+  }
+
+  .section h1 {
+    font-size: 26px;
+  }
+
+  .muted-text {
+    font-size: 13px;
+  }
+
+  .booking-bar {
+    padding: 14px;
+    border-radius: 18px;
+    gap: 14px;
+  }
+
+  .booking-label {
+    font-size: 13px;
+  }
+
+  .booking-input {
+    min-height: 50px;
+    padding: 10px 12px;
+  }
+
+  .booking-input select,
+  .booking-input input {
+    font-size: 15px;
+  }
+
+  .booking-option {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  .booking-dropdown-actions {
+    flex-direction: column;
+  }
+
+  .booking-clear-mini,
+  .booking-apply-mini {
+    width: 100%;
+  }
+
+  .booking-btn,
+  .booking-reset-btn {
+    min-height: 50px;
+    font-size: 15px;
+  }
+
+  .home-property-img-wrapper {
+    height: 220px;
+  }
+
+  .card-status-chip {
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    padding: 5px 12px;
+  }
+
+  .capacity-circle {
+    left: 12px;
+    bottom: 12px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .home-property-body {
+    padding: 14px;
+  }
+
+  .home-property-title {
+    font-size: 16px;
+  }
+
+  .home-property-text {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .home-property-btn {
+    min-height: 44px;
+    font-size: 14px;
+  }
+
+  .pagination {
+    gap: 6px;
+  }
+
+  .pagination .btn-primary {
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* -------- CELULAR PEQUEÑO -------- */
+@media (max-width: 360px) {
+  .page-main {
+    padding-top: 96px;
+  }
+
+  .page-centered {
+    padding: 0 8px;
+  }
+
+  .booking-bar {
+    padding: 12px;
+  }
+
+  .home-property-img-wrapper {
+    height: 205px;
+  }
+
+  .home-property-body {
+    padding: 12px;
+  }
+
+  .home-property-title {
+    font-size: 15px;
+  }
+
+  .home-property-text {
+    font-size: 12.5px;
   }
 }
