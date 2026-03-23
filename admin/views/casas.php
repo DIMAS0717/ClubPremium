@@ -241,9 +241,11 @@ $propiedades = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php endif; ?>
 
 <div class="content-section">
+   <div class="content-section">
     <h2>Listado de propiedades</h2>
-    <div class="articles-container">
-        <table class="admin-table">
+
+    <div class="table-responsive propiedades-wrap">
+        <table class="admin-table propiedades-table">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -264,17 +266,20 @@ $propiedades = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <td><?= htmlspecialchars($p['categoria']); ?></td>
                             <td><?= htmlspecialchars($p['estado_base']); ?></td>
                             <td>
-                                <a href="panel.php?view=casas&edit=<?= $p['id']; ?>" class="small-link">Editar</a>
-                                ·
-                                <a href="../propiedad.php?id=<?= $p['id']; ?>" target="_blank" class="small-link">Ver página</a>
-                                <form method="post" class="inline-form" style="display:inline;" onsubmit="return confirm('¿Eliminar esta casa?');">
-                                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
-                                    <input type="hidden" name="action" value="delete_property">
-                                    <input type="hidden" name="id" value="<?= $p['id']; ?>">
-                                    <button type="submit" class="small-link danger" style="border:none;background:none;">
-                                        Borrar
-                                    </button>
-                                </form>
+                                <div class="acciones-tabla">
+                                    <a href="panel.php?view=casas&edit=<?= $p['id']; ?>" class="small-link">Editar</a>
+
+                                    <a href="../propiedad.php?id=<?= $p['id']; ?>" target="_blank" class="small-link">Ver página</a>
+
+                                    <form method="post" class="inline-form delete-inline-form" onsubmit="return confirm('¿Eliminar esta casa?');">
+                                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']); ?>">
+                                        <input type="hidden" name="action" value="delete_property">
+                                        <input type="hidden" name="id" value="<?= $p['id']; ?>">
+                                        <button type="submit" class="small-link danger small-link-btn">
+                                            Borrar
+                                        </button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
                     <?php endforeach; ?>
