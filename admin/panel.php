@@ -47,48 +47,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     switch ($action) {
 
-        /* =============================
-           PROPIEDADES
-        ============================== */
         case 'save_property':
         case 'delete_property':
         case 'delete_photo':
         case 'delete_multiple_photos':
-        require_once __DIR__ . '/controllers/PropertyController.php';
-        PropertyController::handle($conn, $action);
-        exit;
+            require_once __DIR__ . '/controllers/PropertyController.php';
+            PropertyController::handle($conn, $action);
+            exit;
 
-
-        /* =============================
-           CALENDARIO
-        ============================== */
         case 'save_calendar':
         case 'delete_calendar':
-
             require_once __DIR__ . '/controllers/CalendarController.php';
             CalendarController::handle($conn, $action);
             exit;
 
-
-        /* =============================
-           PERFIL
-        ============================== */
         case 'update_profile':
-
             require_once __DIR__ . '/controllers/AuthController.php';
             AuthController::updateProfile($conn);
             exit;
 
-
         case 'update_avatar':
-
             require_once __DIR__ . '/controllers/AuthController.php';
             AuthController::updateAvatar($conn);
             exit;
 
-
         case 'change_password':
-
             require_once __DIR__ . '/controllers/AuthController.php';
             AuthController::changePassword($conn);
             exit;
@@ -104,16 +87,13 @@ $movimientos = [];
 $adminId = $_SESSION['admin_id'] ?? 0;
 
 if ($adminId > 0) {
-
     $stmt = $conn->prepare("
         SELECT id, username, nombre, correo, foto, pais, estado, created_at
         FROM admins
         WHERE id = ?
         LIMIT 1
     ");
-
     $stmt->execute([$adminId]);
-
     $admin = $stmt->fetch(PDO::FETCH_ASSOC) ?: [];
 }
 
@@ -121,9 +101,7 @@ if ($adminId > 0) {
    MOVIMIENTOS DASHBOARD
 ============================= */
 if ($view === 'dashboard') {
-
     $sqlMov = "
-
         (SELECT
             'Propiedad' AS tipo,
             nombre AS detalle,
@@ -144,7 +122,6 @@ if ($view === 'dashboard') {
     ";
 
     $stmtMov = $conn->query($sqlMov);
-
     $movimientos = $stmtMov ? $stmtMov->fetchAll(PDO::FETCH_ASSOC) : [];
 }
 
@@ -156,176 +133,204 @@ $flash_error   = $_SESSION['flash_error'] ?? '';
 
 unset($_SESSION['flash_success'], $_SESSION['flash_error']);
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <title>Panel Administrativo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="../assets/css/admin/panel.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
 
+<div class="mobile-overlay" id="mobileOverlay"></div>
 
 <!-- ================= SIDEBAR ================= -->
+<aside class="left-side" id="adminSidebar">
 
-<div class="left-side">
+    <div class="sidebar-mobile-top">
+        <h1>Centro de Administración</h1>
+        <button type="button" class="sidebar-close" id="sidebarClose" aria-label="Cerrar menú">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
 
-<h1>Centro de Administración</h1>
+    <?php
+    $rutaFoto = !empty($admin['foto']) ? (__DIR__ . '/../' . $admin['foto']) : '';
+    ?>
 
+    <div class="profile-avatar">
+        <?php if (!empty($admin['foto']) && is_file($rutaFoto)): ?>
+            <img src="../<?= htmlspecialchars($admin['foto']) ?>" alt="Foto">
+        <?php else: ?>
+            <div class="avatar-initial">
+                <?php
+                $nombreMostrar = ($admin['nombre'] ?? '') ?: ($_SESSION['nombre'] ?? 'A');
+                echo strtoupper(substr($nombreMostrar, 0, 1));
+                ?>
+            </div>
+        <?php endif; ?>
+    </div>
 
-<div class="profile-avatar">
+    <h2 class="profile-name">
+        <?= htmlspecialchars($_SESSION['nombre'] ?? 'Usuario'); ?>
+    </h2>
 
-<?php
-$rutaFoto = !empty($admin['foto']) ? (__DIR__ . '/../' . $admin['foto']) : '';
-?>
+    <p class="profile-role">
+        <?= htmlspecialchars($_SESSION['rol'] ?? 'Administrador'); ?>
+    </p>
 
-<?php if (!empty($admin['foto']) && is_file($rutaFoto)): ?>
+    <nav class="sidebar-nav">
+        <ul>
+            <li class="<?= $view === 'dashboard' ? 'active' : '' ?>">
+                <a href="panel.php?view=dashboard">
+                    <i class="fas fa-user"></i> Mi Panel
+                </a>
+            </li>
 
-<img src="../<?= htmlspecialchars($admin['foto']) ?>" alt="Foto">
+            <li class="<?= $view === 'casas' ? 'active' : '' ?>">
+                <a href="panel.php?view=casas">
+                    <i class="fas fa-house-user"></i> Casas
+                </a>
+            </li>
 
-<?php else: ?>
+            <li class="<?= $view === 'calendario' ? 'active' : '' ?>">
+                <a href="panel.php?view=calendario">
+                    <i class="fas fa-calendar-alt"></i> Calendario
+                </a>
+            </li>
 
-<div class="avatar-initial">
+            <li class="<?= $view === 'perfil' ? 'active' : '' ?>">
+                <a href="panel.php?view=perfil">
+                    <i class="fas fa-id-card"></i> Editar perfil
+                </a>
+            </li>
 
-<?php
-$nombreMostrar = ($admin['nombre'] ?? '') ?: ($_SESSION['nombre'] ?? 'A');
-echo strtoupper(substr($nombreMostrar, 0, 1));
-?>
+            <li class="<?= $view === 'password' ? 'active' : '' ?>">
+                <a href="panel.php?view=password">
+                    <i class="fas fa-lock"></i> Cambiar contraseña
+                </a>
+            </li>
 
-</div>
+            <li>
+                <a href="../index.php">
+                    <i class="fas fa-home"></i> Volver al inicio
+                </a>
+            </li>
 
-<?php endif; ?>
-
-</div>
-
-
-<h2 class="profile-name">
-<?= htmlspecialchars($_SESSION['nombre'] ?? 'Usuario'); ?>
-</h2>
-
-
-<p class="profile-role">
-<?= htmlspecialchars($_SESSION['rol'] ?? 'Administrador'); ?>
-</p>
-
-
-<div class="sidebar-nav">
-
-<ul>
-
-<li class="<?= $view === 'dashboard' ? 'active' : '' ?>">
-<a href="panel.php?view=dashboard">
-<i class="fas fa-user"></i> Mi Panel
-</a>
-</li>
-
-<li class="<?= $view === 'casas' ? 'active' : '' ?>">
-<a href="panel.php?view=casas">
-<i class="fas fa-house-user"></i> Casas
-</a>
-</li>
-
-<li class="<?= $view === 'calendario' ? 'active' : '' ?>">
-<a href="panel.php?view=calendario">
-<i class="fas fa-calendar-alt"></i> Calendario
-</a>
-</li>
-
-<li class="<?= $view === 'perfil' ? 'active' : '' ?>">
-<a href="panel.php?view=perfil">
-<i class="fas fa-id-card"></i> Editar perfil
-</a>
-</li>
-
-<li class="<?= $view === 'password' ? 'active' : '' ?>">
-<a href="panel.php?view=password">
-<i class="fas fa-lock"></i> Cambiar contraseña
-</a>
-</li>
-
-<li>
-<a href="../index.php">
-<i class="fas fa-home"></i> Volver al inicio
-</a>
-</li>
-
-<li>
-<a href="logout.php">
-<i class="fas fa-sign-out-alt"></i> Cerrar sesión
-</a>
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-
+            <li>
+                <a href="logout.php">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+                </a>
+            </li>
+        </ul>
+    </nav>
+</aside>
 
 <!-- ================= CONTENIDO ================= -->
-
 <div class="right-side">
 
-<header>
-<div class="access-info">
-<i class="fas fa-shield-alt"></i>
-Acceso seguro
-</div>
-</header>
+    <header class="admin-topbar">
+        <div class="topbar-left">
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <i class="fas fa-bars"></i>
+            </button>
 
+            <div class="access-info">
+                <i class="fas fa-shield-alt"></i>
+                Acceso seguro
+            </div>
+        </div>
 
-<div class="rectangle">
+        <div class="topbar-user">
+            <span><?= htmlspecialchars($_SESSION['nombre'] ?? 'Admin'); ?></span>
+        </div>
+    </header>
 
-<div class="rectangle-text">
+    <div class="rectangle">
+        <div class="rectangle-text">
+            <h1>¡Bienvenido a tu panel, <?= htmlspecialchars($_SESSION['nombre'] ?? 'Admin'); ?>!</h1>
+            <p>Aquí puedes administrar las casas, gestionar el calendario y actualizar tu perfil.</p>
+        </div>
 
-<h1>
-¡Bienvenido a tu panel, <?= htmlspecialchars($_SESSION['nombre'] ?? 'Admin'); ?>!
-</h1>
-
-<p>
-Aquí puedes administrar las casas, gestionar el calendario y actualizar tu perfil.
-</p>
-
-</div>
-
-<img src="../assets/img/fondos/icon_admin.png" class="hand-header" alt="">
-
-</div>
-
-
-<?php if (!empty($flash_success)): ?>
-    <div class="alert success">
-        <?= htmlspecialchars($flash_success); ?>
+        <img src="../assets/img/fondos/icon_admin.png" class="hand-header" alt="">
     </div>
-<?php endif; ?>
 
-<?php if (!empty($flash_error)): ?>
-    <div class="alert error">
-        <?= htmlspecialchars($flash_error); ?>
-    </div>
-<?php endif; ?>
+    <?php if (!empty($flash_success)): ?>
+        <div class="alert success">
+            <?= htmlspecialchars($flash_success); ?>
+        </div>
+    <?php endif; ?>
 
-<?php
+    <?php if (!empty($flash_error)): ?>
+        <div class="alert error">
+            <?= htmlspecialchars($flash_error); ?>
+        </div>
+    <?php endif; ?>
 
-$viewFile = __DIR__ . "/views/{$view}.php";
+    <?php
+    $viewFile = __DIR__ . "/views/{$view}.php";
 
-if (is_file($viewFile)) {
-    include $viewFile;
-} else {
-    include __DIR__ . '/views/dashboard.php';
-}
-
-?>
-
+    if (is_file($viewFile)) {
+        include $viewFile;
+    } else {
+        include __DIR__ . '/views/dashboard.php';
+    }
+    ?>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const body = document.body;
+    const sidebar = document.getElementById('adminSidebar');
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebarClose = document.getElementById('sidebarClose');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const sidebarLinks = sidebar ? sidebar.querySelectorAll('a') : [];
+
+    const openSidebar = () => {
+        body.classList.add('sidebar-open');
+    };
+
+    const closeSidebar = () => {
+        body.classList.remove('sidebar-open');
+    };
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', openSidebar);
+    }
+
+    if (sidebarClose) {
+        sidebarClose.addEventListener('click', closeSidebar);
+    }
+
+    if (mobileOverlay) {
+        mobileOverlay.addEventListener('click', closeSidebar);
+    }
+
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                closeSidebar();
+            }
+        });
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeSidebar();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeSidebar();
+        }
+    });
+});
+</script>
 
 </body>
 </html>
