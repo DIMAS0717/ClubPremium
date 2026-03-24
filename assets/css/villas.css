@@ -158,39 +158,6 @@
   border: none;
 }
 
-/* ===================== RESPONSIVE ===================== */
-
-@media (max-width: 768px) {
-
-  .around-title {
-    font-size: 2.3rem;
-  }
-
-  .title-deco {
-    width: 32px;
-  }
-
-  .villas-header {
-    padding-top: 70px;
-  }
-
-  .villas-video-section {
-    margin-top: -220px;
-  }
-}
-
-@keyframes fadeInUpSoft {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
 
 /*========================tercera seccion cartas de villas===========================*/
         * {
@@ -477,4 +444,505 @@
     margin: 10px 10px 25px 10px;
     width: calc(100% - 20px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================== RESPONSIVE COMPLETO ===================== */
+
+/* LAPTOP / TABLET GRANDE */
+@media (max-width: 1200px) {
+    .villa-types-section {
+        max-width: 1000px;
+        padding: 40px 18px;
+    }
+
+    .villa-cards-container {
+        grid-template-columns: repeat(2, minmax(280px, 1fr));
+        gap: 24px;
+    }
+
+    .villas-video-card {
+        max-width: 920px;
+    }
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    .villas-hero-container {
+        height: 560px;
+        background-attachment: scroll;
+        padding: 0 16px;
+    }
+
+    .villas-header {
+        padding-top: 90px;
+        max-width: 760px;
+    }
+
+    .around-title-wrap {
+        gap: 18px;
+    }
+
+    .title-deco {
+        width: 52px;
+    }
+
+    .around-title {
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+    }
+
+    .around-title-underline {
+        width: 220px;
+        margin: 16px auto 22px;
+    }
+
+    .around-subtitle {
+        font-size: 1.08rem;
+        max-width: 580px;
+    }
+
+    .villas-video-section {
+        margin-top: -210px;
+        padding: 0 16px 70px;
+    }
+
+    .villas-video-card {
+        max-width: 100%;
+        border-radius: 20px;
+        padding: 8px;
+    }
+
+    .villas-video-wrapper {
+        border-radius: 14px;
+    }
+
+    .villa-types-section {
+        padding: 30px 16px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 36px;
+    }
+
+    .villa-cards-container {
+        grid-template-columns: repeat(2, minmax(260px, 1fr));
+        gap: 22px;
+    }
+
+    .villa-content {
+        padding: 22px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .villa-capacity {
+        font-size: 1rem;
+    }
+
+    .villa-features {
+        gap: 14px;
+    }
+}
+
+/* TABLET PEQUEÑA */
+@media (max-width: 768px) {
+    .villas-hero-container {
+        height: 500px;
+        padding: 0 14px;
+    }
+
+    .villas-header {
+        padding-top: 70px;
+    }
+
+    .around-title-wrap {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .around-title {
+        font-size: 2.3rem;
+        letter-spacing: 1px;
+    }
+
+    .title-deco {
+        width: 32px;
+    }
+
+    .around-title-underline {
+        width: 180px;
+        margin: 14px auto 18px;
+    }
+
+    .around-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 95%;
+    }
+
+    .villas-video-section {
+        margin-top: -170px;
+        padding: 0 14px 55px;
+    }
+
+    .villa-types-section {
+        padding: 26px 14px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.96rem;
+        margin-bottom: 28px;
+    }
+
+    .villa-cards-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .villa-card {
+        max-width: 100%;
+    }
+
+    .villa-image {
+        height: 230px;
+    }
+
+    .villa-content {
+        padding: 20px;
+    }
+
+    .villa-features {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 22px;
+    }
+
+    .bed-distribution {
+        padding: 16px;
+    }
+
+    .villa-text-wrapper {
+        gap: 10px;
+    }
+
+    .villa-title {
+        font-size: 0.92rem;
+        line-height: 1.35;
+    }
+
+    .villa-title small {
+        display: block;
+        margin-left: 0;
+        margin-top: 2px;
+    }
+
+    .btn-details {
+        width: 100%;
+        margin: 12px 0 0 0;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 576px) {
+    .villas-hero-container {
+        height: 430px;
+        padding: 0 10px;
+    }
+
+    .villas-header {
+        padding-top: 52px;
+    }
+
+    .around-title {
+        font-size: 1.75rem;
+        letter-spacing: 0.5px;
+        line-height: 1.15;
+    }
+
+    .title-deco {
+        width: 24px;
+    }
+
+    .around-title-underline {
+        width: 130px;
+        height: 3px;
+        margin: 12px auto 16px;
+    }
+
+    .around-subtitle {
+        font-size: 0.92rem;
+        line-height: 1.45;
+    }
+
+    .villas-video-section {
+        margin-top: -120px;
+        padding: 0 10px 42px;
+    }
+
+    .villas-video-card {
+        border-radius: 16px;
+        padding: 6px;
+    }
+
+    .villas-video-wrapper {
+        border-radius: 12px;
+    }
+
+    .villa-types-section {
+        padding: 22px 10px;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        line-height: 1.2;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 22px;
+    }
+
+    .villa-badge {
+        top: 12px;
+        left: 12px;
+        font-size: 0.62rem;
+        padding: 5px 10px;
+        letter-spacing: 0.8px;
+    }
+
+    .villa-image {
+        height: 205px;
+    }
+
+    .villa-content {
+        padding: 18px 16px;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+
+    .villa-capacity {
+        font-size: 0.95rem;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+    }
+
+    .feature {
+        font-size: 0.9rem;
+        gap: 8px;
+    }
+
+    .feature-icon {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+    }
+
+    .bed-distribution {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .bed-distribution h4 {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .villa-option-link {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .villa-icon-wrapper {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        margin-right: 8px;
+    }
+
+    .villa-text-wrapper {
+        align-items: flex-start;
+        padding-bottom: 8px;
+    }
+
+    .villa-title {
+        font-size: 0.9rem;
+    }
+
+    .villa-title small {
+        font-size: 0.78rem;
+        line-height: 1.3;
+    }
+
+    .villa-arrow {
+        font-size: 1rem;
+        margin-top: 2px;
+    }
+
+    .btn-details {
+        padding: 12px 16px;
+        font-size: 14px;
+        border-radius: 9px;
+    }
+}
+
+/* CELULAR MUY PEQUEÑO */
+@media (max-width: 360px) {
+    .around-title {
+        font-size: 1.5rem;
+    }
+
+    .around-subtitle {
+        font-size: 0.88rem;
+    }
+
+    .villa-image {
+        height: 190px;
+    }
+
+    .villa-content {
+        padding: 16px 14px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.05rem;
+    }
+
+    .feature {
+        font-size: 0.85rem;
+    }
+
+    .villa-title {
+        font-size: 0.85rem;
+    }
+}
+
+/* ===================== AJUSTE RESPONSIVE EXACTO ===================== */
+
+@media (max-width: 768px) {
+    /* FEATURES: mantener 2 columnas en móvil como en tu diseño */
+    .villa-features {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px 16px;
+        margin-bottom: 22px;
+    }
+
+    .feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 0.92rem;
+        line-height: 1.35;
+    }
+
+    .feature-icon {
+        width: 18px;
+        height: 18px;
+        min-width: 18px;
+        margin-top: 2px;
+    }
+
+    .feature span {
+        display: block;
+        line-height: 1.35;
+        word-break: break-word;
+    }
+
+    /* OPCIONES DE ABAJO: texto arriba/abajo como en tu img buena */
+    .villa-option-link {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .villa-icon-wrapper {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        margin-right: 0;
+        margin-top: 2px;
+    }
+
+    .villa-text-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        padding-bottom: 8px;
+    }
+
+    .villa-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.95rem;
+        line-height: 1.2;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    .villa-title small {
+        display: block;
+        margin-top: 3px;
+        margin-left: 0;
+        font-size: 0.8rem;
+        line-height: 1.25;
+        color: #8b949e;
+        text-decoration: none;
+        white-space: normal;
+    }
+
+    .villa-arrow {
+        font-size: 1rem;
+        line-height: 1;
+        margin-top: 2px;
+        flex-shrink: 0;
+    }
+}
+
+/* CELULAR MÁS CHICO */
+@media (max-width: 480px) {
+    .villa-features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 14px;
+    }
+
+    .feature {
+        font-size: 0.88rem;
+        gap: 7px;
+    }
+
+    .feature span {
+        font-size: 0.88rem;
+        line-height: 1.3;
+    }
+
+    .villa-title {
+        font-size: 0.9rem;
+    }
+
+    .villa-title small {
+        font-size: 0.76rem;
+        line-height: 1.2;
+    }
 }
