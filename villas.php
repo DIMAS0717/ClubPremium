@@ -26,7 +26,7 @@ $page_title = 'Nuestras Villas - Villas Eureka';
   <div class="villas-header">
     <div class="around-title-wrap">
       <img src="assets/img/icon/iconoeureka.png" class="title-deco" alt="">
-      <h1 class="around-title">Nuestras Villas</h1>
+      <h1 class="around-title">NUESTRAS<span class="mobile-break"><br></span>VILLAS</h1>
       <img src="assets/img/icon/iconoeureka.png" class="title-deco" alt="">
     </div>
 
