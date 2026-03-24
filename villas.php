@@ -291,7 +291,7 @@ $page_title = 'Nuestras Villas - Villas Eureka';
                 </svg>
             </div>
             <div class="villa-text-wrapper">
-                <span class="villa-title">2 Recámaras <small>Hasta 8 personas</small></span>
+                <span class="villa-title">2 Recámaras </span><small>Hasta 8 personas</small>
                 <span class="villa-arrow">→</span>
             </div>
         </a>
@@ -307,7 +307,7 @@ $page_title = 'Nuestras Villas - Villas Eureka';
                 </svg>
             </div>
             <div class="villa-text-wrapper">
-                <span class="villa-title">3 Recámaras <small>Hasta 12 personas</small></span>
+                <span class="villa-title">3 Recámaras </span><small>Hasta 12 personas</small>
                 <span class="villa-arrow">→</span>
             </div>
         </a>
@@ -406,7 +406,7 @@ $page_title = 'Nuestras Villas - Villas Eureka';
                 </svg>
             </div>
             <div class="villa-text-wrapper">
-                <span class="villa-title">1 Recámara <small>Hasta 4 personas</small></span>
+                <span class="villa-title">1 Recámara </span><small>Hasta 4 personas</small>
                 <span class="villa-arrow">→</span>
             </div>
         </a>
@@ -422,7 +422,7 @@ $page_title = 'Nuestras Villas - Villas Eureka';
                 </svg>
             </div>
             <div class="villa-text-wrapper">
-                <span class="villa-title">2 Recámaras <small>Hasta 8 personas</small></span>
+                <span class="villa-title">2 Recámaras </span><small>Hasta 8 personas</small>
                 <span class="villa-arrow">→</span>
             </div>
         </a>
@@ -438,7 +438,7 @@ $page_title = 'Nuestras Villas - Villas Eureka';
                 </svg>
             </div>
             <div class="villa-text-wrapper">
-                <span class="villa-title">3 Recámaras <small>Hasta 12 personas</small></span>
+                <span class="villa-title">3 Recámaras </span><small>Hasta 12 personas</small>
                 <span class="villa-arrow">→</span>
             </div>
         </a>
