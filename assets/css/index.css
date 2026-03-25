@@ -271,21 +271,17 @@
 }
 
 /* =========================
-   HERO RESPONSIVE FIX REAL
+   HERO RESPONSIVE MEJORADO
 ========================= */
 
 @media (max-width: 768px) {
   .around-hero-container {
     position: relative;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
-    height: 100vh;
+    height: auto;
     margin: 0;
-    padding: 0 18px;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    padding: 110px 18px 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -327,36 +323,39 @@
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 8px;
+    padding: 0 6px;
     text-align: center;
   }
 
   .around-title-wrap {
     gap: 10px;
     margin-bottom: 10px;
+    flex-wrap: nowrap;
   }
 
   .around-title {
     font-size: 2.2rem;
-    line-height: 1.05;
+    line-height: 1.08;
     padding-left: 0;
-    margin-bottom: 6px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
   }
 
   .around-title-deco {
-    width: 34px;
-    max-width: 34px;
+    width: 32px;
+    max-width: 32px;
+    flex-shrink: 0;
   }
 
   .around-title-underline {
     width: 150px;
-    margin: 8px auto 14px;
+    margin: 10px auto 16px;
   }
 
   .around-subtitle-main {
-    font-size: 0.88rem;
-    letter-spacing: 4px;
-    line-height: 1.4;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    line-height: 1.5;
     margin: 18px 0 16px;
   }
 
@@ -369,7 +368,7 @@
 
   .around-description {
     font-size: 0.95rem;
-    line-height: 1.55;
+    line-height: 1.6;
   }
 
   .hero-actions {
@@ -395,37 +394,49 @@
 
 @media (max-width: 480px) {
   .around-hero-container {
-    padding: 0 14px;
+    padding: 100px 14px 50px;
+  }
+
+  .around-title-wrap {
+    gap: 8px;
   }
 
   .around-title {
-    font-size: 1.9rem;
+    font-size: 1.75rem;
+    line-height: 1.1;
   }
 
   .around-title-deco {
-    width: 28px;
-    max-width: 28px;
+    width: 24px;
+    max-width: 24px;
+  }
+
+  .around-title-underline {
+    width: 120px;
+    height: 3px;
   }
 
   .around-subtitle-main {
-    font-size: 0.78rem;
-    letter-spacing: 3px;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    margin: 14px 0 14px;
   }
 
   .around-description-box {
-    max-width: 320px;
+    max-width: 300px;
     padding: 12px 14px;
   }
 
   .around-description {
-    font-size: 0.88rem;
+    font-size: 0.86rem;
+    line-height: 1.5;
   }
 
   .hero-btn,
   .hero-btn.primary,
   .hero-btn.secondary {
-    max-width: 320px;
-    font-size: 0.78rem;
+    max-width: 300px;
+    font-size: 0.76rem;
     padding: 13px 14px;
   }
 }
@@ -437,6 +448,7 @@
   padding: 0 5% 90px;
   box-sizing: border-box;
   background: #fcfdfd;
+  overflow: hidden;
 }
 
 .destacados-header {
@@ -472,7 +484,7 @@
   background: #bfa15f;
 }
 
-/* GRID */
+/* GRID DESKTOP */
 .villas-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -595,6 +607,12 @@
   line-height: 1.7;
 }
 
+.ubicacion-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 /* ICONOS */
 .villa-icons {
   display: flex;
@@ -641,16 +659,43 @@
   transform: scale(1.02);
 }
 
-/* ================= RESPONSIVE ================= */
+/* ================= SLIDER TABLET Y MÓVIL ================= */
 
 @media (max-width: 1100px) {
-  .villas-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px;
-  }
-
   .destacados-header h2 {
     font-size: 2.5rem;
+  }
+
+  .villas-grid {
+    display: flex;
+    gap: 22px;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 6px 4px 12px;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .villas-grid::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .villas-grid::-webkit-scrollbar-track {
+    background: #e2e8f0;
+    border-radius: 999px;
+  }
+
+  .villas-grid::-webkit-scrollbar-thumb {
+    background: #bfa15f;
+    border-radius: 999px;
+  }
+
+  .villa-card {
+    flex: 0 0 calc(50% - 11px);
+    min-width: calc(50% - 11px);
+    scroll-snap-align: start;
   }
 }
 
@@ -660,7 +705,8 @@
   }
 
   .destacados-header {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
+    padding-top: 0;
   }
 
   .destacados-header span {
@@ -674,8 +720,13 @@
   }
 
   .villas-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 18px;
+    padding-bottom: 10px;
+  }
+
+  .villa-card {
+    flex: 0 0 85%;
+    min-width: 85%;
   }
 
   .villa-image {
@@ -707,6 +758,11 @@
 
   .destacados-header h2 {
     font-size: 1.7rem;
+  }
+
+  .villa-card {
+    flex: 0 0 92%;
+    min-width: 92%;
   }
 
   .villa-image {
