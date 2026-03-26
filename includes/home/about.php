@@ -1,20 +1,9 @@
 <section class="about-section">
   <div class="about-wrapper">
-    <div class="about-image">
-      <img src="./assets/img/fondos/fondo_1.JPG" alt="Propiedades en Manzanillo">
-
-      <div class="rating-box">
-        <div class="rating-top">
-          <span class="star-icon">★</span>
-          <h4>4.9/5 Calificación</h4>
-        </div>
-        <p>Basado en más de 500 reseñas de clientes satisfechos.</p>
-      </div>
-    </div>
 
     <div class="about-text">
       <span class="about-subtitle">SOBRE NOSOTROS</span>
-      <h2>Más de 20 años cumpliendo sueños en Manzanillo</h2>
+      <h2>¿QUIÉNES SOMOS?</h2>
 
       <p>
         Club Santiago Real Estate es la agencia líder en propiedades de lujo.
@@ -29,7 +18,20 @@
         <li>Concierge de lujo 24/7</li>
       </ul>
 
-      <a href="#" class="about-link">Contacta a nuestro equipo →</a>
+      <a href="contacto.php" class="about-link">Contacta a nuestro equipo</a>
     </div>
+
+    <div class="about-image">
+      <img src="./assets/img/fondos/fondo_1.JPG" alt="Propiedades en Manzanillo">
+
+      <div class="rating-box">
+        <div class="rating-top">
+          <span class="star-icon">★</span>
+          <h4>4.9/5 Calificación</h4>
+        </div>
+        <p>Basado en más de 500 reseñas de clientes satisfechos.</p>
+      </div>
+    </div>
+
   </div>
 </section>
