@@ -502,16 +502,18 @@
 .villa-icons {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  gap: 8px; /* antes 10px, esto ayuda a que no se rompa */
   margin-top: auto;
   padding-top: 15px;
   border-top: 1px solid #f1f5f9;
 }
 
 .villa-icons span {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
+  box-sizing: border-box;
   text-align: center;
-  padding: 10px 12px;
+  padding: 10px 8px;
   background: #f8fafc;
   color: #475569;
   border: 1px solid #f1f5f9;
@@ -519,7 +521,6 @@
   font-size: 0.78rem;
   font-weight: 700;
 }
-
 .villa-icons i {
   color: #bfa15f;
 }
@@ -528,6 +529,7 @@
 .btn-explorar {
   display: block;
   width: 100%;
+  box-sizing: border-box;
   margin-top: 16px;
   padding: 14px;
   background: #1e293b;
