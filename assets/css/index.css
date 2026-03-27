@@ -1290,12 +1290,13 @@ body {
     line-height: 1.6;
   }
 }
-/* ================= NUESTRAS VILLAS PREMIUM ================= */
+
+/* ================= NUESTRAS VILLAS ================= */
 
 .villas {
   width: 100%;
   padding: 110px 5%;
-  background-color: #fcfdfd !important;
+  background: #fcfdfd;
   overflow: hidden;
 }
 
@@ -1312,40 +1313,39 @@ body {
 
 .villas-texto {
   max-width: 520px;
+  min-width: 0;
 }
 
 .villas-subtitle {
-  display: inline-block;
-  margin-bottom: 14px;
+  display: block;
+  margin: 0 0 14px;
   color: #b88a2e;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 2.4px;
   text-transform: uppercase;
+  line-height: 1.3;
 }
 
-.villas-texto h2{
-  margin:0 0 35px;
-  color:#142e4d;
-  font-size:58px;
-  line-height:1.05;
-  font-weight:700;
-  letter-spacing:-1px;
-  position:relative;
-  display:inline-block;
+.villas-texto h2 {
+  display: block;
+  margin: 0 0 34px;
+  color: #142e4d;
+  font-size: 58px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -1px;
+  position: relative;
 }
 
-/* línea dorada */
-
-.villas-texto h2::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-14px;
-  width:350px;
-  height:3px;
-  background:linear-gradient(90deg,#d4af37,#b8962e);
-  border-radius:3px;
+.villas-texto h2::after {
+  content: "";
+  display: block;
+  width: 170px;
+  height: 3px;
+  margin-top: 14px;
+  background: linear-gradient(90deg, #d4af37, #b8962e);
+  border-radius: 3px;
 }
 
 .intro {
@@ -1378,7 +1378,7 @@ body {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3D5477 0%, #173457 100%);
+  background: linear-gradient(135deg, #3d5477 0%, #173457 100%);
   color: #fff;
   font-size: 12px;
   font-weight: 700;
@@ -1388,75 +1388,181 @@ body {
   box-shadow: 0 8px 16px rgba(184, 137, 47, 0.16);
 }
 
+/* ================= BOTÓN ================= */
+
 .btn-villas {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 15px 28px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #14263c 0%, #1d3d68 100%);
+  gap: 10px;
+  min-width: 240px;
+  padding: 16px 30px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #10243c 0%, #183a63 55%, #224d80 100%);
   color: #ffffff;
   text-decoration: none;
   font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.2px;
-  box-shadow: 0 12px 24px rgba(17, 31, 53, 0.14);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(184, 138, 46, 0.22);
+  box-shadow: 0 14px 28px rgba(16, 31, 53, 0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-villas::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.14) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
 }
 
 .btn-villas:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 30px rgba(17, 31, 53, 0.20);
+  box-shadow: 0 18px 34px rgba(16, 31, 53, 0.24);
+  filter: brightness(1.03);
 }
 
-/* ================= GALERÍA ================= */
-
-.villas-galeria {
-  display: grid;
-  grid-template-columns: 1.08fr 0.92fr 0.92fr;
-  grid-template-rows: 175px 175px;
-  gap: 16px;
-  align-items: stretch;
+.btn-villas:hover::before {
+  transform: translateX(120%);
 }
 
-.villa-img {
+.btn-villas::after {
+  content: "→";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* ================= SLIDER ================= */
+
+.villas-slider {
+  width: 100%;
+  min-width: 0;
+}
+
+.slider-main {
   position: relative;
+  width: 100%;
+  height: 540px;
+  border-radius: 28px;
   overflow: hidden;
-  border-radius: 20px;
-  background: #e7e2d8;
-  box-shadow: 0 10px 24px rgba(19, 27, 38, 0.08);
-  border: 1px solid rgba(15, 23, 32, 0.04);
+  background: #e8edf2;
+  box-shadow: 0 18px 38px rgba(18, 30, 46, 0.12);
 }
 
-.villa-img img {
+.slider-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.slide img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.45s ease, filter 0.35s ease;
-  filter: saturate(0.96) contrast(0.98) brightness(1.01);
 }
 
-.villa-img::after {
+.slide::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10, 18, 28, 0.10), transparent 60%);
+  background: linear-gradient(to top, rgba(10, 18, 28, 0.16), rgba(10, 18, 28, 0.02) 45%);
   pointer-events: none;
 }
 
-.villa-img:hover img {
-  transform: scale(1.04);
-  filter: saturate(1) contrast(1);
+/* ================= BOTONES DEL SLIDER ================= */
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.88);
+  color: #173457;
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(16, 26, 40, 0.14);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* Imagen principal */
-.villa-main {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
-  min-height: 366px;
-  border: 1px solid rgba(184, 137, 47, 0.16);
+.slider-btn:hover {
+  background: #ffffff;
+  transform: translateY(-50%) scale(1.06);
+}
+
+.slider-btn.prev {
+  left: 18px;
+}
+
+.slider-btn.next {
+  right: 18px;
+}
+
+/* ================= MINIATURAS ================= */
+
+.slider-thumbs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.thumb {
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(17, 28, 42, 0.08);
+  transition: transform 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+  opacity: 0.82;
+}
+
+.thumb:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.thumb.active {
+  border-color: #b88a2e;
+  opacity: 1;
+}
+
+.thumb img {
+  width: 100%;
+  height: 92px;
+  display: block;
+  object-fit: cover;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -1475,18 +1581,40 @@ body {
     font-size: 48px;
   }
 
-  .villas-galeria {
-    grid-template-columns: 1.05fr 1fr 1fr;
+  .slider-main {
+    height: 500px;
   }
 }
 
 @media (max-width: 768px) {
   .villas {
-    padding: 90px 5%;
+    padding: 90px 16px;
+  }
+
+  .villas-container {
+    gap: 40px;
+  }
+
+  .villas-texto {
+    max-width: 100%;
+  }
+
+  .villas-subtitle {
+    margin-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 2px;
   }
 
   .villas-texto h2 {
+    margin: 0 0 28px;
     font-size: 38px;
+    line-height: 1.12;
+    letter-spacing: -0.5px;
+  }
+
+  .villas-texto h2::after {
+    width: 120px;
+    margin-top: 12px;
   }
 
   .intro {
@@ -1498,45 +1626,119 @@ body {
     font-size: 15px;
   }
 
-  .villas-galeria {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 240px 170px 170px;
-    gap: 14px;
+  .btn-villas {
+    min-width: 100%;
+    width: 100%;
+    padding: 16px 22px;
+    border-radius: 18px;
+    font-size: 15px;
   }
 
-  .villa-main {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-    min-height: auto;
+  .slider-main {
+    height: 380px;
+    border-radius: 22px;
+  }
+
+  .slider-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .slider-btn.prev {
+    left: 12px;
+  }
+
+  .slider-btn.next {
+    right: 12px;
+  }
+
+  .slider-thumbs {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .thumb {
+    border-radius: 12px;
+  }
+
+  .thumb img {
+    height: 68px;
   }
 }
 
 @media (max-width: 480px) {
   .villas {
-    padding: 75px 5%;
+    padding: 75px 14px;
+  }
+
+  .villas-container {
+    gap: 34px;
+  }
+
+  .villas-texto {
+    text-align: left;
+  }
+
+  .villas-subtitle {
+    margin-bottom: 8px;
+    font-size: 11px;
+    letter-spacing: 1.8px;
   }
 
   .villas-texto h2 {
-    font-size: 32px;
+    margin: 0 0 24px;
+    font-size: 31px;
+    line-height: 1.14;
   }
 
   .villas-texto h2::after {
-    width: 65px;
-    margin-top: 12px;
+    width: 95px;
+    height: 3px;
+    margin-top: 10px;
+  }
+
+  .intro {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .villas-lista {
+    margin-bottom: 28px;
+  }
+
+  .villas-lista li {
+    padding-left: 30px;
+    margin-bottom: 14px;
+    font-size: 14px;
   }
 
   .btn-villas {
     width: 100%;
+    min-width: 100%;
+    padding: 15px 18px;
+    border-radius: 16px;
+    font-size: 14px;
   }
 
-  .villas-galeria {
-    grid-template-columns: 1fr;
-    grid-template-rows: 240px 170px 170px 170px 170px;
+  .slider-main {
+    height: 290px;
+    border-radius: 18px;
   }
 
-  .villa-main {
-    grid-column: auto;
-    grid-row: auto;
+  .slider-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .slider-thumbs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .thumb img {
+    height: 62px;
   }
 }
 

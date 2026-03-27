@@ -162,3 +162,59 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+// ============================================
+// SLIDER VILLAS
+// ============================================
+const villaSlides = document.querySelectorAll(".slide");
+const villaThumbs = document.querySelectorAll(".thumb");
+const villaPrev = document.querySelector(".slider-btn.prev");
+const villaNext = document.querySelector(".slider-btn.next");
+
+if (villaSlides.length > 0) {
+  let current = 0;
+
+  function showVillaSlide(index) {
+    villaSlides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+
+    if (villaThumbs.length > 0) {
+      villaThumbs.forEach((thumb, i) => {
+        thumb.classList.toggle("active", i === index);
+      });
+    }
+
+    current = index;
+  }
+
+  if (villaNext) {
+    villaNext.addEventListener("click", () => {
+      let next = current + 1;
+      if (next >= villaSlides.length) next = 0;
+      showVillaSlide(next);
+    });
+  }
+
+  if (villaPrev) {
+    villaPrev.addEventListener("click", () => {
+      let prev = current - 1;
+      if (prev < 0) prev = villaSlides.length - 1;
+      showVillaSlide(prev);
+    });
+  }
+
+  if (villaThumbs.length > 0) {
+    villaThumbs.forEach((thumb, index) => {
+      thumb.addEventListener("click", () => {
+        showVillaSlide(index);
+      });
+    });
+  }
+
+  setInterval(() => {
+    let next = current + 1;
+    if (next >= villaSlides.length) next = 0;
+    showVillaSlide(next);
+  }, 5000);
+}

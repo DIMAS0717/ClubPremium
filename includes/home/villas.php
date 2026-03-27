@@ -52,27 +52,6 @@
         <button class="slider-btn next" aria-label="Imagen siguiente">&#10095;</button>
       </div>
 
-      <div class="slider-thumbs">
-        <button class="thumb active">
-          <img src="./assets/img/fondos/plantabaja.jpg" alt="Miniatura 1" loading="lazy">
-        </button>
-
-        <button class="thumb">
-          <img src="./assets/img/fondos/slider_afuera.jpg" alt="Miniatura 2" loading="lazy">
-        </button>
-
-        <button class="thumb">
-          <img src="./assets/img/fondos/slider_cocina.jpg" alt="Miniatura 3" loading="lazy">
-        </button>
-
-        <button class="thumb">
-          <img src="./assets/img/fondos/slider_cuarto.jpg" alt="Miniatura 4" loading="lazy">
-        </button>
-
-        <button class="thumb">
-          <img src="./assets/img/fondos/slider_terraza.jpg" alt="Miniatura 5" loading="lazy">
-        </button>
-      </div>
     </div>
 
   </div>

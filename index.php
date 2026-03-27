@@ -72,6 +72,6 @@ try {
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
 
-<script src="assets/app.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
