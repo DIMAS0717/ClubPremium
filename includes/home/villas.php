@@ -23,25 +23,55 @@
       <a href="villas.php" class="btn-villas">Explora nuestras villas</a>
     </div>
 
-    <div class="villas-galeria">
-      <div class="villa-img villa-main">
-        <img src="./assets/img/fondos/plantabaja.jpg" alt="Vista principal de villa" loading="lazy">
+    <div class="villas-slider">
+      <div class="slider-main">
+        <button class="slider-btn prev" aria-label="Imagen anterior">&#10094;</button>
+
+        <div class="slider-track">
+          <div class="slide active">
+            <img src="./assets/img/fondos/plantabaja.jpg" alt="Vista principal de villa" loading="lazy">
+          </div>
+
+          <div class="slide">
+            <img src="./assets/img/fondos/slider_afuera.jpg" alt="Exterior de villa" loading="lazy">
+          </div>
+
+          <div class="slide">
+            <img src="./assets/img/fondos/slider_cocina.jpg" alt="Cocina equipada" loading="lazy">
+          </div>
+
+          <div class="slide">
+            <img src="./assets/img/fondos/slider_cuarto.jpg" alt="Recámara de villa" loading="lazy">
+          </div>
+
+          <div class="slide">
+            <img src="./assets/img/fondos/slider_terraza.jpg" alt="Terraza privada" loading="lazy">
+          </div>
+        </div>
+
+        <button class="slider-btn next" aria-label="Imagen siguiente">&#10095;</button>
       </div>
 
-      <div class="villa-img">
-        <img src="./assets/img/fondos/slider_afuera.jpg" alt="Exterior de villa" loading="lazy">
-      </div>
+      <div class="slider-thumbs">
+        <button class="thumb active">
+          <img src="./assets/img/fondos/plantabaja.jpg" alt="Miniatura 1" loading="lazy">
+        </button>
 
-      <div class="villa-img">
-        <img src="./assets/img/fondos/slider_cocina.jpg" alt="Cocina equipada" loading="lazy">
-      </div>
+        <button class="thumb">
+          <img src="./assets/img/fondos/slider_afuera.jpg" alt="Miniatura 2" loading="lazy">
+        </button>
 
-      <div class="villa-img">
-        <img src="./assets/img/fondos/slider_cuarto.jpg" alt="Recámara de villa" loading="lazy">
-      </div>
+        <button class="thumb">
+          <img src="./assets/img/fondos/slider_cocina.jpg" alt="Miniatura 3" loading="lazy">
+        </button>
 
-      <div class="villa-img">
-        <img src="./assets/img/fondos/slider_terraza.jpg" alt="Terraza privada" loading="lazy">
+        <button class="thumb">
+          <img src="./assets/img/fondos/slider_cuarto.jpg" alt="Miniatura 4" loading="lazy">
+        </button>
+
+        <button class="thumb">
+          <img src="./assets/img/fondos/slider_terraza.jpg" alt="Miniatura 5" loading="lazy">
+        </button>
       </div>
     </div>
 
