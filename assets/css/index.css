@@ -1013,283 +1013,6 @@ body {
   }
 }
 
-/* ================= BENEFICIOS PREMIUM FULL WIDTH ================= */
-
-.villas-eureka-beneficios {
-  position: relative;
-  width: 100%;
-  padding: 110px 0;
-  background:
-    radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.04), transparent 24%),
-    linear-gradient(180deg, #28456b 0%, #173457 55%, #122a47 100%);
-  overflow: hidden;
-}
-
-.villas-eureka-beneficios::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  opacity: 0.12;
-  pointer-events: none;
-}
-
-.beneficios-container {
-  position: relative;
-  z-index: 2;
-  width: min(1280px, 92%);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.beneficios-subtitle {
-  display: inline-block;
-  margin-bottom: 14px;
-  color: #d4af37;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-.beneficios-titulo {
-  margin: 0 0 56px;
-  color: #ffffff;
-  font-size: clamp(2rem, 3.4vw, 3.4rem);
-  line-height: 1.12;
-  font-weight: 800;
-  letter-spacing: -1px;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-  position: relative;
-}
-
-.beneficios-titulo::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 3px;
-  margin: 18px auto 0;
-  background: linear-gradient(90deg, #d4af37, #e6c158);
-  border-radius: 10px;
-}
-
-.beneficios-wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 26px;
-  align-items: stretch;
-}
-
-.beneficio-card {
-  position: relative;
-  padding: 36px 26px 32px;
-  border-radius: 28px;
-  background: linear-gradient(180deg, #ffffff 0%, #f9f6ef 100%);
-  border: 1px solid rgba(212, 175, 55, 0.18);
-  box-shadow:
-    0 25px 50px rgba(0, 0, 0, 0.18),
-    inset 0 1px 0 rgba(255,255,255,0.8);
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease,
-    border-color 0.4s ease;
-  overflow: hidden;
-}
-
-.beneficio-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 4px;
-  background: linear-gradient(90deg, #d4af37, #e6c158, #d4af37);
-}
-
-.beneficio-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow:
-    0 35px 60px rgba(0, 0, 0, 0.25),
-    0 0 25px rgba(212, 175, 55, 0.15);
-  border-color: rgba(212, 175, 55, 0.35);
-}
-
-.icon-box {
-  width: 92px;
-  height: 92px;
-  margin: 0 auto 20px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #c79f38;
-  background: linear-gradient(180deg, #fffdf9 0%, #f6efe1 100%);
-  border: 1.5px solid rgba(199, 159, 56, 0.35);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.95),
-    0 10px 24px rgba(199, 159, 56, 0.10);
-  transition: all 0.4s ease;
-}
-
-.beneficio-card:hover .icon-box {
-  transform: scale(1.1);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.95),
-    0 10px 25px rgba(212, 175, 55, 0.25);
-}
-
-.icon-box svg {
-  width: 42px;
-  height: 42px;
-  display: block;
-  stroke-width: 1.8;
-}
-
-.beneficio-card h3 {
-  margin: 0 0 12px;
-  color: #1a2f4d;
-  font-size: 1.9rem;
-  line-height: 1.15;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-}
-
-.beneficio-card p {
-  margin: 0 auto;
-  max-width: 260px;
-  color: #5f6b78;
-  font-size: 0.98rem;
-  line-height: 1.7;
-  font-weight: 400;
-}
-
-/* ================= BOTÓN PREMIUM ================= */
-
-.beneficios-action {
-  margin-top: 60px;
-  display: flex;
-  justify-content: center;
-}
-
-.beneficios-btn {
-  position: relative;
-  padding: 16px 40px;
-  border-radius: 40px;
-  background: linear-gradient(135deg, #d4af37, #e6c158);
-  color: #1a2f4d;
-  font-weight: 700;
-  font-size: 14px;
-  text-decoration: none;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-  transition: all 0.35s ease;
-}
-
-.beneficios-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 1200px) {
-  .beneficios-wrapper {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .beneficio-card h3 {
-    font-size: 1.7rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .villas-eureka-beneficios {
-    padding: 84px 0;
-  }
-
-  .beneficios-container {
-    width: min(92%, 680px);
-  }
-
-  .beneficios-wrapper {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .beneficios-titulo {
-    margin-bottom: 34px;
-  }
-
-  .beneficio-card {
-    padding: 28px 20px 24px;
-    border-radius: 22px;
-  }
-
-  .icon-box {
-    width: 78px;
-    height: 78px;
-    margin-bottom: 16px;
-  }
-
-  .icon-box svg {
-    width: 34px;
-    height: 34px;
-  }
-
-  .beneficio-card h3 {
-    font-size: 1.45rem;
-  }
-
-  .beneficio-card p {
-    font-size: 0.95rem;
-    max-width: 100%;
-  }
-
-  .beneficios-action {
-    margin-top: 40px;
-  }
-
-  .beneficios-btn {
-    width: 100%;
-    max-width: 320px;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .villas-eureka-beneficios {
-    padding: 72px 0;
-  }
-
-  .beneficios-container {
-    width: 92%;
-  }
-
-  .beneficios-subtitle {
-    font-size: 11px;
-    letter-spacing: 2.4px;
-  }
-
-  .beneficios-titulo {
-    font-size: 2rem;
-  }
-
-  .beneficio-card {
-    padding: 24px 18px 22px;
-  }
-
-  .beneficio-card h3 {
-    font-size: 1.28rem;
-  }
-
-  .beneficio-card p {
-    font-size: 0.92rem;
-    line-height: 1.6;
-  }
-}
 
 /* ================= NUESTRAS VILLAS ================= */
 
@@ -1683,6 +1406,345 @@ body {
     font-size: 16px;
   }
 
+}
+
+/* ================= BENEFICIOS PREMIUM FULL WIDTH ================= */
+
+.villas-eureka-beneficios {
+  position: relative;
+  width: 100%;
+  padding: 110px 0;
+  background:
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.04), transparent 24%),
+    linear-gradient(180deg, #28456b 0%, #173457 55%, #122a47 100%);
+  overflow: hidden;
+}
+
+.villas-eureka-beneficios::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.beneficios-container {
+  position: relative;
+  z-index: 2;
+  width: min(1280px, 92%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.beneficios-subtitle {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #d4af37;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.beneficios-titulo {
+  margin: 0 0 64px;
+  color: #ffffff;
+  font-size: clamp(2rem, 3.4vw, 3.4rem);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  position: relative;
+}
+
+.beneficios-titulo::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 18px auto 0;
+  background: linear-gradient(90deg, #d4af37, #e6c158);
+  border-radius: 10px;
+}
+
+/* ================= GRID ================= */
+
+.beneficios-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+/* ================= CARD ================= */
+
+.beneficio-card {
+  position: relative;
+  padding: 30px 22px 26px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9f6ef 100%);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  box-shadow:
+    0 20px 42px rgba(0, 0, 0, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.82);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  overflow: hidden;
+}
+
+.beneficio-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #d4af37, #e6c158, #d4af37);
+}
+
+.beneficio-card:hover {
+  transform: translateY(-10px);
+  box-shadow:
+    0 28px 55px rgba(0, 0, 0, 0.22),
+    0 0 22px rgba(212, 175, 55, 0.14);
+  border-color: rgba(212, 175, 55, 0.34);
+}
+
+/* ================= ICONO ================= */
+
+.icon-box {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c79f38;
+  background: linear-gradient(180deg, #fffdf9 0%, #f6efe1 100%);
+  border: 1.5px solid rgba(199, 159, 56, 0.35);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 10px 24px rgba(199, 159, 56, 0.10);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.beneficio-card:hover .icon-box {
+  transform: scale(1.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 12px 26px rgba(212, 175, 55, 0.22);
+}
+
+.icon-box svg {
+  width: 38px;
+  height: 38px;
+  display: block;
+  stroke-width: 1.8;
+}
+
+/* ================= TEXTO CARD ================= */
+
+.beneficio-card h3 {
+  margin: 0 0 10px;
+  color: #1a2f4d;
+  font-size: 1.55rem;
+  line-height: 1.18;
+  font-weight: 800;
+  letter-spacing: -0.4px;
+}
+
+.beneficio-card p {
+  margin: 0 auto;
+  max-width: 250px;
+  color: #5f6b78;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+/* ================= BOTÓN ================= */
+
+.beneficios-action {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.beneficios-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 34px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #d4af37, #e6c158);
+  color: #1a2f4d;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  box-shadow: 0 10px 28px rgba(212, 175, 55, 0.28);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.beneficios-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(212, 175, 55, 0.4);
+  filter: brightness(1.02);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+  .beneficios-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .beneficios-titulo {
+    margin-bottom: 54px;
+  }
+
+  .beneficio-card h3 {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .villas-eureka-beneficios {
+    padding: 84px 0;
+  }
+
+  .beneficios-container {
+    width: min(92%, 680px);
+  }
+
+  .beneficios-subtitle {
+    margin-bottom: 12px;
+    font-size: 11px;
+    letter-spacing: 2.6px;
+  }
+
+  .beneficios-titulo {
+    margin: 0 0 36px;
+    font-size: clamp(1.9rem, 6.5vw, 2.6rem);
+    line-height: 1.15;
+  }
+
+  .beneficios-titulo::after {
+    width: 72px;
+    margin-top: 14px;
+  }
+
+  .beneficios-wrapper {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .beneficio-card {
+    padding: 28px 20px 24px;
+    border-radius: 22px;
+  }
+
+  .icon-box {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 16px;
+  }
+
+  .icon-box svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .beneficio-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .beneficio-card p {
+    max-width: 100%;
+    font-size: 0.94rem;
+  }
+
+  .beneficios-action {
+    margin-top: 40px;
+  }
+
+  .beneficios-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .villas-eureka-beneficios {
+    padding: 72px 0;
+  }
+
+  .beneficios-container {
+    width: 92%;
+  }
+
+  .beneficios-subtitle {
+    font-size: 10px;
+    letter-spacing: 2.2px;
+  }
+
+  .beneficios-titulo {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    line-height: 1.14;
+  }
+
+  .beneficios-titulo::after {
+    width: 64px;
+    margin-top: 12px;
+  }
+
+  .beneficio-card {
+    padding: 24px 18px 22px;
+    border-radius: 20px;
+  }
+
+  .icon-box {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 14px;
+  }
+
+  .icon-box svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .beneficio-card h3 {
+    font-size: 1.22rem;
+    margin-bottom: 8px;
+  }
+
+  .beneficio-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .beneficios-action {
+    margin-top: 34px;
+  }
+
+  .beneficios-btn {
+    max-width: 100%;
+    width: 100%;
+    font-size: 12px;
+    padding: 14px 22px;
+  }
 }
 
 /* ================= UBICACIÓN PREMIUM ================= */
@@ -2536,5 +2598,3 @@ body {
     border-radius: 999px;
   }
 }
-
-
