@@ -2347,9 +2347,194 @@ body {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.12);
 }
+/* ================= RESPONSIVE FINAL RESERVA ================= */
 
-/*
-===================
-RESPONSIVE
-====================================================== */
+/* ---------- TABLET ---------- */
+@media (max-width: 992px) {
+  .booking-hero {
+    min-height: 620px;
+    padding: 110px 18px 60px;
+    background-position: center;
+  }
+
+  .booking-content {
+    max-width: 760px;
+  }
+
+  .booking-header {
+    max-width: 680px;
+    margin-bottom: 18px;
+  }
+
+  .booking-header h2 {
+    font-size: clamp(32px, 5.6vw, 52px);
+    line-height: 1.08;
+  }
+
+  .booking-header p {
+    font-size: 16px;
+  }
+
+  .booking-panel {
+    max-width: 700px;
+    padding: 22px 20px;
+    border-radius: 20px;
+  }
+
+  .booking-form {
+    grid-template-columns: 1fr 1fr; /* aquí aún 2 columnas */
+    gap: 12px;
+  }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .booking-hero {
+    min-height: auto;
+    padding: 95px 16px 55px;
+  }
+
+  .booking-content {
+    max-width: 100%;
+  }
+
+  .booking-header {
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .booking-kicker {
+    margin-bottom: 10px;
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .booking-header h2 {
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+  }
+
+  .booking-divider {
+    width: 90px;
+    margin: 12px auto;
+  }
+
+  .booking-header p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .booking-panel {
+    max-width: 100%;
+    padding: 20px 16px 18px;
+    border-radius: 18px;
+    margin-top: 10px;
+  }
+
+  /* 🔥 CAMBIO CLAVE: UNA COLUMNA */
+  .booking-form {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .booking-field input {
+    height: 52px;
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .booking-field-date {
+    padding-top: 10px;
+  }
+
+  .booking-date-label {
+    left: 10px;
+    font-size: 10px;
+  }
+
+  .booking-actions {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .booking-actions button {
+    width: 100%;
+    height: 48px;
+    font-size: 13px;
+  }
+}
+
+/* ---------- MOBILE PEQUEÑO ---------- */
+@media (max-width: 480px) {
+  .booking-hero {
+    padding: 82px 14px 48px;
+  }
+
+  .booking-header {
+    margin-bottom: 14px;
+  }
+
+  .booking-kicker {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+  }
+
+  .booking-header h2 {
+    font-size: 30px;
+    line-height: 1.08;
+  }
+
+  .booking-header p {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .booking-divider {
+    width: 80px;
+    height: 2px;
+    margin: 10px auto;
+  }
+
+  .booking-panel {
+    padding: 18px 14px 16px;
+    border-radius: 16px;
+  }
+
+  .booking-panel-title {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .booking-form {
+    gap: 10px;
+  }
+
+  .booking-field input {
+    height: 50px;
+    padding: 0 12px;
+    font-size: 14px;
+  }
+
+  .booking-field input[type="date"] {
+    padding-right: 36px;
+  }
+
+  .booking-date-label {
+    left: 8px;
+    font-size: 9px;
+  }
+
+  .booking-actions {
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .booking-actions button {
+    height: 46px;
+    font-size: 13px;
+    border-radius: 999px;
+  }
+}
+
 
