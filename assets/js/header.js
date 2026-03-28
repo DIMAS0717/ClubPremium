@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileLinks = document.querySelectorAll('.mobile-nav a');
     const themeToggle = document.getElementById('themeToggle');
     const langToggle = document.getElementById('langToggle');
-    const logoLink = document.querySelector('.header-logo-link');
+    const logoLink = document.getElementById('hiddenAdminTrigger');
 
     /* =========================
        HEADER SCROLL
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /* =========================
-       IDIOMA (BASE)
+       IDIOMA
     ========================= */
     if (langToggle) {
         let currentLang = localStorage.getItem('siteLang') || 'es';
@@ -103,29 +103,30 @@ document.addEventListener('DOMContentLoaded', function () {
             currentLang = currentLang === 'es' ? 'en' : 'es';
             localStorage.setItem('siteLang', currentLang);
             updateLangButton();
-
-            console.log('Idioma actual:', currentLang);
         });
     }
 
     /* =========================
        ACCESO OCULTO ADMIN
     ========================= */
-    if (logoLink) {
-        let clickCount = 0;
-        let clickTimer;
+    const footerAdminTrigger = document.getElementById('hiddenAdminTriggerFooter');
 
-        logoLink.addEventListener('click', function () {
-            clickCount++;
+if (footerAdminTrigger) {
+    let clickCount = 0;
+    let clickTimer;
 
+    footerAdminTrigger.addEventListener('click', function () {
+        clickCount++;
+
+        clearTimeout(clickTimer);
+        clickTimer = setTimeout(() => {
+            clickCount = 0;
+        }, 1800);
+
+        if (clickCount === 5) {
             clearTimeout(clickTimer);
-            clickTimer = setTimeout(() => {
-                clickCount = 0;
-            }, 1500);
-
-            if (clickCount === 5) {
-                window.location.href = 'admin/login.php';
-            }
-        });
-    }
+            window.location.href = 'admin/login.php';
+        }
+    });
+}
 });

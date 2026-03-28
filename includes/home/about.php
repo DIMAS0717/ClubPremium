@@ -4,6 +4,7 @@
     <div class="about-text">
       <span class="about-subtitle">SOBRE NOSOTROS</span>
       <h2>¿QUIÉNES SOMOS?</h2>
+      <div class="divider_about"></div>
 
       <p>
         Club Santiago Real Estate es la agencia líder en propiedades de lujo.
