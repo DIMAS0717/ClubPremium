@@ -991,7 +991,7 @@ h4,
 
 /* =========================================================
    DARK MODE - ALREDEDORES
-   Pegar al final del archivo
+   ARCHIVO COMPLETO FINAL
    ========================================================= */
 
 body.dark-mode {
@@ -1016,12 +1016,12 @@ body.dark-mode .around-hero-container::before {
     ) !important;
 }
 
-/* no tocar color del texto hero */
+/* texto hero intacto */
 body.dark-mode .around-title,
 body.dark-mode .around-subtitle,
 body.dark-mode .around-title-deco,
 body.dark-mode .around-title-underline {
-  /* se respetan como están */
+  /* no cambiar */
 }
 
 /* =========================================================
@@ -1103,11 +1103,12 @@ body.dark-mode .around-section-title {
   color: #A2C7E7 !important;
 }
 
+/* línea igual al modo claro */
 body.dark-mode .around-section-title::after {
   background: linear-gradient(
     90deg,
-    rgba(162, 199, 231, 0.9),
-    rgba(53, 87, 134, 0.9)
+    #bee99e,
+    #173457
   ) !important;
 }
 
@@ -1164,7 +1165,7 @@ body.dark-mode .badge-gray {
 }
 
 /* =========================================================
-   RESPONSIVE MÓVIL/TABLET
+   RESPONSIVE
    ========================================================= */
 @media (max-width: 1024px) {
   body.dark-mode .around-map-card {
@@ -1183,14 +1184,6 @@ body.dark-mode .badge-gray {
       rgba(10, 14, 18, 0.52) 42%,
       rgba(10, 14, 18, 0.08) 100%
     ) !important;
-  }
-
-  body.dark-mode .around-activity-overlay h3 {
-    color: #ffffff !important;
-  }
-
-  body.dark-mode .around-activity-overlay p {
-    color: rgba(255, 245, 236, 0.95) !important;
   }
 
   body.dark-mode .around-btn {

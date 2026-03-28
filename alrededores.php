@@ -81,7 +81,7 @@ $page_title = 'Alrededores - Villas Eureka';
                                 <path fill="currentColor" d="M11 2h2v9l2.2-2.2 1.4 1.4L13 14l3.6 3.8-1.4 1.4L13 17v5h-2v-5l-2.2 2.2-1.4-1.4L11 14 7.4 10.2l1.4-1.4L11 11z"/>
                             </svg>
                             <span class="around-map-label">Restaurantes</span>
-                            <span class="around-map-time">2–7 min</span>
+                            <span class="around-map-time">2 min</span>
                         </li>
 
                         <li>
