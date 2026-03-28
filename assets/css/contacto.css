@@ -617,3 +617,121 @@ textarea.cs-input {
     min-height: 110px;
   }
 }
+
+/* =========================================================
+   DARK MODE - CONTACTANOS
+   AJUSTE VISUAL COMO LA IMAGEN
+   ========================================================= */
+
+body.dark-mode .cs-contact-section {
+  background:
+    linear-gradient(
+      rgba(16, 19, 22, 0.34),
+      rgba(16, 19, 22, 0.34)
+    ),
+    url("../img/fondos/fondo_contact.JPG") center -70px / cover no-repeat !important;
+}
+
+body.dark-mode .cs-title {
+  color: #bfe7e0 !important;
+}
+
+body.dark-mode .cs-title-underline {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #b48a1f,
+    #d4af37,
+    #b48a1f,
+    transparent
+  ) !important;
+  box-shadow: none !important;
+}
+
+/* caja principal */
+body.dark-mode .cs-contact-box {
+  background: #16191c !important;
+  border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.34) !important;
+  border-radius: 20px !important;
+}
+
+/* panel izquierdo */
+body.dark-mode .cs-left-panel {
+  background: #14345a !important;
+  border-right: none !important;
+}
+
+/* panel derecho */
+body.dark-mode .cs-right-panel {
+  background: #14171a !important;
+}
+
+body.dark-mode .cs-right-panel h3 {
+  color: #a8d2f5 !important;
+  font-size: 1.95rem !important;
+}
+
+/* textos panel izquierdo */
+body.dark-mode .cs-label {
+  color: #ffffff !important;
+}
+
+body.dark-mode .cs-detail,
+body.dark-mode .cs-socials .cs-label {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* iconos panel izquierdo */
+body.dark-mode .cs-icon {
+  background: #5f9ea0 !important;
+  color: #dff7f2 !important;
+}
+
+/* iconos sociales */
+body.dark-mode .cs-social {
+  background: transparent !important;
+  border: none !important;
+  color: #ffffff !important;
+  width: 42px !important;
+  height: 42px !important;
+}
+
+body.dark-mode .cs-social:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* inputs */
+body.dark-mode .cs-input,
+body.dark-mode textarea.cs-input {
+  background: #171a1d !important;
+  border: 1px solid rgba(66, 109, 166, 0.55) !important;
+  color: #d7d0c7 !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .cs-input::placeholder {
+  color: #6f7276 !important;
+}
+
+body.dark-mode .cs-input:focus {
+  background: #171a1d !important;
+  border-color: rgba(100, 150, 220, 0.85) !important;
+  box-shadow: 0 0 0 3px rgba(48, 92, 148, 0.14) !important;
+}
+
+/* botón */
+body.dark-mode .cs-submit {
+  background: linear-gradient(135deg, #1a7c70, #2e8d7f) !important;
+  color: #eaf8f5 !important;
+  border: 1px solid rgba(118, 214, 193, 0.22) !important;
+  box-shadow:
+    0 0 18px rgba(40, 170, 145, 0.22),
+    0 10px 24px rgba(0, 0, 0, 0.18) !important;
+  min-width: 250px !important;
+  border-radius: 999px !important;
+}
+
+body.dark-mode .cs-submit:hover {
+  background: linear-gradient(135deg, #1f8e80, #37998b) !important;
+}
