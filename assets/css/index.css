@@ -776,11 +776,11 @@ body {
 
 .about-text h2 {
   margin: 0 0 24px;
-  font-size: 56px;
+  font-size: 50px;
   line-height: 1.08;
   font-weight: 700;
   letter-spacing: -1px;
-  color: #1f2a37;
+  color: #1e293b;
 }
 
 .about-text p {
@@ -1106,7 +1106,7 @@ body {
 .villas-texto h2 {
   display: block;
   margin: 0 0 34px;
-  color: #142e4d;
+  color: #1e293b;
   font-size: 58px;
   line-height: 1.05;
   font-weight: 700;
