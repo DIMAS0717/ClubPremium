@@ -894,3 +894,200 @@ a {
     padding-bottom: 0;
   }
 }
+
+/* =========================================================
+   DARK MODE - PROPIEDADES.PHP
+   Pegar al final de propiedades.css
+   ========================================================= */
+
+body.dark-mode {
+  background: #181A1B !important;
+  color: #d7d0c7 !important;
+}
+
+body.dark-mode .property-wrapper {
+  background: transparent !important;
+}
+
+/* =========================
+   TEXTOS
+========================= */
+body.dark-mode .property-title,
+body.dark-mode .section-title,
+body.dark-mode .section-subtitle,
+body.dark-mode .mini-value,
+body.dark-mode .location-label,
+body.dark-mode .small-link {
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .muted-text,
+body.dark-mode .property-short,
+body.dark-mode .desc-text,
+body.dark-mode .rules-list,
+body.dark-mode .location-value,
+body.dark-mode .mini-label {
+  color: #c0b4a7 !important;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+body.dark-mode .property-slider-card,
+body.dark-mode .property-summary-card,
+body.dark-mode .property-card,
+body.dark-mode .property-gallery-card .gallery-item {
+  background: #1E2022 !important;
+  border: 1px solid rgba(162, 199, 231, 0.18) !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22) !important;
+}
+
+body.dark-mode .property-mini-stats {
+  border-top: 1px solid rgba(162, 199, 231, 0.16) !important;
+}
+
+/* =========================
+   SLIDER
+========================= */
+body.dark-mode .slide {
+  background: radial-gradient(circle at top, #1f2832, #0b0d10) !important;
+}
+
+body.dark-mode .slider-arrow {
+  background: rgba(70, 70, 70, 0.55) !important;
+  border: 1px solid rgba(255, 255, 255, 0.20) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.24) !important;
+}
+
+body.dark-mode .slider-arrow:hover {
+  background: rgba(90, 90, 90, 0.70) !important;
+}
+
+body.dark-mode .slider-dot {
+  border-color: rgba(162, 199, 231, 0.45) !important;
+  background: transparent !important;
+}
+
+body.dark-mode .slider-dot.active {
+  background: #dfe8f2 !important;
+}
+
+/* =========================
+   BADGES
+========================= */
+body.dark-mode .status-badge {
+  background: #111417 !important;
+  border-color: rgba(162, 199, 231, 0.22) !important;
+  color: #d7d0c7 !important;
+}
+
+body.dark-mode .status-disponible {
+  border-color: rgba(29, 164, 78, 0.28) !important;
+  background: rgba(10, 168, 68, 0.20) !important;
+  color: #4ee27e !important;
+}
+
+body.dark-mode .status-no_disponible {
+  border-color: rgba(148, 163, 184, 0.20) !important;
+  background: #161a1f !important;
+  color: #e5e7eb !important;
+}
+
+body.dark-mode .status-soft {
+  background: transparent !important;
+  color: #A2C7E7 !important;
+  border: 1px solid rgba(162, 199, 231, 0.45) !important;
+}
+
+/* =========================
+   BOTONES
+========================= */
+body.dark-mode .btn-primary {
+  background: linear-gradient(135deg, #355786, #173F6C) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .btn-primary:hover {
+  filter: brightness(1.06) !important;
+}
+
+body.dark-mode .btn-primary-outline {
+  background: transparent !important;
+  border: 1px solid rgba(162, 199, 231, 0.34) !important;
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .btn-secondary {
+  background: transparent !important;
+  color: #A2C7E7 !important;
+  border: 1px solid rgba(162, 199, 231, 0.34) !important;
+}
+
+body.dark-mode .btn-ghost {
+  background: transparent !important;
+  color: #c0b4a7 !important;
+  border: 1px dashed rgba(162, 199, 231, 0.28) !important;
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+body.dark-mode .chip {
+  background: transparent !important;
+  border: 1px solid rgba(162, 199, 231, 0.42) !important;
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .chip-service {
+  background: #1E2022 !important;
+  border: 1px solid rgba(162, 199, 231, 0.42) !important;
+  color: #A2C7E7 !important;
+}
+
+/* =========================
+   GALERÍA
+========================= */
+body.dark-mode .property-gallery-card .gallery-item {
+  border: 1px solid rgba(162, 199, 231, 0.18) !important;
+}
+
+/* =========================
+   UBICACIÓN
+========================= */
+body.dark-mode .small-link {
+  text-decoration: none !important;
+}
+
+body.dark-mode .small-link:hover {
+  text-decoration: underline !important;
+}
+
+/* =========================
+   AVISO
+========================= */
+body.dark-mode .aviso-temporada {
+  color: #f08b84 !important;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+body.dark-mode .lightbox {
+  background: rgba(0, 0, 0, 0.92) !important;
+}
+
+body.dark-mode .lightbox-counter {
+  background: rgba(20, 20, 20, 0.50) !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .lightbox-nav {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .lightbox-close {
+  color: #ffffff !important;
+}
