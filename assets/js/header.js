@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-
     const header = document.querySelector('.header-full');
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -63,23 +62,28 @@ document.addEventListener('DOMContentLoaded', function () {
     /* =========================
        TEMA OSCURO
     ========================= */
-    if (themeToggle) {
-        const savedTheme = localStorage.getItem('siteTheme');
+    function applyTheme(theme) {
+        const isDark = theme === 'dark';
 
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            themeToggle.textContent = '☀️';
-        } else {
-            themeToggle.textContent = '🌙';
+        document.body.classList.toggle('dark-mode', isDark);
+        localStorage.setItem('siteTheme', isDark ? 'dark' : 'light');
+
+        if (themeToggle) {
+            themeToggle.textContent = isDark ? '☀️' : '🌙';
+            themeToggle.setAttribute(
+                'aria-label',
+                isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'
+            );
         }
+    }
+
+    if (themeToggle) {
+        const savedTheme = localStorage.getItem('siteTheme') || 'light';
+        applyTheme(savedTheme);
 
         themeToggle.addEventListener('click', function () {
-            document.body.classList.toggle('dark-mode');
-
             const isDark = document.body.classList.contains('dark-mode');
-            localStorage.setItem('siteTheme', isDark ? 'dark' : 'light');
-
-            themeToggle.textContent = isDark ? '☀️' : '🌙';
+            applyTheme(isDark ? 'light' : 'dark');
         });
     }
 
@@ -101,15 +105,11 @@ document.addEventListener('DOMContentLoaded', function () {
             updateLangButton();
 
             console.log('Idioma actual:', currentLang);
-
-            // FUTURO: aquí puedes conectar traducción real
-            // location.reload();
         });
     }
 
     /* =========================
-       ACCESO OCULTO ADMIN (OPCIONAL)
-       5 clics al logo
+       ACCESO OCULTO ADMIN
     ========================= */
     if (logoLink) {
         let clickCount = 0;
@@ -128,5 +128,4 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
 });
