@@ -156,3 +156,91 @@ body.dark-mode .destacados-container .villas-grid::-webkit-scrollbar-track {
 body.dark-mode .destacados-container .villas-grid::-webkit-scrollbar-thumb {
   background: #355786 !important;
 }
+
+
+/* =========================================================
+   DARK MODE - ABOUT US (ESTILO IMG1)
+   ========================================================= */
+
+/* FONDO GENERAL */
+body.dark-mode .about-section {
+  background: linear-gradient(
+    180deg,
+    #1b1e21 0%,
+    #181b1e 50%,
+    #15181b 100%
+  ) !important;
+}
+
+/* ================= TEXTOS ================= */
+
+body.dark-mode .about-subtitle {
+  color: #c6a25a !important;
+}
+
+body.dark-mode .about-text h2 {
+  color: #f2e9de !important;
+}
+
+/* divider dorado */
+body.dark-mode .divider_about {
+  background: linear-gradient(90deg, #c6a25a, #8f6b2f) !important;
+}
+
+/* párrafo */
+body.dark-mode .about-text p {
+  color: #b8b0a2 !important;
+}
+
+/* ================= LISTA ================= */
+
+body.dark-mode .about-list li {
+  color: #cfc6b8 !important;
+}
+
+/* check dorado */
+body.dark-mode .about-list li::before {
+  background: #c6a25a !important;
+  color: #1b1e21 !important;
+}
+
+/* ================= LINK ================= */
+
+body.dark-mode .about-link {
+  color: #d1a75b !important;
+}
+
+body.dark-mode .about-link:hover {
+  color: #f0c979 !important;
+}
+
+/* ================= IMAGEN ================= */
+
+body.dark-mode .about-image img {
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.35),
+    0 35px 70px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ================= RATING BOX ================= */
+
+body.dark-mode .rating-box {
+  background: rgba(28, 32, 36, 0.85) !important;
+  border: 1px solid rgba(162, 199, 231, 0.08) !important;
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* texto dentro */
+body.dark-mode .rating-box h4 {
+  color: #eaeaea !important;
+}
+
+body.dark-mode .rating-box p {
+  color: #a9b2bd !important;
+}
+
+/* estrella */
+body.dark-mode .star-icon {
+  color: #d1a75b !important;
+}
