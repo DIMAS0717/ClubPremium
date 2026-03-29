@@ -244,3 +244,89 @@ body.dark-mode .rating-box p {
 body.dark-mode .star-icon {
   color: #d1a75b !important;
 }
+
+
+/* =========================================================
+   DARK MODE - NUESTRAS VILLAS
+   ========================================================= */
+
+/* ================= FONDO ================= */
+body.dark-mode .villas {
+  background: linear-gradient(
+    180deg,
+    #1b1e21 0%,
+    #181b1e 50%,
+    #15181b 100%
+  ) !important;
+}
+
+/* ================= TEXTOS ================= */
+
+body.dark-mode .villas-subtitle {
+  color: #c6a25a !important;
+}
+
+body.dark-mode .villas-texto h2 {
+  color: #f2e9de !important;
+}
+
+/* divider dorado */
+body.dark-mode .villas-texto h2::after {
+  background: linear-gradient(90deg, #c6a25a, #8f6b2f) !important;
+}
+
+/* párrafo */
+body.dark-mode .intro {
+  color: #b8b0a2 !important;
+}
+
+/* ================= LISTA ================= */
+
+body.dark-mode .villas-lista li {
+  color: #d1c6b6 !important;
+}
+
+/* check icon */
+body.dark-mode .villas-lista li::before {
+  background: linear-gradient(135deg, #c6a25a 0%, #8f6b2f 100%) !important;
+  color: #1b1e21 !important;
+  box-shadow: 0 6px 14px rgba(198, 162, 90, 0.25) !important;
+}
+
+/* ================= BOTÓN ================= */
+/* (NO lo tocamos visualmente, solo suavizamos sombra) */
+body.dark-mode .btn-villas {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* ================= SLIDER ================= */
+
+body.dark-mode .slider-main {
+  background: #202428 !important;
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.35),
+    0 28px 60px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* overlay más elegante */
+body.dark-mode .slide::after {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.05) 50%
+  ) !important;
+}
+
+/* ================= BOTONES SLIDER ================= */
+
+body.dark-mode .slider-btn {
+  background: rgba(28, 32, 36, 0.9) !important;
+  color: #e6edf5 !important;
+  border: 1px solid rgba(162, 199, 231, 0.12) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35) !important;
+}
+
+body.dark-mode .slider-btn:hover {
+  background: #2a2f34 !important;
+  transform: translateY(-50%) scale(1.06);
+}
