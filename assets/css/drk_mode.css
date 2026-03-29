@@ -330,3 +330,105 @@ body.dark-mode .slider-btn:hover {
   background: #2a2f34 !important;
   transform: translateY(-50%) scale(1.06);
 }
+
+
+
+/* =========================================================
+   DARK MODE - BENEFICIOS
+   ========================================================= */
+
+/* ================= FONDO GENERAL ================= */
+body.dark-mode .villas-eureka-beneficios {
+  background:
+    radial-gradient(circle at top left, rgba(198, 162, 90, 0.05), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.02), transparent 24%),
+    linear-gradient(
+      180deg,
+      #1b1e21 0%,
+      #181b1e 52%,
+      #15181b 100%
+    ) !important;
+}
+
+body.dark-mode .villas-eureka-beneficios::before {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px) !important;
+  opacity: 0.10 !important;
+}
+
+/* ================= TÍTULOS ================= */
+
+body.dark-mode .beneficios-subtitle {
+  color: #c6a25a !important;
+}
+
+body.dark-mode .beneficios-titulo {
+  color: #f2e9de !important;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.28) !important;
+}
+
+body.dark-mode .beneficios-titulo::after {
+  background: linear-gradient(90deg, #c6a25a, #8f6b2f) !important;
+}
+
+/* ================= CARDS ================= */
+
+body.dark-mode .beneficio-card {
+  background: linear-gradient(180deg, #1f2327 0%, #1a1e22 100%) !important;
+  border: 1px solid rgba(162, 199, 231, 0.10) !important;
+  box-shadow:
+    0 20px 42px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+}
+
+body.dark-mode .beneficio-card::before {
+  background: linear-gradient(90deg, #c6a25a, #d7b56b, #c6a25a) !important;
+}
+
+body.dark-mode .beneficio-card:hover {
+  box-shadow:
+    0 28px 55px rgba(0, 0, 0, 0.34),
+    0 0 22px rgba(198, 162, 90, 0.10) !important;
+  border-color: rgba(198, 162, 90, 0.18) !important;
+}
+
+/* ================= ICONO ================= */
+
+body.dark-mode .icon-box {
+  color: #d1a75b !important;
+  background: linear-gradient(180deg, #252a30 0%, #1f2328 100%) !important;
+  border: 1.5px solid rgba(209, 167, 91, 0.24) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 10px 24px rgba(0, 0, 0, 0.18) !important;
+}
+
+body.dark-mode .beneficio-card:hover .icon-box {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 12px 26px rgba(209, 167, 91, 0.18) !important;
+}
+
+/* ================= TEXTO CARD ================= */
+
+body.dark-mode .beneficio-card h3 {
+  color: #f2e9de !important;
+}
+
+body.dark-mode .beneficio-card p {
+  color: #b8b0a2 !important;
+}
+
+/* ================= BOTÓN ================= */
+
+body.dark-mode .beneficios-btn {
+  background: linear-gradient(135deg, #c6a25a, #d8b76d) !important;
+  color: #1b1e21 !important;
+  box-shadow: 0 10px 28px rgba(198, 162, 90, 0.22) !important;
+}
+
+body.dark-mode .beneficios-btn:hover {
+  box-shadow: 0 14px 34px rgba(198, 162, 90, 0.32) !important;
+  filter: brightness(1.02);
+}
