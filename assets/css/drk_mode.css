@@ -432,3 +432,142 @@ body.dark-mode .beneficios-btn:hover {
   box-shadow: 0 14px 34px rgba(198, 162, 90, 0.32) !important;
   filter: brightness(1.02);
 }
+
+
+/* =========================================================
+   DARK MODE - UBICACIÓN
+   ========================================================= */
+
+/* ================= FONDO GENERAL ================= */
+body.dark-mode .ubicacion-premium {
+  background: linear-gradient(
+    180deg,
+    #1b1e21 0%,
+    #181b1e 52%,
+    #15181b 100%
+  ) !important;
+}
+
+/* ================= TEXTO ================= */
+
+body.dark-mode .ubicacion-subtitle {
+  color: #c6a25a !important;
+}
+
+body.dark-mode .ubicacion-texto h2 {
+  color: #f2e9de !important;
+}
+
+body.dark-mode .ubicacion-texto h2::after {
+  background: linear-gradient(90deg, #c6a25a 0%, #8f6b2f 100%) !important;
+}
+
+body.dark-mode .ubicacion-intro {
+  color: #b8b0a2 !important;
+}
+
+/* ================= CARD DE DIRECCIÓN ================= */
+
+body.dark-mode .ubicacion-card {
+  background: rgba(30, 32, 34, 0.88) !important;
+  border: 1px solid rgba(162, 199, 231, 0.10) !important;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+body.dark-mode .ubicacion-card h3 {
+  color: #f2e9de !important;
+}
+
+body.dark-mode .ubicacion-card p {
+  color: #b8b0a2 !important;
+}
+
+body.dark-mode .ubicacion-badges span {
+  background: #23272c !important;
+  color: #d1a75b !important;
+  border: 1px solid rgba(198, 162, 90, 0.14) !important;
+}
+
+/* ================= BOTONES MINI ================= */
+
+body.dark-mode .mini-video-card,
+body.dark-mode .mini-maps-card {
+  background: linear-gradient(180deg, #1f2328 0%, #1a1e22 100%) !important;
+  border: 1px solid rgba(162, 199, 231, 0.10) !important;
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+}
+
+body.dark-mode .mini-video-card:hover,
+body.dark-mode .mini-maps-card:hover {
+  background: linear-gradient(180deg, #242a30 0%, #1d2227 100%) !important;
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(162, 199, 231, 0.08) !important;
+}
+
+body.dark-mode .mini-video-play,
+body.dark-mode .mini-maps-icon {
+  background: linear-gradient(135deg, #0f1114, #262b31) !important;
+  color: #f2e9de !important;
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.30),
+    0 0 10px rgba(162, 199, 231, 0.06) !important;
+}
+
+body.dark-mode .mini-video-tag {
+  color: #c6a25a !important;
+}
+
+body.dark-mode .mini-video-card strong,
+body.dark-mode .mini-maps-card strong {
+  color: #f2e9de !important;
+}
+
+body.dark-mode .mini-video-card p,
+body.dark-mode .mini-maps-card p {
+  color: #aeb6c0 !important;
+}
+
+/* ================= MAPA ================= */
+
+body.dark-mode .mapa-frame {
+  background: #202428 !important;
+  border: 1px solid rgba(162, 199, 231, 0.08) !important;
+  box-shadow:
+    0 22px 48px rgba(0, 0, 0, 0.28),
+    0 30px 60px rgba(0, 0, 0, 0.14) !important;
+}
+
+body.dark-mode .mapa-frame::after {
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.22), transparent 35%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02), transparent 24%) !important;
+}
+
+/* ================= OVERLAY DEL MAPA ================= */
+
+body.dark-mode .mapa-overlay-card {
+  background: rgba(28, 32, 36, 0.90) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+body.dark-mode .pin-dot {
+  background: #2b64f1 !important;
+  box-shadow: 0 0 0 6px rgba(43, 100, 241, 0.14) !important;
+}
+
+body.dark-mode .mapa-overlay-card strong {
+  color: #f2e9de !important;
+}
+
+body.dark-mode .mapa-overlay-card p {
+  color: #aeb6c0 !important;
+}
+
+body.dark-mode .mapa-link {
+  color: #7fb0ff !important;
+}
