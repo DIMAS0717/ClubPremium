@@ -621,7 +621,8 @@
   }
 
   .villas-grid::-webkit-scrollbar-track {
-    background: #e2e8f0;
+    background: #bfa15f !important;
+    color: #c79f38 !important;
     border-radius: 999px;
   }
 
