@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ANIMACIONES SCROLL (REVEAL)
   // ============================================
 
-  const revealElements = document.querySelectorAll(`
+    const revealElements = document.querySelectorAll(`
     .destacados-header,
     .villa-card,
     .about-text,
@@ -240,7 +240,12 @@ document.addEventListener("DOMContentLoaded", function () {
     .around-map-info,
     .around-map-image,
     .section-header,
-    .around-activity-card
+    .around-activity-card,
+    .cs-title-wrap,
+    .cs-title-underline,
+    .cs-contact-box,
+    .cs-left-panel,
+    .cs-right-panel
   `);
 
   if ("IntersectionObserver" in window) {
