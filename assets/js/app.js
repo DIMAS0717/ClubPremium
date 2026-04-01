@@ -214,3 +214,50 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
+  // ============================================
+  // ANIMACIONES SCROLL (REVEAL)
+  // ============================================
+
+  const revealElements = document.querySelectorAll(`
+    .destacados-header,
+    .villa-card,
+    .about-text,
+    .about-image,
+    .villas-texto,
+    .villas-slider,
+    .beneficios-subtitle,
+    .beneficios-titulo,
+    .beneficio-card,
+    .beneficios-action,
+    .ubicacion-texto,
+    .ubicacion-visual,
+    .booking-header,
+    .booking-alert,
+    .booking-panel
+  `);
+
+  if ("IntersectionObserver" in window) {
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.18,
+      rootMargin: "0px 0px -60px 0px"
+    });
+
+    revealElements.forEach(el => {
+      revealObserver.observe(el);
+    });
+
+  } else {
+    // fallback (si el navegador es viejo)
+    revealElements.forEach(el => {
+      el.classList.add("is-visible");
+    });
+  }

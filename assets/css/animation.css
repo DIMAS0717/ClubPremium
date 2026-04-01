@@ -1,0 +1,443 @@
+/* =========================================================
+   ANIMACIONES GLOBALES
+   Archivo: animaciones.css
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estado inicial */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-up,
+.reveal-zoom {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.9s ease;
+}
+
+/* Variantes */
+.reveal-left {
+  transform: translateX(-70px);
+}
+
+.reveal-right {
+  transform: translateX(70px);
+}
+
+.reveal-up {
+  transform: translateY(60px);
+}
+
+.reveal-zoom {
+  transform: scale(0.92);
+  filter: blur(6px);
+}
+
+/* Cuando entra */
+.reveal.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-up.is-visible,
+.reveal-zoom.is-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* Delays */
+.delay-1 { transition-delay: 0.12s; }
+.delay-2 { transition-delay: 0.24s; }
+.delay-3 { transition-delay: 0.36s; }
+.delay-4 { transition-delay: 0.48s; }
+.delay-5 { transition-delay: 0.60s; }
+
+/* =========================================================
+   1. PROPIEDADES DESTACADAS
+   ========================================================= */
+
+.destacados-header {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.destacados-header.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.villa-card {
+  opacity: 0;
+  transform: translateY(55px);
+  transition:
+    opacity 0.85s ease,
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.villa-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.villa-card:nth-child(1) { transition-delay: 0.08s; }
+.villa-card:nth-child(2) { transition-delay: 0.16s; }
+.villa-card:nth-child(3) { transition-delay: 0.24s; }
+.villa-card:nth-child(4) { transition-delay: 0.32s; }
+.villa-card:nth-child(5) { transition-delay: 0.40s; }
+.villa-card:nth-child(6) { transition-delay: 0.48s; }
+
+.villa-image img {
+  transition: transform 0.9s ease;
+}
+
+.villa-card.is-visible .villa-image img {
+  transform: scale(1.03);
+}
+
+.villa-card:hover .villa-image img {
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   2. ABOUT
+   Texto izquierda / imagen derecha
+   ========================================================= */
+
+.about-text,
+.about-image {
+  opacity: 0;
+  transition:
+    opacity 0.95s ease,
+    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-text {
+  transform: translateX(-80px);
+}
+
+.about-image {
+  transform: translateX(80px);
+}
+
+.about-text.is-visible,
+.about-image.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-subtitle,
+.about-text h2,
+.divider_about,
+.about-text p,
+.about-list li,
+.about-link {
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.about-image img {
+  transition:
+    transform 1s ease,
+    box-shadow 0.45s ease;
+}
+
+.about-image.is-visible img {
+  transform: scale(1.02);
+}
+
+.rating-box {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease 0.35s,
+    transform 0.7s ease 0.35s;
+}
+
+.about-image.is-visible .rating-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   3. NUESTRAS VILLAS
+   Texto izquierda / slider derecha
+   ========================================================= */
+
+.villas-texto,
+.villas-slider {
+  opacity: 0;
+  transition:
+    opacity 0.95s ease,
+    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.villas-texto {
+  transform: translateX(-85px);
+}
+
+.villas-slider {
+  transform: translateX(85px);
+}
+
+.villas-texto.is-visible,
+.villas-slider.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slider-main {
+  overflow: hidden;
+}
+
+.villas-slider .slider-main img,
+.villas-slider .slide img {
+  transition: transform 1s ease;
+}
+
+.villas-slider.is-visible .slide.active img {
+  transform: scale(1.02);
+}
+
+/* =========================================================
+   4. BENEFICIOS
+   ========================================================= */
+
+.beneficios-subtitle,
+.beneficios-titulo,
+.beneficios-action {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+}
+
+.beneficios-subtitle.is-visible,
+.beneficios-titulo.is-visible,
+.beneficios-action.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.beneficio-card {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.85s ease,
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.beneficio-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.beneficio-card:nth-child(1) { transition-delay: 0.08s; }
+.beneficio-card:nth-child(2) { transition-delay: 0.16s; }
+.beneficio-card:nth-child(3) { transition-delay: 0.24s; }
+.beneficio-card:nth-child(4) { transition-delay: 0.32s; }
+
+.beneficio-card .icon-box {
+  transition: transform 0.45s ease;
+}
+
+.beneficio-card:hover .icon-box {
+  transform: translateY(-4px) scale(1.05);
+}
+
+/* =========================================================
+   5. UBICACION
+   Texto izquierda / mapa derecha
+   ========================================================= */
+
+.ubicacion-texto,
+.ubicacion-visual {
+  opacity: 0;
+  transition:
+    opacity 0.95s ease,
+    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ubicacion-texto {
+  transform: translateX(-85px);
+}
+
+.ubicacion-visual {
+  transform: translateX(85px);
+}
+
+.ubicacion-texto.is-visible,
+.ubicacion-visual.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ubicacion-card,
+.mapa-overlay-card,
+.mini-video-card,
+.mini-maps-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    opacity 0.75s ease;
+}
+
+.ubicacion-visual iframe {
+  opacity: 0;
+  transform: scale(0.96);
+  transition:
+    opacity 1s ease 0.15s,
+    transform 1s ease 0.15s;
+}
+
+.ubicacion-visual.is-visible iframe {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ubicacion-visual .mapa-overlay-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease 0.35s,
+    transform 0.7s ease 0.35s;
+}
+
+.ubicacion-visual.is-visible .mapa-overlay-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   6. BOOKING / RESERVA
+   ========================================================= */
+
+.booking-header,
+.booking-alert,
+.booking-panel {
+  opacity: 0;
+  transform: translateY(45px);
+  transition:
+    opacity 0.85s ease,
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.booking-header.is-visible,
+.booking-alert.is-visible,
+.booking-panel.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.booking-panel {
+  transition-delay: 0.18s;
+}
+
+.booking-form .booking-field,
+.booking-actions {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.booking-panel.is-visible .booking-field:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.18s; }
+.booking-panel.is-visible .booking-field:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.26s; }
+.booking-panel.is-visible .booking-field:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.34s; }
+.booking-panel.is-visible .booking-field:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.42s; }
+.booking-panel.is-visible .booking-field:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.50s; }
+.booking-panel.is-visible .booking-field:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.58s; }
+.booking-panel.is-visible .booking-actions { opacity: 1; transform: translateY(0); transition-delay: 0.66s; }
+
+/* =========================================================
+   HOVER SUTIL GENERAL
+   ========================================================= */
+
+.beneficio-card:hover,
+.mini-video-card:hover,
+.mini-maps-card:hover,
+.ubicacion-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================================================
+   RESPONSIVE: en móvil reducimos distancia para que se vea suave
+   ========================================================= */
+
+@media (max-width: 980px) {
+  .reveal-left,
+  .reveal-right,
+  .about-text,
+  .about-image,
+  .villas-texto,
+  .villas-slider,
+  .ubicacion-texto,
+  .ubicacion-visual {
+    transform: translateY(40px);
+  }
+
+  .reveal-left.is-visible,
+  .reveal-right.is-visible,
+  .about-text.is-visible,
+  .about-image.is-visible,
+  .villas-texto.is-visible,
+  .villas-slider.is-visible,
+  .ubicacion-texto.is-visible,
+  .ubicacion-visual.is-visible {
+    transform: translateY(0);
+  }
+
+  .villa-card,
+  .beneficio-card,
+  .booking-header,
+  .booking-alert,
+  .booking-panel {
+    transform: translateY(35px);
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-up,
+  .reveal-zoom,
+  .destacados-header,
+  .villa-card,
+  .about-text,
+  .about-image,
+  .rating-box,
+  .villas-texto,
+  .villas-slider,
+  .beneficios-subtitle,
+  .beneficios-titulo,
+  .beneficio-card,
+  .beneficios-action,
+  .ubicacion-texto,
+  .ubicacion-visual,
+  .booking-header,
+  .booking-alert,
+  .booking-panel,
+  .booking-form .booking-field,
+  .booking-actions,
+  .ubicacion-visual iframe,
+  .ubicacion-visual .mapa-overlay-card {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
