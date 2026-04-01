@@ -692,6 +692,19 @@ body.dark-mode .booking-field input[type="date"]::-webkit-calendar-picker-indica
   opacity: 1 !important;
 }
 
+body.dark-mode .booking-reset-btn {
+  background: linear-gradient(180deg, #2a2f35 0%, #21262c 100%) !important;
+  color: #d7d0c7 !important;
+  border: 1px solid rgba(162, 199, 231, 0.18) !important;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16) !important;
+}
+
+body.dark-mode .booking-reset-btn:hover {
+  background: linear-gradient(180deg, #323840 0%, #272d34 100%) !important;
+  color: #ffffff !important;
+  border-color: rgba(162, 199, 231, 0.30) !important;
+}
+
 /* =========================
    DROPDOWN MENU
 ========================= */
