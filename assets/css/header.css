@@ -418,3 +418,102 @@ body {
     padding: 12px 14px;
   }
 }
+
+/* ---------- RESPONSIVE EXTRA PRO ---------- */
+
+/* 📱 CELULARES MUY PEQUEÑOS (ej: 320px - 400px) */
+@media (max-width: 400px) {
+
+  .header-container {
+    width: 96%;
+  }
+
+  .header-logo span {
+    display: none; /* oculta texto para ahorrar espacio */
+  }
+
+  .header-logo img {
+    height: 58px;
+  }
+
+  .header-full.scrolled .header-logo img {
+    height: 50px;
+  }
+
+  .lang-toggle {
+    min-width: 52px;
+    font-size: 10px;
+    padding: 0 6px;
+  }
+
+  .toggle-theme,
+  .menu-toggle {
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+
+/* 📱 CELULAR NORMAL (400px - 560px mejora) */
+@media (max-width: 480px) {
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .lang-toggle {
+    min-width: 58px;
+    font-size: 10.5px;
+  }
+
+}
+
+
+/* 📲 TABLET PEQUEÑA (561px - 768px) */
+@media (max-width: 768px) {
+
+  .header-container {
+    width: 95%;
+  }
+
+  .header-logo img {
+    height: 80px;
+  }
+
+  .header-full.scrolled .header-logo img {
+    height: 66px;
+  }
+
+  .header-logo span {
+    font-size: 15px;
+  }
+
+  .header-actions {
+    gap: 10px;
+  }
+
+}
+
+
+/* 💻 TABLET GRANDE (769px - 1024px) */
+@media (max-width: 1024px) {
+
+  .header-nav {
+    gap: 28px;
+    margin-left: -40px;
+  }
+
+  .header-logo img {
+    height: 110px;
+  }
+
+  .header-full.scrolled .header-logo img {
+    height: 90px;
+  }
+
+  .header-logo span {
+    font-size: 18px;
+  }
+
+}
