@@ -297,6 +297,105 @@
 }
 
 
+/*HEROOO PRINCIPAL*/
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 768px) {
+  .around-title-wrap {
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .around-title {
+    font-size: 5.8rem;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    padding-left: 0;
+    white-space: normal;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .around-subtitle-main {
+    font-size: 0.99rem;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    margin: 34px 0 22px;
+  }
+
+  .around-title-underline {
+    width: 220px;
+    margin: 8px auto 22px;
+  }
+
+  .around-description-box {
+    padding: 20px;
+    margin: 0 auto 30px;
+  }
+
+  .around-description {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-btn {
+    min-width: 250px;
+    padding: 14px 30px;
+  }
+
+  .hero-image::after {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  .around-title-wrap {
+    gap: 3px;
+  }
+
+  .around-title {
+    font-size: 2.6rem;
+    line-height: 1.04;
+    letter-spacing: 0.5px;
+    max-width: 220px; 
+  }
+
+  .around-subtitle-main {
+    font-size: 1.0rem;      
+    letter-spacing: 1.5px;  
+    line-height: 1.35;
+    margin: 26px 0 18px;
+    white-space: nowrap;
+  }
+
+  .around-title-deco {
+    width: 62px;
+  }
+
+  .around-title-underline {
+    width: 170px;
+  }
+
+  .around-description-box {
+    padding: 18px 16px;
+  }
+
+  .around-description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .hero-btn {
+    min-width: 100%;
+    max-width: 320px;
+  }
+}
+
 /* =========================================================
    RESPONSIVE villas.php
    ========================================================= */
@@ -803,25 +902,25 @@
   }
 
   .alrededores-page .around-title-wrap {
-    gap: 12px !important;
-    margin-bottom: 10px !important;
-    flex-wrap: wrap !important;
+    gap: 12px ;
+    margin-bottom: 10px ;
+    flex-wrap: wrap ;
   }
 
   .alrededores-page .around-title {
-    font-size: 2.45rem !important;
-    line-height: 1.08 !important;
-    letter-spacing: 1px !important;
-    margin: 0 !important;
+    font-size: 2.45rem ;
+    line-height: 1.08 ;
+    letter-spacing: 1px ;
+    margin: 0 ;
   }
 
   .alrededores-page .around-title-deco {
-    width: 36px !important;
+    width: 36px ;
   }
 
   .alrededores-page .around-title-underline {
-    width: 130px !important;
-    margin: 10px auto 14px !important;
+    width: 130px ;
+    margin: 10px auto 14px ;
   }
 
   .alrededores-page .around-subtitle {
@@ -889,16 +988,16 @@
   }
 
   .alrededores-page .around-title-wrap {
-    gap: 8px !important;
-    margin-bottom: 8px !important;
-    flex-wrap: wrap !important;
+    gap: 8px ;
+    margin-bottom: 8px ;
+    flex-wrap: wrap ;
   }
 
   .alrededores-page .around-title {
-    font-size: 1.85rem !important;
-    line-height: 1.08 !important;
-    letter-spacing: 0.8px !important;
-    margin: 0 !important;
+    font-size: 1.85rem ;
+    line-height: 1.08 ;
+    letter-spacing: 0.8px ;
+    margin: 0 ;
   }
 
   .alrededores-page .around-title-deco {
@@ -1005,11 +1104,11 @@
   }
 
   .alrededores-page .around-title {
-    font-size: 1.65rem !important;
+    font-size: 3.65rem ;
   }
 
   .alrededores-page .around-title-deco {
-    width: 16px !important;
+    width: 16px ;
   }
 
   .alrededores-page .around-title-underline {
