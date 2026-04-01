@@ -10,6 +10,8 @@ $page_title = 'Alrededores - Villas Eureka';
 
     <link rel="stylesheet" href="assets/css/alrededores.css">
     <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/drk_mode.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
