@@ -2110,13 +2110,14 @@ body {
   }
 }
 
+
 /* ================= RESERVA PREMIUM ================= */
 
 .booking-hero {
   position: relative;
   width: 100%;
-  min-height: 680px;
-  padding: 120px 20px 70px;
+  min-height: 860px; /* antes 680px */
+  padding: 150px 20px 130px; /* antes 120px 20px 70px */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2370,12 +2371,11 @@ body {
   background: rgba(255, 255, 255, 0.12);
 }
 /* ================= RESPONSIVE FINAL RESERVA ================= */
-
 /* ---------- TABLET ---------- */
 @media (max-width: 992px) {
   .booking-hero {
-    min-height: 620px;
-    padding: 110px 18px 60px;
+    min-height: 760px; /* antes 620px */
+    padding: 130px 18px 100px; /* antes 110px 18px 60px */
     background-position: center;
   }
 
@@ -2404,7 +2404,7 @@ body {
   }
 
   .booking-form {
-    grid-template-columns: 1fr 1fr; /* aquí aún 2 columnas */
+    grid-template-columns: 1fr 1fr;
     gap: 12px;
   }
 }
@@ -2412,8 +2412,8 @@ body {
 /* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
   .booking-hero {
-    min-height: auto;
-    padding: 95px 16px 55px;
+    min-height: 780px; /* antes auto */
+    padding: 110px 16px 85px; /* antes 95px 16px 55px */
   }
 
   .booking-content {
@@ -2454,7 +2454,6 @@ body {
     margin-top: 10px;
   }
 
-  /* 🔥 CAMBIO CLAVE: UNA COLUMNA */
   .booking-form {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -2490,7 +2489,8 @@ body {
 /* ---------- MOBILE PEQUEÑO ---------- */
 @media (max-width: 480px) {
   .booking-hero {
-    padding: 82px 14px 48px;
+    min-height: 720px;
+    padding: 95px 14px 75px; /* antes 82px 14px 48px */
   }
 
   .booking-header {
@@ -2558,160 +2558,3 @@ body {
     border-radius: 999px;
   }
 }
-/* ===================== SISTEMA TIPOGRÁFICO GLOBAL ===================== */
-
-/* Marca / navegación / UI */
-body,
-p,
-span,
-a,
-button,
-input,
-textarea,
-select,
-label,
-li,
-.badge,
-.btn-explorar,
-.btn-villas,
-.beneficios-btn,
-.hero-btn,
-.booking-actions button,
-.booking-panel-title,
-.booking-kicker,
-.about-link,
-.villas-subtitle,
-.about-subtitle,
-.beneficios-subtitle,
-.destacados-header span,
-.ubicacion-subtitle,
-.mini-video-tag,
-.mapa-link {
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* ===================== TÍTULOS PRINCIPALES ===================== */
-
-.about-text h2,
-.villas-texto h2,
-.destacados-header h2,
-.beneficios-titulo,
-.ubicacion-texto h2,
-.booking-header h2 {
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
-}
-
-/* ===================== HERO PRINCIPAL ===================== */
-/* Aquí sí dejamos Montserrat porque funciona mejor como marca */
-.around-title,
-.around-subtitle-main,
-.booking-kicker {
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* ===================== TÍTULOS DE TARJETAS / BLOQUES ===================== */
-
-.villa-info h3,
-.beneficio-card h3,
-.ubicacion-card h3,
-.rating-box h4 {
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
-  letter-spacing: 0;
-}
-
-/* ===================== TEXTO DESCRIPTIVO ===================== */
-
-.about-text p,
-.intro,
-.villa-info p,
-.beneficio-card p,
-.ubicacion-intro,
-.ubicacion-card p,
-.around-description,
-.booking-header p,
-.rating-box p,
-.mini-video-card p,
-.mini-maps-card p,
-.mapa-overlay-card p {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-}
-
-/* ===================== BOTONES ===================== */
-
-.hero-btn,
-.btn-explorar,
-.btn-villas,
-.beneficios-btn,
-.booking-actions button,
-.mini-video-card strong,
-.mini-maps-card strong {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-}
-
-/* ===================== NAVBAR ===================== */
-
-header a,
-nav a,
-.menu a,
-.navbar a,
-.nav-link {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-}
-
-/* ===================== LISTAS / DETALLES ===================== */
-
-.about-list li,
-.villas-lista li,
-.villa-icons span,
-.ubicacion-badges span {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-}
-
-/* ===================== FORMULARIOS ===================== */
-
-.booking-field input,
-.booking-date-label,
-.booking-alert {
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* ===================== AJUSTES FINOS DE ELEGANCIA ===================== */
-
-.destacados-header h2,
-.beneficios-titulo,
-.ubicacion-texto h2,
-.villas-texto h2,
-.about-text h2,
-.booking-header h2 {
-  letter-spacing: -0.4px;
-}
-
-.villa-info h3,
-.beneficio-card h3,
-.ubicacion-card h3 {
-  line-height: 1.2;
-}
-
-/* ===================== EXCEPCIONES IMPORTANTES ===================== */
-/* Para que no se vea rígido en textos muy pequeños */
-.badge,
-.booking-panel-title,
-.booking-date-label,
-.villas-subtitle,
-.about-subtitle,
-.beneficios-subtitle,
-.destacados-header span,
-.ubicacion-subtitle,
-.mini-video-tag {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-}
-
-
