@@ -7,6 +7,13 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --anim-time-main: 1.45s;
+  --anim-time-soft: 1.2s;
+  --anim-time-fast: 1s;
+  --anim-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 /* Estado inicial */
 .reveal,
 .reveal-left,
@@ -14,29 +21,29 @@ html {
 .reveal-up,
 .reveal-zoom {
   opacity: 0;
-  will-change: transform, opacity;
+  will-change: transform, opacity, filter;
   transition:
-    opacity 0.9s ease,
-    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.9s ease;
+    opacity var(--anim-time-main) ease,
+    transform var(--anim-time-main) var(--anim-ease),
+    filter var(--anim-time-main) ease;
 }
 
 /* Variantes */
 .reveal-left {
-  transform: translateX(-70px);
+  transform: translateX(-80px);
 }
 
 .reveal-right {
-  transform: translateX(70px);
+  transform: translateX(80px);
 }
 
 .reveal-up {
-  transform: translateY(60px);
+  transform: translateY(65px);
 }
 
 .reveal-zoom {
   transform: scale(0.92);
-  filter: blur(6px);
+  filter: blur(8px);
 }
 
 /* Cuando entra */
@@ -50,12 +57,12 @@ html {
   filter: blur(0);
 }
 
-/* Delays */
-.delay-1 { transition-delay: 0.12s; }
-.delay-2 { transition-delay: 0.24s; }
-.delay-3 { transition-delay: 0.36s; }
-.delay-4 { transition-delay: 0.48s; }
-.delay-5 { transition-delay: 0.60s; }
+/* Delays más lentos */
+.delay-1 { transition-delay: 0.18s; }
+.delay-2 { transition-delay: 0.32s; }
+.delay-3 { transition-delay: 0.46s; }
+.delay-4 { transition-delay: 0.60s; }
+.delay-5 { transition-delay: 0.74s; }
 
 /* =========================================================
    1. PROPIEDADES DESTACADAS
@@ -63,10 +70,10 @@ html {
 
 .destacados-header {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(42px);
   transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
+    opacity var(--anim-time-soft) ease,
+    transform var(--anim-time-soft) var(--anim-ease);
 }
 
 .destacados-header.is-visible {
@@ -76,10 +83,10 @@ html {
 
 .villa-card {
   opacity: 0;
-  transform: translateY(55px);
+  transform: translateY(60px);
   transition:
-    opacity 0.85s ease,
-    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity var(--anim-time-main) ease,
+    transform var(--anim-time-main) var(--anim-ease),
     box-shadow 0.35s ease;
 }
 
@@ -88,15 +95,15 @@ html {
   transform: translateY(0);
 }
 
-.villa-card:nth-child(1) { transition-delay: 0.08s; }
-.villa-card:nth-child(2) { transition-delay: 0.16s; }
-.villa-card:nth-child(3) { transition-delay: 0.24s; }
-.villa-card:nth-child(4) { transition-delay: 0.32s; }
-.villa-card:nth-child(5) { transition-delay: 0.40s; }
-.villa-card:nth-child(6) { transition-delay: 0.48s; }
+.villa-card:nth-child(1) { transition-delay: 0.14s; }
+.villa-card:nth-child(2) { transition-delay: 0.26s; }
+.villa-card:nth-child(3) { transition-delay: 0.38s; }
+.villa-card:nth-child(4) { transition-delay: 0.50s; }
+.villa-card:nth-child(5) { transition-delay: 0.62s; }
+.villa-card:nth-child(6) { transition-delay: 0.74s; }
 
 .villa-image img {
-  transition: transform 0.9s ease;
+  transition: transform 1.3s ease;
 }
 
 .villa-card.is-visible .villa-image img {
@@ -116,16 +123,16 @@ html {
 .about-image {
   opacity: 0;
   transition:
-    opacity 0.95s ease,
-    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 1.5s ease,
+    transform 1.5s var(--anim-ease);
 }
 
 .about-text {
-  transform: translateX(-80px);
+  transform: translateX(-95px);
 }
 
 .about-image {
-  transform: translateX(80px);
+  transform: translateX(95px);
 }
 
 .about-text.is-visible,
@@ -141,13 +148,13 @@ html {
 .about-list li,
 .about-link {
   transition:
-    opacity 0.7s ease,
-    transform 0.7s ease;
+    opacity var(--anim-time-soft) ease,
+    transform var(--anim-time-soft) ease;
 }
 
 .about-image img {
   transition:
-    transform 1s ease,
+    transform 1.5s ease,
     box-shadow 0.45s ease;
 }
 
@@ -157,10 +164,10 @@ html {
 
 .rating-box {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(32px);
   transition:
-    opacity 0.7s ease 0.35s,
-    transform 0.7s ease 0.35s;
+    opacity 1.1s ease 0.55s,
+    transform 1.1s ease 0.55s;
 }
 
 .about-image.is-visible .rating-box {
@@ -177,16 +184,16 @@ html {
 .villas-slider {
   opacity: 0;
   transition:
-    opacity 0.95s ease,
-    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 1.5s ease,
+    transform 1.5s var(--anim-ease);
 }
 
 .villas-texto {
-  transform: translateX(-85px);
+  transform: translateX(-95px);
 }
 
 .villas-slider {
-  transform: translateX(85px);
+  transform: translateX(95px);
 }
 
 .villas-texto.is-visible,
@@ -201,7 +208,7 @@ html {
 
 .villas-slider .slider-main img,
 .villas-slider .slide img {
-  transition: transform 1s ease;
+  transition: transform 1.4s ease;
 }
 
 .villas-slider.is-visible .slide.active img {
@@ -216,10 +223,10 @@ html {
 .beneficios-titulo,
 .beneficios-action {
   opacity: 0;
-  transform: translateY(35px);
+  transform: translateY(38px);
   transition:
-    opacity 0.75s ease,
-    transform 0.75s ease;
+    opacity var(--anim-time-soft) ease,
+    transform var(--anim-time-soft) var(--anim-ease);
 }
 
 .beneficios-subtitle.is-visible,
@@ -231,10 +238,10 @@ html {
 
 .beneficio-card {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(58px);
   transition:
-    opacity 0.85s ease,
-    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity var(--anim-time-main) ease,
+    transform var(--anim-time-main) var(--anim-ease),
     box-shadow 0.35s ease;
 }
 
@@ -243,10 +250,10 @@ html {
   transform: translateY(0);
 }
 
-.beneficio-card:nth-child(1) { transition-delay: 0.08s; }
-.beneficio-card:nth-child(2) { transition-delay: 0.16s; }
-.beneficio-card:nth-child(3) { transition-delay: 0.24s; }
-.beneficio-card:nth-child(4) { transition-delay: 0.32s; }
+.beneficio-card:nth-child(1) { transition-delay: 0.14s; }
+.beneficio-card:nth-child(2) { transition-delay: 0.28s; }
+.beneficio-card:nth-child(3) { transition-delay: 0.42s; }
+.beneficio-card:nth-child(4) { transition-delay: 0.56s; }
 
 .beneficio-card .icon-box {
   transition: transform 0.45s ease;
@@ -265,16 +272,16 @@ html {
 .ubicacion-visual {
   opacity: 0;
   transition:
-    opacity 0.95s ease,
-    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 1.5s ease,
+    transform 1.5s var(--anim-ease);
 }
 
 .ubicacion-texto {
-  transform: translateX(-85px);
+  transform: translateX(-95px);
 }
 
 .ubicacion-visual {
-  transform: translateX(85px);
+  transform: translateX(95px);
 }
 
 .ubicacion-texto.is-visible,
@@ -290,15 +297,15 @@ html {
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease,
-    opacity 0.75s ease;
+    opacity 1.1s ease;
 }
 
 .ubicacion-visual iframe {
   opacity: 0;
   transform: scale(0.96);
   transition:
-    opacity 1s ease 0.15s,
-    transform 1s ease 0.15s;
+    opacity 1.45s ease 0.25s,
+    transform 1.45s ease 0.25s;
 }
 
 .ubicacion-visual.is-visible iframe {
@@ -308,10 +315,10 @@ html {
 
 .ubicacion-visual .mapa-overlay-card {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(26px);
   transition:
-    opacity 0.7s ease 0.35s,
-    transform 0.7s ease 0.35s;
+    opacity 1.1s ease 0.58s,
+    transform 1.1s ease 0.58s;
 }
 
 .ubicacion-visual.is-visible .mapa-overlay-card {
@@ -327,10 +334,10 @@ html {
 .booking-alert,
 .booking-panel {
   opacity: 0;
-  transform: translateY(45px);
+  transform: translateY(48px);
   transition:
-    opacity 0.85s ease,
-    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity var(--anim-time-main) ease,
+    transform var(--anim-time-main) var(--anim-ease);
 }
 
 .booking-header.is-visible,
@@ -341,25 +348,25 @@ html {
 }
 
 .booking-panel {
-  transition-delay: 0.18s;
+  transition-delay: 0.24s;
 }
 
 .booking-form .booking-field,
 .booking-actions {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(28px);
   transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+    opacity var(--anim-time-fast) ease,
+    transform var(--anim-time-fast) ease;
 }
 
-.booking-panel.is-visible .booking-field:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.18s; }
-.booking-panel.is-visible .booking-field:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.26s; }
-.booking-panel.is-visible .booking-field:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.34s; }
-.booking-panel.is-visible .booking-field:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.42s; }
-.booking-panel.is-visible .booking-field:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.50s; }
-.booking-panel.is-visible .booking-field:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.58s; }
-.booking-panel.is-visible .booking-actions { opacity: 1; transform: translateY(0); transition-delay: 0.66s; }
+.booking-panel.is-visible .booking-field:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.24s; }
+.booking-panel.is-visible .booking-field:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.36s; }
+.booking-panel.is-visible .booking-field:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.48s; }
+.booking-panel.is-visible .booking-field:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.60s; }
+.booking-panel.is-visible .booking-field:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.72s; }
+.booking-panel.is-visible .booking-field:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.84s; }
+.booking-panel.is-visible .booking-actions { opacity: 1; transform: translateY(0); transition-delay: 0.96s; }
 
 /* =========================================================
    HOVER SUTIL GENERAL
@@ -373,7 +380,7 @@ html {
 }
 
 /* =========================================================
-   RESPONSIVE: en móvil reducimos distancia para que se vea suave
+   RESPONSIVE
    ========================================================= */
 
 @media (max-width: 980px) {
@@ -385,7 +392,7 @@ html {
   .villas-slider,
   .ubicacion-texto,
   .ubicacion-visual {
-    transform: translateY(40px);
+    transform: translateY(45px);
   }
 
   .reveal-left.is-visible,
@@ -404,7 +411,22 @@ html {
   .booking-header,
   .booking-alert,
   .booking-panel {
-    transform: translateY(35px);
+    transform: translateY(40px);
+  }
+}
+
+@media (max-width: 560px) {
+  .villa-card:nth-child(1),
+  .villa-card:nth-child(2),
+  .villa-card:nth-child(3),
+  .villa-card:nth-child(4),
+  .villa-card:nth-child(5),
+  .villa-card:nth-child(6),
+  .beneficio-card:nth-child(1),
+  .beneficio-card:nth-child(2),
+  .beneficio-card:nth-child(3),
+  .beneficio-card:nth-child(4) {
+    transition-delay: 0.12s;
   }
 }
 
