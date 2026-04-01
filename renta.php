@@ -341,6 +341,7 @@ try {
 
     <link rel="stylesheet" href="assets/css/renta.css">
     <link rel="stylesheet" href="assets/css/drk_mode.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

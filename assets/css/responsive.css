@@ -1,0 +1,297 @@
+
+/* =========================================================
+   RESPONSIVE renta.php
+   ========================================================= */
+
+/* -------- LAPTOP PEQUEÑA / TABLET GRANDE -------- */
+@media (max-width: 1100px) {
+  .page-main {
+    padding-top: 132px;
+  }
+
+  .page-centered {
+    padding: 0 16px;
+  }
+
+  .booking-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .booking-field {
+    min-height: auto;
+    padding: 0;
+    border-right: none;
+  }
+
+  .booking-actions {
+    grid-column: 1 / -1;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .booking-btn,
+  .booking-reset-btn {
+    min-width: 100%;
+    min-height: 52px;
+    border-radius: 14px;
+    padding: 0 18px;
+    border-left: none;
+  }
+
+  .booking-reset-btn {
+    background: #eef2f7;
+    color: #173457;
+  }
+
+  .home-property-grid {
+    gap: 20px;
+  }
+
+  .home-property-img-wrapper {
+    height: 235px;
+  }
+}
+
+/* -------- TABLET -------- */
+@media (max-width: 768px) {
+  .page-main {
+    padding-top: 118px;
+    padding-bottom: 24px;
+  }
+
+  .page-centered {
+    padding: 0 14px;
+  }
+
+  .section {
+    margin-top: 20px;
+  }
+
+  .section h1 {
+    font-size: 30px;
+  }
+
+  .booking-bar {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 18px;
+    border-radius: 22px;
+    margin-top: 18px;
+  }
+
+  .booking-field {
+    padding: 0;
+  }
+
+  .booking-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .booking-input {
+    min-height: 54px;
+    border-radius: 14px;
+    padding: 12px 14px;
+  }
+
+  .booking-input select,
+  .booking-input input {
+    font-size: 16px;
+  }
+
+  .booking-dropdown-menu {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .booking-actions {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .booking-btn,
+  .booking-reset-btn {
+    min-height: 54px;
+    border-radius: 14px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .home-property-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  .home-property-card:hover {
+    transform: none;
+  }
+
+  .home-property-img-wrapper {
+    height: 240px;
+  }
+
+  .home-property-body {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .home-property-title {
+    font-size: 17px;
+  }
+
+  .home-property-text {
+    font-size: 14px;
+  }
+
+  .pagination {
+    gap: 8px;
+  }
+
+  .pagination .btn-primary {
+    min-width: 42px;
+    min-height: 42px;
+  }
+}
+
+/* -------- CELULAR -------- */
+@media (max-width: 480px) {
+  .page-main {
+    padding-top: 104px;
+  }
+
+  .page-centered {
+    padding: 0 10px;
+  }
+
+  .section h1 {
+    font-size: 26px;
+  }
+
+  .muted-text {
+    font-size: 13px;
+  }
+
+  .booking-bar {
+    padding: 14px;
+    border-radius: 18px;
+    gap: 14px;
+  }
+
+  .booking-label {
+    font-size: 13px;
+  }
+
+  .booking-input {
+    min-height: 50px;
+    padding: 10px 12px;
+  }
+
+  .booking-input select,
+  .booking-input input {
+    font-size: 15px;
+  }
+
+  .booking-option {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  .booking-dropdown-actions {
+    flex-direction: column;
+  }
+
+  .booking-clear-mini,
+  .booking-apply-mini {
+    width: 100%;
+  }
+
+  .booking-btn,
+  .booking-reset-btn {
+    min-height: 50px;
+    font-size: 15px;
+  }
+
+  .home-property-img-wrapper {
+    height: 220px;
+  }
+
+  .card-status-chip {
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    padding: 5px 12px;
+  }
+
+  .capacity-circle {
+    left: 12px;
+    bottom: 12px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .home-property-body {
+    padding: 14px;
+  }
+
+  .home-property-title {
+    font-size: 16px;
+  }
+
+  .home-property-text {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .home-property-btn {
+    min-height: 44px;
+    font-size: 14px;
+  }
+
+  .pagination {
+    gap: 6px;
+  }
+
+  .pagination .btn-primary {
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* -------- CELULAR PEQUEÑO -------- */
+@media (max-width: 360px) {
+  .page-main {
+    padding-top: 96px;
+  }
+
+  .page-centered {
+    padding: 0 8px;
+  }
+
+  .booking-bar {
+    padding: 12px;
+  }
+
+  .home-property-img-wrapper {
+    height: 205px;
+  }
+
+  .home-property-body {
+    padding: 12px;
+  }
+
+  .home-property-title {
+    font-size: 15px;
+  }
+
+  .home-property-text {
+    font-size: 12.5px;
+  }
+}
