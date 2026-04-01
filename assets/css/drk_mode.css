@@ -957,3 +957,221 @@ body.dark-mode .villa-image {
     color: #c4b8aa !important;
   }
 }
+
+
+
+
+/* =========================================================
+   DARK MODE - ALREDEDORES
+   ========================================================= */
+
+body.dark-mode {
+  background: #181A1B !important;
+  color: #d7d0c7 !important;
+}
+
+body.dark-mode .alrededores-page {
+  background: transparent !important;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+body.dark-mode .around-hero-container::before {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(10, 14, 18, 0.72) 0%,
+      rgba(10, 14, 18, 0.34) 42%,
+      rgba(24, 26, 27, 0.70) 100%
+    ) !important;
+}
+
+/* texto hero intacto */
+body.dark-mode .around-title,
+body.dark-mode .around-subtitle,
+body.dark-mode .around-title-deco,
+body.dark-mode .around-title-underline {
+  /* no cambiar */
+}
+
+/* =========================================================
+   MAPA FLOTANTE
+   ========================================================= */
+body.dark-mode .around-map-card {
+  background: #1E2022 !important;
+  border: 1px solid rgba(162, 199, 231, 0.16) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.26) !important;
+}
+
+body.dark-mode .around-map-title {
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .around-map-title span {
+  color: #c0b4a7 !important;
+}
+
+body.dark-mode .around-map-divider {
+  background: #355786 !important;
+  opacity: 0.9 !important;
+}
+
+body.dark-mode .around-map-list li {
+  border-bottom: 1px solid rgba(162, 199, 231, 0.14) !important;
+}
+
+body.dark-mode .around-map-icon {
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .around-map-label {
+  color: #d7d0c7 !important;
+}
+
+body.dark-mode .around-map-time {
+  background: #252a30 !important;
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .around-map-image img {
+  background: #111315 !important;
+  border: 1px solid rgba(162, 199, 231, 0.14) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24) !important;
+}
+
+/* =========================================================
+   MODAL MAPA
+   ========================================================= */
+body.dark-mode #mapModal {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+}
+
+body.dark-mode .map-modal-content {
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.12) !important;
+}
+
+body.dark-mode .map-close {
+  color: #ffffff !important;
+}
+
+body.dark-mode .map-close:hover {
+  color: #A2C7E7 !important;
+}
+
+/* =========================================================
+   SECCIONES GENERALES
+   ========================================================= */
+body.dark-mode .around-activities-section {
+  background: transparent !important;
+}
+
+body.dark-mode .section-header span {
+  color: #7fc7a1 !important;
+}
+
+body.dark-mode .around-section-title {
+  color: #A2C7E7 !important;
+}
+
+/* línea igual al modo claro */
+body.dark-mode .around-section-title::after {
+  background: linear-gradient(
+    90deg,
+    #bee99e,
+    #173457
+  ) !important;
+}
+
+/* =========================================================
+   TARJETAS DE ACTIVIDADES
+   ========================================================= */
+body.dark-mode .around-activity-card {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18) !important;
+}
+
+body.dark-mode .around-activity-card:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.28) !important;
+}
+
+body.dark-mode .around-activity-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(10, 14, 18, 0.86),
+    rgba(10, 14, 18, 0.18)
+  ) !important;
+}
+
+body.dark-mode .around-activity-overlay h3 {
+  color: #ffffff !important;
+}
+
+body.dark-mode .around-activity-overlay p {
+  color: #e5ddd3 !important;
+}
+
+body.dark-mode .around-btn {
+  background: rgba(15, 23, 42, 0.90) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(162, 199, 231, 0.20) !important;
+}
+
+body.dark-mode .around-btn:hover {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #ffffff !important;
+}
+
+/* badges */
+body.dark-mode .badge-green {
+  background: rgba(22, 163, 74, 0.88) !important;
+}
+
+body.dark-mode .badge-blue {
+  background: rgba(37, 99, 235, 0.88) !important;
+}
+
+body.dark-mode .badge-gray {
+  background: rgba(71, 85, 105, 0.90) !important;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1024px) {
+  body.dark-mode .around-map-card {
+    background: #1E2022 !important;
+    border: 1px solid rgba(162, 199, 231, 0.16) !important;
+  }
+
+  body.dark-mode .around-activity-card {
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22) !important;
+  }
+
+  body.dark-mode .around-activity-card::before {
+    background: linear-gradient(
+      to top,
+      rgba(10, 14, 18, 0.92) 0%,
+      rgba(10, 14, 18, 0.52) 42%,
+      rgba(10, 14, 18, 0.08) 100%
+    ) !important;
+  }
+
+  body.dark-mode .around-btn {
+    background: rgba(17, 34, 66, 0.95) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(162, 199, 231, 0.16) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body.dark-mode .around-map-list li {
+    border-bottom: 1px solid rgba(162, 199, 231, 0.14) !important;
+  }
+
+  body.dark-mode .around-map-time {
+    background: #252a30 !important;
+    color: #A2C7E7 !important;
+  }
+}
+
