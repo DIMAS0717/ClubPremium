@@ -1,0 +1,1503 @@
+/* =========================================================
+   DARK MODE - PROPIEDADES DESTACADAS
+   ========================================================= */
+
+body.dark-mode .destacados-container {
+  background: linear-gradient(
+    180deg,
+    #24282c 0%,
+    #202428 50%,
+    #1c2024 100%
+  ) !important;
+}
+/* contenedor interno */
+body.dark-mode .destacados-container .page-centered {
+  background: transparent !important;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+body.dark-mode .destacados-header span {
+  color: #c6a25a !important;
+}
+
+body.dark-mode .destacados-header h2 {
+  color: #f2e9de !important;
+}
+
+body.dark-mode .destacados-header .divider,
+body.dark-mode .destacados-container .divider {
+  background: #a67b2d !important;
+}
+
+/* =========================
+   CARD COMPLETA
+   ========================= */
+body.dark-mode .destacados-container .villa-card {
+  background: #171a1d !important;
+  border: 1px solid rgba(162, 199, 231, 0.10) !important;
+  border-radius: 20px !important;
+  box-shadow:
+    0 16px 36px rgba(0, 0, 0, 0.34),
+    0 30px 70px rgba(0, 0, 0, 0.18) !important;
+}
+
+body.dark-mode .destacados-container .villa-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow:
+    0 20px 44px rgba(0, 0, 0, 0.42),
+    0 38px 80px rgba(0, 0, 0, 0.22) !important;
+}
+
+/* =========================
+   IMAGEN
+   ========================= */
+body.dark-mode .destacados-container .villa-image {
+  background: #202327 !important;
+}
+
+body.dark-mode .destacados-container .villa-image::before {
+  color: rgba(162, 199, 231, 0.55) !important;
+}
+
+body.dark-mode .destacados-container .villa-image img {
+  display: block !important;
+}
+
+/* =========================
+   BADGE DISPONIBLE
+   ========================= */
+body.dark-mode .destacados-container .badge {
+  background: rgba(10, 120, 86, 0.88) !important;
+  color: #d7fff0 !important;
+  border: 1px solid rgba(122, 255, 204, 0.12) !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .destacados-container .badge::before {
+  background-color: #12d18b !important;
+  box-shadow:
+    0 0 8px #12d18b,
+    0 0 12px rgba(18, 209, 139, 0.45) !important;
+}
+
+/* =========================
+   INFO INFERIOR
+   ========================= */
+body.dark-mode .destacados-container .villa-info {
+  background: #171a1d !important;
+  color: #cbbda9 !important;
+}
+
+/* nombre casa */
+body.dark-mode .destacados-container .villa-info h3 {
+  color: #f0e7dc !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.2px !important;
+  line-height: 1.22 !important;
+}
+
+/* ubicación */
+body.dark-mode .destacados-container .villa-info p,
+body.dark-mode .destacados-container .ubicacion-text {
+  color: #c4b6a2 !important;
+}
+
+body.dark-mode .destacados-container .ubicacion-text i {
+  color: #c6a25a !important;
+}
+
+/* línea interna */
+body.dark-mode .destacados-container .villa-icons {
+  border-top: 1px solid rgba(88, 119, 160, 0.22) !important;
+}
+
+/* cajitas de detalles */
+/* cajitas de detalles */
+body.dark-mode .destacados-container .villa-icons span {
+  background: #1f2328 !important;
+  border: 1px solid rgba(69, 106, 153, 0.38) !important;
+  border-radius: 14px !important;
+
+  /* 🔥 IMPORTANTE */
+  color: inherit !important; /* mantiene el gris original */
+}
+
+body.dark-mode .destacados-container .villa-icons i {
+  color: #d1a75b !important;
+}
+
+/* footer de card */
+body.dark-mode .destacados-container .villa-footer {
+  background: transparent !important;
+}
+
+/* botón */
+body.dark-mode .destacados-container .btn-explorar {
+  background: linear-gradient(180deg, #223f6a 0%, #163457 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .destacados-container .btn-explorar:hover {
+  background: linear-gradient(180deg, #294b7c 0%, #1b406b 100%) !important;
+  transform: scale(1.02) !important;
+}
+
+/* scrollbar móvil */
+body.dark-mode .destacados-container .villas-grid::-webkit-scrollbar-track {
+  background: #1a1d20 !important;
+}
+
+body.dark-mode .destacados-container .villas-grid::-webkit-scrollbar-thumb {
+  background: #355786 !important;
+}
+
+
+/* =========================================================
+   DARK MODE - ABOUT US (ESTILO IMG1)
+   ========================================================= */
+
+/* FONDO GENERAL */
+body.dark-mode .about-section {
+  background: linear-gradient(
+    180deg,
+    #1b1e21 0%,
+    #181b1e 50%,
+    #15181b 100%
+  ) !important;
+}
+
+/* ================= TEXTOS ================= */
+
+body.dark-mode .about-subtitle {
+  color: #c6a25a !important;
+}
+
+body.dark-mode .about-text h2 {
+  color: #f2e9de !important;
+}
+
+/* divider dorado */
+body.dark-mode .divider_about {
+  background: linear-gradient(90deg, #c6a25a, #8f6b2f) !important;
+}
+
+/* párrafo */
+body.dark-mode .about-text p {
+  color: #b8b0a2 !important;
+}
+
+/* ================= LISTA ================= */
+
+body.dark-mode .about-list li {
+  color: #cfc6b8 !important;
+}
+
+/* check dorado */
+body.dark-mode .about-list li::before {
+  background: #c6a25a !important;
+  color: #1b1e21 !important;
+}
+
+/* ================= LINK ================= */
+
+body.dark-mode .about-link {
+  color: #d1a75b !important;
+}
+
+body.dark-mode .about-link:hover {
+  color: #f0c979 !important;
+}
+
+/* ================= IMAGEN ================= */
+
+body.dark-mode .about-image img {
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.35),
+    0 35px 70px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ================= RATING BOX ================= */
+
+body.dark-mode .rating-box {
+  background: rgba(28, 32, 36, 0.85) !important;
+  border: 1px solid rgba(162, 199, 231, 0.08) !important;
+  box-shadow:
+    0 16px 35px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* texto dentro */
+body.dark-mode .rating-box h4 {
+  color: #eaeaea !important;
+}
+
+body.dark-mode .rating-box p {
+  color: #a9b2bd !important;
+}
+
+/* estrella */
+body.dark-mode .star-icon {
+  color: #d1a75b !important;
+}
+
+
+/* =========================================================
+   DARK MODE - NUESTRAS VILLAS
+   ========================================================= */
+
+/* ================= FONDO ================= */
+body.dark-mode .villas {
+  background: linear-gradient(
+    180deg,
+    #1b1e21 0%,
+    #181b1e 50%,
+    #15181b 100%
+  ) !important;
+}
+
+/* ================= TEXTOS ================= */
+
+body.dark-mode .villas-subtitle {
+  color: #c6a25a !important;
+}
+
+body.dark-mode .villas-texto h2 {
+  color: #f2e9de !important;
+}
+
+/* divider dorado */
+body.dark-mode .villas-texto h2::after {
+  background: linear-gradient(90deg, #c6a25a, #8f6b2f) !important;
+}
+
+/* párrafo */
+body.dark-mode .intro {
+  color: #b8b0a2 !important;
+}
+
+/* ================= LISTA ================= */
+
+body.dark-mode .villas-lista li {
+  color: #d1c6b6 !important;
+}
+
+/* check icon */
+body.dark-mode .villas-lista li::before {
+  background: linear-gradient(135deg, #c6a25a 0%, #8f6b2f 100%) !important;
+  color: #1b1e21 !important;
+  box-shadow: 0 6px 14px rgba(198, 162, 90, 0.25) !important;
+}
+
+/* ================= BOTÓN ================= */
+/* (NO lo tocamos visualmente, solo suavizamos sombra) */
+body.dark-mode .btn-villas {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* ================= SLIDER ================= */
+
+body.dark-mode .slider-main {
+  background: #202428 !important;
+  box-shadow:
+    0 18px 38px rgba(0, 0, 0, 0.35),
+    0 28px 60px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* overlay más elegante */
+body.dark-mode .slide::after {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.05) 50%
+  ) !important;
+}
+
+/* ================= BOTONES SLIDER ================= */
+
+body.dark-mode .slider-btn {
+  background: rgba(28, 32, 36, 0.9) !important;
+  color: #e6edf5 !important;
+  border: 1px solid rgba(162, 199, 231, 0.12) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35) !important;
+}
+
+body.dark-mode .slider-btn:hover {
+  background: #2a2f34 !important;
+  transform: translateY(-50%) scale(1.06);
+}
+
+
+
+/* =========================================================
+   DARK MODE - BENEFICIOS
+   ========================================================= */
+
+/* ================= FONDO GENERAL ================= */
+body.dark-mode .villas-eureka-beneficios {
+  background:
+    radial-gradient(circle at top left, rgba(198, 162, 90, 0.05), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.02), transparent 24%),
+    linear-gradient(
+      180deg,
+      #1b1e21 0%,
+      #181b1e 52%,
+      #15181b 100%
+    ) !important;
+}
+
+body.dark-mode .villas-eureka-beneficios::before {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px) !important;
+  opacity: 0.10 !important;
+}
+
+/* ================= TÍTULOS ================= */
+
+body.dark-mode .beneficios-subtitle {
+  color: #c6a25a !important;
+}
+
+body.dark-mode .beneficios-titulo {
+  color: #f2e9de !important;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.28) !important;
+}
+
+body.dark-mode .beneficios-titulo::after {
+  background: linear-gradient(90deg, #c6a25a, #8f6b2f) !important;
+}
+
+/* ================= CARDS ================= */
+
+body.dark-mode .beneficio-card {
+  background: linear-gradient(180deg, #1f2327 0%, #1a1e22 100%) !important;
+  border: 1px solid rgba(162, 199, 231, 0.10) !important;
+  box-shadow:
+    0 20px 42px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+}
+
+body.dark-mode .beneficio-card::before {
+  background: linear-gradient(90deg, #c6a25a, #d7b56b, #c6a25a) !important;
+}
+
+body.dark-mode .beneficio-card:hover {
+  box-shadow:
+    0 28px 55px rgba(0, 0, 0, 0.34),
+    0 0 22px rgba(198, 162, 90, 0.10) !important;
+  border-color: rgba(198, 162, 90, 0.18) !important;
+}
+
+/* ================= ICONO ================= */
+
+body.dark-mode .icon-box {
+  color: #d1a75b !important;
+  background: linear-gradient(180deg, #252a30 0%, #1f2328 100%) !important;
+  border: 1.5px solid rgba(209, 167, 91, 0.24) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 10px 24px rgba(0, 0, 0, 0.18) !important;
+}
+
+body.dark-mode .beneficio-card:hover .icon-box {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.03),
+    0 12px 26px rgba(209, 167, 91, 0.18) !important;
+}
+
+/* ================= TEXTO CARD ================= */
+
+body.dark-mode .beneficio-card h3 {
+  color: #f2e9de !important;
+}
+
+body.dark-mode .beneficio-card p {
+  color: #b8b0a2 !important;
+}
+
+/* ================= BOTÓN ================= */
+
+body.dark-mode .beneficios-btn {
+  background: linear-gradient(135deg, #c6a25a, #d8b76d) !important;
+  color: #1b1e21 !important;
+  box-shadow: 0 10px 28px rgba(198, 162, 90, 0.22) !important;
+}
+
+body.dark-mode .beneficios-btn:hover {
+  box-shadow: 0 14px 34px rgba(198, 162, 90, 0.32) !important;
+  filter: brightness(1.02);
+}
+
+
+/* =========================================================
+   DARK MODE - UBICACIÓN
+   ========================================================= */
+
+/* ================= FONDO GENERAL ================= */
+body.dark-mode .ubicacion-premium {
+  background: linear-gradient(
+    180deg,
+    #1b1e21 0%,
+    #181b1e 52%,
+    #15181b 100%
+  ) !important;
+}
+
+/* ================= TEXTO ================= */
+
+body.dark-mode .ubicacion-subtitle {
+  color: #c6a25a !important;
+}
+
+body.dark-mode .ubicacion-texto h2 {
+  color: #f2e9de !important;
+}
+
+body.dark-mode .ubicacion-texto h2::after {
+  background: linear-gradient(90deg, #c6a25a 0%, #8f6b2f 100%) !important;
+}
+
+body.dark-mode .ubicacion-intro {
+  color: #b8b0a2 !important;
+}
+
+/* ================= CARD DE DIRECCIÓN ================= */
+
+body.dark-mode .ubicacion-card {
+  background: rgba(30, 32, 34, 0.88) !important;
+  border: 1px solid rgba(162, 199, 231, 0.10) !important;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.24) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+body.dark-mode .ubicacion-card h3 {
+  color: #f2e9de !important;
+}
+
+body.dark-mode .ubicacion-card p {
+  color: #b8b0a2 !important;
+}
+
+body.dark-mode .ubicacion-badges span {
+  background: #23272c !important;
+  color: #d1a75b !important;
+  border: 1px solid rgba(198, 162, 90, 0.14) !important;
+}
+
+/* ================= BOTONES MINI ================= */
+
+body.dark-mode .mini-video-card,
+body.dark-mode .mini-maps-card {
+  background: linear-gradient(180deg, #1f2328 0%, #1a1e22 100%) !important;
+  border: 1px solid rgba(162, 199, 231, 0.10) !important;
+  box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
+}
+
+body.dark-mode .mini-video-card:hover,
+body.dark-mode .mini-maps-card:hover {
+  background: linear-gradient(180deg, #242a30 0%, #1d2227 100%) !important;
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(162, 199, 231, 0.08) !important;
+}
+
+body.dark-mode .mini-video-play,
+body.dark-mode .mini-maps-icon {
+  background: linear-gradient(135deg, #0f1114, #262b31) !important;
+  color: #f2e9de !important;
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.30),
+    0 0 10px rgba(162, 199, 231, 0.06) !important;
+}
+
+body.dark-mode .mini-video-tag {
+  color: #c6a25a !important;
+}
+
+body.dark-mode .mini-video-card strong,
+body.dark-mode .mini-maps-card strong {
+  color: #f2e9de !important;
+}
+
+body.dark-mode .mini-video-card p,
+body.dark-mode .mini-maps-card p {
+  color: #aeb6c0 !important;
+}
+
+/* ================= MAPA ================= */
+
+body.dark-mode .mapa-frame {
+  background: #202428 !important;
+  border: 1px solid rgba(162, 199, 231, 0.08) !important;
+  box-shadow:
+    0 22px 48px rgba(0, 0, 0, 0.28),
+    0 30px 60px rgba(0, 0, 0, 0.14) !important;
+}
+
+body.dark-mode .mapa-frame::after {
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.22), transparent 35%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02), transparent 24%) !important;
+}
+
+/* ================= OVERLAY DEL MAPA ================= */
+
+body.dark-mode .mapa-overlay-card {
+  background: rgba(28, 32, 36, 0.90) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+body.dark-mode .pin-dot {
+  background: #2b64f1 !important;
+  box-shadow: 0 0 0 6px rgba(43, 100, 241, 0.14) !important;
+}
+
+body.dark-mode .mapa-overlay-card strong {
+  color: #f2e9de !important;
+}
+
+body.dark-mode .mapa-overlay-card p {
+  color: #aeb6c0 !important;
+}
+
+body.dark-mode .mapa-link {
+  color: #7fb0ff !important;
+}
+
+
+
+/* =========================================================
+   DARK MODE COMPLETO - RENTA.PHP
+   Pegar al final de renta.css
+   ========================================================= */
+
+body.dark-mode {
+  background: #181A1B !important;
+  color: #d7d0c7 !important;
+}
+
+body.dark-mode .page-main {
+  background: #181A1B !important;
+}
+/* =========================
+   TEXTOS
+========================= */
+body.dark-mode .page-main.renta-page .section h1,
+body.dark-mode .renta-page .section h1,
+body.dark-mode .home-property-title {
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .muted-text,
+body.dark-mode .home-property-text {
+  color: #c0b4a7 !important;
+}
+/* =========================
+   TARJETAS
+========================= */
+body.dark-mode .home-property-card,
+body.dark-mode .home-property-body,
+body.dark-mode .booking-dropdown-menu {
+  background: #1E2022 !important;
+}
+
+body.dark-mode .home-property-card {
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22) !important;
+}
+
+body.dark-mode .home-property-img-wrapper {
+  background: #050607 !important;
+}
+
+/* =========================
+   BUSCADOR COMPLETO
+========================= */
+body.dark-mode .booking-bar {
+  background: #1E2022 !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.18),
+    0 6px 18px rgba(0, 0, 0, 0.12) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+body.dark-mode .booking-field {
+  border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+  background: transparent !important;
+}
+
+body.dark-mode .booking-field:last-of-type {
+  border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+body.dark-mode .booking-label,
+body.dark-mode .booking-dropdown-title {
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .booking-input {
+  background: #1E2022 !important;
+  border: 1px solid rgba(162, 199, 231, 0.32) !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .booking-input:focus-within {
+  background: #1E2022 !important;
+  border: 1px solid rgba(162, 199, 231, 0.42) !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .booking-field input,
+body.dark-mode .booking-field select,
+body.dark-mode .booking-input input,
+body.dark-mode .booking-input select,
+body.dark-mode .booking-dropdown-toggle,
+body.dark-mode #tipoTexto {
+  color: #c0b4a7 !important;
+}
+
+body.dark-mode .booking-field input::placeholder,
+body.dark-mode .booking-input input::placeholder {
+  color: #c0b4a7 !important;
+}
+
+body.dark-mode .booking-dropdown-divider {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-mode .booking-option {
+  color: #d7d0c7 !important;
+}
+
+body.dark-mode .booking-option:hover {
+  background: #25282b !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .booking-field input[type="date"] {
+  color: #c0b4a7 !important;
+}
+
+body.dark-mode .booking-field input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(2) !important;
+  opacity: 1 !important;
+}
+
+body.dark-mode .booking-reset-btn {
+  background: linear-gradient(180deg, #2a2f35 0%, #21262c 100%) !important;
+  color: #d7d0c7 !important;
+  border: 1px solid rgba(162, 199, 231, 0.18) !important;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16) !important;
+}
+
+body.dark-mode .booking-reset-btn:hover {
+  background: linear-gradient(180deg, #323840 0%, #272d34 100%) !important;
+  color: #ffffff !important;
+  border-color: rgba(162, 199, 231, 0.30) !important;
+}
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+body.dark-mode .booking-dropdown-menu {
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.28) !important;
+}
+
+body.dark-mode .booking-clear-mini {
+  background: #2b3138 !important;
+  color: #d7d0c7 !important;
+}
+
+body.dark-mode .booking-clear-mini:hover {
+  background: #343c45 !important;
+}
+
+body.dark-mode .booking-apply-mini {
+  background: linear-gradient(135deg, #264b78, #173457) !important;
+  color: #fff !important;
+}
+
+/* =========================
+   FEEDBACK
+========================= */
+body.dark-mode .search-feedback-success {
+  color: #e5e7eb !important;
+}
+
+body.dark-mode .search-feedback-success strong {
+  color: #A2C7E7 !important;
+  border-bottom: 2px solid rgba(162, 199, 231, 0.85) !important;
+}
+
+body.dark-mode .search-feedback-error {
+  color: #fca5a5 !important;
+}
+
+/* =========================
+   BADGES Y CAPACIDAD
+========================= */
+body.dark-mode .card-status-disponible {
+  background: rgba(0, 114, 82, 0.88) !important;
+  color: #d6fff0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+body.dark-mode .card-status-disponible::before {
+  background-color: #12d18b !important;
+  box-shadow: 0 0 8px #12d18b, 0 0 12px rgba(18, 209, 139, 0.5) !important;
+}
+
+body.dark-mode .card-status-no-disponible {
+  background: rgba(72, 79, 88, 0.92) !important;
+  color: #f5f5f5 !important;
+}
+
+body.dark-mode .capacity-circle {
+  background: rgba(10, 11, 13, 0.42) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+
+body.dark-mode .capacity-circle-icon,
+body.dark-mode .capacity-circle-number {
+  color: #ffffff !important;
+}
+
+
+/* =========================================================
+   DARK MODE FINAL - NUESTRAS VILLAS
+   ========================================================= */
+
+body.dark-mode {
+  background: #181A1B !important;
+  color: #d7d0c7 !important;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+body.dark-mode .villas-hero-container::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 14, 18, 0.72) 0%,
+    rgba(24, 26, 27, 0.52) 100%
+  ) !important;
+}
+
+body.dark-mode .villas-video-card {
+  background: rgba(30, 32, 34, 0.92) !important;
+  border: 1px solid rgba(162, 199, 231, 0.16) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55) !important;
+}
+
+body.dark-mode .villas-video-wrapper {
+  background: #000 !important;
+}
+
+/* =========================================================
+   SECCIÓN GENERAL
+   ========================================================= */
+body.dark-mode .villa-types-section,
+body.dark-mode .container {
+  background: transparent !important;
+}
+
+body.dark-mode .villa-types-section h2 {
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .villa-types-section .section-subtitle {
+  color: #c0b4a7 !important;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+body.dark-mode .villa-card {
+  background: #1b1d20 !important;
+  border: 1px solid rgba(162, 199, 231, 0.18) !important;
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.28),
+    0 30px 60px rgba(0, 0, 0, 0.18) !important;
+}
+
+body.dark-mode .villa-card:hover {
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.30),
+    0 36px 72px rgba(0, 0, 0, 0.20) !important;
+}
+
+body.dark-mode .villa-content {
+  background: #1b1d20 !important;
+}
+
+body.dark-mode .villa-content h3 {
+  color: #b8d8f3 !important;
+}
+
+/* capacidad roja como tu referencia */
+body.dark-mode .villa-capacity {
+  color: #ff5a4f !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
+}
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+body.dark-mode .villa-badge,
+body.dark-mode .villa-badge.economy,
+body.dark-mode .villa-badge.group,
+body.dark-mode .villa-card.featured .villa-badge {
+  background: rgba(74, 143, 221, 0.26) !important;
+  color: #eef6fd !important;
+  border: 1px solid rgba(162, 199, 231, 0.30) !important;
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+body.dark-mode .feature {
+  color: #d0c5b8 !important;
+}
+
+/* =========================================================
+   CAJA DE DISTRIBUCIÓN
+   ========================================================= */
+body.dark-mode .bed-distribution {
+  background: #202327 !important;
+  border-left: 4px solid #3d7fd1 !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02) !important;
+}
+
+body.dark-mode .bed-distribution h4 {
+  color: #a9d2f5 !important;
+}
+
+body.dark-mode .bed-distribution,
+body.dark-mode .bed-distribution p,
+body.dark-mode .bed-distribution span,
+body.dark-mode .bed-distribution li {
+  color: #d0c5b8 !important;
+}
+
+/* =========================================================
+   OPCIONES / LINKS
+   ========================================================= */
+body.dark-mode .villa-option-link {
+  color: #b8d8f3 !important;
+}
+
+body.dark-mode .villa-option-link:hover {
+  color: #d7ebfa !important;
+}
+
+body.dark-mode .villa-text-wrapper {
+  border-bottom: 1px dashed rgba(162, 199, 231, 0.14) !important;
+  color: #d0c5b8 !important;
+}
+
+body.dark-mode .villa-title {
+  color: #b8d8f3 !important;
+}
+
+body.dark-mode .villa-title small {
+  color: #c4b8aa !important;
+}
+
+body.dark-mode .villa-arrow {
+  color: #c7dff4 !important;
+}
+
+/* =========================================================
+   BOTÓN
+   ========================================================= */
+body.dark-mode .btn-details {
+  background: linear-gradient(180deg, #2f4f79 0%, #1f3d64 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.20) !important;
+}
+
+body.dark-mode .btn-details:hover {
+  filter: brightness(1.06) !important;
+}
+
+/* =========================================================
+   IMAGEN
+   ========================================================= */
+body.dark-mode .villa-image {
+  background: #0c0e10 !important;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1024px) {
+  body.dark-mode .villa-title small {
+    color: #c4b8aa !important;
+  }
+
+  body.dark-mode .villa-text-wrapper {
+    color: #d0c5b8 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body.dark-mode .villa-title small {
+    color: #c4b8aa !important;
+  }
+}
+
+@media (max-width: 430px) {
+  body.dark-mode .villa-title small {
+    color: #c4b8aa !important;
+  }
+}
+
+@media (max-width: 360px) {
+  body.dark-mode .villa-title small {
+    color: #c4b8aa !important;
+  }
+}
+
+
+
+
+/* =========================================================
+   DARK MODE - ALREDEDORES
+   ========================================================= */
+
+body.dark-mode {
+  background: #181A1B !important;
+  color: #d7d0c7 !important;
+}
+
+body.dark-mode .alrededores-page {
+  background: transparent !important;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+body.dark-mode .around-hero-container::before {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(10, 14, 18, 0.72) 0%,
+      rgba(10, 14, 18, 0.34) 42%,
+      rgba(24, 26, 27, 0.70) 100%
+    ) !important;
+}
+
+/* texto hero intacto */
+body.dark-mode .around-title,
+body.dark-mode .around-subtitle,
+body.dark-mode .around-title-deco,
+body.dark-mode .around-title-underline {
+  /* no cambiar */
+}
+
+/* =========================================================
+   MAPA FLOTANTE
+   ========================================================= */
+body.dark-mode .around-map-card {
+  background: #1E2022 !important;
+  border: 1px solid rgba(162, 199, 231, 0.16) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.26) !important;
+}
+
+body.dark-mode .around-map-title {
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .around-map-title span {
+  color: #c0b4a7 !important;
+}
+
+body.dark-mode .around-map-divider {
+  background: #355786 !important;
+  opacity: 0.9 !important;
+}
+
+body.dark-mode .around-map-list li {
+  border-bottom: 1px solid rgba(162, 199, 231, 0.14) !important;
+}
+
+body.dark-mode .around-map-icon {
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .around-map-label {
+  color: #d7d0c7 !important;
+}
+
+body.dark-mode .around-map-time {
+  background: #252a30 !important;
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .around-map-image img {
+  background: #111315 !important;
+  border: 1px solid rgba(162, 199, 231, 0.14) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24) !important;
+}
+
+/* =========================================================
+   MODAL MAPA
+   ========================================================= */
+body.dark-mode #mapModal {
+  background-color: rgba(0, 0, 0, 0.95) !important;
+}
+
+body.dark-mode .map-modal-content {
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.12) !important;
+}
+
+body.dark-mode .map-close {
+  color: #ffffff !important;
+}
+
+body.dark-mode .map-close:hover {
+  color: #A2C7E7 !important;
+}
+
+/* =========================================================
+   SECCIONES GENERALES
+   ========================================================= */
+body.dark-mode .around-activities-section {
+  background: transparent !important;
+}
+
+body.dark-mode .section-header span {
+  color: #7fc7a1 !important;
+}
+
+body.dark-mode .around-section-title {
+  color: #A2C7E7 !important;
+}
+
+/* línea igual al modo claro */
+body.dark-mode .around-section-title::after {
+  background: linear-gradient(
+    90deg,
+    #bee99e,
+    #173457
+  ) !important;
+}
+
+/* =========================================================
+   TARJETAS DE ACTIVIDADES
+   ========================================================= */
+body.dark-mode .around-activity-card {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18) !important;
+}
+
+body.dark-mode .around-activity-card:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.28) !important;
+}
+
+body.dark-mode .around-activity-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(10, 14, 18, 0.86),
+    rgba(10, 14, 18, 0.18)
+  ) !important;
+}
+
+body.dark-mode .around-activity-overlay h3 {
+  color: #ffffff !important;
+}
+
+body.dark-mode .around-activity-overlay p {
+  color: #e5ddd3 !important;
+}
+
+body.dark-mode .around-btn {
+  background: rgba(15, 23, 42, 0.90) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(162, 199, 231, 0.20) !important;
+}
+
+body.dark-mode .around-btn:hover {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #ffffff !important;
+}
+
+/* badges */
+body.dark-mode .badge-green {
+  background: rgba(22, 163, 74, 0.88) !important;
+}
+
+body.dark-mode .badge-blue {
+  background: rgba(37, 99, 235, 0.88) !important;
+}
+
+body.dark-mode .badge-gray {
+  background: rgba(71, 85, 105, 0.90) !important;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 1024px) {
+  body.dark-mode .around-map-card {
+    background: #1E2022 !important;
+    border: 1px solid rgba(162, 199, 231, 0.16) !important;
+  }
+
+  body.dark-mode .around-activity-card {
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22) !important;
+  }
+
+  body.dark-mode .around-activity-card::before {
+    background: linear-gradient(
+      to top,
+      rgba(10, 14, 18, 0.92) 0%,
+      rgba(10, 14, 18, 0.52) 42%,
+      rgba(10, 14, 18, 0.08) 100%
+    ) !important;
+  }
+
+  body.dark-mode .around-btn {
+    background: rgba(17, 34, 66, 0.95) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(162, 199, 231, 0.16) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  body.dark-mode .around-map-list li {
+    border-bottom: 1px solid rgba(162, 199, 231, 0.14) !important;
+  }
+
+  body.dark-mode .around-map-time {
+    background: #252a30 !important;
+    color: #A2C7E7 !important;
+  }
+}
+
+
+/* =========================================================
+   DARK MODE - CONTACTANOS
+   ========================================================= */
+
+body.dark-mode .cs-contact-section {
+  background:
+    linear-gradient(
+      rgba(16, 19, 22, 0.34),
+      rgba(16, 19, 22, 0.34)
+    ),
+    url("../img/fondos/fondo_contact.JPG") center -70px / cover no-repeat !important;
+}
+
+body.dark-mode .cs-title {
+  color: #bfe7e0 !important;
+}
+
+body.dark-mode .cs-title-underline {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #b48a1f,
+    #d4af37,
+    #b48a1f,
+    transparent
+  ) !important;
+  box-shadow: none !important;
+}
+
+/* caja principal */
+body.dark-mode .cs-contact-box {
+  background: #16191c !important;
+  border: 1px solid rgba(255, 255, 255, 0.04) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.34) !important;
+  border-radius: 20px !important;
+}
+
+/* panel izquierdo */
+body.dark-mode .cs-left-panel {
+  background: #14345a !important;
+  border-right: none !important;
+}
+
+/* panel derecho */
+body.dark-mode .cs-right-panel {
+  background: #14171a !important;
+}
+
+body.dark-mode .cs-right-panel h3 {
+  color: #a8d2f5 !important;
+  font-size: 1.95rem !important;
+}
+
+/* textos panel izquierdo */
+body.dark-mode .cs-label {
+  color: #ffffff !important;
+}
+
+body.dark-mode .cs-detail,
+body.dark-mode .cs-socials .cs-label {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* iconos panel izquierdo */
+body.dark-mode .cs-icon {
+  background: #5f9ea0 !important;
+  color: #dff7f2 !important;
+}
+
+/* iconos sociales */
+body.dark-mode .cs-social {
+  background: transparent !important;
+  border: none !important;
+  color: #ffffff !important;
+  width: 42px !important;
+  height: 42px !important;
+}
+
+body.dark-mode .cs-social:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* inputs */
+body.dark-mode .cs-input,
+body.dark-mode textarea.cs-input {
+  background: #171a1d !important;
+  border: 1px solid rgba(66, 109, 166, 0.55) !important;
+  color: #d7d0c7 !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .cs-input::placeholder {
+  color: #6f7276 !important;
+}
+
+body.dark-mode .cs-input:focus {
+  background: #171a1d !important;
+  border-color: rgba(100, 150, 220, 0.85) !important;
+  box-shadow: 0 0 0 3px rgba(48, 92, 148, 0.14) !important;
+}
+
+/* botón */
+body.dark-mode .cs-submit {
+  background: linear-gradient(135deg, #1a7c70, #2e8d7f) !important;
+  color: #eaf8f5 !important;
+  border: 1px solid rgba(118, 214, 193, 0.22) !important;
+  box-shadow:
+    0 0 18px rgba(40, 170, 145, 0.22),
+    0 10px 24px rgba(0, 0, 0, 0.18) !important;
+  min-width: 250px !important;
+  border-radius: 999px !important;
+}
+
+body.dark-mode .cs-submit:hover {
+  background: linear-gradient(135deg, #1f8e80, #37998b) !important;
+}
+
+
+
+/* =========================================================
+   DARK MODE - PROPIEDADES.PHP
+   ========================================================= */
+
+body.dark-mode {
+  background: #181A1B !important;
+  color: #d7d0c7 !important;
+}
+
+body.dark-mode .property-wrapper {
+  background: transparent !important;
+}
+
+/* =========================
+   TEXTOS
+========================= */
+body.dark-mode .property-title,
+body.dark-mode .section-title,
+body.dark-mode .section-subtitle,
+body.dark-mode .mini-value,
+body.dark-mode .location-label,
+body.dark-mode .small-link {
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .muted-text,
+body.dark-mode .property-short,
+body.dark-mode .desc-text,
+body.dark-mode .rules-list,
+body.dark-mode .location-value,
+body.dark-mode .mini-label {
+  color: #c0b4a7 !important;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+body.dark-mode .property-slider-card,
+body.dark-mode .property-summary-card,
+body.dark-mode .property-card,
+body.dark-mode .property-gallery-card .gallery-item {
+  background: #1E2022 !important;
+  border: 1px solid rgba(162, 199, 231, 0.18) !important;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22) !important;
+}
+
+body.dark-mode .property-mini-stats {
+  border-top: 1px solid rgba(162, 199, 231, 0.16) !important;
+}
+
+/* =========================
+   SLIDER
+========================= */
+body.dark-mode .slide {
+  background: radial-gradient(circle at top, #1f2832, #0b0d10) !important;
+}
+
+body.dark-mode .slider-arrow {
+  background: rgba(70, 70, 70, 0.55) !important;
+  border: 1px solid rgba(255, 255, 255, 0.20) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.24) !important;
+}
+
+body.dark-mode .slider-arrow:hover {
+  background: rgba(90, 90, 90, 0.70) !important;
+}
+
+body.dark-mode .slider-dot {
+  border-color: rgba(162, 199, 231, 0.45) !important;
+  background: transparent !important;
+}
+
+body.dark-mode .slider-dot.active {
+  background: #dfe8f2 !important;
+}
+
+/* =========================
+   BADGES
+========================= */
+body.dark-mode .status-badge {
+  background: #111417 !important;
+  border-color: rgba(162, 199, 231, 0.22) !important;
+  color: #d7d0c7 !important;
+}
+
+body.dark-mode .status-disponible {
+  border-color: rgba(29, 164, 78, 0.28) !important;
+  background: rgba(10, 168, 68, 0.20) !important;
+  color: #4ee27e !important;
+}
+
+body.dark-mode .status-no_disponible {
+  border-color: rgba(148, 163, 184, 0.20) !important;
+  background: #161a1f !important;
+  color: #e5e7eb !important;
+}
+
+body.dark-mode .status-soft {
+  background: transparent !important;
+  color: #A2C7E7 !important;
+  border: 1px solid rgba(162, 199, 231, 0.45) !important;
+}
+
+/* =========================
+   BOTONES
+========================= */
+body.dark-mode .btn-primary {
+  background: linear-gradient(135deg, #355786, #173F6C) !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode .btn-primary:hover {
+  filter: brightness(1.06) !important;
+}
+
+body.dark-mode .btn-primary-outline {
+  background: transparent !important;
+  border: 1px solid rgba(162, 199, 231, 0.34) !important;
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .btn-secondary {
+  background: transparent !important;
+  color: #A2C7E7 !important;
+  border: 1px solid rgba(162, 199, 231, 0.34) !important;
+}
+
+body.dark-mode .btn-ghost {
+  background: transparent !important;
+  color: #c0b4a7 !important;
+  border: 1px dashed rgba(162, 199, 231, 0.28) !important;
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+body.dark-mode .chip {
+  background: transparent !important;
+  border: 1px solid rgba(162, 199, 231, 0.42) !important;
+  color: #A2C7E7 !important;
+}
+
+body.dark-mode .chip-service {
+  background: #1E2022 !important;
+  border: 1px solid rgba(162, 199, 231, 0.42) !important;
+  color: #A2C7E7 !important;
+}
+
+/* =========================
+   GALERÍA
+========================= */
+body.dark-mode .property-gallery-card .gallery-item {
+  border: 1px solid rgba(162, 199, 231, 0.18) !important;
+}
+
+/* =========================
+   UBICACIÓN
+========================= */
+body.dark-mode .small-link {
+  text-decoration: none !important;
+}
+
+body.dark-mode .small-link:hover {
+  text-decoration: underline !important;
+}
+
+/* =========================
+   AVISO
+========================= */
+body.dark-mode .aviso-temporada {
+  color: #f08b84 !important;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+body.dark-mode .lightbox {
+  background: rgba(0, 0, 0, 0.92) !important;
+}
+
+body.dark-mode .lightbox-counter {
+  background: rgba(20, 20, 20, 0.50) !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .lightbox-nav {
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .lightbox-close {
+  color: #ffffff !important;
+}

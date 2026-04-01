@@ -68,8 +68,15 @@
   </div>
 
   <div class="ve-footer-bottom">
-    <span class="ve-bottom-line"></span>
-    <img src="assets/img/icon/lagartija.png" alt="Iguana Villas Eureka" class="ve-iguana-mini">
-    <span class="ve-bottom-line"></span>
+      <span class="ve-bottom-line"></span>
+
+      <img
+          src="assets/img/icon/lagartija.png"
+          alt="Iguana Villas Eureka"
+          class="ve-iguana-mini"
+          id="hiddenAdminTriggerFooter"
+      >
+
+      <span class="ve-bottom-line"></span>
   </div>
 </footer>

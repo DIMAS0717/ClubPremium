@@ -311,29 +311,6 @@ body {
   font-weight: 700;
 }
 
-/* ---------- DARK MODE ---------- */
-body.dark-mode .header-full {
-  background: linear-gradient(90deg, #020817, #051427);
-}
-
-body.dark-mode .header-full.scrolled {
-  background: rgba(2, 8, 23, 0.85);
-}
-
-body.dark-mode .header-nav a {
-  color: #ffffff;
-}
-
-body.dark-mode .header-nav a:hover,
-body.dark-mode .header-nav a.active {
-  color: var(--gold);
-}
-
-/* ---------- ESTADO GENERAL ---------- */
-body.menu-open {
-  overflow: hidden;
-}
-
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 1200px) {
   .header-nav {
@@ -441,3 +418,4 @@ body.menu-open {
     padding: 12px 14px;
   }
 }
+

@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-
     const header = document.querySelector('.header-full');
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const mobileLinks = document.querySelectorAll('.mobile-nav a');
     const themeToggle = document.getElementById('themeToggle');
     const langToggle = document.getElementById('langToggle');
-    const logoLink = document.querySelector('.header-logo-link');
+    const logoLink = document.getElementById('hiddenAdminTrigger');
 
     /* =========================
        HEADER SCROLL
@@ -63,28 +62,33 @@ document.addEventListener('DOMContentLoaded', function () {
     /* =========================
        TEMA OSCURO
     ========================= */
-    if (themeToggle) {
-        const savedTheme = localStorage.getItem('siteTheme');
+    function applyTheme(theme) {
+        const isDark = theme === 'dark';
 
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            themeToggle.textContent = '☀️';
-        } else {
-            themeToggle.textContent = '🌙';
+        document.body.classList.toggle('dark-mode', isDark);
+        localStorage.setItem('siteTheme', isDark ? 'dark' : 'light');
+
+        if (themeToggle) {
+            themeToggle.textContent = isDark ? '☀️' : '🌙';
+            themeToggle.setAttribute(
+                'aria-label',
+                isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'
+            );
         }
+    }
+
+    if (themeToggle) {
+        const savedTheme = localStorage.getItem('siteTheme') || 'light';
+        applyTheme(savedTheme);
 
         themeToggle.addEventListener('click', function () {
-            document.body.classList.toggle('dark-mode');
-
             const isDark = document.body.classList.contains('dark-mode');
-            localStorage.setItem('siteTheme', isDark ? 'dark' : 'light');
-
-            themeToggle.textContent = isDark ? '☀️' : '🌙';
+            applyTheme(isDark ? 'light' : 'dark');
         });
     }
 
     /* =========================
-       IDIOMA (BASE)
+       IDIOMA
     ========================= */
     if (langToggle) {
         let currentLang = localStorage.getItem('siteLang') || 'es';
@@ -99,34 +103,30 @@ document.addEventListener('DOMContentLoaded', function () {
             currentLang = currentLang === 'es' ? 'en' : 'es';
             localStorage.setItem('siteLang', currentLang);
             updateLangButton();
-
-            console.log('Idioma actual:', currentLang);
-
-            // FUTURO: aquí puedes conectar traducción real
-            // location.reload();
         });
     }
 
     /* =========================
-       ACCESO OCULTO ADMIN (OPCIONAL)
-       5 clics al logo
+       ACCESO OCULTO ADMIN
     ========================= */
-    if (logoLink) {
-        let clickCount = 0;
-        let clickTimer;
+    const footerAdminTrigger = document.getElementById('hiddenAdminTriggerFooter');
 
-        logoLink.addEventListener('click', function () {
-            clickCount++;
+if (footerAdminTrigger) {
+    let clickCount = 0;
+    let clickTimer;
 
+    footerAdminTrigger.addEventListener('click', function () {
+        clickCount++;
+
+        clearTimeout(clickTimer);
+        clickTimer = setTimeout(() => {
+            clickCount = 0;
+        }, 1800);
+
+        if (clickCount === 5) {
             clearTimeout(clickTimer);
-            clickTimer = setTimeout(() => {
-                clickCount = 0;
-            }, 1500);
-
-            if (clickCount === 5) {
-                window.location.href = 'admin/login.php';
-            }
-        });
-    }
-
+            window.location.href = 'admin/login.php';
+        }
+    });
+}
 });

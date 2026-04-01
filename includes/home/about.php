@@ -4,9 +4,10 @@
     <div class="about-text">
       <span class="about-subtitle">SOBRE NOSOTROS</span>
       <h2>¿QUIÉNES SOMOS?</h2>
+      <div class="divider_about"></div>
 
       <p>
-        Club Santiago Real Estate es la agencia líder en propiedades de lujo.
+        Club Santiago es una inmobiliaria líder en propiedades vacacionales,
         Nos especializamos en conectar a personas extraordinarias con hogares
         excepcionales. Nuestro compromiso es brindar un servicio personalizado,
         transparente y de clase mundial.
@@ -15,7 +16,7 @@
       <ul class="about-list">
         <li>Asesoría legal y financiera completa</li>
         <li>Gestión de propiedades y mantenimiento</li>
-        <li>Concierge de lujo 24/7</li>
+        <li>Propiedades vacacionales <br>en Manzanillo</li>
       </ul>
 
       <a href="contacto.php" class="about-link">Contacta a nuestro equipo</a>

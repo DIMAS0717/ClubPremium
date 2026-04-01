@@ -1,0 +1,1936 @@
+
+/* =========================================================
+   RESPONSIVE renta.php
+   ========================================================= */
+
+/* -------- LAPTOP PEQUEÑA / TABLET GRANDE -------- */
+@media (max-width: 1100px) {
+  .page-main {
+    padding-top: 132px;
+  }
+
+  .page-centered {
+    padding: 0 16px;
+  }
+
+  .booking-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .booking-field {
+    min-height: auto;
+    padding: 0;
+    border-right: none;
+  }
+
+  .booking-actions {
+    grid-column: 1 / -1;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .booking-btn,
+  .booking-reset-btn {
+    min-width: 100%;
+    min-height: 52px;
+    border-radius: 14px;
+    padding: 0 18px;
+    border-left: none;
+  }
+
+  .booking-reset-btn {
+    background: #38404b;
+    color: #ffffff;
+  }
+
+  .home-property-grid {
+    gap: 20px;
+  }
+
+  .home-property-img-wrapper {
+    height: 235px;
+  }
+}
+
+/* -------- TABLET -------- */
+@media (max-width: 768px) {
+  .page-main {
+    padding-top: 118px;
+    padding-bottom: 24px;
+  }
+
+  .page-centered {
+    padding: 0 14px;
+  }
+
+  .section {
+    margin-top: 20px;
+  }
+
+  .section h1 {
+    font-size: 30px;
+  }
+
+  .booking-bar {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 18px;
+    border-radius: 22px;
+    margin-top: 18px;
+  }
+
+  .booking-field {
+    padding: 0;
+  }
+
+  .booking-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .booking-input {
+    min-height: 54px;
+    border-radius: 14px;
+    padding: 12px 14px;
+  }
+
+  .booking-input select,
+  .booking-input input {
+    font-size: 16px;
+  }
+
+  .booking-dropdown-menu {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .booking-actions {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .booking-btn,
+  .booking-reset-btn {
+    min-height: 54px;
+    border-radius: 14px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .home-property-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  .home-property-card:hover {
+    transform: none;
+  }
+
+  .home-property-img-wrapper {
+    height: 240px;
+  }
+
+  .home-property-body {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .home-property-title {
+    font-size: 17px;
+  }
+
+  .home-property-text {
+    font-size: 14px;
+  }
+
+  .pagination {
+    gap: 8px;
+  }
+
+  .pagination .btn-primary {
+    min-width: 42px;
+    min-height: 42px;
+  }
+}
+
+/* -------- CELULAR -------- */
+@media (max-width: 480px) {
+  .page-main {
+    padding-top: 104px;
+  }
+
+  .page-centered {
+    padding: 0 10px;
+  }
+
+  .section h1 {
+    font-size: 26px;
+  }
+
+  .muted-text {
+    font-size: 13px;
+  }
+
+  .booking-bar {
+    padding: 14px;
+    border-radius: 18px;
+    gap: 14px;
+  }
+
+  .booking-label {
+    font-size: 13px;
+  }
+
+  .booking-input {
+    min-height: 50px;
+    padding: 10px 12px;
+  }
+
+  .booking-input select,
+  .booking-input input {
+    font-size: 15px;
+  }
+
+  .booking-option {
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  .booking-dropdown-actions {
+    flex-direction: column;
+  }
+
+  .booking-clear-mini,
+  .booking-apply-mini {
+    width: 100%;
+  }
+
+  .booking-btn,
+  .booking-reset-btn {
+    min-height: 50px;
+    font-size: 15px;
+  }
+
+  .home-property-img-wrapper {
+    height: 220px;
+  }
+
+  .card-status-chip {
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    padding: 5px 12px;
+  }
+
+  .capacity-circle {
+    left: 12px;
+    bottom: 12px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .home-property-body {
+    padding: 14px;
+  }
+
+  .home-property-title {
+    font-size: 16px;
+  }
+
+  .home-property-text {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .home-property-btn {
+    min-height: 44px;
+    font-size: 14px;
+  }
+
+  .pagination {
+    gap: 6px;
+  }
+
+  .pagination .btn-primary {
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* -------- CELULAR PEQUEÑO -------- */
+@media (max-width: 360px) {
+  .page-main {
+    padding-top: 96px;
+  }
+
+  .page-centered {
+    padding: 0 8px;
+  }
+
+  .booking-bar {
+    padding: 12px;
+  }
+
+  .home-property-img-wrapper {
+    height: 205px;
+  }
+
+  .home-property-body {
+    padding: 12px;
+  }
+
+  .home-property-title {
+    font-size: 15px;
+  }
+
+  .home-property-text {
+    font-size: 12.5px;
+  }
+}
+
+
+/*HEROOO PRINCIPAL*/
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 768px) {
+  .around-title-wrap {
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .around-title {
+    font-size: 5.8rem;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    padding-left: 0;
+    white-space: normal;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .around-subtitle-main {
+    font-size: 0.99rem;
+    letter-spacing: 1.5px;
+    line-height: 1.4;
+    margin: 34px 0 22px;
+  }
+
+  .around-title-underline {
+    width: 220px;
+    margin: 8px auto 22px;
+  }
+
+  .around-description-box {
+    padding: 20px;
+    margin: 0 auto 30px;
+  }
+
+  .around-description {
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-btn {
+    min-width: 250px;
+    padding: 14px 30px;
+  }
+
+  .hero-image::after {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 480px) {
+  .around-title-wrap {
+    gap: 3px;
+  }
+
+  .around-title {
+    font-size: 2.6rem;
+    line-height: 1.04;
+    letter-spacing: 0.5px;
+    max-width: 220px; 
+  }
+
+  .around-subtitle-main {
+    font-size: 1.0rem;      
+    letter-spacing: 1.5px;  
+    line-height: 1.35;
+    margin: 26px 0 18px;
+    white-space: nowrap;
+  }
+
+  .around-title-deco {
+    width: 62px;
+  }
+
+  .around-title-underline {
+    width: 170px;
+  }
+
+  .around-description-box {
+    padding: 18px 16px;
+  }
+
+  .around-description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .hero-btn {
+    min-width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE villas.php
+   ========================================================= */
+
+/* TABLET GRANDE / IPAD */
+@media (max-width: 1024px) {
+  .villas-hero-container {
+    height: 560px;
+    padding: 0 16px;
+    background-attachment: scroll;
+  }
+
+  .villas-header {
+    max-width: 760px;
+    padding-top: 90px;
+  }
+
+  .villas-hero-container .around-title-wrap {
+    gap: 18px;
+  }
+
+  .villas-hero-container .title-deco {
+    width: 52px;
+  }
+
+  .villas-hero-container .around-title {
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+  }
+
+  .villas-hero-container .around-title-underline {
+    width: 220px;
+    margin: 16px auto 22px;
+  }
+
+  .villas-hero-container .around-subtitle {
+    max-width: 580px;
+    font-size: 1.05rem;
+  }
+
+  .villas-video-section {
+    margin-top: -210px;
+    padding: 0 16px 70px;
+  }
+
+  .villas-video-card {
+    max-width: 100%;
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  .villas-video-wrapper {
+    border-radius: 14px;
+  }
+
+  .villa-types-section {
+    width: min(100%, 980px);
+    padding: 28px 16px;
+  }
+
+  .villa-types-section h2 {
+    font-size: 2.1rem;
+    margin-bottom: 12px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 34px;
+    font-size: 1rem;
+  }
+
+  .villa-cards-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .villa-card {
+    max-width: none;
+    margin: 0;
+    border-radius: 20px;
+  }
+
+  .villa-image {
+    height: 220px;
+  }
+
+  .villa-content {
+    padding: 22px 20px 20px;
+  }
+
+  .villa-content h3 {
+    font-size: 1.18rem;
+    margin-bottom: 8px;
+  }
+
+  .villa-capacity {
+    font-size: 0.96rem;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+  .villa-features {
+    gap: 12px 14px;
+    margin-bottom: 18px;
+  }
+
+  .feature {
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.88rem;
+    line-height: 1.28;
+  }
+
+  .feature span {
+    display: block;
+    line-height: 1.28;
+    word-break: break-word;
+  }
+
+  .feature-icon {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    margin-top: 2px;
+  }
+
+  .bed-distribution {
+    padding: 15px 14px 13px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+  }
+
+  .bed-distribution h4 {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+  }
+
+  .villa-options-group {
+    gap: 0;
+  }
+
+  .villa-option-link {
+    gap: 8px;
+    padding: 7px 0;
+  }
+
+  .villa-icon-wrapper {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+  }
+
+  .villa-text-wrapper {
+    gap: 8px;
+    padding-bottom: 7px;
+    color: #8b949e !important;
+    font-size: 0.95rem !important;
+    text-decoration: none !important;
+    font-weight: 400 !important;
+    opacity: 1 !important;
+  }
+
+  .villa-title {
+    font-size: 0.88rem;
+    line-height: 1.2;
+  }
+
+  .villa-title small {
+    font-size: 0.75rem;
+    color: #7b8590;
+  }
+
+  .villa-arrow {
+    font-size: 0.92rem;
+  }
+
+  .btn-details {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+  .villas-hero-container {
+    height: 500px;
+    padding: 0 12px;
+    background-attachment: scroll;
+  }
+
+  .villas-header {
+    padding-top: 70px;
+  }
+
+  .villas-hero-container .around-title-wrap {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    justify-items: center;
+    column-gap: 10px;
+    row-gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .villas-hero-container .title-deco {
+    width: 40px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .villas-hero-container .around-title {
+    font-size: 2.2rem;
+    line-height: 1.02;
+    letter-spacing: 1px;
+    text-align: center;
+    white-space: normal;
+    max-width: 100%;
+  }
+
+  .villas-hero-container .around-title-underline {
+    width: 180px;
+    margin: 14px auto 18px;
+  }
+
+  .villas-hero-container .around-subtitle {
+    max-width: 95%;
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+
+  .villas-video-section {
+    margin-top: -165px;
+    padding: 0 12px 50px;
+  }
+
+  .villa-types-section {
+    max-width: 100%;
+    padding: 22px 12px;
+  }
+
+  .villa-types-section h2 {
+    font-size: 1.9rem;
+  }
+
+  .section-subtitle {
+    margin-bottom: 26px;
+    font-size: 0.95rem;
+  }
+
+  .villa-cards-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .villa-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 18px;
+  }
+
+  .villa-badge {
+    top: 14px;
+    left: 14px;
+    padding: 6px 12px;
+    font-size: 0.66rem;
+    letter-spacing: 0.8px;
+  }
+
+  .villa-image {
+    height: 205px;
+  }
+
+  .villa-content {
+    padding: 22px 20px 20px;
+  }
+
+  .villa-content h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .villa-capacity {
+    font-size: 0.92rem;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+  }
+
+  .villa-features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 16px;
+    margin-bottom: 18px;
+  }
+
+  .feature {
+    align-items: flex-start;
+    gap: 7px;
+    font-size: 0.84rem;
+    line-height: 1.25;
+  }
+
+  .feature span {
+    display: block;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+
+  .feature-icon {
+    width: 17px;
+    height: 17px;
+    min-width: 17px;
+    margin-top: 2px;
+  }
+
+  .bed-distribution {
+    padding: 14px 14px 12px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+  }
+
+  .bed-distribution h4 {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+  }
+
+  .villa-option-link {
+    gap: 9px;
+    padding: 8px 0;
+  }
+
+  .villa-icon-wrapper {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+  }
+
+  .villa-text-wrapper {
+    gap: 8px;
+    padding-bottom: 8px;
+  }
+
+  .villa-title {
+    font-size: 0.88rem;
+    line-height: 1.2;
+  }
+
+  .villa-title small {
+    font-size: 0.72rem;
+    color: #8b949e !important;
+    font-weight: 400;
+    text-decoration: none !important;
+    opacity: 1;
+    line-height: 1.2;
+  }
+
+  .villa-arrow {
+    font-size: 0.92rem;
+  }
+
+  .btn-details {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+/* CELULAR PEQUEÑO */
+@media (max-width: 430px) {
+  .villa-card {
+    max-width: 390px;
+  }
+
+  .villa-image {
+    height: 188px;
+  }
+
+  .villa-content {
+    padding: 20px 18px 18px;
+  }
+
+  .villa-content h3 {
+    font-size: 0.98rem;
+  }
+
+  .villa-capacity {
+    font-size: 0.88rem;
+  }
+
+  .villa-features {
+    gap: 10px 12px;
+  }
+
+  .feature {
+    gap: 6px;
+    font-size: 0.8rem;
+  }
+
+  .feature-icon {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+  }
+
+  .bed-distribution {
+    padding: 13px 12px 11px;
+  }
+
+  .bed-distribution h4 {
+    font-size: 0.9rem;
+  }
+
+  .villa-option-link {
+    gap: 8px;
+    padding: 7px 0;
+  }
+
+  .villa-icon-wrapper {
+    width: 17px;
+    height: 17px;
+    min-width: 17px;
+  }
+
+  .villa-title {
+    font-size: 0.84rem;
+  }
+
+  .villa-title small {
+    font-size: 0.7rem;
+    color: #8b949e;
+  }
+
+  .villa-arrow {
+    font-size: 0.88rem;
+  }
+
+  .btn-details {
+    padding: 11px 14px;
+    font-size: 13px;
+  }
+}
+
+/* CELULAR MUY PEQUEÑO */
+@media (max-width: 360px) {
+  .villa-card {
+    max-width: 340px;
+  }
+
+  .villa-image {
+    height: 176px;
+  }
+
+  .villa-content {
+    padding: 18px 16px 16px;
+  }
+
+  .villa-content h3 {
+    font-size: 0.92rem;
+  }
+
+  .villa-capacity {
+    font-size: 0.82rem;
+  }
+
+  .feature {
+    font-size: 0.75rem;
+  }
+
+  .villa-title {
+    font-size: 0.79rem;
+  }
+
+  .villa-title small {
+    font-size: 0.66rem;
+    color: #8b949e;
+  }
+
+  .bed-distribution h4 {
+    font-size: 0.84rem;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVO ALREDEDORES.PHP
+   ========================================================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .alrededores-page {
+    padding-top: 110px;
+  }
+
+  .alrededores-page .around-hero-container {
+    height: 420px !important;
+    min-height: 420px !important;
+    padding: 0 16px !important;
+    background-attachment: scroll !important;
+    background-position: center center !important;
+  }
+
+  .alrededores-page .around-header {
+    max-width: 760px !important;
+    width: 100% !important;
+    padding-top: 56px !important;
+    text-align: center !important;
+  }
+
+  .alrededores-page .around-title-wrap {
+    gap: 12px ;
+    margin-bottom: 10px ;
+    flex-wrap: wrap ;
+  }
+
+  .alrededores-page .around-title {
+    font-size: 2.45rem ;
+    line-height: 1.08 ;
+    letter-spacing: 1px ;
+    margin: 0 ;
+  }
+
+  .alrededores-page .around-title-deco {
+    width: 36px ;
+  }
+
+  .alrededores-page .around-title-underline {
+    width: 130px ;
+    margin: 10px auto 14px ;
+  }
+
+  .alrededores-page .around-subtitle {
+    max-width: 620px !important;
+    margin: 0 auto !important;
+    padding: 0 8px !important;
+    font-size: 0.98rem !important;
+    line-height: 1.55 !important;
+    text-align: center !important;
+  }
+
+  .alrededores-page .around-map-section {
+    margin-top: -85px !important;
+    padding: 0 16px 65px !important;
+  }
+
+  .alrededores-page .around-map-card {
+    grid-template-columns: 1fr !important;
+    max-width: 820px !important;
+    padding: 24px !important;
+    gap: 20px !important;
+    border-radius: 24px !important;
+  }
+
+  .alrededores-page .around-map-title {
+    font-size: 1.3rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .alrededores-page .around-map-title span {
+    display: block !important;
+    margin-top: 4px !important;
+    font-size: 0.92rem !important;
+  }
+
+  .alrededores-page .around-map-divider {
+    max-width: 280px !important;
+    margin: 10px 0 16px !important;
+  }
+
+  .alrededores-page .around-map-image {
+    min-height: 260px !important;
+  }
+}
+
+/* MOVIL */
+@media (max-width: 768px) {
+  .alrededores-page {
+    padding-top: 100px;
+  }
+
+  .alrededores-page .around-hero-container {
+    height: 300px !important;
+    min-height: 300px !important;
+    padding: 0 12px !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+  }
+
+  .alrededores-page .around-header {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-top: 34px !important;
+    text-align: center !important;
+  }
+
+  .alrededores-page .around-title-wrap {
+    gap: 8px ;
+    margin-bottom: 8px ;
+    flex-wrap: wrap ;
+  }
+
+  .alrededores-page .around-title {
+    font-size: 1.85rem ;
+    line-height: 1.08 ;
+    letter-spacing: 0.8px ;
+    margin: 0 ;
+  }
+
+  .alrededores-page .around-title-deco {
+    width: 18px !important;
+  }
+
+  .alrededores-page .around-title-underline {
+    width: 74px !important;
+    height: 3px !important;
+    margin: 8px auto 10px !important;
+  }
+
+  .alrededores-page .around-subtitle {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 4px !important;
+    font-size: 0.84rem !important;
+    line-height: 1.42 !important;
+    text-align: center !important;
+  }
+
+  .alrededores-page .around-map-section {
+    margin-top: -18px !important;
+    padding: 0 12px 42px !important;
+  }
+
+  .alrededores-page .around-map-card {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 16px 12px !important;
+    border-radius: 18px !important;
+  }
+
+  .alrededores-page .around-map-info {
+    padding: 0 !important;
+  }
+
+  .alrededores-page .around-map-title {
+    font-size: 1.02rem !important;
+    line-height: 1.28 !important;
+  }
+
+  .alrededores-page .around-map-title span {
+    display: block !important;
+    margin-top: 4px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .alrededores-page .around-map-divider {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 10px 0 14px !important;
+  }
+
+  .alrededores-page .around-map-list li {
+    gap: 10px !important;
+    padding: 10px 0 10px 6px !important;
+    margin-bottom: 8px !important;
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(47, 78, 124, 0.18) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .alrededores-page .around-map-list li:last-child {
+    border-bottom: none !important;
+  }
+
+  .alrededores-page .around-map-label {
+    font-size: 0.84rem !important;
+  }
+
+  .alrededores-page .around-map-time {
+    font-size: 0.72rem !important;
+    padding: 3px 8px !important;
+  }
+
+  .alrededores-page .around-map-icon {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .alrededores-page .around-map-image {
+    min-height: 180px !important;
+    border-radius: 14px !important;
+  }
+
+  .alrededores-page .around-map-image img {
+    border-radius: 14px !important;
+  }
+}
+
+/* MOVIL PEQUEÑO */
+@media (max-width: 480px) {
+  .alrededores-page .around-hero-container {
+    height: 270px !important;
+    min-height: 270px !important;
+    padding: 0 10px !important;
+  }
+
+  .alrededores-page .around-header {
+    padding-top: 28px !important;
+  }
+
+  .alrededores-page .around-title {
+    font-size: 3.65rem ;
+  }
+
+  .alrededores-page .around-title-deco {
+    width: 16px ;
+  }
+
+  .alrededores-page .around-title-underline {
+    width: 64px !important;
+    margin: 8px auto 10px !important;
+  }
+
+  .alrededores-page .around-subtitle {
+    font-size: 0.8rem !important;
+    line-height: 1.38 !important;
+    padding: 0 2px !important;
+  }
+
+  .alrededores-page .around-map-section {
+    margin-top: -8px !important;
+    padding: 0 10px 38px !important;
+  }
+
+  .alrededores-page .around-map-card {
+    padding: 14px 10px !important;
+    border-radius: 16px !important;
+  }
+
+  .alrededores-page .around-map-title {
+    font-size: 0.96rem !important;
+  }
+
+  .alrededores-page .around-map-title span {
+    font-size: 0.76rem !important;
+  }
+
+  .alrededores-page .around-map-list li {
+    padding: 9px 0 9px 4px !important;
+  }
+
+  .alrededores-page .around-map-label {
+    font-size: 0.8rem !important;
+  }
+
+  .alrededores-page .around-map-time {
+    font-size: 0.68rem !important;
+  }
+
+  .alrededores-page .around-map-image {
+    min-height: 165px !important;
+  }
+}
+
+/* ================= RESPONSIVO PARA MIS CARTAS ====================== */
+/* ===== FIX FUERTE TARJETAS MÓVIL / TABLET ===== */
+@media (max-width: 1024px) {
+  .around-activities-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .around-activity-card {
+    position: relative !important;
+    width: 100% !important;
+    min-height: 430px !important;
+    height: 430px !important;
+    border-radius: 28px !important;
+    overflow: hidden !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    box-shadow: 0 18px 36px rgba(12, 22, 36, 0.16) !important;
+  }
+
+  .around-activity-card::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: linear-gradient(
+      to top,
+      rgba(7, 18, 34, 0.92) 0%,
+      rgba(7, 18, 34, 0.52) 42%,
+      rgba(7, 18, 34, 0.08) 100%
+    ) !important;
+    z-index: 0 !important;
+  }
+
+  .around-activity-overlay {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+    padding: 26px 22px 24px !important;
+    background: transparent !important;
+    gap: 0 !important;
+  }
+
+  .around-activity-overlay h3 {
+    margin: 0 0 12px !important;
+    color: #ffffff !important;
+    font-size: 2rem !important;
+    line-height: 1.05 !important;
+    font-weight: 800 !important;
+    text-align: left !important;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  .around-activity-overlay p {
+    margin: 0 0 18px !important;
+    max-width: 88% !important;
+    color: rgba(255, 255, 255, 0.97) !important;
+    font-size: 1rem !important;
+    line-height: 1.55 !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.28) !important;
+  }
+
+  .around-activity-badge {
+    position: absolute !important;
+    top: 18px !important;
+    left: 18px !important;
+    z-index: 2 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 15px !important;
+    border-radius: 999px !important;
+    font-size: 0.74rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.8px !important;
+    text-transform: uppercase !important;
+  }
+
+  .around-btn {
+    position: relative !important;
+    z-index: 2 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px 18px !important;
+    border-radius: 999px !important;
+    background: rgba(7, 23, 54, 0.96) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .around-activities-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .around-activity-card {
+    min-height: 420px !important;
+    height: 420px !important;
+    border-radius: 28px !important;
+  }
+
+  .around-activity-overlay {
+    padding: 24px 20px 22px !important;
+  }
+
+  .around-activity-overlay h3 {
+    font-size: 1.1rem !important;
+    margin: 0 0 10px !important;
+  }
+
+  .around-activity-overlay p {
+    max-width: 92% !important;
+    font-size: 0.92rem !important;
+    margin: 0 0 18px !important;
+  }
+
+  .around-activity-badge {
+    top: 16px !important;
+    left: 16px !important;
+    padding: 8px 14px !important;
+    font-size: 0.7rem !important;
+  }
+
+  .around-btn {
+    padding: 11px 17px !important;
+    font-size: 0.86rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .around-activity-card {
+    min-height: 390px !important;
+    height: 390px !important;
+    border-radius: 24px !important;
+  }
+
+  .around-activity-overlay {
+    padding: 22px 18px 20px !important;
+  }
+
+  .around-activity-overlay h3 {
+    font-size: 1.02rem !important;
+  }
+
+  .around-activity-overlay p {
+    max-width: 100% !important;
+    font-size: 0.86rem !important;
+  }
+
+  .around-activity-badge {
+    top: 14px !important;
+    left: 14px !important;
+    padding: 7px 12px !important;
+    font-size: 0.66rem !important;
+  }
+
+  .around-btn {
+    padding: 10px 15px !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+
+/*RESPONSIVE CONTACTUS================*/
+/* ==================== TABLET ==================== */
+@media (max-width: 1024px) {
+  .page-main {
+    padding-top: 110px;
+  }
+
+  .cs-contact-section {
+    min-height: auto;
+    padding: 55px 16px 70px;
+    background-position: center center;
+  }
+
+  .cs-title-wrap {
+    gap: 14px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+
+  .cs-title {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    line-height: 1.1;
+  }
+
+  .cs-title-deco {
+    width: 46px;
+  }
+
+  .cs-title-underline {
+    width: 180px;
+    margin: 12px auto 0;
+  }
+
+  .cs-contact-box {
+    flex-direction: column;
+    width: calc(100% - 32px);
+    max-width: 760px;
+    margin: 48px auto 0; /* MÁS ABAJO DEL TÍTULO */
+    border-radius: 18px;
+  }
+
+  .cs-right-panel {
+    order: 1;
+    width: 100%;
+    padding: 30px 24px 34px;
+  }
+
+  .cs-left-panel {
+    order: 2;
+    width: 100%;
+    padding: 60px 30px 46px; /* MÁS AIRE */
+    gap: 42px;
+  }
+
+  .cs-right-panel h3 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .cs-form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cs-input {
+    margin-bottom: 16px;
+  }
+
+  textarea.cs-input {
+    min-height: 130px;
+  }
+
+  .cs-info-block {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .cs-info-block div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .cs-label {
+    margin-bottom: 4px;
+    font-size: 1rem;
+  }
+
+  .cs-detail {
+    max-width: none;
+    line-height: 1.6;
+  }
+
+  .cs-socials {
+    gap: 16px;
+    padding-top: 10px;
+  }
+
+  .cs-icons {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .cs-submit {
+    min-width: 220px;
+  }
+}
+
+/* ==================== MÓVIL ==================== */
+@media (max-width: 768px) {
+  .page-main {
+    padding-top: 100px;
+  }
+
+  .cs-contact-section {
+    padding: 42px 12px 55px;
+  }
+
+  .cs-title-wrap {
+    gap: 10px;
+    margin-bottom: 8px;
+    padding: 0 6px;
+  }
+
+  .cs-title {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    line-height: 1.1;
+  }
+
+  .cs-title-deco {
+    width: 32px;
+  }
+
+  .cs-title-underline {
+    width: 120px;
+    height: 3px;
+    margin: 10px auto 0;
+  }
+
+  .cs-contact-box {
+    width: calc(100% - 24px);
+    max-width: 100%;
+    margin: 46px auto 0; /* MÁS ABAJO DEL TÍTULO */
+    border-radius: 16px;
+  }
+
+  .cs-right-panel {
+    padding: 24px 16px 30px;
+  }
+
+  .cs-left-panel {
+    padding: 58px 22px 42px; /* MÁS AIRE INTERNO */
+    gap: 38px;
+  }
+
+  .cs-right-panel h3 {
+    font-size: 1.45rem;
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  .cs-input {
+    padding: 13px 14px;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    border-radius: 10px;
+  }
+
+  textarea.cs-input {
+    min-height: 120px;
+  }
+
+  /* ICONOS MÁS FINOS */
+  .cs-icon {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    font-size: 14px;
+  }
+
+  .cs-info-block {
+    gap: 16px;
+  }
+
+  .cs-info-block div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .cs-label {
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+  }
+
+  .cs-detail {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  .cs-socials {
+    gap: 14px;
+    padding-top: 8px;
+  }
+
+  .cs-socials .cs-label {
+    font-size: 13px;
+  }
+
+  .cs-icons {
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .cs-social {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+  .cs-submit {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* ==================== MÓVIL PEQUEÑO ==================== */
+@media (max-width: 480px) {
+  .cs-contact-section {
+    padding: 38px 10px 48px;
+  }
+
+  .cs-title {
+    font-size: 1.75rem;
+  }
+
+  .cs-title-deco {
+    width: 26px;
+  }
+
+  .cs-title-underline {
+    width: 95px;
+  }
+
+  .cs-contact-box {
+    width: calc(100% - 20px);
+    margin: 42px auto 0; /* MÁS ABAJO DEL TÍTULO */
+    border-radius: 14px;
+  }
+
+  .cs-right-panel {
+    padding: 22px 14px 26px;
+  }
+
+  .cs-left-panel {
+    padding: 54px 18px 36px; /* MÁS AIRE */
+    gap: 34px;
+  }
+
+  .cs-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    font-size: 13px;
+  }
+
+  .cs-info-block {
+    gap: 14px;
+  }
+
+  .cs-info-block div {
+    gap: 4px;
+  }
+
+  .cs-label {
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+  }
+
+  .cs-detail {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .cs-socials {
+    gap: 12px;
+  }
+
+  .cs-social {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .cs-right-panel h3 {
+    font-size: 1.3rem;
+  }
+
+  .cs-input {
+    font-size: 0.92rem;
+  }
+
+  textarea.cs-input {
+    min-height: 110px;
+  }
+}
+
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+/* -------- TABLET GRANDE / LAPTOP PEQUEÑA -------- */
+@media (max-width: 1100px) {
+  .property-wrapper {
+    padding: 120px 14px 0;
+    margin-bottom: 40px;
+  }
+
+  .property-hero {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+    padding-top: 30px;
+  }
+
+  .property-info-grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 14px;
+  }
+
+  .property-desc-card,
+  .property-rules-card,
+  .property-services-card {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .slider-window {
+    height: clamp(300px, 52vw, 420px);
+  }
+
+  .property-gallery-card .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* -------- TABLET -------- */
+@media (max-width: 768px) {
+  .property-wrapper {
+    padding: 105px 12px 0;
+    margin-bottom: 32px;
+  }
+
+  .property-slider-card,
+  .property-summary-card,
+  .property-card {
+    border-radius: 18px;
+  }
+
+  .property-summary-card,
+  .property-card {
+    padding: 16px;
+  }
+
+  .property-hero {
+    gap: 14px;
+    margin-bottom: 14px;
+    padding-top: 37px;
+  }
+
+  .property-info-grid {
+    row-gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .slider-window {
+    height: clamp(230px, 54vw, 320px);
+    border-radius: 16px;
+  }
+
+  .slider-arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.22);
+  }
+
+  .slider-arrow[data-prev] {
+    left: 8px;
+  }
+
+  .slider-arrow[data-next] {
+    right: 8px;
+  }
+
+  .property-title {
+    font-size: 22px;
+    line-height: 1.1;
+    margin: 8px 0;
+  }
+
+  .property-short {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+
+  .property-status-row {
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .status-badge,
+  .status-soft {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+
+  .btn-row {
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .btn-row a,
+  .btn-primary,
+  .btn-primary-outline,
+  .btn-secondary,
+  .btn-ghost {
+    min-height: 46px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+  }
+
+  .property-mini-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 14px;
+  }
+
+  .mini-label {
+    font-size: 11px;
+  }
+
+  .mini-value {
+    font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+
+  .section-subtitle {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .desc-text,
+  .rules-list,
+  .location-row,
+  .location-value {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .chip-service {
+    font-size: 12px;
+    padding: 9px 10px;
+  }
+
+  .property-gallery-card .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .property-gallery-card .gallery-item img,
+  .gallery-img {
+    height: 190px;
+  }
+
+  .location-row {
+    grid-template-columns: 1fr;
+    row-gap: 3px;
+    margin-bottom: 10px;
+  }
+
+  .lightbox-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .lightbox-close {
+    top: 12px;
+    right: 14px;
+    font-size: 32px;
+  }
+
+  #lightbox-img {
+    max-width: 92vw;
+    max-height: 72vh;
+  }
+}
+
+/* -------- CELULAR -------- */
+@media (max-width: 480px) {
+  .property-wrapper {
+    padding: 90px 10px 0;
+  }
+
+  .property-summary-card,
+  .property-card {
+    padding: 14px;
+  }
+
+  .slider-window {
+    height: clamp(210px, 58vw, 260px);
+  }
+
+  .property-title {
+    font-size: 20px;
+  }
+
+  .property-short {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .btn-row a,
+  .btn-primary,
+  .btn-primary-outline,
+  .btn-secondary,
+  .btn-ghost {
+    min-height: 44px;
+    padding: 11px 12px;
+    font-size: 13px;
+  }
+
+  .property-mini-stats {
+    gap: 6px;
+  }
+
+  .mini-label {
+    font-size: 10px;
+  }
+
+  .mini-value {
+    font-size: 17px;
+  }
+
+  .property-gallery-card .gallery-item img,
+  .gallery-img {
+    height: 170px;
+  }
+}
+
+/* -------- CELULAR MUY PEQUEÑO -------- */
+@media (max-width: 360px) {
+  .property-wrapper {
+    padding: 84px 8px 0;
+  }
+
+  .property-summary-card,
+  .property-card {
+    padding: 12px;
+  }
+
+  .slider-window {
+    height: 200px;
+  }
+
+  .property-title {
+    font-size: 18px;
+  }
+
+  .property-mini-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .mini-stat {
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  }
+
+  .mini-stat:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}

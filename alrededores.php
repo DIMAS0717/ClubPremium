@@ -9,6 +9,9 @@ $page_title = 'Alrededores - Villas Eureka';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="assets/css/alrededores.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/drk_mode.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,7 +84,7 @@ $page_title = 'Alrededores - Villas Eureka';
                                 <path fill="currentColor" d="M11 2h2v9l2.2-2.2 1.4 1.4L13 14l3.6 3.8-1.4 1.4L13 17v5h-2v-5l-2.2 2.2-1.4-1.4L11 14 7.4 10.2l1.4-1.4L11 11z"/>
                             </svg>
                             <span class="around-map-label">Restaurantes</span>
-                            <span class="around-map-time">2–7 min</span>
+                            <span class="around-map-time">2 min</span>
                         </li>
 
                         <li>

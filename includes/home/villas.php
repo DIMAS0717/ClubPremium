@@ -4,6 +4,7 @@
     <div class="villas-texto">
       <span class="villas-subtitle">Estancia exclusiva</span>
       <h2>Nuestras Villas</h2>
+      <div class="divider_villas"></div>
 
       <p class="intro">
         Descubre villas amplias, elegantes y totalmente equipadas, diseñadas

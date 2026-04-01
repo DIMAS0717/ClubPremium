@@ -40,11 +40,7 @@ if (empty($_SESSION['csrf_token'])) {
 </head>
 <body class="admin-body">
 
-  <img src="../assets/images/fondo_login.jpg" alt="Fondo" class="bg-image-tag">
-
-  <a href="../index.php" class="boton-inicio">
-    <img src="../assets/images/logofoter.png" alt="Ir a Inicio">
-  </a>
+  <img src="../assets/img/fondos/fondo_login.jpg" alt="Fondo" class="bg-image-tag">
 
   <div class="bg-overlay"></div>
 
@@ -73,7 +69,7 @@ if (empty($_SESSION['csrf_token'])) {
       <button type="submit" class="btn-submit">Entrar</button>
 
       <div class="card-footer">
-        <a href="../../index.php" class="link-back">Volver al sitio principal</a>
+        <a href="../index.php" class="link-back">Volver al sitio principal</a>
       </div>
 
     </form>
