@@ -1934,3 +1934,99 @@
     padding-bottom: 0;
   }
 }
+
+
+/* =========================================================
+   RESPONSIVE - LOTES
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .lotes-top-content {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .lotes-right {
+        align-items: flex-start;
+    }
+
+    .lotes-map-text {
+        max-width: 100%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .lotes-hero-container {
+        min-height: 78vh;
+        padding: 125px 14px 170px;
+    }
+
+    .lotes-hero-bg {
+        background-attachment: scroll;
+    }
+
+    .lotes-title-wrap {
+        gap: 14px;
+    }
+
+    .lotes-title-deco {
+        width: 40px;
+    }
+
+    .lotes-title-underline {
+        width: 120px;
+        margin: 14px auto 18px;
+    }
+
+    .lotes-subtitle {
+        line-height: 1.65;
+    }
+
+    .lotes-video-section {
+        margin-top: -95px;
+        padding: 0 14px 70px;
+    }
+
+    .lotes-top-content {
+        padding: 22px 18px 20px;
+    }
+
+    .lotes-color-bar {
+        height: 6px;
+    }
+
+    .lotes-price-box strong {
+        font-size: clamp(2.4rem, 10vw, 3.8rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .lotes-hero-container {
+        padding: 110px 12px 150px;
+    }
+
+    .lotes-video-section {
+        margin-top: -80px;
+        padding: 0 12px 55px;
+    }
+
+    .lotes-video-card {
+        border-radius: 20px;
+    }
+
+    .lotes-left h2 {
+        font-size: 1.12rem;
+    }
+
+    .lotes-left p,
+    .lotes-map-text {
+        font-size: 0.93rem;
+        line-height: 1.7;
+    }
+
+    .lotes-map-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
