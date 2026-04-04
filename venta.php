@@ -1,101 +1,122 @@
 <?php
-require_once __DIR__ . '/admin/core/Database.php';
-require_once __DIR__ . '/includes/property_helpers.php';
-
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-try {
-    $db = Database::getConnection();
-
-    $sql = "
-        SELECT
-            id,
-            nombre,
-            descripcion_corta,
-            foto_principal,
-            categoria
-        FROM properties
-        WHERE categoria = :categoria
-        ORDER BY created_at DESC
-    ";
-
-    $stmt = $db->prepare($sql);
-    $stmt->execute([
-        ':categoria' => 'venta'
-    ]);
-
-    $propiedadesVenta = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-} catch (Throwable $e) {
-    echo '<pre style="background:#300;color:#fff;padding:12px;border-radius:8px;">';
-    echo 'ERROR EN VENTA.PHP' . "\n\n";
-    echo $e->getMessage();
-    echo '</pre>';
-    exit;
-}
+$page_title = 'Lotes en Venta - Villas Eureka';
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Propiedades en venta - Casas Club Santiago</title>
+    <title><?= htmlspecialchars($page_title); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/css/lotes.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/drk_mode.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <?php include __DIR__ . '/includes/header.php'; ?>
 
-<main class="page-main">
-    <section class="section">
-        <h1>Propiedades en venta</h1>
-        <p class="muted-text">Casas y propiedades disponibles para compra.</p>
+<main class="page-main lotes-page">
+
+    <!-- HERO -->
+    <section class="lotes-hero-container">
+        <div class="lotes-hero-bg"></div>
+        <div class="lotes-hero-overlay"></div>
+
+        <div class="lotes-header">
+            <div class="lotes-title-wrap">
+                <img src="assets/img/icon/iconoeureka.png" class="lotes-title-deco" alt="">
+                <h1 class="lotes-title">LOTES EN VENTA</h1>
+                <img src="assets/img/icon/iconoeureka.png" class="lotes-title-deco" alt="">
+            </div>
+
+            <div class="lotes-title-underline"></div>
+
+            <p class="lotes-subtitle">
+                Oportunidad de inversión en una excelente ubicación dentro de la
+                Colonia Miramar, Maravillas del Campo, Manzanillo, Colima.
+            </p>
+        </div>
     </section>
 
-    <section class="section">
-        <?php if (!empty($propiedadesVenta)): ?>
-            <?php foreach ($propiedadesVenta as $p): ?>
-                <article class="home-property-card">
-                    <?php if (!empty($p['foto_principal'])): ?>
-                        <a href="propiedad.php?id=<?php echo (int)$p['id']; ?>">
-                            <img
-                                src="<?php echo e($p['foto_principal']); ?>"
-                                alt="<?php echo e($p['nombre']); ?>"
-                                class="home-property-img"
-                            >
-                        </a>
-                    <?php endif; ?>
+    <!-- BLOQUE PRINCIPAL -->
+    <section class="lotes-video-section">
+        <div class="lotes-video-card">
 
-                    <div class="home-property-body">
-                        <h3><?php echo e($p['nombre']); ?></h3>
+            <div class="lotes-top-content">
+                <div class="lotes-left">
+                    <h2>
+                        Se venden 14 terrenos de oportunidad para desarrolladoras o inversionistas
+                        dentro de la Colonia Miramar, Maravillas del Campo, Manzanillo, Colima.
+                    </h2>
 
-                        <?php if (!empty($p['descripcion_corta'])): ?>
-                            <p class="muted-text">
-                                <?php echo e($p['descripcion_corta']); ?>
-                            </p>
-                        <?php endif; ?>
+                    <p>
+                        Están ubicados entre la calle Juárez y calle Miguel Domínguez, a tan solo
+                        media cuadra de la carretera con dirección Manzanillo - Cihuatlán y Puerto Vallarta.
+                        Las lotificaciones se encuentran a 15 minutos de los centros comerciales como lo son:
+                        Soriana, La Comercial Mexicana y Walmart. Además de los hospitales generales y
+                        particulares. Cabe mencionar que la distancia al mar es de solo 5 minutos.
+                    </p>
 
-                        <a href="propiedad.php?id=<?php echo (int)$p['id']; ?>" class="btn-primary">
-                            Ver detalles
-                        </a>
+                    <div class="lotes-price-box">
+                        <span class="lotes-price-label">PRECIO</span>
+                        <strong>$5,000</strong>
+                        <small>por metro cuadrado</small>
                     </div>
-                </article>
-            <?php endforeach; ?>
-        <?php else: ?>
-            <p class="muted-text">Aún no hay propiedades registradas en venta.</p>
-        <?php endif; ?>
+                </div>
+
+                <div class="lotes-right">
+                    <div class="lotes-map-preview">
+                        <img src="assets/img/lotes/lotes-preview.jpg" alt="Vista previa lotes">
+                    </div>
+
+                    <p class="lotes-map-text">
+                        En el siguiente link podrá encontrar la ubicación geográfica en la cual usted podrá
+                        manipular el entorno en un ángulo 360°.
+                    </p>
+
+                    <a
+                        href="https://maps.google.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="lotes-map-link"
+                    >
+                        <span class="map-pin">📍</span>
+                        <span>Google Maps</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="lotes-color-bar">
+                <span class="c1"></span>
+                <span class="c2"></span>
+                <span class="c3"></span>
+                <span class="c4"></span>
+                <span class="c5"></span>
+                <span class="c6"></span>
+            </div>
+
+            <div class="lotes-video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/TU_VIDEO_ID?rel=0&modestbranding=1"
+                    title="Video Lotes en Venta"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+        </div>
     </section>
+
 </main>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
 
-<script src="assets/app.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>
