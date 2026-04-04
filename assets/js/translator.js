@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const STORAGE_KEY = 'site_language';
   const DEFAULT_LANG = 'es';
   const BASE_URL = window.APP_BASE_URL || '';
-  const TRANSLATE_URL = `${BASE_URL}/api/translate.php`;
+  const TRANSLATE_URL = `${BASE_URL}/admin/api/translate.php`;
 
   let textEntries = [];
   let placeholderEntries = [];
@@ -161,7 +161,15 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       });
 
-      const data = await response.json();
+      const rawText = await response.text();
+
+      let data;
+      try {
+        data = JSON.parse(rawText);
+      } catch (e) {
+        console.error('Respuesta no JSON:', rawText);
+        throw new Error(`El endpoint no devolvió JSON válido. URL usada: ${TRANSLATE_URL}`);
+      }
 
       if (!response.ok || !data.ok || !Array.isArray(data.translations)) {
         throw new Error(data.message || 'No se pudo traducir la página');
@@ -181,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem(STORAGE_KEY, 'en');
     } catch (error) {
       console.error(error);
-      alert('No se pudo traducir la página. Revisa tu API key, la URL de DeepL o el endpoint PHP.');
+      alert(error.message || 'No se pudo traducir la página.');
       updateToggleUI('es');
     }
   }

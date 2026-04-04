@@ -18,7 +18,7 @@ if (!file_exists($configFile)) {
     http_response_code(500);
     echo json_encode([
         'ok' => false,
-        'message' => 'No existe config/deepl_config.php'
+        'message' => 'No existe admin/config/deepl_config.php'
     ]);
     exit;
 }
@@ -71,7 +71,7 @@ if ($source === '' || $target === '') {
     exit;
 }
 
-$cacheDir = __DIR__ . '/../storage/translation_cache';
+$cacheDir = __DIR__ . '/../../storage/translation_cache';
 
 if (!is_dir($cacheDir) && !mkdir($cacheDir, 0775, true) && !is_dir($cacheDir)) {
     http_response_code(500);

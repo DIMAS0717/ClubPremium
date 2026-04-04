@@ -9,7 +9,7 @@ $payload = [
     ]
 ];
 
-$ch = curl_init('http://localhost/CLUBPREMIUM/api/translate.php');
+$ch = curl_init('http://localhost/CLUBPREMIUM/admin/api/translate.php');
 
 curl_setopt_array($ch, [
     CURLOPT_POST => true,
