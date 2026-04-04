@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const STORAGE_KEY = 'site_language';
   const DEFAULT_LANG = 'es';
+  const BASE_URL = window.APP_BASE_URL || '';
+  const TRANSLATE_URL = `${BASE_URL}/api/translate.php`;
 
   let textEntries = [];
   let placeholderEntries = [];
@@ -147,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateToggleUI('en', true);
 
     try {
-      const response = await fetch('/../api/translate.php', {
+      const response = await fetch(TRANSLATE_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
