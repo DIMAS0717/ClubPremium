@@ -14,8 +14,7 @@ $page_title = 'Lotes en Venta - Villas Eureka';
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,32 +22,28 @@ $page_title = 'Lotes en Venta - Villas Eureka';
 
 <main class="page-main lotes-page">
 
-    <section class="lotes-premium-section">
-        <div class="lotes-premium-shell">
+    <section class="lvp-section">
+        <div class="lvp-container">
 
-            <div class="lotes-deco lotes-deco-1"></div>
-            <div class="lotes-deco lotes-deco-2"></div>
+            <div class="lvp-grid">
 
-            <div class="lotes-premium-grid">
+                <!-- COPY -->
+                <div class="lvp-copy">
+                    <span class="lvp-eyebrow">OPORTUNIDAD DE INVERSIÓN</span>
 
-                <!-- IZQUIERDA -->
-                <div class="lotes-copy-column">
-
-                    <span class="lotes-kicker">OPORTUNIDAD DE INVERSIÓN</span>
-
-                    <h1 class="lotes-main-title">
-                        Lotes en venta en
-                        <span class="lotes-main-title-accent">Colonia Miramar</span>
+                    <h1 class="lvp-title">
+                        Lotes en venta para
+                        <span>desarrollo en Miramar</span>
                     </h1>
 
-                    <div class="lotes-title-divider"></div>
+                    <div class="lvp-divider"></div>
 
-                    <p class="lotes-lead">
+                    <p class="lvp-lead">
                         Se venden 14 terrenos de oportunidad para desarrolladoras o inversionistas
                         dentro de la Colonia Miramar, Maravillas del Campo, Manzanillo, Colima.
                     </p>
 
-                    <p class="lotes-body-text">
+                    <p class="lvp-text">
                         Están ubicados entre la calle Juárez y calle Miguel Domínguez, a tan solo
                         media cuadra de la carretera con dirección Manzanillo - Cihuatlán y Puerto Vallarta.
                         Las lotificaciones se encuentran a 15 minutos de centros comerciales como Soriana,
@@ -56,78 +51,72 @@ $page_title = 'Lotes en Venta - Villas Eureka';
                         La distancia al mar es de solo 5 minutos.
                     </p>
 
-                    <div class="lotes-points">
-                        <div class="lotes-point">
-                            <span class="lotes-point-icon">✓</span>
+                    <div class="lvp-tags">
+                        <span class="lvp-tag">14 terrenos disponibles</span>
+                        <span class="lvp-tag">A 5 min del mar</span>
+                        <span class="lvp-tag">Zona de crecimiento</span>
+                    </div>
+
+                    <div class="lvp-list">
+                        <div class="lvp-list-item">
+                            <span class="lvp-check">✓</span>
                             <span>Ubicación estratégica para desarrollo</span>
                         </div>
 
-                        <div class="lotes-point">
-                            <span class="lotes-point-icon">✓</span>
-                            <span>A solo 5 minutos del mar</span>
+                        <div class="lvp-list-item">
+                            <span class="lvp-check">✓</span>
+                            <span>Conectividad rápida con vialidades principales</span>
                         </div>
 
-                        <div class="lotes-point">
-                            <span class="lotes-point-icon">✓</span>
-                            <span>Cerca de hospitales y supermercados</span>
-                        </div>
-
-                        <div class="lotes-point">
-                            <span class="lotes-point-icon">✓</span>
-                            <span>Ideal para inversión y lotificación</span>
+                        <div class="lvp-list-item">
+                            <span class="lvp-check">✓</span>
+                            <span>Cercanía con hospitales, supermercados y playa</span>
                         </div>
                     </div>
 
-                    <div class="lotes-price-card">
-                        <div class="lotes-price-card-top">
-                            <span class="lotes-price-label">PRECIO POR m²</span>
-                            <span class="lotes-price-chip">Zona con potencial</span>
-                        </div>
-
-                        <div class="lotes-price-value">$5,000</div>
-
-                        <p class="lotes-price-note">
-                            Precio competitivo en una zona con crecimiento y excelente conectividad.
+                    <div class="lvp-price-card">
+                        <span class="lvp-price-label">PRECIO POR m²</span>
+                        <strong class="lvp-price-value">$5,000</strong>
+                        <p class="lvp-price-note">
+                            Precio competitivo en una zona con alto potencial de inversión.
                         </p>
                     </div>
                 </div>
 
-                <!-- DERECHA -->
-                <div class="lotes-media-column">
+                <!-- MEDIA -->
+                <div class="lvp-media">
 
-                    <div class="lotes-video-frame">
-                        <div class="lotes-video-glow"></div>
+                    <div class="lvp-video-card">
+                        <span class="lvp-video-badge">RECORRIDO AÉREO</span>
 
-                        <div class="lotes-video-card">
-                            <div class="lotes-video-wrapper">
-                                <iframe
-                                    src="https://www.youtube.com/embed/hWKKNF4gU74?rel=0&modestbranding=1"
-                                    title="Video Lotes en Venta"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen>
-                                </iframe>
-                            </div>
+                        <div class="lvp-video-wrapper">
+                            <iframe
+                                src="https://www.youtube.com/embed/hWKKNF4gU74?rel=0&modestbranding=1"
+                                title="Video Lotes en Venta"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
                         </div>
                     </div>
 
-                    <div class="lotes-location-card">
-                        <div class="lotes-location-thumb">
+                    <div class="lvp-location-card">
+                        <div class="lvp-location-image">
                             <img src="assets/img/lotes/lotes-preview.jpg" alt="Ubicación de lotes">
                         </div>
 
-                        <div class="lotes-location-info">
-                            <span class="lotes-location-tag">UBICACIÓN Y ENTORNO</span>
-                            <h3>Consulta la zona antes de invertir</h3>
+                        <div class="lvp-location-copy">
+                            <span class="lvp-location-kicker">UBICACIÓN Y ENTORNO</span>
+                            <h3>Revisa la zona antes de invertir</h3>
                             <p>
-                                Visualiza el entorno y revisa la ubicación geográfica para conocer mejor
-                                el contexto del desarrollo.
+                                Consulta la ubicación geográfica y analiza el entorno para
+                                visualizar mejor el potencial del proyecto.
                             </p>
 
                             <a
                                 href="https://maps.google.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="lotes-maps-btn"
+                                class="lvp-btn-primary"
                             >
                                 Ver en Google Maps
                             </a>
@@ -135,9 +124,37 @@ $page_title = 'Lotes en Venta - Villas Eureka';
                     </div>
 
                 </div>
+
             </div>
 
-            <div class="lotes-color-bar">
+            <!-- BLOQUES DE VALOR -->
+            <div class="lvp-benefits">
+                <article class="lvp-benefit-card">
+                    <span class="lvp-benefit-number">01</span>
+                    <h4>Acceso privilegiado</h4>
+                    <p>
+                        Ubicación cercana a vialidades principales con excelente movilidad.
+                    </p>
+                </article>
+
+                <article class="lvp-benefit-card">
+                    <span class="lvp-benefit-number">02</span>
+                    <h4>Entorno consolidado</h4>
+                    <p>
+                        Zona con servicios cercanos, hospitales, tiendas y puntos clave.
+                    </p>
+                </article>
+
+                <article class="lvp-benefit-card">
+                    <span class="lvp-benefit-number">03</span>
+                    <h4>Alta proyección</h4>
+                    <p>
+                        Terrenos ideales para desarrollos con visión comercial y patrimonial.
+                    </p>
+                </article>
+            </div>
+
+            <div class="lvp-color-bar">
                 <span class="c1"></span>
                 <span class="c2"></span>
                 <span class="c3"></span>
