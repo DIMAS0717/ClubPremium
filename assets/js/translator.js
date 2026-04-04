@@ -5,71 +5,97 @@ document.addEventListener('DOMContentLoaded', () => {
   const STORAGE_KEY = 'site_language';
   const DEFAULT_LANG = 'es';
 
-  const TEXT_SELECTOR = [
-    'header nav a',
-    '.mobile-nav a',
-    'main h1', 'main h2', 'main h3', 'main h4', 'main h5', 'main h6',
-    'main p', 'main li', 'main a', 'main button', 'main label',
-    'main span', 'main small', 'main option',
-    'footer h1', 'footer h2', 'footer h3', 'footer h4',
-    'footer p', 'footer li', 'footer a', 'footer span', 'footer small'
-  ].join(', ');
-
-  const PLACEHOLDER_SELECTOR = 'input[placeholder], textarea[placeholder]';
+  let textEntries = [];
+  let placeholderEntries = [];
 
   function hasLetters(text) {
     return /[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]/.test(text);
   }
 
-  function isExcluded(el) {
-    return (
+  function isInsideNoTranslate(el) {
+    if (!el) return false;
+
+    return !!(
       el.closest('[data-no-translate]') ||
-      el.matches('#langToggle') ||
-      el.matches('#themeToggle') ||
-      el.matches('#menuToggle')
+      el.id === 'langToggle' ||
+      el.id === 'themeToggle' ||
+      el.id === 'menuToggle'
     );
   }
 
-  function getTextElements() {
-    return [...document.querySelectorAll(TEXT_SELECTOR)].filter(el => {
-      if (isExcluded(el)) return false;
+  function shouldSkipElement(el) {
+    if (!el) return true;
+    if (isInsideNoTranslate(el)) return true;
 
-      // evitamos romper nodos complejos con mucho HTML interno
-      if (el.children.length > 0) return false;
+    const tag = el.tagName;
+    if (['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEXTAREA', 'CODE', 'PRE'].includes(tag)) return true;
+    if (el.isContentEditable) return true;
 
-      const text = (el.textContent || '').trim();
-      if (!text) return false;
-      if (text.length < 2) return false;
-      if (!hasLetters(text)) return false;
-
-      return true;
-    });
+    return false;
   }
 
-  function getPlaceholderElements() {
-    return [...document.querySelectorAll(PLACEHOLDER_SELECTOR)].filter(el => {
-      if (isExcluded(el)) return false;
+  function captureTextNodes() {
+    const walker = document.createTreeWalker(
+      document.body,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode(node) {
+          const parent = node.parentElement;
+          if (!parent) return NodeFilter.FILTER_REJECT;
+          if (shouldSkipElement(parent)) return NodeFilter.FILTER_REJECT;
 
-      const text = (el.getAttribute('placeholder') || '').trim();
-      if (!text) return false;
-      if (!hasLetters(text)) return false;
+          const raw = node.nodeValue || '';
+          const core = raw.trim();
 
-      return true;
-    });
+          if (!core) return NodeFilter.FILTER_REJECT;
+          if (core.length < 2) return NodeFilter.FILTER_REJECT;
+          if (!hasLetters(core)) return NodeFilter.FILTER_REJECT;
+
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      }
+    );
+
+    const entries = [];
+    let node;
+
+    while ((node = walker.nextNode())) {
+      const raw = node.nodeValue || '';
+      const matchPrefix = raw.match(/^\s*/);
+      const matchSuffix = raw.match(/\s*$/);
+
+      const prefix = matchPrefix ? matchPrefix[0] : '';
+      const suffix = matchSuffix ? matchSuffix[0] : '';
+      const core = raw.trim();
+
+      entries.push({
+        node,
+        raw,
+        prefix,
+        core,
+        suffix
+      });
+    }
+
+    return entries;
   }
 
-  function rememberOriginals() {
-    getTextElements().forEach(el => {
-      if (!el.dataset.originalText) {
-        el.dataset.originalText = el.textContent.trim();
-      }
-    });
+  function capturePlaceholderNodes() {
+    return [...document.querySelectorAll('input[placeholder], textarea[placeholder]')]
+      .filter(el => !isInsideNoTranslate(el))
+      .map(el => ({
+        el,
+        raw: el.getAttribute('placeholder') || ''
+      }))
+      .filter(item => {
+        const text = item.raw.trim();
+        return text && hasLetters(text);
+      });
+  }
 
-    getPlaceholderElements().forEach(el => {
-      if (!el.dataset.originalPlaceholder) {
-        el.dataset.originalPlaceholder = el.getAttribute('placeholder').trim();
-      }
-    });
+  function snapshotOriginalSpanish() {
+    textEntries = captureTextNodes();
+    placeholderEntries = capturePlaceholderNodes();
   }
 
   function updateToggleUI(currentLang, loading = false) {
@@ -80,16 +106,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function restoreSpanish() {
-    getTextElements().forEach(el => {
-      if (el.dataset.originalText) {
-        el.textContent = el.dataset.originalText;
+    textEntries.forEach(item => {
+      if (item.node) {
+        item.node.nodeValue = item.raw;
       }
     });
 
-    getPlaceholderElements().forEach(el => {
-      if (el.dataset.originalPlaceholder) {
-        el.setAttribute('placeholder', el.dataset.originalPlaceholder);
-      }
+    placeholderEntries.forEach(item => {
+      item.el.setAttribute('placeholder', item.raw);
     });
 
     updateToggleUI('es');
@@ -97,86 +121,65 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function translateToEnglish() {
-    const textElements = getTextElements();
-    const placeholderElements = getPlaceholderElements();
+    if (textEntries.length === 0 && placeholderEntries.length === 0) {
+      snapshotOriginalSpanish();
+    }
 
-    // si ya tradujimos una vez, usamos cache del DOM
-    const allTextCached = textElements.every(el => el.dataset.translatedEn);
-    const allPlaceholdersCached = placeholderElements.every(el => el.dataset.translatedEnPlaceholder);
+    const payloadItems = [
+      ...textEntries.map(item => ({
+        type: 'text',
+        ref: item,
+        value: item.core
+      })),
+      ...placeholderEntries.map(item => ({
+        type: 'placeholder',
+        ref: item,
+        value: item.raw.trim()
+      }))
+    ];
 
-    if (allTextCached && allPlaceholdersCached) {
-      textElements.forEach(el => {
-        el.textContent = el.dataset.translatedEn;
-      });
-
-      placeholderElements.forEach(el => {
-        el.setAttribute('placeholder', el.dataset.translatedEnPlaceholder);
-      });
-
+    if (payloadItems.length === 0) {
       updateToggleUI('en');
       localStorage.setItem(STORAGE_KEY, 'en');
       return;
     }
 
-    const payloadItems = [];
-
-    textElements.forEach(el => {
-      payloadItems.push({
-        type: 'text',
-        el,
-        value: el.dataset.originalText || el.textContent.trim()
-      });
-    });
-
-    placeholderElements.forEach(el => {
-      payloadItems.push({
-        type: 'placeholder',
-        el,
-        value: el.dataset.originalPlaceholder || el.getAttribute('placeholder').trim()
-      });
-    });
-
-    const texts = payloadItems.map(item => item.value);
-
     updateToggleUI('en', true);
 
     try {
-      const response = await fetch('api/translate.php', {
+      const response = await fetch('/../api/translate.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          source: 'es',
-          target: 'en',
-          texts
+          source: 'ES',
+          target: 'EN-US',
+          texts: payloadItems.map(item => item.value)
         })
       });
 
       const data = await response.json();
 
       if (!response.ok || !data.ok || !Array.isArray(data.translations)) {
-        throw new Error(data.message || 'No se pudo traducir la página.');
+        throw new Error(data.message || 'No se pudo traducir la página');
       }
 
       payloadItems.forEach((item, index) => {
         const translated = data.translations[index] ?? item.value;
 
         if (item.type === 'text') {
-          item.el.textContent = translated;
-          item.el.dataset.translatedEn = translated;
-        } else if (item.type === 'placeholder') {
-          item.el.setAttribute('placeholder', translated);
-          item.el.dataset.translatedEnPlaceholder = translated;
+          item.ref.node.nodeValue = item.ref.prefix + translated + item.ref.suffix;
+        } else {
+          item.ref.el.setAttribute('placeholder', translated);
         }
       });
 
       updateToggleUI('en');
       localStorage.setItem(STORAGE_KEY, 'en');
-
     } catch (error) {
       console.error(error);
-      alert('No se pudo traducir la página. Revisa tu API key y el endpoint PHP.');
+      alert('No se pudo traducir la página. Revisa tu API key, la URL de DeepL o el endpoint PHP.');
       updateToggleUI('es');
     }
   }
@@ -185,13 +188,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentLang = langToggle.dataset.currentLang || DEFAULT_LANG;
 
     if (currentLang === 'es') {
+      snapshotOriginalSpanish();
       await translateToEnglish();
     } else {
       restoreSpanish();
     }
   });
 
-  rememberOriginals();
+  snapshotOriginalSpanish();
 
   const savedLang = localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
   updateToggleUI(savedLang);

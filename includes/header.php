@@ -78,4 +78,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
 </header>
 
 <script src="./assets/js/header.js"></script>
+
+<script>
+    window.APP_BASE_URL = <?= json_encode(rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\')) ?>;
+</script>
+
 <script src="./assets/js/translator.js"></script>
