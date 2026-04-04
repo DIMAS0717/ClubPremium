@@ -84,6 +84,8 @@ if ($cacheDir === false) {
 
 $cacheDir .= DIRECTORY_SEPARATOR . 'translation_cache';
 
+file_put_contents(__DIR__ . '/debug_cache_path.txt', $cacheDir);
+
 if (!is_dir($cacheDir)) {
     if (!mkdir($cacheDir, 0775, true)) {
         http_response_code(500);
