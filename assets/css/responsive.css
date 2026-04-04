@@ -1937,96 +1937,99 @@
 
 
 /* =========================================================
-   RESPONSIVE - LOTES
-   ========================================================= */
+   RESPONSIVE - LOTES PREMIUM
+========================================================= */
 
-@media (max-width: 1100px) {
-    .lotes-top-content {
+@media (max-width: 1150px) {
+    .lotes-premium-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 38px;
     }
 
-    .lotes-right {
-        align-items: flex-start;
+    .lotes-copy-column {
+        padding-top: 0;
     }
 
-    .lotes-map-text {
+    .lotes-lead,
+    .lotes-body-text,
+    .lotes-points,
+    .lotes-price-card {
         max-width: 100%;
-        text-align: left;
+    }
+
+    .lotes-location-card {
+        grid-template-columns: 1fr;
+    }
+
+    .lotes-location-thumb {
+        min-height: 220px;
     }
 }
 
 @media (max-width: 768px) {
-    .lotes-hero-container {
-        min-height: 78vh;
-        padding: 125px 14px 170px;
+    .lotes-premium-section {
+        padding: 40px 14px 58px;
     }
 
-    .lotes-hero-bg {
-        background-attachment: scroll;
+    .lotes-main-title {
+        font-size: 2.3rem;
+        line-height: 1.02;
     }
 
-    .lotes-title-wrap {
-        gap: 14px;
+    .lotes-title-divider {
+        margin: 18px 0 22px;
     }
 
-    .lotes-title-deco {
-        width: 40px;
+    .lotes-price-card {
+        padding: 22px 20px;
+        border-radius: 20px;
     }
 
-    .lotes-title-underline {
-        width: 120px;
-        margin: 14px auto 18px;
+    .lotes-price-card-top {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .lotes-subtitle {
-        line-height: 1.65;
+    .lotes-video-card {
+        padding: 10px;
+        border-radius: 22px;
     }
 
-    .lotes-video-section {
-        margin-top: -95px;
-        padding: 0 14px 70px;
+    .lotes-video-wrapper {
+        border-radius: 16px;
     }
 
-    .lotes-top-content {
-        padding: 22px 18px 20px;
+    .lotes-location-card {
+        padding: 14px;
+        border-radius: 20px;
+    }
+
+    .lotes-location-thumb {
+        min-height: 180px;
+        border-radius: 14px;
     }
 
     .lotes-color-bar {
+        margin-top: 32px;
         height: 6px;
-    }
-
-    .lotes-price-box strong {
-        font-size: clamp(2.4rem, 10vw, 3.8rem);
     }
 }
 
 @media (max-width: 480px) {
-    .lotes-hero-container {
-        padding: 110px 12px 150px;
+    .lotes-main-title {
+        font-size: 1.95rem;
     }
 
-    .lotes-video-section {
-        margin-top: -80px;
-        padding: 0 12px 55px;
+    .lotes-lead,
+    .lotes-body-text,
+    .lotes-point,
+    .lotes-price-note,
+    .lotes-location-info p {
+        font-size: 0.95rem;
+        line-height: 1.75;
     }
 
-    .lotes-video-card {
-        border-radius: 20px;
-    }
-
-    .lotes-left h2 {
-        font-size: 1.12rem;
-    }
-
-    .lotes-left p,
-    .lotes-map-text {
-        font-size: 0.93rem;
-        line-height: 1.7;
-    }
-
-    .lotes-map-link {
+    .lotes-maps-btn {
         width: 100%;
-        justify-content: center;
     }
 }

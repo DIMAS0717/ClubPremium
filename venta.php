@@ -14,8 +14,8 @@ $page_title = 'Lotes en Venta - Villas Eureka';
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,72 +23,117 @@ $page_title = 'Lotes en Venta - Villas Eureka';
 
 <main class="page-main lotes-page">
 
-    <!-- HERO -->
-    <section class="lotes-hero-container">
-        <div class="lotes-hero-bg"></div>
-        <div class="lotes-hero-overlay"></div>
+    <section class="lotes-premium-section">
+        <div class="lotes-premium-shell">
 
-        <div class="lotes-header">
-            <div class="lotes-title-wrap">
-                <img src="assets/img/icon/iconoeureka.png" class="lotes-title-deco" alt="">
-                <h1 class="lotes-title">LOTES EN VENTA</h1>
-                <img src="assets/img/icon/iconoeureka.png" class="lotes-title-deco" alt="">
-            </div>
+            <div class="lotes-deco lotes-deco-1"></div>
+            <div class="lotes-deco lotes-deco-2"></div>
 
-            <div class="lotes-title-underline"></div>
+            <div class="lotes-premium-grid">
 
-            <p class="lotes-subtitle">
-                Oportunidad de inversión en una excelente ubicación dentro de la
-                Colonia Miramar, Maravillas del Campo, Manzanillo, Colima.
-            </p>
-        </div>
-    </section>
+                <!-- IZQUIERDA -->
+                <div class="lotes-copy-column">
 
-    <!-- BLOQUE PRINCIPAL -->
-    <section class="lotes-video-section">
-        <div class="lotes-video-card">
+                    <span class="lotes-kicker">OPORTUNIDAD DE INVERSIÓN</span>
 
-            <div class="lotes-top-content">
-                <div class="lotes-left">
-                    <h2>
+                    <h1 class="lotes-main-title">
+                        Lotes en venta en
+                        <span class="lotes-main-title-accent">Colonia Miramar</span>
+                    </h1>
+
+                    <div class="lotes-title-divider"></div>
+
+                    <p class="lotes-lead">
                         Se venden 14 terrenos de oportunidad para desarrolladoras o inversionistas
                         dentro de la Colonia Miramar, Maravillas del Campo, Manzanillo, Colima.
-                    </h2>
-
-                    <p>
-                        Están ubicados entre la calle Juárez y calle Miguel Domínguez, a tan solo
-                        media cuadra de la carretera con dirección Manzanillo - Cihuatlán y Puerto Vallarta.
-                        Las lotificaciones se encuentran a 15 minutos de los centros comerciales como lo son:
-                        Soriana, La Comercial Mexicana y Walmart. Además de los hospitales generales y
-                        particulares. Cabe mencionar que la distancia al mar es de solo 5 minutos.
                     </p>
 
-                    <div class="lotes-price-box">
-                        <span class="lotes-price-label">PRECIO</span>
-                        <strong>$5,000</strong>
-                        <small>por metro cuadrado</small>
+                    <p class="lotes-body-text">
+                        Están ubicados entre la calle Juárez y calle Miguel Domínguez, a tan solo
+                        media cuadra de la carretera con dirección Manzanillo - Cihuatlán y Puerto Vallarta.
+                        Las lotificaciones se encuentran a 15 minutos de centros comerciales como Soriana,
+                        La Comercial Mexicana y Walmart, además de hospitales generales y particulares.
+                        La distancia al mar es de solo 5 minutos.
+                    </p>
+
+                    <div class="lotes-points">
+                        <div class="lotes-point">
+                            <span class="lotes-point-icon">✓</span>
+                            <span>Ubicación estratégica para desarrollo</span>
+                        </div>
+
+                        <div class="lotes-point">
+                            <span class="lotes-point-icon">✓</span>
+                            <span>A solo 5 minutos del mar</span>
+                        </div>
+
+                        <div class="lotes-point">
+                            <span class="lotes-point-icon">✓</span>
+                            <span>Cerca de hospitales y supermercados</span>
+                        </div>
+
+                        <div class="lotes-point">
+                            <span class="lotes-point-icon">✓</span>
+                            <span>Ideal para inversión y lotificación</span>
+                        </div>
+                    </div>
+
+                    <div class="lotes-price-card">
+                        <div class="lotes-price-card-top">
+                            <span class="lotes-price-label">PRECIO POR m²</span>
+                            <span class="lotes-price-chip">Zona con potencial</span>
+                        </div>
+
+                        <div class="lotes-price-value">$5,000</div>
+
+                        <p class="lotes-price-note">
+                            Precio competitivo en una zona con crecimiento y excelente conectividad.
+                        </p>
                     </div>
                 </div>
 
-                <div class="lotes-right">
-                    <div class="lotes-map-preview">
-                        <img src="assets/img/lotes/lotes-preview.jpg" alt="Vista previa lotes">
+                <!-- DERECHA -->
+                <div class="lotes-media-column">
+
+                    <div class="lotes-video-frame">
+                        <div class="lotes-video-glow"></div>
+
+                        <div class="lotes-video-card">
+                            <div class="lotes-video-wrapper">
+                                <iframe
+                                    src="https://www.youtube.com/embed/hWKKNF4gU74?rel=0&modestbranding=1"
+                                    title="Video Lotes en Venta"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
                     </div>
 
-                    <p class="lotes-map-text">
-                        En el siguiente link podrá encontrar la ubicación geográfica en la cual usted podrá
-                        manipular el entorno en un ángulo 360°.
-                    </p>
+                    <div class="lotes-location-card">
+                        <div class="lotes-location-thumb">
+                            <img src="assets/img/lotes/lotes-preview.jpg" alt="Ubicación de lotes">
+                        </div>
 
-                    <a
-                        href="https://maps.google.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="lotes-map-link"
-                    >
-                        <span class="map-pin">📍</span>
-                        <span>Google Maps</span>
-                    </a>
+                        <div class="lotes-location-info">
+                            <span class="lotes-location-tag">UBICACIÓN Y ENTORNO</span>
+                            <h3>Consulta la zona antes de invertir</h3>
+                            <p>
+                                Visualiza el entorno y revisa la ubicación geográfica para conocer mejor
+                                el contexto del desarrollo.
+                            </p>
+
+                            <a
+                                href="https://maps.google.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="lotes-maps-btn"
+                            >
+                                Ver en Google Maps
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -99,15 +144,6 @@ $page_title = 'Lotes en Venta - Villas Eureka';
                 <span class="c4"></span>
                 <span class="c5"></span>
                 <span class="c6"></span>
-            </div>
-
-            <div class="lotes-video-wrapper">
-                <iframe
-                    src="https://www.youtube.com/embed/TU_VIDEO_ID?rel=0&modestbranding=1"
-                    title="Video Lotes en Venta"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
             </div>
 
         </div>
