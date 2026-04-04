@@ -71,15 +71,28 @@ if ($source === '' || $target === '') {
     exit;
 }
 
-$cacheDir = __DIR__ . '/../../storage/translation_cache';
+$cacheDir = realpath(__DIR__ . '/../../storage');
 
-if (!is_dir($cacheDir) && !mkdir($cacheDir, 0775, true) && !is_dir($cacheDir)) {
+if ($cacheDir === false) {
     http_response_code(500);
     echo json_encode([
         'ok' => false,
-        'message' => 'No se pudo crear la carpeta de caché'
+        'message' => 'No existe la carpeta storage en la raíz del proyecto'
     ]);
     exit;
+}
+
+$cacheDir .= DIRECTORY_SEPARATOR . 'translation_cache';
+
+if (!is_dir($cacheDir)) {
+    if (!mkdir($cacheDir, 0775, true)) {
+        http_response_code(500);
+        echo json_encode([
+            'ok' => false,
+            'message' => 'No se pudo crear la carpeta storage/translation_cache'
+        ]);
+        exit;
+    }
 }
 
 function buildCacheFilePath(string $cacheDir, string $source, string $target, string $text): string
