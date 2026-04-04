@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$configFile = __DIR__ . '/../config/deepl_config.php';
+$configFile = dirname(__DIR__) . '/config/deepl_config.php';
 
 if (!file_exists($configFile)) {
     http_response_code(500);
@@ -71,36 +71,65 @@ if ($source === '' || $target === '') {
     exit;
 }
 
-$cacheDir = realpath(__DIR__ . '/../../storage');
+/* =========================================================
+   RUTAS FIJAS DEL PROYECTO
+   ========================================================= */
 
-if ($cacheDir === false) {
+$projectRoot = dirname(__DIR__, 2);
+$storageRoot = $projectRoot . DIRECTORY_SEPARATOR . 'storage';
+$cacheDir    = $storageRoot . DIRECTORY_SEPARATOR . 'translation_cache';
+
+file_put_contents(__DIR__ . '/debug_cache_path.txt', $cacheDir);
+
+if (!is_dir($storageRoot)) {
     http_response_code(500);
     echo json_encode([
         'ok' => false,
-        'message' => 'No existe la carpeta storage en la raíz del proyecto'
+        'message' => 'La carpeta storage no existe'
     ]);
     exit;
 }
 
-$cacheDir .= DIRECTORY_SEPARATOR . 'translation_cache';
-
-file_put_contents(__DIR__ . '/debug_cache_path.txt', $cacheDir);
-
 if (!is_dir($cacheDir)) {
-    if (!mkdir($cacheDir, 0775, true)) {
-        http_response_code(500);
-        echo json_encode([
-            'ok' => false,
-            'message' => 'No se pudo crear la carpeta storage/translation_cache'
-        ]);
-        exit;
-    }
+    http_response_code(500);
+    echo json_encode([
+        'ok' => false,
+        'message' => 'La carpeta storage/translation_cache no existe'
+    ]);
+    exit;
 }
+
+if (!is_writable($cacheDir)) {
+    http_response_code(500);
+    echo json_encode([
+        'ok' => false,
+        'message' => 'La carpeta storage/translation_cache no tiene permisos de escritura'
+    ]);
+    exit;
+}
+
+$testFile = $cacheDir . DIRECTORY_SEPARATOR . 'write_test.txt';
+$writeOk = @file_put_contents($testFile, 'test');
+
+if ($writeOk === false) {
+    http_response_code(500);
+    echo json_encode([
+        'ok' => false,
+        'message' => 'PHP no puede escribir dentro de storage/translation_cache'
+    ]);
+    exit;
+}
+
+@unlink($testFile);
+
+/* =========================================================
+   FUNCIONES
+   ========================================================= */
 
 function buildCacheFilePath(string $cacheDir, string $source, string $target, string $text): string
 {
     $hash = md5($source . '|' . $target . '|' . $text);
-    return $cacheDir . '/' . $hash . '.txt';
+    return $cacheDir . DIRECTORY_SEPARATOR . $hash . '.txt';
 }
 
 function splitIntoBatches(array $indexedTexts, int $maxItems = 20, int $maxChars = 7000): array
@@ -185,6 +214,10 @@ function translateBatchDeepL(array $texts, string $source, string $target, strin
     return $translated;
 }
 
+/* =========================================================
+   PROCESO
+   ========================================================= */
+
 try {
     $results = [];
     $pending = [];
@@ -200,7 +233,8 @@ try {
         $cacheFile = buildCacheFilePath($cacheDir, $source, $target, $text);
 
         if (is_file($cacheFile)) {
-            $results[$i] = (string)file_get_contents($cacheFile);
+            $cached = file_get_contents($cacheFile);
+            $results[$i] = $cached !== false ? (string)$cached : '';
         } else {
             $pending[$i] = $text;
         }
@@ -219,7 +253,7 @@ try {
             $results[$originalIndex] = $translatedText;
 
             $cacheFile = buildCacheFilePath($cacheDir, $source, $target, $originalText);
-            file_put_contents($cacheFile, $translatedText);
+            @file_put_contents($cacheFile, $translatedText);
         }
     }
 
