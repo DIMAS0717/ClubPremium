@@ -143,21 +143,20 @@ body {
 .cs-socials {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  padding-top: 10px;
+  gap: 16px;
+  padding-top: 6px;
 }
 
 .cs-socials .cs-label {
-  font-size: 15px;
-  font-weight: 600;
-  opacity: 0.95;
+  font-size: 14px;
+  opacity: 0.9;
   margin-bottom: 0;
 }
 
 .cs-icons {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
@@ -165,32 +164,24 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 54px;
-  height: 54px;
-  min-width: 54px;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.10);
-  color: #ffffff;
+  backdrop-filter: blur(6px);
+  font-size: 20px;
   text-decoration: none;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  font-size: 24px;
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .cs-social i {
-  font-size: 24px;
   line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .cs-social:hover {
-  transform: translateY(-3px) scale(1.08);
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px) scale(1.06);
+  background: rgba(255, 255, 255, 0.22);
 }
 
 .cs-social.facebook:hover {
@@ -206,7 +197,7 @@ body {
 }
 
 .cs-social.tiktok:hover {
-  background: #111111;
+  background: #000;
 }
 
 /* ==================== PANEL DERECHO ==================== */
