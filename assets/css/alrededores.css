@@ -212,6 +212,7 @@ h4,
   height: 22px;
   flex-shrink: 0;
   color: #1f3d68;
+  filter: drop-shadow(0 0 4px rgba(79, 163, 247, 0.2));
 }
 
 .around-map-label {
