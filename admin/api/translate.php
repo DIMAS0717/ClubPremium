@@ -1,6 +1,4 @@
 <?php
-declare(strict_types=1);
-
 header('Content-Type: application/json; charset=utf-8');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -12,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$configFile = dirname(__DIR__) . '/config/deepl_config.php';
+$configFile = __DIR__ . '/../config/deepl_config.php';
 
 if (!file_exists($configFile)) {
     http_response_code(500);
@@ -25,163 +23,69 @@ if (!file_exists($configFile)) {
 
 $config = require $configFile;
 
-$apiKey  = trim((string)($config['deepl_api_key'] ?? ''));
-$apiBase = rtrim((string)($config['deepl_api_base'] ?? ''), '/');
+$apiKey  = trim((string)($config['api_key'] ?? $config['deepl_api_key'] ?? ''));
+$apiBase = rtrim((string)($config['deepl_api_base'] ?? 'https://api-free.deepl.com'), '/');
 
-if ($apiKey === '' || $apiBase === '') {
+if ($apiKey === '') {
     http_response_code(500);
     echo json_encode([
         'ok' => false,
-        'message' => 'Falta deepl_api_key o deepl_api_base en la configuración'
+        'message' => 'API KEY no configurada'
     ]);
     exit;
 }
 
-$rawInput = file_get_contents('php://input');
-$input = json_decode($rawInput, true);
+$data = json_decode(file_get_contents('php://input'), true);
 
-if (!is_array($input)) {
-    http_response_code(400);
+$texts = $data['texts'] ?? [];
+$targetLang = strtoupper(trim((string)($data['target'] ?? $data['target_lang'] ?? 'EN-US')));
+$sourceLang = strtoupper(trim((string)($data['source'] ?? 'ES')));
+
+if (!is_array($texts) || empty($texts)) {
     echo json_encode([
         'ok' => false,
-        'message' => 'JSON inválido'
+        'message' => 'No se recibieron textos para traducir'
     ]);
     exit;
 }
 
-$texts  = $input['texts'] ?? [];
-$source = strtoupper(trim((string)($input['source'] ?? 'ES')));
-$target = strtoupper(trim((string)($input['target'] ?? 'EN-US')));
-
-if (!is_array($texts)) {
-    http_response_code(400);
-    echo json_encode([
-        'ok' => false,
-        'message' => 'texts debe ser un arreglo'
-    ]);
-    exit;
-}
-
-if ($source === '' || $target === '') {
-    http_response_code(400);
-    echo json_encode([
-        'ok' => false,
-        'message' => 'source y target son obligatorios'
-    ]);
-    exit;
-}
-
-/* =========================================================
-   RUTAS FIJAS DEL PROYECTO
-   ========================================================= */
-
-$projectRoot = dirname(__DIR__, 2);
-$storageRoot = $projectRoot . DIRECTORY_SEPARATOR . 'storage';
-$cacheDir    = $storageRoot . DIRECTORY_SEPARATOR . 'translation_cache';
-
-file_put_contents(__DIR__ . '/debug_cache_path.txt', $cacheDir);
-
-if (!is_dir($storageRoot)) {
-    http_response_code(500);
-    echo json_encode([
-        'ok' => false,
-        'message' => 'La carpeta storage no existe'
-    ]);
-    exit;
-}
+$cacheDir = __DIR__ . '/../../storage/translation_cache/';
 
 if (!is_dir($cacheDir)) {
-    http_response_code(500);
-    echo json_encode([
-        'ok' => false,
-        'message' => 'La carpeta storage/translation_cache no existe'
-    ]);
-    exit;
-}
-
-if (!is_writable($cacheDir)) {
-    http_response_code(500);
-    echo json_encode([
-        'ok' => false,
-        'message' => 'La carpeta storage/translation_cache no tiene permisos de escritura'
-    ]);
-    exit;
-}
-
-$testFile = $cacheDir . DIRECTORY_SEPARATOR . 'write_test.txt';
-$writeOk = @file_put_contents($testFile, 'test');
-
-if ($writeOk === false) {
-    http_response_code(500);
-    echo json_encode([
-        'ok' => false,
-        'message' => 'PHP no puede escribir dentro de storage/translation_cache'
-    ]);
-    exit;
-}
-
-@unlink($testFile);
-
-/* =========================================================
-   FUNCIONES
-   ========================================================= */
-
-function buildCacheFilePath(string $cacheDir, string $source, string $target, string $text): string
-{
-    $hash = md5($source . '|' . $target . '|' . $text);
-    return $cacheDir . DIRECTORY_SEPARATOR . $hash . '.txt';
-}
-
-function splitIntoBatches(array $indexedTexts, int $maxItems = 20, int $maxChars = 7000): array
-{
-    $batches = [];
-    $currentBatch = [];
-    $currentChars = 0;
-
-    foreach ($indexedTexts as $index => $text) {
-        $length = mb_strlen($text, 'UTF-8');
-
-        if (
-            !empty($currentBatch) &&
-            (count($currentBatch) >= $maxItems || ($currentChars + $length) > $maxChars)
-        ) {
-            $batches[] = $currentBatch;
-            $currentBatch = [];
-            $currentChars = 0;
-        }
-
-        $currentBatch[$index] = $text;
-        $currentChars += $length;
+    if (!mkdir($cacheDir, 0777, true)) {
+        echo json_encode([
+            'ok' => false,
+            'message' => 'No se pudo crear la carpeta storage/translation_cache'
+        ]);
+        exit;
     }
-
-    if (!empty($currentBatch)) {
-        $batches[] = $currentBatch;
-    }
-
-    return $batches;
 }
 
-function translateBatchDeepL(array $texts, string $source, string $target, string $apiKey, string $apiBase): array
+function translateWithDeepL(array $texts, string $sourceLang, string $targetLang, string $apiKey, string $apiBase): array
 {
     $url = $apiBase . '/v2/translate';
 
     $payload = [
-        'text'        => array_values($texts),
-        'source_lang' => $source,
-        'target_lang' => $target
+        'text' => array_values($texts),
+        'source_lang' => $sourceLang,
+        'target_lang' => $targetLang
     ];
 
     $ch = curl_init($url);
 
     curl_setopt_array($ch, [
-        CURLOPT_POST           => true,
+        CURLOPT_POST => true,
         CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_HTTPHEADER     => [
+        CURLOPT_HTTPHEADER => [
             'Authorization: DeepL-Auth-Key ' . $apiKey,
             'Content-Type: application/json'
         ],
-        CURLOPT_POSTFIELDS     => json_encode($payload, JSON_UNESCAPED_UNICODE),
-        CURLOPT_TIMEOUT        => 30,
+        CURLOPT_POSTFIELDS => json_encode($payload, JSON_UNESCAPED_UNICODE),
+        CURLOPT_TIMEOUT => 30,
+
+        // SOLO LOCAL
+        CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_SSL_VERIFYHOST => 0,
     ]);
 
     $response = curl_exec($ch);
@@ -195,65 +99,61 @@ function translateBatchDeepL(array $texts, string $source, string $target, strin
     $httpCode = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
 
-    $data = json_decode($response, true);
+    $result = json_decode($response, true);
 
     if ($httpCode >= 400) {
-        $message = $data['message'] ?? 'Error de DeepL';
-        throw new RuntimeException($message);
+        $deepLMessage = $result['message'] ?? $result['detail'] ?? ('HTTP ' . $httpCode . ' en DeepL');
+        throw new RuntimeException('DeepL respondió: ' . $deepLMessage);
     }
 
-    if (!isset($data['translations']) || !is_array($data['translations'])) {
-        throw new RuntimeException('Respuesta inválida de DeepL');
+    if (!isset($result['translations']) || !is_array($result['translations'])) {
+        throw new RuntimeException('Respuesta inválida de DeepL: ' . $response);
     }
 
     $translated = [];
-    foreach ($data['translations'] as $item) {
+    foreach ($result['translations'] as $item) {
         $translated[] = (string)($item['text'] ?? '');
     }
 
     return $translated;
 }
 
-/* =========================================================
-   PROCESO
-   ========================================================= */
-
 try {
     $results = [];
-    $pending = [];
+    $pendingIndexes = [];
+    $pendingTexts = [];
 
-    foreach ($texts as $i => $rawText) {
+    foreach ($texts as $index => $rawText) {
         $text = trim((string)$rawText);
 
         if ($text === '') {
-            $results[$i] = '';
+            $results[$index] = '';
             continue;
         }
 
-        $cacheFile = buildCacheFilePath($cacheDir, $source, $target, $text);
+        $cacheKey = md5($text . '|' . $sourceLang . '|' . $targetLang);
+        $cacheFile = $cacheDir . $cacheKey . '.txt';
 
-        if (is_file($cacheFile)) {
-            $cached = file_get_contents($cacheFile);
-            $results[$i] = $cached !== false ? (string)$cached : '';
+        if (file_exists($cacheFile)) {
+            $results[$index] = (string)file_get_contents($cacheFile);
         } else {
-            $pending[$i] = $text;
+            $pendingIndexes[] = $index;
+            $pendingTexts[] = $text;
         }
     }
 
-    $batches = splitIntoBatches($pending);
+    if (!empty($pendingTexts)) {
+        $translatedBatch = translateWithDeepL($pendingTexts, $sourceLang, $targetLang, $apiKey, $apiBase);
 
-    foreach ($batches as $batch) {
-        $translations = translateBatchDeepL($batch, $source, $target, $apiKey, $apiBase);
-        $indexes = array_keys($batch);
-
-        foreach ($translations as $offset => $translatedText) {
-            $originalIndex = $indexes[$offset];
-            $originalText  = $batch[$originalIndex];
+        foreach ($translatedBatch as $i => $translatedText) {
+            $originalIndex = $pendingIndexes[$i];
+            $originalText = trim((string)$texts[$originalIndex]);
 
             $results[$originalIndex] = $translatedText;
 
-            $cacheFile = buildCacheFilePath($cacheDir, $source, $target, $originalText);
-            @file_put_contents($cacheFile, $translatedText);
+            $cacheKey = md5($originalText . '|' . $sourceLang . '|' . $targetLang);
+            $cacheFile = $cacheDir . $cacheKey . '.txt';
+            file_put_contents($cacheFile, $translatedText);
         }
     }
 
