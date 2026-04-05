@@ -880,7 +880,7 @@ body.dark-mode .bed-distribution {
 }
 
 body.dark-mode .bed-distribution h4 {
-  color: #a9d2f5 !important;
+  color: #d0c5b8 !important;
 }
 
 body.dark-mode .bed-distribution,
@@ -906,11 +906,11 @@ body.dark-mode .villa-text-wrapper {
   color: #d0c5b8 !important;
 }
 
-body.dark-mode .villa-title {
-  color: #b8d8f3 !important;
+body.dark-mode .villa-text-wrapper .villa-title {
+  color: #b8d8f3 !important; /* mismo tono azul de iconos */
 }
 
-body.dark-mode .villa-title small {
+body.dark-mode .villa-text-wrapper small {
   color: #c4b8aa !important;
 }
 
