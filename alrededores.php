@@ -214,7 +214,7 @@ $page_title = 'Alrededores - Villas Eureka';
             </article>
 
             <article class="around-activity-card restaurant-delfos">
-                <div class="around-activity-badge">Mariscos</div>
+                <div class="around-activity-badge">Comida</div>
                 <div class="around-activity-overlay">
                     <h3>Restaurante Delfos</h3>
                     <p>Especialidades del mar, pescados y mariscos de calidad.</p>
@@ -222,11 +222,11 @@ $page_title = 'Alrededores - Villas Eureka';
                 </div>
             </article>
 
-            <article class="around-activity-card restaurant-eureka">
-                <div class="around-activity-badge">Local</div>
+            <article class="around-activity-card experience-food">
+                <div class="around-activity-badge">Mariscos</div>
                 <div class="around-activity-overlay">
-                    <h3>Tienda Eureka</h3>
-                    <p>Tienda local con artesanías y productos típicos de la región.</p>
+                    <h3>Comidas típicas</h3>
+                    <p>Platillos tradicionales y mariscos frescos frente al mar.</p>
                     <a href="#" class="around-btn">Ver más →</a>
                 </div>
             </article>
