@@ -453,15 +453,18 @@ h4,
 }
 
 .badge-green {
-  background: rgba(22, 163, 74, 0.9);
+  background: linear-gradient(135deg, #118039, #22c55e);
+  color: #ffffff;
 }
 
 .badge-blue {
-  background: rgba(37, 99, 235, 0.9);
+  background: linear-gradient(135deg, #173457, #485d7c);
+  color: #ffffff;
 }
 
 .badge-gray {
-  background: rgba(51, 65, 85, 0.9);
+  background: linear-gradient(135deg, #334155, #5f718a);
+  color: #ffffff;
 }
 
 /* =========================================================

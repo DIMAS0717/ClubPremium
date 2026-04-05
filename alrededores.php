@@ -169,7 +169,7 @@ $page_title = 'Alrededores - Villas Eureka';
 
         <div class="around-activities-grid">
             <article class="around-activity-card experience-banana">
-                <div class="around-activity-badge badge-blue">Diversión</div>
+                <div class="around-activity-badge badge-gray">Diversión</div>
                 <div class="around-activity-overlay">
                     <h3>Playas</h3>
                     <p>Actividad divertida para grupos y familias con vista al mar.</p>
@@ -205,7 +205,7 @@ $page_title = 'Alrededores - Villas Eureka';
 
         <div class="around-activities-grid">
             <article class="around-activity-card restaurant-oasis">
-                <div class="around-activity-badge badge-gray">Gastronomía</div>
+                <div class="around-activity-badge badge-blue">Gastronomía</div>
                 <div class="around-activity-overlay">
                     <h3>Restaurante OASIS</h3>
                     <p>Ambiente agradable y comida fresca con vista al mar.</p>
@@ -223,7 +223,7 @@ $page_title = 'Alrededores - Villas Eureka';
             </article>
 
             <article class="around-activity-card experience-food">
-                <div class="around-activity-badge badge-green">Sabor</div>
+                <div class="around-activity-badge badge-blue">Sabor</div>
                 <div class="around-activity-overlay">
                     <h3>Comidas típicas</h3>
                     <p>Platillos tradicionales y mariscos frescos frente al mar.</p>
