@@ -1242,23 +1242,26 @@
     text-transform: uppercase !important;
   }
 
+  @media (max-width: 768px) {
   .around-btn {
-    position: relative !important;
-    z-index: 2 !important;
+    align-self: flex-start !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 12px 18px !important;
+    padding: 10px 20px !important;
     border-radius: 999px !important;
-    background: rgba(7, 23, 54, 0.96) !important;
+    background: transparent !important;
     color: #ffffff !important;
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
-    text-decoration: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    font-family: 'Inter', sans-serif !important;
     font-size: 0.9rem !important;
-    font-weight: 700 !important;
-    line-height: 1 !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18) !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
+    box-shadow: none !important;
   }
+}
 }
 
 @media (max-width: 768px) {
