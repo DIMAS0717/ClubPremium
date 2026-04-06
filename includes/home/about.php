@@ -16,7 +16,7 @@
       <ul class="about-list">
         <li>Asesoría legal y financiera completa</li>
         <li>Gestión de propiedades y mantenimiento</li>
-        <li>Propiedades vacacionales <br>en Manzanillo</li>
+        <li>Propiedades vacacionales en Manzanillo</li>
       </ul>
 
       <a href="contacto.php" class="about-link">Contacta a nuestro equipo</a>
