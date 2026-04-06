@@ -589,9 +589,12 @@ body.dark-mode .page-main {
 /* =========================
    TEXTOS
 ========================= */
-body.dark-mode .page-main.renta-page .section h1,
-body.dark-mode .renta-page .section h1,
+body.dark-mode .page-main.renta-page,
+body.dark-mode .renta-page,
 body.dark-mode .home-property-title {
+  color: #A2C7E7 !important;
+}
+body.dark-mode .section h1{
   color: #A2C7E7 !important;
 }
 
