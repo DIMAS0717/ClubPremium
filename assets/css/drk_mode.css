@@ -202,17 +202,6 @@ body.dark-mode .about-list li::before {
   background: #c6a25a !important;
   color: #1b1e21 !important;
 }
-
-/* ================= LINK ================= */
-
-body.dark-mode .about-link {
-  color: #d1a75b !important;
-}
-
-body.dark-mode .about-link:hover {
-  color: #f0c979 !important;
-}
-
 /* ================= IMAGEN ================= */
 
 body.dark-mode .about-image img {

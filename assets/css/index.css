@@ -794,6 +794,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
+  color: #ffffff;
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0) 20%,
