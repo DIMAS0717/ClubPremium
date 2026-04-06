@@ -108,7 +108,14 @@
   text-decoration: none;
   word-break: break-word;
 }
-
+/* SOLO para el icono del teléfono */
+.ve-contact-item:nth-child(3) .ve-icon-img {
+  transform: translateY(20px);
+}
+/* SOLO para el icono del teléfono */
+.ve-contact-item:nth-child(4) .ve-icon-img {
+  transform: translateY(5px);
+}
 /* ================== LINKS ================== */
 
 .ve-links {
