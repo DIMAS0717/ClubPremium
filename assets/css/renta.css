@@ -652,3 +652,7 @@ a {
   min-height: 44px;
   padding: 10px 14px;
 }
+
+body.dark-mode .section h1{
+  color: #A2C7E7 !important;
+}

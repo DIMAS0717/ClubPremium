@@ -158,7 +158,7 @@ body.dark-mode .destacados-container .villas-grid::-webkit-scrollbar-thumb {
 
 
 /* =========================================================
-   DARK MODE - ABOUT US (ESTILO IMG1)
+   DARK MODE - ABOUT US 
    ========================================================= */
 
 /* FONDO GENERAL */
@@ -287,9 +287,10 @@ body.dark-mode .villas-lista li {
 
 /* check icon */
 body.dark-mode .villas-lista li::before {
-  background: linear-gradient(135deg, #c6a25a 0%, #8f6b2f 100%) !important;
+  background: #c6a25a !important;
   color: #1b1e21 !important;
-  box-shadow: 0 6px 14px rgba(198, 162, 90, 0.25) !important;
+  box-shadow: none !important;
+  border-radius: 50%; /* por si acaso */
 }
 
 /* ================= BOTÓN ================= */
@@ -592,9 +593,6 @@ body.dark-mode .page-main {
 body.dark-mode .page-main.renta-page,
 body.dark-mode .renta-page,
 body.dark-mode .home-property-title {
-  color: #A2C7E7 !important;
-}
-body.dark-mode .section h1{
   color: #A2C7E7 !important;
 }
 
