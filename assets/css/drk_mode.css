@@ -1666,7 +1666,7 @@ body.dark-mode .admin-table {
 }
 
 /* =========================================================
-   DARK MODE SOLO COLORES
+   DARK MODE Pnl principal 
 ========================================================= */
 
 body.dark-mode {
@@ -1939,21 +1939,19 @@ body.dark-mode .admin-table tr:hover td {
 }
 
 /* =========================================================
-   FIX FONDO DETRÁS DEL SIDEBAR (SIN MOVER NADA)
+   FIX FONDO DETRÁS DEL SIDEBAR
 ========================================================= */
 
-/* Fondo global del panel */
 body.dark-mode {
   background: #2f7597 !important;
 }
 
-/* Asegura que ningún contenedor meta negro */
 body.dark-mode,
 body.dark-mode html {
   background: #2f7597 !important;
 }
 
-/* Si hay wrapper general */
+
 body.dark-mode .admin-wrapper,
 body.dark-mode .container,
 body.dark-mode main {
