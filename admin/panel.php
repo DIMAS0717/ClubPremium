@@ -333,6 +333,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-<script src="../assets/js/admin/header.js"></script>
+<script src="../assets/js/header.js"></script>
 </body>
 </html>

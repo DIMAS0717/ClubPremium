@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileLinks = document.querySelectorAll('.mobile-nav a');
     const themeToggle = document.getElementById('themeToggle');
     const langToggle = document.getElementById('langToggle');
-    const logoLink = document.getElementById('hiddenAdminTrigger');
+    const footerAdminTrigger = document.getElementById('hiddenAdminTriggerFooter');
 
     /* =========================
        HEADER SCROLL
@@ -20,8 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
+    if (header) {
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    }
 
     /* =========================
        MENÚ MÓVIL
@@ -109,8 +111,6 @@ document.addEventListener('DOMContentLoaded', function () {
     /* =========================
        ACCESO OCULTO ADMIN
     ========================= */
-    const footerAdminTrigger = document.getElementById('hiddenAdminTriggerFooter');
-
     if (footerAdminTrigger) {
         let clickCount = 0;
         let clickTimer;
