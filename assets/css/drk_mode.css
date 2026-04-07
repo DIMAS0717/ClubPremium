@@ -4,11 +4,12 @@
 
 body.dark-mode .destacados-container {
   background: linear-gradient(
-    180deg,
-    #24282c 0%,
-    #202428 50%,
-    #1c2024 100%
-  ) !important;
+  180deg,
+  #202428 0%,
+  #1a1e22 50%,
+  #161a1d 100%
+);
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
 }
 /* contenedor interno */
 body.dark-mode .destacados-container .page-centered {
@@ -164,11 +165,12 @@ body.dark-mode .destacados-container .villas-grid::-webkit-scrollbar-thumb {
 /* FONDO GENERAL */
 body.dark-mode .about-section {
   background: linear-gradient(
-    180deg,
-    #1b1e21 0%,
-    #181b1e 50%,
-    #15181b 100%
-  ) !important;
+  180deg,
+  #1b1e21 0%,
+  #181b1e 50%,
+  #15181b 100%
+);
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
 }
 
 /* ================= TEXTOS ================= */
@@ -241,11 +243,12 @@ body.dark-mode .star-icon {
 /* ================= FONDO ================= */
 body.dark-mode .villas {
   background: linear-gradient(
-    180deg,
-    #1b1e21 0%,
-    #181b1e 50%,
-    #15181b 100%
-  ) !important;
+  180deg,
+  #181c20 0%,
+  #14181c 50%,
+  #101417 100%
+);
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
 }
 
 /* ================= TEXTOS ================= */
@@ -435,6 +438,7 @@ body.dark-mode .ubicacion-premium {
     #181b1e 52%,
     #15181b 100%
   ) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
 }
 
 /* ================= TEXTO ================= */
