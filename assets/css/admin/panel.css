@@ -124,6 +124,27 @@ a {
   align-items: center;
 }
 
+/*=================boton drk mode*/
+.panel-theme-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 54px;
+  height: 54px;
+  border: none;
+  border-radius: 50%;
+  background: #0f1419;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.28);
+}
+
+body.dark-mode .panel-theme-toggle {
+  background: #f4f7fb;
+  color: #0f1419;
+}
 /* =========================
    SIDEBAR
 ========================= */
@@ -1655,17 +1676,3 @@ footer {
   }
 }
 
-.dark-toggle{
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 999;
-  width: 52px;
-  height: 52px;
-  border: none;
-  border-radius: 50%;
-  background: #0f1419;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 10px 24px rgba(0,0,0,.28);
-}
