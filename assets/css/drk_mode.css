@@ -1297,7 +1297,7 @@ body.dark-mode .cs-submit:hover {
   body.dark-mode .cs-contact-section {
     min-height: auto !important;
     height: auto !important;
-    padding-bottom: 0 !important;
+    padding-bottom: 30px !important;
     margin-bottom: 0 !important;
     background-position: center center !important;
   }
@@ -1316,14 +1316,16 @@ body.dark-mode .cs-submit:hover {
   }
 }
 
+
 @media (max-width: 480px) {
   body.dark-mode .cs-contact-section {
     min-height: auto !important;
     height: auto !important;
-    padding-bottom: 0 !important;
+    padding-bottom: 50px !important;
     margin-bottom: 0 !important;
   }
 }
+
 
 
 /* =========================================================
