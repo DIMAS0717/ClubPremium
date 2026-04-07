@@ -77,10 +77,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    if (themeToggle) {
-        const savedTheme = localStorage.getItem('siteTheme') || 'light';
-        applyTheme(savedTheme);
+    const savedTheme = localStorage.getItem('siteTheme') || 'light';
+    applyTheme(savedTheme);
 
+    if (themeToggle) {
         themeToggle.addEventListener('click', function () {
             const isDark = document.body.classList.contains('dark-mode');
             applyTheme(isDark ? 'light' : 'dark');
@@ -111,22 +111,22 @@ document.addEventListener('DOMContentLoaded', function () {
     ========================= */
     const footerAdminTrigger = document.getElementById('hiddenAdminTriggerFooter');
 
-if (footerAdminTrigger) {
-    let clickCount = 0;
-    let clickTimer;
+    if (footerAdminTrigger) {
+        let clickCount = 0;
+        let clickTimer;
 
-    footerAdminTrigger.addEventListener('click', function () {
-        clickCount++;
+        footerAdminTrigger.addEventListener('click', function () {
+            clickCount++;
 
-        clearTimeout(clickTimer);
-        clickTimer = setTimeout(() => {
-            clickCount = 0;
-        }, 1800);
-
-        if (clickCount === 5) {
             clearTimeout(clickTimer);
-            window.location.href = 'admin/login.php';
-        }
-    });
-}
+            clickTimer = setTimeout(() => {
+                clickCount = 0;
+            }, 1800);
+
+            if (clickCount === 5) {
+                clearTimeout(clickTimer);
+                window.location.href = 'admin/login.php';
+            }
+        });
+    }
 });

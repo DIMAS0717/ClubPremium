@@ -1654,3 +1654,18 @@ footer {
     padding: 8px;
   }
 }
+
+.dark-toggle{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  background: #0f1419;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0,0,0,.28);
+}
