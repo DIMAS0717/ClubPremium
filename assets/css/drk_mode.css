@@ -1289,7 +1289,41 @@ body.dark-mode .cs-submit:hover {
   background: linear-gradient(135deg, #1f8e80, #37998b) !important;
 }
 
+/* =========================================
+   FIX CONTACTO MOBILE DARK MODE
+   quita el espacio gris arriba del footer
+========================================= */
+@media (max-width: 768px) {
+  body.dark-mode .cs-contact-section {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    background-position: center center !important;
+  }
 
+  body.dark-mode .cs-contact-box {
+    margin-bottom: 0 !important;
+  }
+
+  body.dark-mode .page-main {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  body.dark-mode .ve-footer {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body.dark-mode .cs-contact-section {
+    min-height: auto !important;
+    height: auto !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}
 
 
 /* =========================================================
