@@ -331,15 +331,12 @@ body.dark-mode .slider-btn:hover {
 
 /* ================= FONDO GENERAL ================= */
 body.dark-mode .villas-eureka-beneficios {
-  background:
-    radial-gradient(circle at top left, rgba(198, 162, 90, 0.05), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.02), transparent 24%),
-    linear-gradient(
-      180deg,
-      #1b1e21 0%,
-      #181b1e 52%,
-      #15181b 100%
-    ) !important;
+  background: linear-gradient(
+  180deg,
+  #1a1e22 0%,
+  #13171a 50%,
+  #0e1114 100%
+);
 }
 
 body.dark-mode .villas-eureka-beneficios::before {
