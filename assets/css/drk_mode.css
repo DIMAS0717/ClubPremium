@@ -1665,3 +1665,297 @@ body.dark-mode .admin-table {
   background: #121b22;
 }
 
+/* =========================================================
+   DARK MODE SOLO COLORES
+========================================================= */
+
+body.dark-mode {
+  --color-text: #eef4f8;
+  --color-text-light: #a9b8c4;
+  --color-background: #101820;
+  --color-white: #121b23;
+  background: #2f7597;
+  color: var(--color-text);
+}
+
+/* Fondo general */
+body.dark-mode .right-side {
+  background: #2f7597;
+}
+
+/* Sidebar - solo color */
+body.dark-mode .left-side {
+  background: linear-gradient(180deg, #0a4768 0%, #063954 55%, #03273c 100%);
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Textos sidebar */
+body.dark-mode .left-side h1,
+body.dark-mode .profile-name,
+body.dark-mode .sidebar-nav a {
+  color: #f3f7fa;
+}
+
+body.dark-mode .left-side h1::after {
+  background-color: #2e9ad7;
+}
+
+body.dark-mode .profile-role {
+  background: rgba(0, 0, 0, 0.16);
+  color: #a7d8ff;
+}
+
+/* Avatar */
+body.dark-mode .profile-avatar {
+  background: #143c54;
+  border-color: #2d87b8;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+}
+
+body.dark-mode .avatar-initial {
+  background: #357ca2;
+  color: #ffffff;
+}
+
+/* Navegación sidebar */
+body.dark-mode .sidebar-nav li.active {
+  background-color: rgba(0, 0, 0, 0.18);
+  box-shadow: inset 3px 0 0 #42a6e0;
+}
+
+body.dark-mode .sidebar-nav li:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .sidebar-nav a i {
+  color: #9ad7ff;
+}
+
+body.dark-mode .sidebar-nav li.active a::before {
+  background-color: #42a6e0;
+}
+
+/* Topbar */
+body.dark-mode .topbar-user {
+  background: rgba(0, 0, 0, 0.16);
+  color: #eaf4fb;
+}
+
+body.dark-mode .access-info {
+  color: #e0edf5;
+}
+
+body.dark-mode .access-info i {
+  color: #8dd1ff;
+}
+
+/* Banner */
+body.dark-mode .rectangle {
+  background: linear-gradient(180deg, #337ea7 0%, #2b7398 100%);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+body.dark-mode .rectangle-text h1,
+body.dark-mode .rectangle-text p {
+  color: #f7fbff;
+}
+
+/* Secciones */
+body.dark-mode .content-section {
+  background: linear-gradient(180deg, #0f161d 0%, #0b1117 100%);
+  border-color: rgba(93, 151, 194, 0.10);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+body.dark-mode .content-section h2 {
+  color: #67bdf4;
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .content-section h2::before {
+  color: #67bdf4;
+}
+
+body.dark-mode .content-section h2::after {
+  background: #33a3e3;
+}
+
+/* Cards */
+body.dark-mode .info-item,
+body.dark-mode .stat-item,
+body.dark-mode .article-item,
+body.dark-mode .no-items,
+body.dark-mode #file-name-display,
+body.dark-mode .admin-table {
+  background: #121b22;
+  color: #eef4f8;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+body.dark-mode .info-item::before {
+  background: #2f97d5;
+}
+
+body.dark-mode .info-label,
+body.dark-mode .article-date,
+body.dark-mode .comment-text,
+body.dark-mode .stat-label,
+body.dark-mode .no-items {
+  color: #9eb0bc;
+}
+
+body.dark-mode .info-value,
+body.dark-mode .stat-value,
+body.dark-mode .article-item a {
+  color: #eef5fa;
+}
+
+body.dark-mode .article-item:hover {
+  background: #16212a;
+  border-left-color: #3399d8;
+}
+
+body.dark-mode .article-date {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+body.dark-mode .comment-text {
+  border-left-color: rgba(255, 255, 255, 0.10);
+}
+
+/* Inputs normales */
+body.dark-mode input:not([type="file"]),
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #2f3336;
+  color: #f3f7fa;
+  border: none;
+  box-shadow: none;
+}
+
+body.dark-mode input:not([type="file"])::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #9aa6b2;
+}
+
+body.dark-mode input:not([type="file"]):focus,
+body.dark-mode select:focus,
+body.dark-mode textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(58, 162, 222, 0.22);
+}
+
+/* File input */
+body.dark-mode input[type="file"] {
+  background: #2f3336;
+  color: #cfd9e1;
+  border: none;
+  box-shadow: none;
+}
+
+body.dark-mode input[type="file"]::file-selector-button {
+  background: #dfe5ea;
+  color: #11161b;
+  border: none;
+}
+
+body.dark-mode input[type="file"]::-webkit-file-upload-button {
+  background: #dfe5ea;
+  color: #11161b;
+  border: none;
+}
+
+/* Botones */
+body.dark-mode .btn-primary,
+body.dark-mode .file-input-label {
+  background-color: #3d8ec0;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+body.dark-mode .btn-primary:hover,
+body.dark-mode .file-input-label:hover {
+  background-color: #347ca8;
+}
+
+body.dark-mode .btn-secondary,
+body.dark-mode .theme-button {
+  background-color: #182129;
+  color: #dfe9f0;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .btn-secondary:hover,
+body.dark-mode .theme-button:hover {
+  background-color: #1d2831;
+}
+
+/* Toggle */
+body.dark-mode .slider {
+  background-color: #2b3741;
+}
+
+body.dark-mode input:checked + .slider {
+  background-color: #3d8ec0;
+}
+
+body.dark-mode .slider:before {
+  background-color: #ffffff;
+}
+
+/* Badges */
+body.dark-mode .role-badge.admin {
+  background-color: rgba(231, 76, 60, 0.16);
+  color: #ff7567;
+}
+
+body.dark-mode .role-badge.editor {
+  background-color: rgba(52, 152, 219, 0.16);
+  color: #6fc8ff;
+}
+
+body.dark-mode .role-badge.lector {
+  background-color: rgba(46, 204, 113, 0.16);
+  color: #72e7a1;
+}
+
+/* Tabla */
+body.dark-mode .admin-table thead {
+  background-color: #182129;
+}
+
+body.dark-mode .admin-table th {
+  color: #a8b9c4;
+}
+
+body.dark-mode .admin-table th,
+body.dark-mode .admin-table td {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .admin-table tr:hover td {
+  background-color: #162029;
+}
+
+/* =========================================================
+   FIX FONDO DETRÁS DEL SIDEBAR (SIN MOVER NADA)
+========================================================= */
+
+/* Fondo global del panel */
+body.dark-mode {
+  background: #2f7597 !important;
+}
+
+/* Asegura que ningún contenedor meta negro */
+body.dark-mode,
+body.dark-mode html {
+  background: #2f7597 !important;
+}
+
+/* Si hay wrapper general */
+body.dark-mode .admin-wrapper,
+body.dark-mode .container,
+body.dark-mode main {
+  background: #2f7597 !important;
+}
