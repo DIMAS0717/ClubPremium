@@ -965,21 +965,25 @@
   }
 }
 
-
 /* =========================================================
-   RESPONSIVO ALREDEDORES.PHP
+   RESPONSIVO ALREDEDORES.PHP (FIX PREMIUM)
    ========================================================= */
 
-/* TABLET */
+/* ================= TABLET ================= */
 @media (max-width: 1024px) {
   .alrededores-page {
     padding-top: 110px;
   }
 
   .alrededores-page .around-hero-container {
-    height: 420px !important;
-    min-height: 420px !important;
-    padding: 0 16px !important;
+    height: 440px !important;
+    min-height: 440px !important;
+    padding: 0 18px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
     background-attachment: scroll !important;
     background-position: center center !important;
   }
@@ -987,68 +991,60 @@
   .alrededores-page .around-header {
     max-width: 760px !important;
     width: 100% !important;
-    padding-top: 56px !important;
+    padding-top: 0 !important;
+    padding-bottom: 40px !important;
     text-align: center !important;
   }
 
   .alrededores-page .around-title-wrap {
-    gap: 12px ;
-    margin-bottom: 10px ;
-    flex-wrap: wrap ;
+    gap: 14px;
+    margin-bottom: 12px;
+    flex-wrap: nowrap;
   }
 
   .alrededores-page .around-title {
-    font-size: 2.45rem ;
-    line-height: 1.08 ;
-    letter-spacing: 1px ;
-    margin: 0 ;
+    font-size: 2.6rem;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    margin: 0;
   }
 
   .alrededores-page .around-title-deco {
-    width: 36px ;
+    width: 36px;
   }
 
   .alrededores-page .around-title-underline {
-    width: 130px ;
-    margin: 10px auto 14px ;
+    width: 130px;
+    margin: 12px auto 16px;
   }
 
   .alrededores-page .around-subtitle {
     max-width: 620px !important;
     margin: 0 auto !important;
-    padding: 0 8px !important;
-    font-size: 0.98rem !important;
+    font-size: 1rem !important;
     line-height: 1.55 !important;
-    text-align: center !important;
   }
 
+  /* 🔥 BAJAMOS EL MAPA */
   .alrededores-page .around-map-section {
-    margin-top: -85px !important;
-    padding: 0 16px 65px !important;
+    margin-top: -40px !important;
+    padding: 0 18px 70px !important;
   }
 
   .alrededores-page .around-map-card {
     grid-template-columns: 1fr !important;
     max-width: 820px !important;
-    padding: 24px !important;
-    gap: 20px !important;
+    padding: 26px !important;
+    gap: 22px !important;
     border-radius: 24px !important;
   }
 
   .alrededores-page .around-map-title {
     font-size: 1.3rem !important;
-    line-height: 1.3 !important;
-  }
-
-  .alrededores-page .around-map-title span {
-    display: block !important;
-    margin-top: 4px !important;
-    font-size: 0.92rem !important;
   }
 
   .alrededores-page .around-map-divider {
-    max-width: 280px !important;
-    margin: 10px 0 16px !important;
+    margin: 12px 0 18px !important;
   }
 
   .alrededores-page .around-map-image {
@@ -1056,69 +1052,73 @@
   }
 }
 
-/* MOVIL */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .alrededores-page {
     padding-top: 100px;
   }
 
+  /* 🔥 HERO CENTRADO PERFECTO */
   .alrededores-page .around-hero-container {
-    height: 300px !important;
-    min-height: 300px !important;
-    padding: 0 12px !important;
-    background-position: center center !important;
-    background-attachment: scroll !important;
+    height: 360px !important;
+    min-height: 360px !important;
+    padding: 0 14px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .alrededores-page .around-header {
     width: 100% !important;
     max-width: 100% !important;
-    padding-top: 34px !important;
+
+    padding-top: 0 !important;
+    padding-bottom: 28px !important;
+
     text-align: center !important;
   }
 
   .alrededores-page .around-title-wrap {
-    gap: 8px ;
-    margin-bottom: 8px ;
-    flex-wrap: wrap ;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
   }
 
   .alrededores-page .around-title {
-    font-size: 1.85rem ;
-    line-height: 1.08 ;
-    letter-spacing: 0.8px ;
-    margin: 0 ;
+    font-size: 2rem;
+    line-height: 1.02;
+    letter-spacing: 0.5px;
   }
 
   .alrededores-page .around-title-deco {
-    width: 18px !important;
+    width: 20px !important;
   }
 
   .alrededores-page .around-title-underline {
-    width: 74px !important;
+    width: 80px !important;
     height: 3px !important;
-    margin: 8px auto 10px !important;
+    margin: 10px auto 12px !important;
   }
 
   .alrededores-page .around-subtitle {
-    max-width: 100% !important;
+    max-width: 320px !important;
     margin: 0 auto !important;
-    padding: 0 4px !important;
-    font-size: 0.84rem !important;
-    line-height: 1.42 !important;
-    text-align: center !important;
+    font-size: 0.95rem !important;
+    line-height: 1.45 !important;
   }
 
+  /* 🔥 AQUÍ LO IMPORTANTE: BAJAMOS SERVICIOS */
   .alrededores-page .around-map-section {
-    margin-top: -18px !important;
+    margin-top: 22px !important;
     padding: 0 12px 42px !important;
   }
 
   .alrededores-page .around-map-card {
     grid-template-columns: 1fr !important;
-    gap: 16px !important;
-    padding: 16px 12px !important;
-    border-radius: 18px !important;
+    gap: 18px !important;
+    padding: 18px 14px !important;
+    border-radius: 20px !important;
   }
 
   .alrededores-page .around-map-info {
@@ -1126,124 +1126,55 @@
   }
 
   .alrededores-page .around-map-title {
-    font-size: 1.02rem !important;
-    line-height: 1.28 !important;
-  }
-
-  .alrededores-page .around-map-title span {
-    display: block !important;
-    margin-top: 4px !important;
-    font-size: 0.8rem !important;
+    font-size: 1.05rem !important;
   }
 
   .alrededores-page .around-map-divider {
-    width: 100% !important;
-    max-width: 100% !important;
     margin: 10px 0 14px !important;
   }
 
   .alrededores-page .around-map-list li {
     gap: 10px !important;
     padding: 10px 0 10px 6px !important;
-    margin-bottom: 8px !important;
-    background: transparent !important;
-    border: none !important;
     border-bottom: 1px solid rgba(47, 78, 124, 0.18) !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-  }
-
-  .alrededores-page .around-map-list li:last-child {
-    border-bottom: none !important;
   }
 
   .alrededores-page .around-map-label {
-    font-size: 0.84rem !important;
+    font-size: 0.85rem !important;
   }
 
   .alrededores-page .around-map-time {
-    font-size: 0.72rem !important;
+    font-size: 0.75rem !important;
     padding: 3px 8px !important;
-  }
-
-  .alrededores-page .around-map-icon {
-    width: 18px !important;
-    height: 18px !important;
-  }
-
-  .alrededores-page .around-map-image {
-    min-height: 180px !important;
-    border-radius: 14px !important;
-  }
-
-  .alrededores-page .around-map-image img {
-    border-radius: 14px !important;
   }
 }
 
-/* MOVIL PEQUEÑO */
+/* ================= SMALL MOBILE ================= */
 @media (max-width: 480px) {
   .alrededores-page .around-hero-container {
-    height: 270px !important;
-    min-height: 270px !important;
-    padding: 0 10px !important;
+    height: 330px !important;
+    min-height: 330px !important;
   }
 
   .alrededores-page .around-header {
-    padding-top: 28px !important;
+    padding-bottom: 20px !important;
   }
 
   .alrededores-page .around-title {
-    font-size: 3.65rem ;
-  }
-
-  .alrededores-page .around-title-deco {
-    width: 16px ;
-  }
-
-  .alrededores-page .around-title-underline {
-    width: 64px !important;
-    margin: 8px auto 10px !important;
+    font-size: 1.7rem !important;
   }
 
   .alrededores-page .around-subtitle {
-    font-size: 0.8rem !important;
-    line-height: 1.38 !important;
-    padding: 0 2px !important;
+    font-size: 0.9rem !important;
   }
 
+  /* 🔥 MÁS SEPARACIÓN PARA QUE NO CHOQUE */
   .alrededores-page .around-map-section {
-    margin-top: -8px !important;
-    padding: 0 10px 38px !important;
+    margin-top: 26px !important;
   }
 
   .alrededores-page .around-map-card {
-    padding: 14px 10px !important;
-    border-radius: 16px !important;
-  }
-
-  .alrededores-page .around-map-title {
-    font-size: 0.96rem !important;
-  }
-
-  .alrededores-page .around-map-title span {
-    font-size: 0.76rem !important;
-  }
-
-  .alrededores-page .around-map-list li {
-    padding: 9px 0 9px 4px !important;
-  }
-
-  .alrededores-page .around-map-label {
-    font-size: 0.8rem !important;
-  }
-
-  .alrededores-page .around-map-time {
-    font-size: 0.68rem !important;
-  }
-
-  .alrededores-page .around-map-image {
-    min-height: 165px !important;
+    padding: 16px 12px !important;
   }
 }
 
