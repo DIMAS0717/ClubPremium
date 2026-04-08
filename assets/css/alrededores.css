@@ -56,7 +56,7 @@ h4,
       to bottom,
       rgba(7, 22, 39, 0.58) 0%,
       rgba(7, 22, 39, 0.26) 42%,
-      rgba(7, 22, 39, 0.62) 100%
+      rgba(7, 22, 39, 0.22) 50%
     );
   z-index: 0;
 }
@@ -94,8 +94,8 @@ h4,
   letter-spacing: 3px;
   text-transform: uppercase;
   text-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.26),
-    0 2px 5px rgba(0, 0, 0, 0.2);
+    0 8px 24px rgba(0, 0, 0, 0.06),
+    0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .around-title-underline {
