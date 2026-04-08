@@ -1469,17 +1469,16 @@ body {
   }
 
 }
-
 /* ================= BENEFICIOS ================= */
 
 .villas-eureka-beneficios {
   position: relative;
   width: 100%;
-  padding: 110px 0;
+  padding: 125px 0;
   background:
-    radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.04), transparent 24%),
-    linear-gradient(180deg, #28456b 0%, #173457 55%, #122a47 100%);
+    radial-gradient(circle at top left, rgba(212, 175, 55, 0.05), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.03), transparent 24%),
+    linear-gradient(180deg, #213d63 0%, #163251 52%, #112844 100%);
   overflow: hidden;
 }
 
@@ -1488,10 +1487,10 @@ body {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
   background-size: 60px 60px;
-  opacity: 0.12;
+  opacity: 0.08;
   pointer-events: none;
 }
 
@@ -1505,7 +1504,7 @@ body {
 
 .beneficios-subtitle {
   display: inline-block;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
   color: #d4af37;
   font-size: 12px;
   font-weight: 700;
@@ -1514,22 +1513,22 @@ body {
 }
 
 .beneficios-titulo {
-  margin: 0 0 64px;
+  margin: 0 0 78px;
   color: #ffffff;
-  font-size: clamp(2rem, 3.4vw, 3.4rem);
-  line-height: 1.12;
+  font-size: clamp(2.2rem, 3.4vw, 3.6rem);
+  line-height: 1.1;
   font-weight: 800;
   letter-spacing: -1px;
-  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
   position: relative;
 }
 
 .beneficios-titulo::after {
   content: "";
   display: block;
-  width: 80px;
-  height: 3px;
-  margin: 18px auto 0;
+  width: 58px;
+  height: 2px;
+  margin: 20px auto 0;
   background: linear-gradient(90deg, #d4af37, #e6c158);
   border-radius: 10px;
 }
@@ -1539,7 +1538,7 @@ body {
 .beneficios-wrapper {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
+  gap: 24px;
   align-items: stretch;
 }
 
@@ -1547,12 +1546,12 @@ body {
 
 .beneficio-card {
   position: relative;
-  padding: 30px 22px 26px;
+  padding: 34px 24px 30px;
   border-radius: 24px;
-  background: linear-gradient(180deg, #ffffff 0%, #f9f6ef 100%);
-  border: 1px solid rgba(212, 175, 55, 0.18);
+  background: linear-gradient(180deg, #fdfcf9 0%, #f7f3eb 100%);
+  border: 1px solid rgba(212, 175, 55, 0.14);
   box-shadow:
-    0 20px 42px rgba(0, 0, 0, 0.16),
+    0 16px 34px rgba(0, 0, 0, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 0.82);
   transition:
     transform 0.35s ease,
@@ -1561,45 +1560,39 @@ body {
   overflow: hidden;
 }
 
-
-
 .beneficio-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
   box-shadow:
-    0 28px 55px rgba(0, 0, 0, 0.22),
-    0 0 22px rgba(212, 175, 55, 0.14);
-  border-color: rgba(212, 175, 55, 0.34);
+    0 22px 40px rgba(0, 0, 0, 0.18);
+  border-color: rgba(212, 175, 55, 0.24);
 }
 
 /* ================= ICONO ================= */
 
 .icon-box {
-  width: 84px;
-  height: 84px;
-  margin: 0 auto 18px;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #c79f38;
-  background: linear-gradient(180deg, #fffdf9 0%, #f6efe1 100%);
-  border: 1.5px solid rgba(199, 159, 56, 0.35);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.95),
-    0 10px 24px rgba(199, 159, 56, 0.10);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(199, 159, 56, 0.28);
+  box-shadow: none;
+  transition: transform 0.35s ease, border-color 0.35s ease, background 0.35s ease;
 }
 
 .beneficio-card:hover .icon-box {
-  transform: scale(1.08);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.95),
-    0 12px 26px rgba(212, 175, 55, 0.22);
+  transform: scale(1.05);
+  border-color: rgba(199, 159, 56, 0.4);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .icon-box svg {
-  width: 38px;
-  height: 38px;
+  width: 36px;
+  height: 36px;
   display: block;
   stroke-width: 1.8;
 }
@@ -1607,9 +1600,9 @@ body {
 /* ================= TEXTO CARD ================= */
 
 .beneficio-card h3 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   color: #1a2f4d;
-  font-size: 1.55rem;
+  font-size: 1.52rem;
   line-height: 1.18;
   font-weight: 800;
   letter-spacing: -0.4px;
@@ -1619,15 +1612,15 @@ body {
   margin: 0 auto;
   max-width: 250px;
   color: #5f6b78;
-  font-size: 0.95rem;
-  line-height: 1.65;
+  font-size: 0.96rem;
+  line-height: 1.7;
   font-weight: 400;
 }
 
 /* ================= BOTÓN ================= */
 
 .beneficios-action {
-  margin-top: 50px;
+  margin-top: 64px;
   display: flex;
   justify-content: center;
 }
@@ -1637,27 +1630,23 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 34px;
+  padding: 15px 40px;
   border-radius: 999px;
-
   background: transparent;
   color: #d4af37;
-
-  border: 1.5px solid #d4af37;
+  border: 1px solid rgba(212, 175, 55, 0.8);
   box-shadow: none;
-
   font-weight: 700;
-  font-size: 13px;
+  font-size: 12px;
   text-decoration: none;
-  letter-spacing: 1px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
-
   transition: all 0.3s ease;
 }
 
 .beneficios-btn:hover {
-  background: #d4af37;
-  color: #1a2f4d;
+  background: rgba(212, 175, 55, 0.08);
+  color: #f2d06b;
   transform: translateY(-2px);
 }
 
@@ -1670,17 +1659,17 @@ body {
   }
 
   .beneficios-titulo {
-    margin-bottom: 54px;
+    margin-bottom: 60px;
   }
 
   .beneficio-card h3 {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
   }
 }
 
 @media (max-width: 768px) {
   .villas-eureka-beneficios {
-    padding: 84px 0;
+    padding: 90px 0;
   }
 
   .beneficios-container {
@@ -1694,14 +1683,14 @@ body {
   }
 
   .beneficios-titulo {
-    margin: 0 0 36px;
+    margin: 0 0 40px;
     font-size: clamp(1.9rem, 6.5vw, 2.6rem);
     line-height: 1.15;
   }
 
   .beneficios-titulo::after {
-    width: 72px;
-    margin-top: 14px;
+    width: 52px;
+    margin-top: 16px;
   }
 
   .beneficios-wrapper {
@@ -1715,18 +1704,18 @@ body {
   }
 
   .icon-box {
-    width: 78px;
-    height: 78px;
+    width: 76px;
+    height: 76px;
     margin-bottom: 16px;
   }
 
   .icon-box svg {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
 
   .beneficio-card h3 {
-    font-size: 1.35rem;
+    font-size: 1.32rem;
   }
 
   .beneficio-card p {
@@ -1735,7 +1724,7 @@ body {
   }
 
   .beneficios-action {
-    margin-top: 40px;
+    margin-top: 42px;
   }
 
   .beneficios-btn {
@@ -1747,7 +1736,7 @@ body {
 
 @media (max-width: 480px) {
   .villas-eureka-beneficios {
-    padding: 72px 0;
+    padding: 76px 0;
   }
 
   .beneficios-container {
@@ -1760,13 +1749,13 @@ body {
   }
 
   .beneficios-titulo {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     font-size: 2rem;
     line-height: 1.14;
   }
 
   .beneficios-titulo::after {
-    width: 64px;
+    width: 46px;
     margin-top: 12px;
   }
 
@@ -1776,18 +1765,18 @@ body {
   }
 
   .icon-box {
-    width: 72px;
-    height: 72px;
+    width: 70px;
+    height: 70px;
     margin-bottom: 14px;
   }
 
   .icon-box svg {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
   }
 
   .beneficio-card h3 {
-    font-size: 1.22rem;
+    font-size: 1.2rem;
     margin-bottom: 8px;
   }
 
