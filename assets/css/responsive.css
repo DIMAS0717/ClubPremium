@@ -748,7 +748,7 @@
 
   .villa-cards-container {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 70px;
   }
 
   .villa-card {
@@ -812,19 +812,19 @@
   }
 
   .bed-distribution {
-    padding: 14px 14px 12px;
+    padding: 18px 16px 16px;
     border-radius: 14px;
     margin-bottom: 16px;
   }
 
   .bed-distribution h4 {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     font-size: 0.95rem;
   }
 
   .villa-option-link {
-    gap: 9px;
-    padding: 8px 0;
+    gap: 12px;
+    padding: 10px 0;
   }
 
   .villa-icon-wrapper {
@@ -834,8 +834,8 @@
   }
 
   .villa-text-wrapper {
-    gap: 8px;
-    padding-bottom: 8px;
+    gap: 10px;
+    padding-bottom: 10px;
   }
 
   .villa-title {
