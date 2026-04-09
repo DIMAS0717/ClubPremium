@@ -504,10 +504,12 @@
 
 body.dark-mode .lotes-page,
 body.dark-mode .lvp-section {
-    background:
-        radial-gradient(circle at top left, rgba(34, 88, 156, 0.10), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(184, 134, 47, 0.08), transparent 22%),
-        #0f141b;
+    background: linear-gradient(
+  180deg,
+  #181c20 0%,
+  #14181c 50%,
+  #101417 100%
+);
 }
 
 body.dark-mode .lvp-title {
