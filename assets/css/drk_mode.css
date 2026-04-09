@@ -1154,9 +1154,9 @@ body.dark-mode .badge-gray {
   }
 
   body.dark-mode .around-btn {
-    background: rgba(17, 34, 66, 0.95) !important;
+    background: transparent !important; /* 🔥 clave */
     color: #ffffff !important;
-    border: 1px solid rgba(162, 199, 231, 0.16) !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
   }
 }
 
