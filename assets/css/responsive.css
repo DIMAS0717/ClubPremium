@@ -297,13 +297,13 @@
 }
 
 /*HEROOO PRINCIPAL*/
-/* ===================== HERO MOBILE / TABLET RESETEADO ===================== */
+/* ===================== HERO MOBILE / TABLET AJUSTADO ===================== */
 @media (max-width: 768px) {
   .around-hero-container {
     position: relative;
     min-height: calc(100vh - 90px);
     height: auto;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
 
@@ -317,7 +317,7 @@
   }
 
   /* dejamos solo la imagen principal */
-    .hero-image.left {
+  .hero-image.left {
     width: 100%;
     height: 100%;
     display: block;
@@ -341,9 +341,9 @@
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.20) 0%,
-      rgba(0, 0, 0, 0.26) 25%,
-      rgba(0, 0, 0, 0.42) 55%,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(0, 0, 0, 0.24) 25%,
+      rgba(0, 0, 0, 0.40) 55%,
       rgba(0, 0, 0, 0.60) 100%
     );
   }
@@ -351,82 +351,83 @@
   .around-header {
     width: 100%;
     max-width: 420px;
-    padding: 34px 18px 36px;
+    padding: 0 18px 34px;
+    margin-top: -8px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
 
-  /* VOLVEMOS A MOSTRAR LOS ICONOS */
   .around-title-deco {
     display: block;
-    width: 58px;
+    width: 52px;
     opacity: 0.9;
     filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
   }
 
   .around-title-wrap {
     gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   .around-title {
-    font-size: 2.6rem;
-    line-height: 1;
+    font-size: 2.45rem;
+    line-height: 0.96;
     letter-spacing: 0.5px;
     max-width: 200px;
     white-space: normal;
     text-align: center;
     text-shadow:
-      0 3px 10px rgba(0, 0, 0, 0.55),
-      2px 2px 0 #000,
-      -2px -2px 0 #000,
-      2px -2px 0 #000,
-      -2px 2px 0 #000;
+      0 3px 10px rgba(0, 0, 0, 0.48),
+      1.5px 1.5px 0 #000,
+      -1.5px -1.5px 0 #000,
+      1.5px -1.5px 0 #000,
+      -1.5px 1.5px 0 #000;
   }
 
   .around-title-underline {
-    width: 150px;
+    width: 145px;
     height: 3px;
-    margin: 8px auto 16px;
+    margin: 8px auto 12px;
     opacity: 0.95;
   }
 
   .around-subtitle-main {
-    font-size: 0.95rem;
+    font-size: 0.90rem;
     font-weight: 500;
-    letter-spacing: 4px;
+    letter-spacing: 3.5px;
     line-height: 1.25;
-    margin: 0 0 22px;
+    margin: 0 0 18px;
     white-space: nowrap;
   }
 
   .around-description-box {
     width: 100%;
-    max-width: 360px;
-    padding: 16px 16px;
-    margin: 0 auto 22px;
-    background: rgba(12, 12, 12, 0.58);
+    max-width: 355px;
+    padding: 14px 16px;
+    margin: 0 auto 20px;
+    background: rgba(12, 12, 12, 0.54);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(212, 175, 55, 0.34);
-    border-radius: 16px;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+    border: 1px solid rgba(212, 175, 55, 0.30);
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
   }
 
   .around-description {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 0.92rem;
+    line-height: 1.58;
     font-weight: 400;
+    margin: 0;
   }
 
   .hero-actions {
     width: 100%;
-    margin-top: 4px;
+    margin-top: 6px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
     align-items: center;
   }
 
@@ -435,7 +436,7 @@
     max-width: 360px;
     min-width: 0;
     padding: 15px 20px;
-    font-size: 0.88rem;
+    font-size: 0.87rem;
     letter-spacing: 1px;
     border-radius: 999px;
   }
@@ -444,45 +445,56 @@
 @media (max-width: 480px) {
   .around-header {
     max-width: 390px;
-    padding: 28px 16px 32px;
+    padding: 0 16px 30px;
+    margin-top: 200px;
   }
 
   .around-title-deco {
-    width: 50px;
+    width: 55px;
   }
 
   .around-title-wrap {
-    gap: 6px;
+    gap: 8px;
+    margin-bottom: 6px;
   }
 
   .around-title {
-    font-size: 2.45rem;
-    max-width: 220px;
+    font-size: 2.18rem;
+    max-width: 190px;
+    letter-spacing: 1px;
+    line-height: 0.96;
   }
 
   .around-title-underline {
-    width: 135px;
-    margin: 8px auto 14px;
+    width: 126px;
+    margin: 8px auto 12px;
   }
 
   .around-subtitle-main {
-    font-size: 0.88rem;
+    font-size: 0.80rem;
     letter-spacing: 3px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
   }
 
   .around-description-box {
-    padding: 15px 14px;
-    margin-bottom: 20px;
+    max-width: 340px;
+    padding: 13px 14px;
+    margin-bottom: 18px;
+    border-radius: 16px;
   }
 
   .around-description {
-    font-size: 0.92rem;
-    line-height: 1.58;
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .hero-actions {
+    gap: 14px;
+    margin-top: 5px;
   }
 
   .hero-btn {
-    font-size: 0.86rem;
+    font-size: 0.84rem;
     padding: 14px 18px;
   }
 }
