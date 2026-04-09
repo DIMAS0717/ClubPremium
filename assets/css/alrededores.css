@@ -540,9 +540,8 @@ h4,
   }
 }
 
-
 /* =========================================================
-   RESPONSIVO ALREDEDORES.PHP (CORREGIDO FINAL)
+   RESPONSIVO ALREDEDORES.PHP (AJUSTADO SIN CAMBIAR TIPOGRAFÍA)
    ========================================================= */
 
 /* ================= TABLET ================= */
@@ -554,7 +553,7 @@ h4,
   .alrededores-page .around-hero-container {
     height: 420px !important;
     min-height: 420px !important;
-    padding: 0 18px !important;
+    padding: 0 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -563,11 +562,12 @@ h4,
   }
 
   .alrededores-page .around-header {
-    width: 100% !important;
+    width: calc(100% - 36px) !important;
     max-width: 760px !important;
     margin: 0 auto !important;
     padding: 0 0 18px !important;
     text-align: center !important;
+    box-sizing: border-box !important;
 
     display: flex !important;
     flex-direction: column !important;
@@ -580,7 +580,8 @@ h4,
     align-items: center !important;
     justify-content: center !important;
     gap: 12px !important;
-    width: 100% !important;
+    width: fit-content !important;
+    max-width: none !important;
     margin: 0 auto 8px !important;
     flex-wrap: nowrap !important;
   }
@@ -649,7 +650,7 @@ h4,
   .alrededores-page .around-hero-container {
     height: 405px !important;
     min-height: 405px !important;
-    padding: 18px 14px 0 !important;
+    padding: 14px 0 0 !important;
     display: flex !important;
     align-items: flex-start !important;
     justify-content: center !important;
@@ -658,11 +659,12 @@ h4,
   }
 
   .alrededores-page .around-header {
-    width: 100% !important;
+    width: calc(100% - 24px) !important;
     max-width: 390px !important;
     margin: 0 auto !important;
-    padding: 0 10px 8px !important;
+    padding: 0 !important;
     text-align: center !important;
+    box-sizing: border-box !important;
 
     display: flex !important;
     flex-direction: column !important;
@@ -675,9 +677,9 @@ h4,
     align-items: center !important;
     justify-content: center !important;
     gap: 8px !important;
-    width: 100% !important;
-    max-width: 320px !important;
-    margin: 0 auto 6px !important;
+    width: fit-content !important;
+    max-width: none !important;
+    margin: 0 auto 8px !important;
     flex-wrap: nowrap !important;
   }
 
@@ -756,7 +758,7 @@ h4,
   .alrededores-page .around-hero-container {
     height: 405px !important;
     min-height: 405px !important;
-    padding: 16px 12px 0 !important;
+    padding: 12px 0 0 !important;
     display: flex !important;
     align-items: flex-start !important;
     justify-content: center !important;
@@ -765,11 +767,12 @@ h4,
   }
 
   .alrededores-page .around-header {
-    width: 100% !important;
+    width: calc(100% - 20px) !important;
     max-width: 390px !important;
     margin: 0 auto !important;
-    padding: 0 8px 8px !important;
+    padding: 0 !important;
     text-align: center !important;
+    box-sizing: border-box !important;
 
     display: flex !important;
     flex-direction: column !important;
@@ -782,29 +785,30 @@ h4,
     align-items: center !important;
     justify-content: center !important;
     gap: 7px !important;
-    width: 100% !important;
-    max-width: 300px !important;
-    margin: 0 auto 6px !important;
+    width: fit-content !important;
+    max-width: none !important;
+    margin: 0 auto 8px !important;
     flex-wrap: nowrap !important;
   }
 
   .alrededores-page .around-title {
-    font-size: 1.42rem !important;
+    font-size: 1.62rem !important;
     line-height: 1 !important;
     letter-spacing: 0.1px !important;
     margin: 0 !important;
     text-align: center !important;
     white-space: nowrap !important;
+    margin-right: 15px !important;
   }
 
   .alrededores-page .around-title-deco {
-    width: 18px !important;
+    width: 40px !important;
     height: auto !important;
     flex-shrink: 0 !important;
   }
 
   .alrededores-page .around-title-underline {
-    width: 82px !important;
+    width: 152px !important;
     height: 3px !important;
     margin: 6px auto 12px !important;
   }
@@ -813,7 +817,7 @@ h4,
     width: 100% !important;
     max-width: 270px !important;
     margin: 0 auto !important;
-    font-size: 0.77rem !important;
+    font-size: 0.87rem !important;
     line-height: 1.4 !important;
     text-align: center !important;
   }
