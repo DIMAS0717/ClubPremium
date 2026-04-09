@@ -51,13 +51,13 @@ h4,
   content: "";
   position: absolute;
   inset: 0;
-  background:
+   background:
     linear-gradient(
       to bottom,
-      rgba(7, 22, 39, 0.58) 0%,
-      rgba(7, 22, 39, 0.26) 42%,
-      rgba(7, 22, 39, 0.22) 50%
-    );
+      rgba(10, 14, 18, 0.72) 0%,
+      rgba(10, 14, 18, 0.34) 42%,
+      rgba(24, 26, 27, 0.70) 100%
+    ) !important;
   z-index: 0;
 }
 
