@@ -979,8 +979,9 @@
 }
 
 
-/* ================= RESPONSIVO PARA MIS CARTAS ====================== */
-/* ===== FIX FUERTE TARJETAS MÓVIL / TABLET ===== */
+
+
+/* ================= RESPONSIVO PARA MIS CARTAS(ALREDEDORES) ====================== */
 @media (max-width: 1024px) {
   .around-activities-grid {
     display: grid !important;
