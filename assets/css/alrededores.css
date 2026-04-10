@@ -86,16 +86,29 @@ h4,
 }
 
 .around-title {
-  margin: 0;
-  color: #ffffff;
-  font-size: 3.45rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5rem;
   font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  padding-left: 0;
+  color: #fff;
+  line-height: 1;
+  white-space: nowrap;
+  display: inline-block;
+  flex: 0 1 auto;
+  max-width: none;
   text-shadow:
-    0 8px 24px rgba(0, 0, 0, 0.06),
-    0 2px 5px rgba(0, 0, 0, 0.1);
+    0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 0, 0, 0.15),
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    0 -2px 0 #000,
+    2px 0 0 #000,
+    -2px 0 0 #000;
 }
 
 .around-title-underline {

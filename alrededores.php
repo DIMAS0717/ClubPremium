@@ -29,7 +29,7 @@ $page_title = 'Alrededores - Villas Eureka';
         <div class="around-header">
             <div class="around-title-wrap">
                 <img src="assets/img/icon/iconoeureka.png" class="around-title-deco" alt="">
-                <h1 class="around-title">Alrededores</h1>
+                <h1 class="around-title">ALREDEDORES</h1>
                 <img src="assets/img/icon/iconoeureka.png" class="around-title-deco" alt="">
             </div>
 
