@@ -991,14 +991,9 @@ body.dark-mode .alrededores-page {
 /* =========================================================
    HERO
    ========================================================= */
-body.dark-mode .around-hero-container::before {
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(10, 14, 18, 0.72) 0%,
-      rgba(10, 14, 18, 0.34) 42%,
-      rgba(24, 26, 27, 0.70) 100%
-    ) !important;
+
+body.dark-mode .around-hero-container {
+  background-image: url('../img/fondos/alrededores_obscuro.jpg') !important;
 }
 
 /* texto hero intacto */
