@@ -701,21 +701,7 @@ body {
   color: #5f6975;
 }
 
-.about-text h2 {
-  position: relative;
-  padding-bottom: 16px;
-}
 
-.about-text h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 60px;
-  height: 3px;
-  background: #b08a4a;
-  border-radius: 2px;
-}
 
 /* ================= LISTA ================= */
 
