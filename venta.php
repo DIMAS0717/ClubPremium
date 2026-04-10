@@ -25,123 +25,166 @@ $page_title = 'Lotes en Venta - Villas Eureka';
     <section class="lvp-section">
         <div class="lvp-container">
 
-            <div class="lvp-grid">
+            <!-- HERO -->
+            <section class="lvp-hero">
+                <div class="lvp-hero-overlay"></div>
 
-                <!-- COPY -->
-                <div class="lvp-copy">
+                <div class="lvp-hero-content">
                     <span class="lvp-eyebrow">OPORTUNIDAD DE INVERSIÓN</span>
 
                     <h1 class="lvp-title">
-                        Lotes en venta para
-                        <span>desarrollo en Miramar</span>
+                        Lotes en venta en <span>Miramar</span>
                     </h1>
 
                     <div class="lvp-divider"></div>
 
                     <p class="lvp-lead">
+                        Terrenos con ubicación estratégica y alto potencial para desarrollo
+                        residencial o inversión patrimonial en Manzanillo, Colima.
+                    </p>
+
+                    <div class="lvp-hero-actions">
+                        <a href="#video-recorrido" class="lvp-btn-primary">Ver recorrido</a>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="lvp-btn-secondary">
+                            Ver ubicación
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STATS -->
+            <section class="lvp-stats">
+                <article class="lvp-stat-card">
+                    <span class="lvp-stat-label">Precio desde</span>
+                    <strong class="lvp-stat-value">$5,000</strong>
+                    <span class="lvp-stat-note">por m²</span>
+                </article>
+
+                <article class="lvp-stat-card">
+                    <span class="lvp-stat-label">Disponibilidad</span>
+                    <strong class="lvp-stat-value">14</strong>
+                    <span class="lvp-stat-note">terrenos disponibles</span>
+                </article>
+
+                <article class="lvp-stat-card">
+                    <span class="lvp-stat-label">Distancia al mar</span>
+                    <strong class="lvp-stat-value">5 min</strong>
+                    <span class="lvp-stat-note">aproximadamente</span>
+                </article>
+
+                <article class="lvp-stat-card">
+                    <span class="lvp-stat-label">Entorno</span>
+                    <strong class="lvp-stat-value">Alta</strong>
+                    <span class="lvp-stat-note">proyección de crecimiento</span>
+                </article>
+            </section>
+
+            <!-- INTRO -->
+            <section class="lvp-intro">
+                <div class="lvp-intro-copy">
+                    <span class="lvp-section-kicker">DESARROLLO Y PLUSVALÍA</span>
+                    <h2>Una ubicación pensada para crecer con valor</h2>
+
+                    <p>
                         Se venden 14 terrenos de oportunidad para desarrolladoras o inversionistas
                         dentro de la Colonia Miramar, Maravillas del Campo, Manzanillo, Colima.
                     </p>
 
-                    <p class="lvp-text">
+                    <p>
                         Están ubicados entre la calle Juárez y calle Miguel Domínguez, a tan solo
                         media cuadra de la carretera con dirección Manzanillo - Cihuatlán y Puerto Vallarta.
-                        Las lotificaciones se encuentran a 15 minutos de centros comerciales como Soriana,
-                        La Comercial Mexicana y Walmart, además de hospitales generales y particulares.
-                        La distancia al mar es de solo 5 minutos.
+                        La zona cuenta con rápida conectividad y cercanía a servicios clave.
                     </p>
+                </div>
 
-                    <div class="lvp-tags">
-                        <span class="lvp-tag">14 terrenos disponibles</span>
-                        <span class="lvp-tag">A 5 min del mar</span>
-                        <span class="lvp-tag">Zona de crecimiento</span>
-                    </div>
-
-                    <div class="lvp-list">
-                        <div class="lvp-list-item">
-                            <span class="lvp-check">✓</span>
-                            <span>Ubicación estratégica para desarrollo</span>
-                        </div>
-
-                        <div class="lvp-list-item">
-                            <span class="lvp-check">✓</span>
-                            <span>Conectividad rápida con vialidades principales</span>
-                        </div>
-
-                        <div class="lvp-list-item">
-                            <span class="lvp-check">✓</span>
-                            <span>Cercanía con hospitales, supermercados y playa</span>
+                <div class="lvp-intro-list">
+                    <div class="lvp-feature-item">
+                        <span class="lvp-feature-icon">✓</span>
+                        <div>
+                            <h3>Ubicación estratégica</h3>
+                            <p>Ideal para proyectos con visión comercial, turística o patrimonial.</p>
                         </div>
                     </div>
 
-                    <div class="lvp-price-card">
-                        <span class="lvp-price-label">PRECIO POR m²</span>
-                        <strong class="lvp-price-value">$5,000</strong>
-                        <p class="lvp-price-note">
-                            Precio competitivo en una zona con alto potencial de inversión.
+                    <div class="lvp-feature-item">
+                        <span class="lvp-feature-icon">✓</span>
+                        <div>
+                            <h3>Conectividad inmediata</h3>
+                            <p>Acceso ágil a vialidades principales y puntos clave de Manzanillo.</p>
+                        </div>
+                    </div>
+
+                    <div class="lvp-feature-item">
+                        <span class="lvp-feature-icon">✓</span>
+                        <div>
+                            <h3>Entorno consolidado</h3>
+                            <p>Cercanía con hospitales, supermercados, playa y zonas de servicio.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MEDIA -->
+            <section class="lvp-media-grid" id="video-recorrido">
+
+                <article class="lvp-video-card">
+                    <div class="lvp-card-head">
+                        <span class="lvp-card-kicker">RECORRIDO AÉREO</span>
+                        <h3>Visualiza el terreno y su contexto</h3>
+                    </div>
+
+                    <div class="lvp-video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/hWKKNF4gU74?rel=0&modestbranding=1"
+                            title="Video Lotes en Venta"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </article>
+
+                <article class="lvp-location-card">
+                    <div class="lvp-location-image">
+                        <img src="assets/img/lotes/lotes-preview.jpg" alt="Ubicación de lotes">
+                    </div>
+
+                    <div class="lvp-location-copy">
+                        <span class="lvp-card-kicker">UBICACIÓN Y ENTORNO</span>
+                        <h3>Revisa la zona antes de invertir</h3>
+
+                        <p>
+                            Consulta la ubicación geográfica y analiza el entorno para visualizar
+                            mejor el potencial del proyecto y su cercanía con playa, hospitales,
+                            supermercados y vialidades principales.
                         </p>
+
+                        <a
+                            href="https://maps.google.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="lvp-btn-primary"
+                        >
+                            Ver en Google Maps
+                        </a>
                     </div>
-                </div>
+                </article>
+            </section>
 
-                <!-- MEDIA -->
-                <div class="lvp-media">
-
-                    <div class="lvp-video-card">
-                        <span class="lvp-video-badge">RECORRIDO AÉREO</span>
-
-                        <div class="lvp-video-wrapper">
-                            <iframe
-                                src="https://www.youtube.com/embed/hWKKNF4gU74?rel=0&modestbranding=1"
-                                title="Video Lotes en Venta"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-
-                    <div class="lvp-location-card">
-                        <div class="lvp-location-image">
-                            <img src="assets/img/lotes/lotes-preview.jpg" alt="Ubicación de lotes">
-                        </div>
-
-                        <div class="lvp-location-copy">
-                            <span class="lvp-location-kicker">UBICACIÓN Y ENTORNO</span>
-                            <h3>Revisa la zona antes de invertir</h3>
-                            <p>
-                                Consulta la ubicación geográfica y analiza el entorno para
-                                visualizar mejor el potencial del proyecto.
-                            </p>
-
-                            <a
-                                href="https://maps.google.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="lvp-btn-primary"
-                            >
-                                Ver en Google Maps
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- BLOQUES DE VALOR -->
-            <div class="lvp-benefits">
+            <!-- BENEFITS -->
+            <section class="lvp-benefits">
                 <article class="lvp-benefit-card">
                     <span class="lvp-benefit-number">01</span>
                     <h4>Acceso privilegiado</h4>
                     <p>
-                        Ubicación cercana a vialidades principales con excelente movilidad.
+                        Conexión rápida a vías principales para facilitar movilidad, logística y plusvalía.
                     </p>
                 </article>
 
                 <article class="lvp-benefit-card">
                     <span class="lvp-benefit-number">02</span>
-                    <h4>Entorno consolidado</h4>
+                    <h4>Zona con servicios</h4>
                     <p>
-                        Zona con servicios cercanos, hospitales, tiendas y puntos clave.
+                        Cercanía con hospitales, supermercados, playa y puntos urbanos importantes.
                     </p>
                 </article>
 
@@ -149,19 +192,28 @@ $page_title = 'Lotes en Venta - Villas Eureka';
                     <span class="lvp-benefit-number">03</span>
                     <h4>Alta proyección</h4>
                     <p>
-                        Terrenos ideales para desarrollos con visión comercial y patrimonial.
+                        Terrenos con perfil ideal para desarrollos que buscan crecimiento patrimonial.
                     </p>
                 </article>
-            </div>
+            </section>
 
-            <div class="lvp-color-bar">
-                <span class="c1"></span>
-                <span class="c2"></span>
-                <span class="c3"></span>
-                <span class="c4"></span>
-                <span class="c5"></span>
-                <span class="c6"></span>
-            </div>
+            <!-- CTA FINAL -->
+            <section class="lvp-cta">
+                <div class="lvp-cta-copy">
+                    <span class="lvp-section-kicker">INVERSIÓN CON VISIÓN</span>
+                    <h2>Descubre una oportunidad con ubicación, proyección y valor</h2>
+                    <p>
+                        Agenda una visita, solicita más información o conoce el entorno del proyecto.
+                    </p>
+                </div>
+
+                <div class="lvp-cta-actions">
+                    <a href="contacto.php" class="lvp-btn-primary">Solicitar información</a>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="lvp-btn-secondary">
+                        Explorar ubicación
+                    </a>
+                </div>
+            </section>
 
         </div>
     </section>
