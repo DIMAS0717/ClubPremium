@@ -319,19 +319,19 @@ body {
   }
 
   .header-logo img {
-    height: 128px;
+    height: 110px;
   }
 
   .header-full.scrolled .header-logo img {
-    height: 96px;
+    height: 80px;
   }
 
   .header-logo span {
-    font-size: 19px;
+    font-size: 10px;
   }
 
   .header-nav a {
-    font-size: 12px;
+    font-size: 15px;
   }
 }
 
@@ -366,7 +366,7 @@ body {
   }
 
   .header-logo span {
-    font-size: 16px;
+    font-size: 10px;
   }
 }
 
@@ -376,11 +376,11 @@ body {
   }
 
   .header-logo-link {
-    gap: 10px;
+    gap: 0px;
   }
 
   .header-logo img {
-    height: 70px;
+    height: 80px;
   }
 
   .header-full.scrolled .header-logo img {
@@ -388,19 +388,19 @@ body {
   }
 
   .header-logo span {
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: 0.5px;
   }
 
   .toggle-theme,
   .menu-toggle {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
   }
 
   .lang-toggle {
     min-width: 64px;
-    height: 34px;
+    height: 30px;
     padding: 0 10px;
     font-size: 11px;
   }
