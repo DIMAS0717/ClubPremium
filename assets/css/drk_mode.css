@@ -250,6 +250,10 @@ body.dark-mode .villas {
 );
 box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
 }
+/* ================= HERO DARK MODE ================= */
+body.dark-mode .villas-hero-container {
+  background-image: url('../img/fondos/villas_obscuro.jpg') !important;
+}
 
 /* ================= TEXTOS ================= */
 
