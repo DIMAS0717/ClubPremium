@@ -416,14 +416,28 @@ body.dark-mode .beneficio-card p {
 /* ================= BOTÓN ================= */
 
 body.dark-mode .beneficios-btn {
-  background: linear-gradient(135deg, #c6a25a, #d8b76d) !important;
-  color: #1b1e21 !important;
-  box-shadow: 0 10px 28px rgba(198, 162, 90, 0.22) !important;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 40px;
+  border-radius: 999px;
+  background: transparent;
+  color: #d4af37;
+  border: 1px solid rgba(212, 175, 55, 0.8);
+  box-shadow: none;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
 body.dark-mode .beneficios-btn:hover {
-  box-shadow: 0 14px 34px rgba(198, 162, 90, 0.32) !important;
-  filter: brightness(1.02);
+  background: rgba(212, 175, 55, 0.08);
+  color: #f2d06b;
+  transform: translateY(-2px);
 }
 
 
