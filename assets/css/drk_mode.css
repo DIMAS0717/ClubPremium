@@ -992,9 +992,7 @@ body.dark-mode .alrededores-page {
    HERO
    ========================================================= */
 
-body.dark-mode .around-hero-container {
-  background-image: url('../img/fondos/alrededores_obscuro.jpg') !important;
-}
+
 
 /* texto hero intacto */
 body.dark-mode .around-title,

@@ -573,6 +573,9 @@ h4,
     background-attachment: scroll !important;
     background-position: center center !important;
   }
+  body.dark-mode .around-hero-container {
+  background-image: url('../img/fondos/alrededores_obscuro.jpg') !important;
+}
 
   .alrededores-page .around-header {
     width: calc(100% - 36px) !important;
@@ -670,6 +673,9 @@ h4,
     background-attachment: scroll !important;
     background-position: center center !important;
   }
+  body.dark-mode .around-hero-container {
+  background-image: url('../img/fondos/alrededores_obscuro.jpg') !important;
+}
 
   .alrededores-page .around-header {
     width: calc(100% - 24px) !important;
@@ -778,6 +784,9 @@ h4,
     background-attachment: scroll !important;
     background-position: center center !important;
   }
+  body.dark-mode .around-hero-container {
+  background-image: url('../img/fondos/alrededores_obscuro.jpg') !important;
+}
 
   .alrededores-page .around-header {
     width: calc(100% - 20px) !important;
