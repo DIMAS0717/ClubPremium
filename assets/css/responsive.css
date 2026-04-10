@@ -406,7 +406,7 @@
     width: 100%;
     max-width: 355px;
     padding: 14px 16px;
-    margin: 0 auto 20px;
+    margin: 32px auto 20px;
     background: rgba(12, 12, 12, 0.54);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
