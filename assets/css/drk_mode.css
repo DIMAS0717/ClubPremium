@@ -4,11 +4,12 @@
 
 body.dark-mode .destacados-container {
   background: linear-gradient(
-    180deg,
-    #24282c 0%,
-    #202428 50%,
-    #1c2024 100%
-  ) !important;
+  180deg,
+  #202428 0%,
+  #1a1e22 50%,
+  #161a1d 100%
+);
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
 }
 /* contenedor interno */
 body.dark-mode .destacados-container .page-centered {
@@ -158,17 +159,18 @@ body.dark-mode .destacados-container .villas-grid::-webkit-scrollbar-thumb {
 
 
 /* =========================================================
-   DARK MODE - ABOUT US (ESTILO IMG1)
+   DARK MODE - ABOUT US 
    ========================================================= */
 
 /* FONDO GENERAL */
 body.dark-mode .about-section {
   background: linear-gradient(
-    180deg,
-    #1b1e21 0%,
-    #181b1e 50%,
-    #15181b 100%
-  ) !important;
+  180deg,
+  #1b1e21 0%,
+  #181b1e 50%,
+  #15181b 100%
+);
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
 }
 
 /* ================= TEXTOS ================= */
@@ -202,17 +204,6 @@ body.dark-mode .about-list li::before {
   background: #c6a25a !important;
   color: #1b1e21 !important;
 }
-
-/* ================= LINK ================= */
-
-body.dark-mode .about-link {
-  color: #d1a75b !important;
-}
-
-body.dark-mode .about-link:hover {
-  color: #f0c979 !important;
-}
-
 /* ================= IMAGEN ================= */
 
 body.dark-mode .about-image img {
@@ -252,11 +243,16 @@ body.dark-mode .star-icon {
 /* ================= FONDO ================= */
 body.dark-mode .villas {
   background: linear-gradient(
-    180deg,
-    #1b1e21 0%,
-    #181b1e 50%,
-    #15181b 100%
-  ) !important;
+  180deg,
+  #181c20 0%,
+  #14181c 50%,
+  #101417 100%
+);
+box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+}
+/* ================= HERO DARK MODE ================= */
+body.dark-mode .villas-hero-container {
+  background-image: url('../img/fondos/villas_obscuro.jpg') !important;
 }
 
 /* ================= TEXTOS ================= */
@@ -287,9 +283,10 @@ body.dark-mode .villas-lista li {
 
 /* check icon */
 body.dark-mode .villas-lista li::before {
-  background: linear-gradient(135deg, #c6a25a 0%, #8f6b2f 100%) !important;
+  background: #c6a25a !important;
   color: #1b1e21 !important;
-  box-shadow: 0 6px 14px rgba(198, 162, 90, 0.25) !important;
+  box-shadow: none !important;
+  border-radius: 50%; /* por si acaso */
 }
 
 /* ================= BOTÓN ================= */
@@ -338,15 +335,12 @@ body.dark-mode .slider-btn:hover {
 
 /* ================= FONDO GENERAL ================= */
 body.dark-mode .villas-eureka-beneficios {
-  background:
-    radial-gradient(circle at top left, rgba(198, 162, 90, 0.05), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.02), transparent 24%),
-    linear-gradient(
-      180deg,
-      #1b1e21 0%,
-      #181b1e 52%,
-      #15181b 100%
-    ) !important;
+  background: linear-gradient(
+  180deg,
+  #1a1e22 0%,
+  #13171a 50%,
+  #0e1114 100%
+);
 }
 
 body.dark-mode .villas-eureka-beneficios::before {
@@ -422,14 +416,28 @@ body.dark-mode .beneficio-card p {
 /* ================= BOTÓN ================= */
 
 body.dark-mode .beneficios-btn {
-  background: linear-gradient(135deg, #c6a25a, #d8b76d) !important;
-  color: #1b1e21 !important;
-  box-shadow: 0 10px 28px rgba(198, 162, 90, 0.22) !important;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 40px;
+  border-radius: 999px;
+  background: transparent;
+  color: #d4af37;
+  border: 1px solid rgba(212, 175, 55, 0.8);
+  box-shadow: none;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: none;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
 body.dark-mode .beneficios-btn:hover {
-  box-shadow: 0 14px 34px rgba(198, 162, 90, 0.32) !important;
-  filter: brightness(1.02);
+  background: rgba(212, 175, 55, 0.08);
+  color: #f2d06b;
+  transform: translateY(-2px);
 }
 
 
@@ -445,6 +453,7 @@ body.dark-mode .ubicacion-premium {
     #181b1e 52%,
     #15181b 100%
   ) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
 }
 
 /* ================= TEXTO ================= */
@@ -589,8 +598,8 @@ body.dark-mode .page-main {
 /* =========================
    TEXTOS
 ========================= */
-body.dark-mode .page-main.renta-page .section h1,
-body.dark-mode .renta-page .section h1,
+body.dark-mode .page-main.renta-page,
+body.dark-mode .renta-page,
 body.dark-mode .home-property-title {
   color: #A2C7E7 !important;
 }
@@ -776,12 +785,6 @@ body.dark-mode .capacity-circle-number {
 /* =========================================================
    DARK MODE FINAL - NUESTRAS VILLAS
    ========================================================= */
-
-body.dark-mode {
-  background: #181A1B !important;
-  color: #d7d0c7 !important;
-}
-
 /* =========================================================
    HERO
    ========================================================= */
@@ -880,7 +883,7 @@ body.dark-mode .bed-distribution {
 }
 
 body.dark-mode .bed-distribution h4 {
-  color: #a9d2f5 !important;
+  color: #d0c5b8 !important;
 }
 
 body.dark-mode .bed-distribution,
@@ -906,11 +909,11 @@ body.dark-mode .villa-text-wrapper {
   color: #d0c5b8 !important;
 }
 
-body.dark-mode .villa-title {
-  color: #b8d8f3 !important;
+body.dark-mode .villa-text-wrapper .villa-title {
+  color: #b8d8f3 !important; /* mismo tono azul de iconos */
 }
 
-body.dark-mode .villa-title small {
+body.dark-mode .villa-text-wrapper small {
   color: #c4b8aa !important;
 }
 
@@ -988,14 +991,9 @@ body.dark-mode .alrededores-page {
 /* =========================================================
    HERO
    ========================================================= */
-body.dark-mode .around-hero-container::before {
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(10, 14, 18, 0.72) 0%,
-      rgba(10, 14, 18, 0.34) 42%,
-      rgba(24, 26, 27, 0.70) 100%
-    ) !important;
+
+body.dark-mode .around-hero-container {
+  background-image: url('../img/fondos/alrededores_obscuro.jpg') !important;
 }
 
 /* texto hero intacto */
@@ -1169,9 +1167,9 @@ body.dark-mode .badge-gray {
   }
 
   body.dark-mode .around-btn {
-    background: rgba(17, 34, 66, 0.95) !important;
+    background: transparent !important; /* 🔥 clave */
     color: #ffffff !important;
-    border: 1px solid rgba(162, 199, 231, 0.16) !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
   }
 }
 
@@ -1185,7 +1183,6 @@ body.dark-mode .badge-gray {
     color: #A2C7E7 !important;
   }
 }
-
 
 /* =========================================================
    DARK MODE - CONTACTANOS
@@ -1304,6 +1301,38 @@ body.dark-mode .cs-submit:hover {
   background: linear-gradient(135deg, #1f8e80, #37998b) !important;
 }
 
+/* =========================================
+   FIX CONTACTO MOBILE DARK MODE
+========================================= */
+@media (max-width: 768px) {
+  body.dark-mode .cs-contact-section {
+    min-height: auto !important;
+    padding-bottom: 30px !important;
+    margin-bottom: 0 !important;
+    background-position: center center !important;
+  }
+
+  body.dark-mode .cs-contact-box {
+    margin-bottom: 0 !important;
+  }
+
+  body.dark-mode .page-main {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  body.dark-mode .ve-footer {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body.dark-mode .cs-contact-section {
+    min-height: auto !important;
+    padding-bottom: 50px !important;
+    margin-bottom: 0 !important;
+  }
+}
 
 
 /* =========================================================
@@ -1500,4 +1529,175 @@ body.dark-mode .lightbox-nav {
 
 body.dark-mode .lightbox-close {
   color: #ffffff !important;
+}
+
+
+/* =========================================================
+   FIX FINAL DARK MODE
+   Sidebar + file inputs + inputs blancos
+========================================================= */
+
+/* ---------- SIDEBAR ---------- */
+body.dark-mode .left-side {
+  background: linear-gradient(180deg, #0a4768 0%, #063954 55%, #03273c 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  overflow-x: hidden;
+}
+
+body.dark-mode .sidebar-mobile-top {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+body.dark-mode .sidebar-mobile-top h1 {
+  color: #f3f7fa;
+}
+
+body.dark-mode .profile-name,
+body.dark-mode .profile-role {
+  text-align: center;
+}
+
+body.dark-mode .sidebar-nav {
+  width: 100%;
+}
+
+body.dark-mode .sidebar-nav ul {
+  width: 100%;
+}
+
+body.dark-mode .sidebar-nav li {
+  width: 100%;
+  transform: none;
+}
+
+body.dark-mode .sidebar-nav li.active {
+  background-color: rgba(0, 0, 0, 0.18);
+  box-shadow: inset 3px 0 0 #42a6e0;
+  transform: none;
+}
+
+body.dark-mode .sidebar-nav li:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: none;
+}
+
+body.dark-mode .sidebar-nav a {
+  color: #f3f7fa;
+}
+
+body.dark-mode .sidebar-nav a i {
+  color: #9ad7ff;
+}
+
+/* ---------- INPUTS NORMALES ---------- */
+body.dark-mode input:not([type="file"]),
+body.dark-mode select,
+body.dark-mode textarea {
+  background: #2f3336 !important;
+  color: #f3f7fa !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode input:not([type="file"])::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #9aa6b2 !important;
+}
+
+body.dark-mode input:not([type="file"]):focus,
+body.dark-mode select:focus,
+body.dark-mode textarea:focus {
+  border: none !important;
+  outline: none !important;
+  box-shadow: 0 0 0 2px rgba(58, 162, 222, 0.22) !important;
+}
+
+/* ---------- FILE INPUTS NATIVOS ---------- */
+body.dark-mode input[type="file"] {
+  width: 100%;
+  background: #2f3336 !important;
+  color: #cfd9e1 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+body.dark-mode input[type="file"]::file-selector-button {
+  background: #e7eaee;
+  color: #11161b;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin-right: 12px;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+body.dark-mode input[type="file"]::file-selector-button:hover {
+  background: #d7dde3;
+}
+
+body.dark-mode input[type="file"]::-webkit-file-upload-button {
+  background: #e7eaee;
+  color: #11161b;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin-right: 12px;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+body.dark-mode input[type="file"]::-webkit-file-upload-button:hover {
+  background: #d7dde3;
+}
+
+/* ---------- SI USAS WRAPPERS DE ARCHIVO ---------- */
+body.dark-mode .file-input-wrapper {
+  background: transparent;
+}
+
+body.dark-mode .file-input-label {
+  background-color: #3d8ec0;
+  color: #ffffff;
+  border: none;
+  box-shadow: none;
+}
+
+body.dark-mode .file-input-label:hover {
+  background-color: #347ca8;
+}
+
+body.dark-mode #file-name-display {
+  background: #121b22;
+  color: #c6d3dc;
+  border: 1px dashed rgba(255, 255, 255, 0.10);
+}
+
+/* ---------- TEXTAREA DE BIOGRAFÍA Y CAMPOS ESPECIALES ---------- */
+body.dark-mode .biografia-form textarea {
+  background: #2f3336 !important;
+  color: #f3f7fa !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ---------- SELECTS ---------- */
+body.dark-mode select {
+  appearance: auto;
+}
+
+/* ---------- TABLAS Y CONTENIDO NO TOCAR ESTRUCTURA ---------- */
+body.dark-mode .content-section {
+  background: linear-gradient(180deg, #0f161d 0%, #0b1117 100%);
+}
+
+body.dark-mode .admin-table {
+  background: #121b22;
 }

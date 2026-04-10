@@ -247,42 +247,47 @@ textarea.cs-input {
   resize: vertical;
   background: #f7f7f7;
 }
-
 .cs-submit {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 220px;
   padding: 14px 30px;
-  background: linear-gradient(135deg, #d8f7ef, #8fd8c8);
-  color: #0b2c2f;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  background: linear-gradient(135deg, #89cabb, #89cabb);
+  color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 999px;
+
   font-weight: 700;
   font-size: 0.95rem;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
+
   cursor: pointer;
+
   box-shadow:
-    0 10px 24px rgba(88, 170, 154, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+    0 10px 25px rgba(31, 143, 122, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
-    background 0.25s ease;
+    filter 0.25s ease;
 }
 
 .cs-submit:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, #c7efe5, #78cdbb);
+  transform: translateY(-3px) scale(1.03);
+  filter: brightness(1.08);
+
   box-shadow:
-    0 14px 30px rgba(88, 170, 154, 0.32),
-    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+    0 16px 35px rgba(31, 143, 122, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .cs-submit:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.98);
 }
-
 /* ==================== MENSAJES ==================== */
 
 .cs-message-success,

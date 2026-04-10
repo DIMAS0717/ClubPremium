@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $mensajeError = 'Ingresa un correo electrónico válido.';
     } else {
-        $destinatario = 'goyorealestate@gmail.com'; // cámbialo si quieres otro correo
+        $destinatario = 'goyorealestate@gmail.com'; 
         $asunto = 'Nuevo mensaje desde Contáctanos';
 
         $contenido  = "Nombre: " . $nombre . "\n";
@@ -185,8 +185,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </main>
 
-<script src="assets/js/app.js"></script>
-<?php include __DIR__ . '/includes/footer.php'; ?>
 
+<?php include __DIR__ . '/includes/footer.php'; ?>
+<script src="assets/js/app.js"></script>
 </body>
 </html>

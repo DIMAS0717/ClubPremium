@@ -16,19 +16,19 @@
       <ul class="about-list">
         <li>Asesoría legal y financiera completa</li>
         <li>Gestión de propiedades y mantenimiento</li>
-        <li>Propiedades vacacionales <br>en Manzanillo</li>
+        <li>Propiedades vacacionales en Manzanillo</li>
       </ul>
 
       <a href="contacto.php" class="about-link">Contacta a nuestro equipo</a>
     </div>
 
     <div class="about-image">
-      <img src="./assets/img/fondos/fondo_1.JPG" alt="Propiedades en Manzanillo">
+      <img src="./assets/img/fondos/fondo28.JPG" alt="Propiedades en Manzanillo">
 
       <div class="rating-box">
         <div class="rating-top">
           <span class="star-icon">★</span>
-          <h4>4.9/5 Calificación</h4>
+          <h4>4.2/5 Calificación</h4>
         </div>
         <p>Basado en más de 500 reseñas de clientes satisfechos.</p>
       </div>

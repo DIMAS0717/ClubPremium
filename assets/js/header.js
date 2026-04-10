@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const mobileLinks = document.querySelectorAll('.mobile-nav a');
     const themeToggle = document.getElementById('themeToggle');
     const langToggle = document.getElementById('langToggle');
-    const logoLink = document.getElementById('hiddenAdminTrigger');
+    const footerAdminTrigger = document.getElementById('hiddenAdminTriggerFooter');
 
     /* =========================
        HEADER SCROLL
@@ -20,8 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
+    if (header) {
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    }
 
     /* =========================
        MENÚ MÓVIL
@@ -77,10 +79,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    if (themeToggle) {
-        const savedTheme = localStorage.getItem('siteTheme') || 'light';
-        applyTheme(savedTheme);
+    const savedTheme = localStorage.getItem('siteTheme') || 'light';
+    applyTheme(savedTheme);
 
+    if (themeToggle) {
         themeToggle.addEventListener('click', function () {
             const isDark = document.body.classList.contains('dark-mode');
             applyTheme(isDark ? 'light' : 'dark');
@@ -109,24 +111,22 @@ document.addEventListener('DOMContentLoaded', function () {
     /* =========================
        ACCESO OCULTO ADMIN
     ========================= */
-    const footerAdminTrigger = document.getElementById('hiddenAdminTriggerFooter');
+    if (footerAdminTrigger) {
+        let clickCount = 0;
+        let clickTimer;
 
-if (footerAdminTrigger) {
-    let clickCount = 0;
-    let clickTimer;
+        footerAdminTrigger.addEventListener('click', function () {
+            clickCount++;
 
-    footerAdminTrigger.addEventListener('click', function () {
-        clickCount++;
-
-        clearTimeout(clickTimer);
-        clickTimer = setTimeout(() => {
-            clickCount = 0;
-        }, 1800);
-
-        if (clickCount === 5) {
             clearTimeout(clickTimer);
-            window.location.href = 'admin/login.php';
-        }
-    });
-}
+            clickTimer = setTimeout(() => {
+                clickCount = 0;
+            }, 1800);
+
+            if (clickCount === 5) {
+                clearTimeout(clickTimer);
+                window.location.href = 'admin/login.php';
+            }
+        });
+    }
 });

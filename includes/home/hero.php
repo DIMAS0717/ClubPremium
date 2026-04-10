@@ -5,7 +5,7 @@
         <div class="hero-image right"></div>
     </div>
 
-    <div class="section around-header">
+    <div class="around-header">
         <div class="around-title-wrap">
             <img src="assets/img/icon/iconoeureka.png" class="around-title-deco" alt="">
             <h1 class="around-title">VILLAS EUREKA</h1>

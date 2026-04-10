@@ -67,26 +67,40 @@ body {
 }
 
 .title-deco {
-  width: 72px;
+  width: 77px;
   height: auto;
   opacity: 0.85;
   filter: brightness(1.2) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
 }
 
 .around-title {
-  margin: 0;
-  color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-size: 3.5rem;
   font-weight: 800;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  animation: fadeInUpSoft 0.8s ease-out both;
+  letter-spacing: 2px;
+  margin: 0;
+  padding-left: 0;
+  color: #fff;
+  line-height: 1;
+  white-space: nowrap;
+  display: inline-block;
+  flex: 0 1 auto;
+  max-width: none;
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(0, 0, 0, 0.15),
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    0 -2px 0 #000,
+    2px 0 0 #000,
+    -2px 0 0 #000;
 }
 
 .around-title-underline {
-  width: 260px;
+  width: 300px;
   height: 4px;
   margin: 18px auto 26px;
   border-radius: 50px;
@@ -117,7 +131,7 @@ body {
 .villas-video-section {
   position: relative;
   z-index: 10;
-  margin-top: -280px;
+  margin-top: -180px;
   padding: 0 20px 100px;
 }
 

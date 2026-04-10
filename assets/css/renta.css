@@ -383,7 +383,7 @@ a {
 }
 
 .search-feedback-success {
-  color: #e5e7eb;
+  color: #264b78;
 }
 
 .search-feedback-success strong {
@@ -639,7 +639,7 @@ a {
    ========================================================= */
 .pagination {
   margin-top: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -651,4 +651,22 @@ a {
   min-width: 44px;
   min-height: 44px;
   padding: 10px 14px;
+}
+
+body.dark-mode .section h1{
+  color: #A2C7E7 !important;
+}
+/* =========================================
+   ESPACIO ARRIBA DE LA PAGINACIÓN
+========================================= */
+@media (max-width: 768px) {
+  .pagination {
+    padding-bottom: 18px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    padding-bottom: 16px !important;
+  }
 }

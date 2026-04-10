@@ -108,7 +108,14 @@
   text-decoration: none;
   word-break: break-word;
 }
-
+/* SOLO para el icono del teléfono */
+.ve-contact-item:nth-child(3) .ve-icon-img {
+  transform: translateY(20px);
+}
+/* SOLO para el icono del teléfono */
+.ve-contact-item:nth-child(4) .ve-icon-img {
+  transform: translateY(5px);
+}
 /* ================== LINKS ================== */
 
 .ve-links {
@@ -380,5 +387,30 @@
 
   .lightbox-next {
     right: 12px;
+  }
+}
+/* =========================================
+   FIX ESPACIO ARRIBA DEL FOOTER EN MOBILE
+========================================= */
+@media (max-width: 768px) {
+  .page-main,
+  main,
+  .page-centered,
+  .section,
+  .pagination,
+  .booking-section,
+  .booking-wrapper {
+    margin-bottom: 0 !important;
+  }
+
+  .page-main,
+  main,
+  .section:last-child,
+  .page-centered:last-child {
+    padding-bottom: 0 !important;
+  }
+
+  .ve-footer {
+    margin-top: 0 !important;
   }
 }

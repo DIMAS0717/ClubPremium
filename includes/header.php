@@ -9,7 +9,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="header-container">
 
         <!-- LOGO -->
-        <div class="header-logo">
+        <div class="header-logo" data-no-translate>
             <a href="index.php" class="header-logo-link" id="hiddenAdminTrigger">
                 <img src="assets/img/icon/logofoter.png" alt="Logo Club Santiago">
                 <span>Villas Eureka</span>
@@ -29,15 +29,34 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <!-- ACCIONES -->
         <div class="header-actions">
 
-
-            <button id="langToggle" class="lang-toggle" type="button" aria-label="Cambiar idioma">
-                ESP | ENG
+            <button
+                id="langToggle"
+                class="lang-toggle"
+                type="button"
+                aria-label="Cambiar idioma"
+                data-current-lang="es"
+            >
+                ES | EN
             </button>
 
-            <button id="themeToggle" class="toggle-theme" type="button" aria-label="Cambiar tema">🌙</button>
+            <button
+                id="themeToggle"
+                class="toggle-theme"
+                type="button"
+                aria-label="Cambiar tema"
+                data-no-translate
+            >
+                🌙
+            </button>
 
-
-            <button id="menuToggle" class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+            <button
+                id="menuToggle"
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                data-no-translate
+            >
                 <span></span>
                 <span></span>
                 <span></span>
@@ -58,5 +77,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
     </div>
 </header>
 
+<script src="./assets/js/header.js"></script>
 
-<script src="./assets/js/header.js"></script> 
+<script>
+    window.APP_BASE_URL = <?= json_encode(rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\')) ?>;
+</script>
+
+<script src="./assets/js/translator.js"></script>

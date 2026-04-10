@@ -243,6 +243,7 @@ unset($_SESSION['flash_success'], $_SESSION['flash_error']);
                 <i class="fas fa-shield-alt"></i>
                 Acceso seguro
             </div>
+            <button id="themeToggle" class="panel-theme-toggle" type="button" aria-label="Cambiar tema">🌙</button>
         </div>
 
         <div class="topbar-user">
@@ -332,6 +333,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-
+<script src="../assets/js/header.js"></script>
 </body>
 </html>
