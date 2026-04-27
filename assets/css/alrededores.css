@@ -573,6 +573,9 @@ h4,
     background-attachment: scroll !important;
     background-position: center center !important;
   }
+  body.dark-mode .around-hero-container {
+  background-image: url('../img/fondos/alrededores_obscuro.jpg') !important;
+}
 
   .alrededores-page .around-header {
     width: calc(100% - 36px) !important;
@@ -670,6 +673,9 @@ h4,
     background-attachment: scroll !important;
     background-position: center center !important;
   }
+  body.dark-mode .around-hero-container {
+  background-image: url('../img/fondos/alrededores_obscuro.jpg') !important;
+}
 
   .alrededores-page .around-header {
     width: calc(100% - 24px) !important;
@@ -778,15 +784,17 @@ h4,
     background-attachment: scroll !important;
     background-position: center center !important;
   }
+  body.dark-mode .around-hero-container {
+  background-image: url('../img/fondos/alrededores_obscuro.jpg') !important;
+}
 
   .alrededores-page .around-header {
     width: calc(100% - 20px) !important;
     max-width: 390px !important;
-    margin: 100px auto !important;
+    margin: 100px 0px 40px 0px !important;
     padding: 0 !important;
     text-align: center !important;
     box-sizing: border-box !important;
-
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -797,21 +805,21 @@ h4,
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 7px !important;
+    gap: 20px !important;
     width: fit-content !important;
     max-width: none !important;
-    margin: 0 auto 8px !important;
+    margin: 0 auto 0px !important;
     flex-wrap: nowrap !important;
   }
 
   .alrededores-page .around-title {
-    font-size: 1.62rem !important;
+    font-size: 1.92rem !important;
     line-height: 1 !important;
     letter-spacing: 0.1px !important;
     margin: 0 !important;
     text-align: center !important;
     white-space: nowrap !important;
-    margin-right: 15px !important;
+    margin-right: 60px !important;
   }
 
   .alrededores-page .around-title-deco {
@@ -830,7 +838,7 @@ h4,
     width: 100% !important;
     max-width: 270px !important;
     margin: 0 auto !important;
-    font-size: 0.87rem !important;
+    font-size: 0.99rem !important;
     line-height: 1.4 !important;
     text-align: center !important;
   }
