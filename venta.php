@@ -26,31 +26,38 @@ $page_title = 'Lotes en Venta - Villas Eureka';
         <div class="lvp-container">
 
             <!-- HERO -->
-            <section class="lvp-hero">
-                <div class="lvp-hero-overlay"></div>
+             <!-- HERO -->
+<section class="villas-hero-container">
+  <div class="villas-header">
+    <div class="around-title-wrap">
+      <img src="assets/img/icon/iconoeureka.png" class="title-deco" alt="">
+      <h1 class="around-title">NUESTRAS VILLAS</h1>
+      <img src="assets/img/icon/iconoeureka.png" class="title-deco" alt="">
+    </div>
 
-                <div class="lvp-hero-content">
-                    <span class="lvp-eyebrow">OPORTUNIDAD DE INVERSIÓN</span>
+    <div class="around-title-underline"></div>
 
-                    <h1 class="lvp-title">
-                        Lotes en venta en <span>Miramar</span>
-                    </h1>
+    <p class="around-subtitle">
+      Espacios diseñados para ofrecer privacidad, confort
+      y una experiencia exclusiva en Club Santiago.
+    </p>
+  </div>
+</section>
 
-                    <div class="lvp-divider"></div>
-
-                    <p class="lvp-lead">
-                        Terrenos con ubicación estratégica y alto potencial para desarrollo
-                        residencial o inversión patrimonial en Manzanillo, Colima.
-                    </p>
-
-                    <div class="lvp-hero-actions">
-                        <a href="#video-recorrido" class="lvp-btn-primary">Ver recorrido</a>
-                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="lvp-btn-secondary">
-                            Ver ubicación
-                        </a>
-                    </div>
-                </div>
-            </section>
+<!-- VIDEO -->
+<section class="villas-video-section">
+  <div class="villas-video-card">
+    <div class="villas-video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/hWKKNF4gU74?si=Rti6o-LM6EzZRQvB"
+        title="Video Villas Eureka"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+    
 
             <!-- STATS -->
             <section class="lvp-stats">
