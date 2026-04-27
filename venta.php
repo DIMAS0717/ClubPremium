@@ -145,7 +145,7 @@ $page_title = 'Lotes en Venta - Villas Eureka';
 
                 <article class="lvp-location-card">
                     <div class="lvp-location-image">
-                        <img src="assets/img/lotes/lotes-preview.jpg" alt="Ubicación de lotes">
+                        <img src="/assets/img/fondos/fondoventa.png" alt="Ubicación de lotes">
                     </div>
 
                     <div class="lvp-location-copy">

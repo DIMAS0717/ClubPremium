@@ -27,17 +27,20 @@
 .lvp-hero {
     position: relative;
     min-height: 560px;
-    padding: 78px 70px;
+    padding: 90px 80px;
     border-radius: 34px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
+
     background:
-        linear-gradient(90deg, rgba(10, 24, 45, 0.55) 0%, rgba(10, 24, 45, 0.18) 48%, rgba(10, 24, 45, 0.04) 100%),
-        url("../img/lotes/lotes-preview.jpg") center center / cover no-repeat,
-        linear-gradient(180deg, #dde6f2 0%, #eef2f7 100%);
-    border: 1px solid rgba(23, 47, 84, 0.08);
-    box-shadow: 0 24px 60px rgba(15, 35, 64, 0.10);
+        linear-gradient(
+            90deg,
+            rgba(5, 12, 24, 0.96) 0%,
+            rgba(5, 12, 24, 0.88) 25%,
+            rgba(5, 12, 24, 0.65) 45%,
+            rgba(5, 12, 24, 0.30) 65%,
+            rgba(5, 12, 24, 0.00) 85%
+        ),
+        url("../img/fondos/fondoventa.png") center / cover no-repeat;
 }
 
 .lvp-hero-overlay {
