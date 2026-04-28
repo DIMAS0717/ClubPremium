@@ -22,42 +22,42 @@ $page_title = 'Lotes en Venta - Villas Eureka';
 
 <main class="page-main lotes-page">
 
-    <section class="lvp-section">
-        <div class="lvp-container">
+<main class="page-main lotes-page">
 
-            <!-- HERO -->
-             <!-- HERO -->
-<section class="villas-hero-container">
-  <div class="villas-header">
+<!-- HERO -->
+<section class="lotes-hero-container">
+  <div class="lotes-header">
     <div class="around-title-wrap">
       <img src="assets/img/icon/iconoeureka.png" class="title-deco" alt="">
-      <h1 class="around-title">NUESTRAS VILLAS</h1>
+      <h1 class="around-title">LOTES EN VENTA</h1>
       <img src="assets/img/icon/iconoeureka.png" class="title-deco" alt="">
     </div>
 
     <div class="around-title-underline"></div>
 
     <p class="around-subtitle">
-      Espacios diseñados para ofrecer privacidad, confort
-      y una experiencia exclusiva en Club Santiago.
+      Terrenos con ubicación estratégica y alto potencial para desarrollo
+      residencial o inversión patrimonial en Manzanillo, Colima.
     </p>
   </div>
 </section>
 
 <!-- VIDEO -->
-<section class="villas-video-section">
-  <div class="villas-video-card">
-    <div class="villas-video-wrapper">
+<section class="lotes-video-section">
+  <div class="lotes-video-card">
+    <div class="lotes-video-wrapper">
       <iframe
-        src="https://www.youtube.com/embed/hWKKNF4gU74?si=Rti6o-LM6EzZRQvB"
-        title="Video Villas Eureka"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        src="https://www.youtube.com/embed/hWKKNF4gU74?rel=0&modestbranding=1"
+        title="Video Lotes en Venta"
         allowfullscreen>
       </iframe>
     </div>
   </div>
 </section>
-    
+
+<section class="lvp-section">
+  <div class="lvp-container">
+
 
             <!-- STATS -->
             <section class="lvp-stats">
