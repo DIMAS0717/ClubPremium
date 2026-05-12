@@ -22,37 +22,50 @@ $page_title = 'Lotes en Venta - Villas Eureka';
 
 <main class="page-main lotes-page">
 
-<main class="page-main lotes-page">
 
 <!-- HERO -->
 <section class="lotes-hero-container">
+
+  <div class="lotes-hero-overlay"></div>
+
   <div class="lotes-header">
-    <div class="around-title-wrap">
-      <img src="assets/img/icon/iconoeureka.png" class="title-deco" alt="">
-      <h1 class="around-title">LOTES EN VENTA</h1>
-      <img src="assets/img/icon/iconoeureka.png" class="title-deco" alt="">
+
+    <div class="lotes-title-wrap">
+      <img src="assets/img/icon/iconoeureka.png" class="lotes-title-deco" alt="">
+      
+      <h1 class="lotes-title">
+        LOTES EN VENTA
+      </h1>
+
+      <img src="assets/img/icon/iconoeureka.png" class="lotes-title-deco" alt="">
     </div>
 
-    <div class="around-title-underline"></div>
+    <div class="lotes-title-underline"></div>
 
-    <p class="around-subtitle">
-      Terrenos con ubicación estratégica y alto potencial para desarrollo
-      residencial o inversión patrimonial en Manzanillo, Colima.
+    <p class="lotes-subtitle">
+      Terrenos exclusivos con ubicación estratégica y alto potencial de inversión
+      en una de las zonas con mayor crecimiento de Manzanillo.
     </p>
+
   </div>
 </section>
 
 <!-- VIDEO -->
 <section class="lotes-video-section">
+
   <div class="lotes-video-card">
+
     <div class="lotes-video-wrapper">
       <iframe
         src="https://www.youtube.com/embed/hWKKNF4gU74?rel=0&modestbranding=1"
         title="Video Lotes en Venta"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen>
       </iframe>
     </div>
+
   </div>
+
 </section>
 
 <section class="lvp-section">

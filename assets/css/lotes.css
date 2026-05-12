@@ -19,139 +19,188 @@
     max-width: 1280px;
     margin: 0 auto;
 } 
+/* =========================================================
+   HERO LOTES PREMIUM
+========================================================= */
 
-/* HERO LOTES - MISMA ESTRUCTURA QUE VILLAS */
 .lotes-hero-container {
-  position: relative;
-  width: 100%;
-  height: 650px;
-  display: flex;
-  justify-content: center;
-  padding: 0 20px;
-  z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 720px;
 
-  background-image: url('../img/fondos/fondoventa.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-image: url('../img/fondos/fondoventa.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-.lotes-hero-container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 28, 48, 0.75) 0%,
-    rgba(0, 0, 0, 0.38) 100%
-  );
-  z-index: 0;
+/* OVERLAY */
+.lotes-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0, 15, 28, 0.82) 0%,
+            rgba(0, 20, 35, 0.72) 30%,
+            rgba(0, 0, 0, 0.40) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.10),
+            rgba(0,0,0,0.45)
+        );
+
+    z-index: 1;
 }
 
-.lotes-hero-container > * {
-  position: relative;
-  z-index: 2;
-}
-
+/* CONTENIDO */
 .lotes-header {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding-top: 120px;
-  max-width: 950px;
+    position: relative;
+    z-index: 5;
+
+    width: 100%;
+    max-width: 1050px;
+
+    padding-top: 150px;
+    padding-inline: 20px;
+
+    text-align: center;
 }
 
-.around-title-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 28px;
-  margin-bottom: 12px;
+/* TITULO */
+.lotes-title-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+
+    margin-bottom: 16px;
 }
 
-.title-deco {
-  width: 77px;
-  height: auto;
-  opacity: 0.85;
-  filter: brightness(1.2) drop-shadow(0 2px 6px rgba(0,0,0,0.35));
+.lotes-title-deco {
+    width: 28px;
+    opacity: 0.9;
+
+    filter:
+        brightness(1.15)
+        drop-shadow(0 2px 8px rgba(0,0,0,0.45));
 }
 
-.around-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3.5rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  margin: 0;
-  color: #fff;
-  line-height: 1;
-  white-space: nowrap;
-  text-shadow:
-    0 0 10px rgba(0,0,0,0.8),
-    2px 2px 0 #000,
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000;
+.lotes-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2.8rem, 6vw, 5rem);
+
+    font-weight: 800;
+    letter-spacing: 3px;
+
+    color: #fff;
+
+    text-transform: uppercase;
+
+    line-height: 1;
+
+    text-shadow:
+        0 5px 25px rgba(0,0,0,0.45),
+        0 2px 10px rgba(0,0,0,0.55);
 }
 
-.around-title-underline {
-  width: 300px;
-  height: 4px;
-  margin: 18px auto 26px;
-  border-radius: 50px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    #d4af37,
-    #f1d592,
-    #d4af37,
-    transparent
-  );
+/* LINEA DORADA */
+.lotes-title-underline {
+    width: 340px;
+    height: 4px;
+
+    margin: 24px auto 30px;
+
+    border-radius: 999px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #d4af37,
+            #f7e2a4,
+            #d4af37,
+            transparent
+        );
+
+    box-shadow:
+        0 0 20px rgba(212,175,55,0.35);
 }
 
-.around-subtitle {
-  max-width: 720px;
-  margin: 0 auto;
-  color: rgba(255,255,255,0.95);
-  font-size: 1.15rem;
-  font-weight: 500;
-  line-height: 1.6;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.35);
+/* SUBTITLE */
+.lotes-subtitle {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    color: rgba(255,255,255,0.92);
+
+    font-size: 1.18rem;
+    font-weight: 400;
+    line-height: 1.8;
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,0.45);
 }
 
-/* VIDEO FLOTANTE */
+/* =========================================================
+   VIDEO FLOTANTE
+========================================================= */
+
 .lotes-video-section {
-  position: relative;
-  z-index: 10;
-  margin-top: -180px;
-  padding: 0 20px 100px;
+    position: relative;
+    z-index: 20;
+
+    margin-top: -190px;
+
+    padding-inline: 20px;
+    padding-bottom: 110px;
 }
 
 .lotes-video-card {
-  max-width: 1000px;
-  margin: auto;
-  padding: 10px;
-  border-radius: 24px;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.3);
-  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    position: relative;
+
+    max-width: 1080px;
+    margin: auto;
+
+    padding: 12px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,0.78);
+
+    backdrop-filter: blur(14px);
+
+    border:
+        1px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,0.28);
 }
 
 .lotes-video-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-  border-radius: 18px;
-  overflow: hidden;
-  background: #000;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    border-radius: 22px;
+    background: #000;
 }
 
 .lotes-video-wrapper iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* =========================================================
