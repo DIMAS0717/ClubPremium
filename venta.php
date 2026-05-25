@@ -22,35 +22,55 @@ $page_title = 'Lotes en Venta - Villas Eureka';
 
 <main class="page-main lotes-page">
 
-    <section class="lvp-section">
-        <div class="lvp-container">
 
-            <!-- HERO -->
-            <section class="lvp-hero">
-                <div class="lvp-hero-overlay"></div>
+<!-- HERO -->
+<section class="lotes-hero-container">
 
-                <div class="lvp-hero-content">
-                    <span class="lvp-eyebrow">OPORTUNIDAD DE INVERSIÓN</span>
+  <div class="lotes-hero-overlay"></div>
 
-                    <h1 class="lvp-title">
-                        Lotes en venta en <span>Miramar</span>
-                    </h1>
+  <div class="lotes-header">
 
-                    <div class="lvp-divider"></div>
+    <div class="lotes-title-wrap">
+      <img src="assets/img/icon/iconoeureka.png" class="lotes-title-deco" alt="">
+      
+      <h1 class="lotes-title">
+        LOTES EN VENTA
+      </h1>
 
-                    <p class="lvp-lead">
-                        Terrenos con ubicación estratégica y alto potencial para desarrollo
-                        residencial o inversión patrimonial en Manzanillo, Colima.
-                    </p>
+      <img src="assets/img/icon/iconoeureka.png" class="lotes-title-deco" alt="">
+    </div>
 
-                    <div class="lvp-hero-actions">
-                        <a href="#video-recorrido" class="lvp-btn-primary">Ver recorrido</a>
-                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="lvp-btn-secondary">
-                            Ver ubicación
-                        </a>
-                    </div>
-                </div>
-            </section>
+    <div class="lotes-title-underline"></div>
+
+    <p class="lotes-subtitle">
+      Terrenos exclusivos con ubicación estratégica y alto potencial de inversión
+      en una de las zonas con mayor crecimiento de Manzanillo.
+    </p>
+
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="lotes-video-section">
+
+  <div class="lotes-video-card">
+
+    <div class="lotes-video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/hWKKNF4gU74?rel=0&modestbranding=1"
+        title="Video Lotes en Venta"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="lvp-section">
+  <div class="lvp-container">
+
 
             <!-- STATS -->
             <section class="lvp-stats">
@@ -145,7 +165,7 @@ $page_title = 'Lotes en Venta - Villas Eureka';
 
                 <article class="lvp-location-card">
                     <div class="lvp-location-image">
-                        <img src="assets/img/lotes/lotes-preview.jpg" alt="Ubicación de lotes">
+                        <img src="/assets/img/fondos/fondoventa.png" alt="Ubicación de lotes">
                     </div>
 
                     <div class="lvp-location-copy">

@@ -46,7 +46,7 @@ html {
 body {
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--bg-page);
+  background: linear-gradient(to bottom, #eef2f7, #eef2f7);
   color: var(--text-main);
   overflow-x: hidden;
 }

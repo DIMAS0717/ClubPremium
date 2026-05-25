@@ -727,12 +727,14 @@ body {
 }
 
 .about-text p {
-  margin: 0 0 34px;
+  margin: 0 0 50px;
   max-width: 520px;
-  font-size: 17px;
+  font-size: 21px;
   line-height: 1.9;
-  color: #5f6975;
+  color: #495059;
 }
+
+
 
 /* ================= LISTA ================= */
 
@@ -746,8 +748,8 @@ body {
   position: relative;
   padding-left: 34px;
   margin-bottom: 16px;
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 22px;
+  line-height: 1.4;
   color: #243041;
 }
 
@@ -1164,7 +1166,7 @@ body {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #3d5477 0%, #173457 100%);
+  background: #b08a4a;
   color: #fff;
   font-size: 12px;
   font-weight: 700;
